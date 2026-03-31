@@ -5,22 +5,16 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { motion } from 'framer-motion';
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  company: string;
-}
-
 export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
+
+  // Use non-standard names so browser autofill can't pre-populate
+  const [fields, setFields] = useState({
+    fname: '',
+    lname: '',
+    eaddr: '',
+    phoneline: '',
+    orgname: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,13 +25,18 @@ export default function ContactPage() {
       const res = await fetch('/api/intake/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          firstName: fields.fname,
+          lastName: fields.lname,
+          email: fields.eaddr,
+          phone: fields.phoneline,
+          company: fields.orgname,
+        }),
       });
 
       const data = await res.json();
 
       if (res.ok && data.redirect) {
-        // Redirect to portal onboarding flow
         window.location.href = data.redirect;
       } else {
         alert(data.error || 'Something went wrong. Please try again.');
@@ -50,7 +49,7 @@ export default function ContactPage() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
@@ -79,24 +78,26 @@ export default function ContactPage() {
                   <label className="block text-xs text-muted mb-2">First Name *</label>
                   <input
                     type="text"
-                    name="firstName"
+                    name="fname"
+                    autoComplete="off"
                     required
-                    value={formData.firstName}
+                    value={fields.fname}
                     onChange={handleChange}
                     className="w-full bg-surface border border-border rounded-xl px-4 py-3.5 text-white placeholder:text-muted focus:outline-none focus:border-accent/50 transition-colors"
-                    placeholder="Franklin"
+                    placeholder="Jane"
                   />
                 </div>
                 <div>
                   <label className="block text-xs text-muted mb-2">Last Name *</label>
                   <input
                     type="text"
-                    name="lastName"
+                    name="lname"
+                    autoComplete="off"
                     required
-                    value={formData.lastName}
+                    value={fields.lname}
                     onChange={handleChange}
                     className="w-full bg-surface border border-border rounded-xl px-4 py-3.5 text-white placeholder:text-muted focus:outline-none focus:border-accent/50 transition-colors"
-                    placeholder="Bryant"
+                    placeholder="Smith"
                   />
                 </div>
               </div>
@@ -106,12 +107,13 @@ export default function ContactPage() {
                 <label className="block text-xs text-muted mb-2">Email Address *</label>
                 <input
                   type="email"
-                  name="email"
+                  name="eaddr"
+                  autoComplete="off"
                   required
-                  value={formData.email}
+                  value={fields.eaddr}
                   onChange={handleChange}
                   className="w-full bg-surface border border-border rounded-xl px-4 py-3.5 text-white placeholder:text-muted focus:outline-none focus:border-accent/50 transition-colors"
-                  placeholder="franklin@company.com"
+                  placeholder="jane@company.com"
                 />
               </div>
 
@@ -120,11 +122,12 @@ export default function ContactPage() {
                 <label className="block text-xs text-muted mb-2">Phone Number</label>
                 <input
                   type="tel"
-                  name="phone"
-                  value={formData.phone}
+                  name="phoneline"
+                  autoComplete="off"
+                  value={fields.phoneline}
                   onChange={handleChange}
                   className="w-full bg-surface border border-border rounded-xl px-4 py-3.5 text-white placeholder:text-muted focus:outline-none focus:border-accent/50 transition-colors"
-                  placeholder="(561) 479-8624"
+                  placeholder="(555) 000-0000"
                 />
               </div>
 
@@ -133,8 +136,9 @@ export default function ContactPage() {
                 <label className="block text-xs text-muted mb-2">Business Name</label>
                 <input
                   type="text"
-                  name="company"
-                  value={formData.company}
+                  name="orgname"
+                  autoComplete="off"
+                  value={fields.orgname}
                   onChange={handleChange}
                   className="w-full bg-surface border border-border rounded-xl px-4 py-3.5 text-white placeholder:text-muted focus:outline-none focus:border-accent/50 transition-colors"
                   placeholder="Acme Corp"

@@ -22,7 +22,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-6"
         >
           <span className="inline-flex items-center gap-2 font-mono text-xs text-accent bg-accent-dim border border-accent/20 px-3 py-1.5 rounded-full">
@@ -35,7 +35,7 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
           className="font-display font-bold text-6xl md:text-8xl leading-[0.95] tracking-tight mb-6"
         >
           AI Business
@@ -49,7 +49,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
           className="text-lg md:text-xl text-muted max-w-xl leading-relaxed mb-10"
         >
           I build autonomous AI systems that research, execute, and scale —
@@ -61,7 +61,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="flex flex-wrap gap-4"
         >
           <a

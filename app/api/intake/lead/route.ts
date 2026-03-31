@@ -24,9 +24,9 @@ export async function POST(req: NextRequest) {
     const data = await res.json();
 
     if (res.ok && data.token) {
-      // Redirect to portal scheduling page
+      // Redirect to calendar hub booking page
       return NextResponse.json({
-        redirect: `https://onboarding.simplifyingbusinesses.com/onboard/${data.token}`,
+        redirect: `https://calendar.simplifyingbusinesses.com/book?token=${data.token}`,
       });
     }
 
