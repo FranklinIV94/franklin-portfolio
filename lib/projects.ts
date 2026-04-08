@@ -37,7 +37,7 @@ export const projects: Project[] = [
     tags: ['React', 'Supabase', 'Vercel', 'pdf-lib', 'Stripe', 'Resend', 'HR Tech', 'PEO', 'TypeScript'],
     role: 'Sole Architect & Developer',
     timeline: 'April 2026',
-    liveUrl: 'https://www.mypeocoforms.com',
+    liveUrl: 'https://simplifyingbusinesses.com',
     repoUrl: 'https://github.com/FranklinIV94/mypeo-forms',
     featured: true,
     order: 0,
