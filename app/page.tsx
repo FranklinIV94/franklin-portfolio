@@ -128,7 +128,7 @@ export default function Home() {
             >
               <span className="font-mono text-xs text-accent mb-3 block">Active Engagements</span>
               <h2 className="font-display font-bold text-4xl md:text-5xl">
-                What I&apos;m
+                What I&apos;ve
                 <br />
                 <span className="text-muted">building now.</span>
               </h2>
