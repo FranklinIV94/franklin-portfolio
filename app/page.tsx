@@ -101,10 +101,10 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '2+', label: 'AI instances running' },
-                  { value: '3+', label: 'Projects live in production' },
-                  { value: '24/7', label: 'Autonomous operation' },
-                  { value: '1→∞', label: 'Leverage through AI' },
+                  { value: '3', label: 'AI agents running' },
+                  { value: '7+', label: 'Projects live in production' },
+                  { value: '24/7', label: 'Autonomous operations' },
+                  { value: '6', label: 'Industries served' },
                 ].map(({ value, label }) => (
                   <div key={label} className="bg-surface border border-border rounded-xl p-5">
                     <div className="font-display font-bold text-3xl text-accent mb-1">{value}</div>
@@ -112,6 +112,59 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Active Engagements */}
+        <section className="border-t border-border">
+          <div className="max-w-6xl mx-auto px-6 py-24">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12"
+            >
+              <span className="font-mono text-xs text-accent mb-3 block">Active Engagements</span>
+              <h2 className="font-display font-bold text-4xl md:text-5xl">
+                What I&apos;m
+                <br />
+                <span className="text-muted">building now.</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  name: 'Bolaveau Group / S57',
+                  description: 'COO & organizational build-out for a $140M interior design + construction company. Full org structure, financial model, AI-augmented operations platform.',
+                },
+                {
+                  name: 'ALBS Client Portal',
+                  description: 'End-to-end client lifecycle automation — intake, CRM pipeline, dual-calendar booking, onboarding wizard, and Stripe billing.',
+                },
+                {
+                  name: 'Prospyr Multi-Agent System',
+                  description: '3 autonomous AI agents running 24/7 — handling client onboarding, security monitoring, email, and business operations across 3 servers.',
+                },
+              ].map((engagement, i) => (
+                <motion.div
+                  key={engagement.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-surface border border-border rounded-xl p-6"
+                >
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
+                    <span className="font-mono text-xs text-accent">Active</span>
+                  </div>
+                  <h3 className="font-display font-bold text-lg mb-3">{engagement.name}</h3>
+                  <p className="text-sm text-muted leading-relaxed">{engagement.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -126,10 +179,10 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-                Have a project in mind?
+                Let&apos;s build something that runs itself.
               </h2>
               <p className="text-muted text-lg mb-10 max-w-md mx-auto">
-                I take on a limited number of projects at a time to ensure focused, high-quality delivery.
+                I architect AI-accelerated systems that scale. Fewer meetings, more execution. If that sounds like your next project, let&apos;s talk.
               </p>
               <a
                 href="/contact"
