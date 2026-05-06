@@ -1,16 +1,25 @@
 'use client';
 
+import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { ProjectCard } from '@/components/ProjectCard';
 import { GithubShowcase } from '@/components/GithubShowcase';
-import { projects } from '@/lib/projects';
+import { projects, type Category } from '@/lib/projects';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+const categories: (Category | 'All')[] = ['All', 'Production', 'Hackathon', 'Internal'];
+
 export default function Home() {
-  const featured = projects.filter((p) => p.featured).sort((a, b) => a.order - b.order);
-  const secondary = projects.filter((p) => !p.featured).sort((a, b) => a.order - b.order);
+  const [activeFilter, setActiveFilter] = useState<Category | 'All'>('All');
+
+  const filtered = activeFilter === 'All'
+    ? projects
+    : projects.filter((p) => p.category === activeFilter);
+
+  const featured = filtered.filter((p) => p.featured).sort((a, b) => a.order - b.order);
+  const secondary = filtered.filter((p) => !p.featured).sort((a, b) => a.order - b.order);
 
   return (
     <>
@@ -26,12 +35,12 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex items-end justify-between mb-12"
+            className="flex items-end justify-between mb-8"
           >
             <div>
               <span className="font-mono text-xs text-accent mb-3 block">Selected Work</span>
               <h2 className="font-display font-bold text-4xl md:text-5xl">
-                Things I&apos;ve
+                Things I{"'"}ve
                 <br />
                 <span className="text-muted">built.</span>
               </h2>
@@ -47,16 +56,40 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          {/* Featured projects */}
-          <div className="space-y-6 mb-8">
-            {featured.map((project, i) => (
-              <ProjectCard key={project.slug} project={project} index={i} featured />
-            ))}
+          {/* Filter tabs */}
+          <div className="flex items-center gap-3 mb-8">
+            {categories.map((filter) => {
+              const count = filter === 'All'
+                ? projects.length
+                : projects.filter((p) => p.category === filter).length;
+              return (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`font-mono text-xs px-3 py-1.5 rounded-lg border transition-all duration-200 ${
+                    activeFilter === filter
+                      ? 'bg-accent text-canvas border-accent'
+                      : 'border-border text-muted hover:border-accent/40 hover:text-white'
+                  }`}
+                >
+                  {filter}<span className="ml-1.5 opacity-60">{count}</span>
+                </button>
+              );
+            })}
           </div>
 
-          {/* Secondary projects */}
+          {/* Featured projects — compact two-column grid */}
+          {featured.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+              {featured.map((project, i) => (
+                <ProjectCard key={project.slug} project={project} index={i} featured />
+              ))}
+            </div>
+          )}
+
+          {/* Secondary projects — three-column grid */}
           {secondary.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {secondary.map((project, i) => (
                 <ProjectCard key={project.slug} project={project} index={i} />
               ))}
@@ -102,7 +135,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { value: '3', label: 'AI agents running' },
-                  { value: '7+', label: 'Projects live in production' },
+                  { value: '10+', label: 'Projects live in production' },
                   { value: '24/7', label: 'Autonomous operations' },
                   { value: '6', label: 'Industries served' },
                 ].map(({ value, label }) => (
@@ -128,7 +161,7 @@ export default function Home() {
             >
               <span className="font-mono text-xs text-accent mb-3 block">Active Engagements</span>
               <h2 className="font-display font-bold text-4xl md:text-5xl">
-                What I&apos;ve
+                What I{"'"}ve
                 <br />
                 <span className="text-muted">building now.</span>
               </h2>
@@ -179,10 +212,10 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-                Let&apos;s build something that runs itself.
+                Let{"'"}s build something that runs itself.
               </h2>
               <p className="text-muted text-lg mb-10 max-w-md mx-auto">
-                I architect AI-accelerated systems that scale. Fewer meetings, more execution. If that sounds like your next project, let&apos;s talk.
+                I architect AI-accelerated systems that scale. Fewer meetings, more execution. If that sounds like your next project, let{"'"}s talk.
               </p>
               <a
                 href="/contact"

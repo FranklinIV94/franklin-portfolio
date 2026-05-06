@@ -1,3 +1,5 @@
+export type Category = 'Production' | 'Hackathon' | 'Internal';
+
 export interface Project {
   slug: string;
   title: string;
@@ -8,6 +10,7 @@ export interface Project {
   solution: string;
   results: string[];
   tags: string[];
+  category: Category;
   role: string;
   timeline: string;
   liveUrl?: string;
@@ -34,6 +37,7 @@ export const projects: Project[] = [
       'SSN never in URLs — all PII handled server-side via Supabase',
     ],
     tags: ['React', 'Supabase', 'Vercel', 'pdf-lib', 'Resend', 'HR Tech', 'PEO', 'TypeScript'],
+    category: 'Production',
     role: 'Sole Architect & Developer',
     timeline: 'April 2026',
     liveUrl: 'https://simplifyingbusinesses.com',
@@ -56,6 +60,7 @@ export const projects: Project[] = [
       'Private deployment for shop operations',
     ],
     tags: ['Next.js', 'CRM', 'Auto', 'PostgreSQL', 'TypeScript'],
+    category: 'Production',
     role: 'Sole Architect & Developer',
     timeline: 'April 2026',
     featured: true,
@@ -76,6 +81,7 @@ export const projects: Project[] = [
       'Persistent memory system with Obsidian vault integration',
     ],
     tags: ['AI Agents', 'Multi-Agent', 'Next.js', 'TypeScript', 'Obsidian', 'Vercel', 'Supabase'],
+    category: 'Production',
     role: 'Sole Architect & Developer',
     timeline: 'March 2026',
     repoUrl: 'https://github.com/FranklinIV94/prospyr-inc',
@@ -97,6 +103,7 @@ export const projects: Project[] = [
       'Live demo deployed to Vercel',
     ],
     tags: ['AI Agents', 'Kite AI', 'Blockchain', 'Next.js', 'TypeScript', 'EIP-3009'],
+    category: 'Hackathon',
     role: 'Sole Architect & Developer',
     timeline: 'March 2026',
     liveUrl: 'https://hackathon-kite.vercel.app',
@@ -121,6 +128,7 @@ export const projects: Project[] = [
       'Quick add lead with automatic onboarding email dispatch',
     ],
     tags: ['Next.js', 'Microsoft Graph API', 'Supabase', 'Prisma', 'Resend', 'Stripe', 'TypeScript', 'Vercel'],
+    category: 'Production',
     role: 'Sole Architect & Developer',
     timeline: 'March–April 2026',
     liveUrl: 'https://onboarding.simplifyingbusinesses.com',
@@ -144,6 +152,7 @@ export const projects: Project[] = [
       'Live at vercel-app-sooty-nu.vercel.app, integrated with onboarding.simplifyingbusinesses.com',
     ],
     tags: ['Microsoft Graph API', 'Next.js', 'TypeScript', 'Prisma', 'Resend', 'Vercel', 'Outlook', 'Office 365'],
+    category: 'Internal',
     role: 'Sole Architect & Developer',
     timeline: 'April 2026',
     liveUrl: 'https://vercel-app-sooty-nu.vercel.app',
@@ -165,6 +174,7 @@ export const projects: Project[] = [
       'Deployed to Vercel, agents connect from anywhere',
     ],
     tags: ['Next.js', 'SSE', 'TypeScript', 'AI Agents', 'Vercel'],
+    category: 'Internal',
     role: 'Sole Architect & Developer',
     timeline: 'March 2026',
     repoUrl: 'https://github.com/FranklinIV94/prospyr-dashboard',
@@ -186,6 +196,7 @@ export const projects: Project[] = [
       'Python x402 server with 5 service endpoints + agent client demo',
     ],
     tags: ['x402', 'ERC-8004', 'AI Agents', 'Base', 'Solidity', 'Python', 'Next.js', 'Hackathon'],
+    category: 'Hackathon',
     role: 'Sole Architect & Developer',
     timeline: 'April 2026',
     liveUrl: 'https://github.com/FranklinIV94/kite-hackathon',
@@ -208,6 +219,7 @@ export const projects: Project[] = [
       'Published at github.com/FranklinIV94/hackathon-2026',
     ],
     tags: ['GenLayer', 'BNB Chain', 'Blockchain', 'Solidity', 'Web3.js', 'React', 'Hackathon'],
+    category: 'Hackathon',
     role: 'Sole Architect & Developer',
     timeline: 'March 2026',
     repoUrl: 'https://github.com/FranklinIV94/hackathon-2026',
@@ -232,6 +244,7 @@ export const projects: Project[] = [
       'Zero upstream dependencies — clean git history, full ALBS ownership',
     ],
     tags: ['Next.js 15', 'PostgreSQL', 'Supabase', 'Grok', 'xAI', 'Better Auth', 'Stripe', 'TypeScript'],
+    category: 'Production',
     role: 'Sole Architect, Developer & Deployer',
     timeline: 'April 2026',
     liveUrl: 'https://tax-simplifier.vercel.app',
@@ -246,7 +259,7 @@ export const projects: Project[] = [
     description: 'A mobile-native dashboard for humans to govern AI agent spending in real-time — built for the Solana Seeker phone at Consensus 2026. Agents request payments, humans approve or reject from their phone, with configurable spending limits and daily caps.',
     challenge: '$340M lost last year to runaway AI agent spending. Agents are becoming autonomous economic actors — they can think and act, but nobody controls the wallet. AI agents make API calls, execute trades, and spend money with zero oversight.',
     approach: 'Built a full-stack Solana dApp with an Anchor on-chain program (8 instructions deployed to devnet), a mobile-first React dashboard with DeepSeek AI generating real payment requests, and a direct Keypair wallet that bypasses the MWA Chrome limitation on the Seeker phone.',
-    solution: 'Humans see every agent payment request on their phone in real-time. Approve, reject, or let spending limits auto-enforce. Every action is on-chain. The daily spend bar updates live. It's parental controls for AI.',
+    solution: 'Humans see every agent payment request on their phone in real-time. Approve, reject, or let spending limits auto-enforce. Every action is on-chain. The daily spend bar updates live. It\'s parental controls for AI.',
     results: [
       'Anchor program deployed to Solana devnet with 8 instructions',
       'DeepSeek AI generating real LLM payment requests every 10-15 seconds',
@@ -256,6 +269,7 @@ export const projects: Project[] = [
       'Demo mode with simulated balance for reliable presentations',
     ],
     tags: ['Solana', 'Anchor', 'DeepSeek', 'AI Agents', 'x402', 'Next.js', 'TypeScript', 'Hackathon'],
+    category: 'Hackathon',
     role: 'Sole Architect & Developer',
     timeline: 'May 2026',
     liveUrl: 'https://agentpay-solana.vercel.app',
@@ -268,7 +282,7 @@ export const projects: Project[] = [
     title: 'Agent Studio',
     tagline: 'AI Agents That Reason, Act, and Pay — Powered by AWS Bedrock + Coinbase',
     description: 'A full-stack AI agent pipeline for autonomous commerce at Consensus 2026 — Director parses intent, Quant analyzes markets, Risk validates compliance via AWS Bedrock Nova Pro, and Execution settles x402 payments on Base. Every step shows its reasoning. Every payment creates an on-chain audit trail.',
-    challenge: 'AI agents can think, but they can't PAY. The x402 protocol closes this gap — agents request data, get HTTP 402 Payment Required, pay USDC on Base, and receive the data. But who evaluates whether a payment should happen? Who ensures compliance?',
+    challenge: 'AI agents can think, but they can\'t PAY. The x402 protocol closes this gap — agents request data, get HTTP 402 Payment Required, pay USDC on Base, and receive the data. But who evaluates whether a payment should happen? Who ensures compliance?',
     approach: 'Built a 4-stage AI pipeline (Director → Quant → Risk → Execution) with AWS Bedrock Nova Pro for real-time risk evaluation, Coinbase Smart Wallet on Base Sepolia for on-chain payments, and full AWS infrastructure via CDK — 4 Lambda functions, 3 DynamoDB tables, API Gateway with 11 endpoints, CloudWatch dashboards and alarms.',
     solution: 'The agent pipeline is fully transparent — every step shows its reasoning. Bedrock Nova Pro evaluates whether payments should be approved, rejected, or flagged. x402 payments settle on Base in under 2 seconds. Five FSI data services (market data, sanctions screening, credit bureau, fraud risk, FX rates) are gated by x402, creating immutable on-chain audit trails. Compliance by design.',
     results: [
@@ -280,6 +294,7 @@ export const projects: Project[] = [
       '5 financial services data products gated by x402 protocol',
     ],
     tags: ['AWS', 'Bedrock', 'Coinbase', 'x402', 'Base', 'AI Agents', 'CDK', 'Lambda', 'DynamoDB', 'Hackathon'],
+    category: 'Hackathon',
     role: 'Sole Architect & Developer',
     timeline: 'May 2026',
     liveUrl: 'https://agent-studio-fawn.vercel.app',

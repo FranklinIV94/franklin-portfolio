@@ -22,7 +22,7 @@ export function ProjectCard({ project, index, featured = false }: ProjectCardPro
       <Link href={`/work/${project.slug}`} className="block">
         <div
           className={`project-card bg-surface border border-border rounded-2xl overflow-hidden ${
-            featured ? 'p-8 md:p-10' : 'p-6'
+            featured ? 'p-6 md:p-8' : 'p-5'
           }`}
         >
           {/* Header */}
@@ -65,23 +65,28 @@ export function ProjectCard({ project, index, featured = false }: ProjectCardPro
             {project.description}
           </p>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {project.tags.map((tag) => (
+          {/* Tags — max 4 visible */}
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            {project.tags.slice(0, 4).map((tag) => (
               <span
                 key={tag}
-                className="font-mono text-xs text-muted bg-canvas border border-border px-2.5 py-1 rounded-md"
+                className="font-mono text-[10px] text-muted bg-canvas border border-border px-2 py-0.5 rounded"
               >
                 {tag}
               </span>
             ))}
+            {project.tags.length > 4 && (
+              <span className="font-mono text-[10px] text-muted">+{project.tags.length - 4}</span>
+            )}
           </div>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-xs text-muted">
+          <div className="flex items-center gap-3 text-[10px] text-muted">
             <span>{project.timeline}</span>
             <span className="w-1 h-1 rounded-full bg-border" />
             <span>{project.role}</span>
+            <span className="w-1 h-1 rounded-full bg-border" />
+            <span className="text-accent/70">{project.category}</span>
           </div>
 
           {/* Bottom links */}
