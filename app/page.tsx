@@ -171,32 +171,66 @@ export default function Home() {
               {[
                 {
                   name: 'Consensus 2026 Hackathon',
-                  description: 'Two live projects at Consensus Miami: AgentPay Solana (mobile-first AI agent payment governance on Solana Seeker) and Agent Studio (AWS Bedrock + Coinbase x402 AI agent pipeline on Base).',
+                  description: 'Two live projects competing across three tracks at Consensus Miami. AgentPay Solana: mobile-first AI agent payment governance on Solana Seeker (8 on-chain instructions, DeepSeek AI, x402 bridge). Agent Studio: AWS Bedrock + Coinbase Smart Wallet AI pipeline on Base (62 CloudFormation resources, 11 API endpoints).',
+                  slug: 'agentpay-solana',
+                  timeline: 'May 2026',
+                  role: 'Sole Architect & Developer',
+                  where: 'Miami, FL',
                 },
                 {
                   name: 'Bolaveau Group / S57',
-                  description: 'COO & organizational build-out for a $140M interior design + construction company. Full org structure, financial model, AI-augmented operations platform.',
+                  description: 'COO & organizational build-out for a $140M interior design + construction company. Full org structure, financial model, and AI-augmented operations platform with 3D kitchen/bathroom editor.',
+                  slug: null,
+                  timeline: 'Ongoing',
+                  role: 'COO & Architect',
+                  where: 'South Florida',
                 },
                 {
                   name: 'ALBS Client Portal',
-                  description: 'End-to-end client lifecycle automation — intake, CRM pipeline, dual-calendar booking, onboarding wizard, and Stripe billing.',
+                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, dual Outlook calendar sync, onboarding wizard, and Stripe billing. 48 services across 13 categories.',
+                  slug: 'albs-portal',
+                  timeline: 'March-Present',
+                  role: 'Sole Architect & Developer',
+                  where: 'onboarding.simplifyingbusinesses.com',
                 },
               ].map((engagement, i) => (
-                <motion.div
+                <Link
                   key={engagement.name}
+                  href={engagement.slug ? `/work/${engagement.slug}` : '#'}
+                  className={engagement.slug ? 'block' : 'block cursor-default'}
+                >
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-surface border border-border rounded-xl p-6"
+                  className={`bg-surface border border-border rounded-xl p-6 h-full transition-colors duration-300 ${engagement.slug ? 'hover:border-accent/40' : ''}`}
                 >
-                  <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center gap-2 mb-3">
                     <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
                     <span className="font-mono text-xs text-accent">Active</span>
+                    <span className="font-mono text-[10px] text-muted ml-auto">{engagement.timeline}</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg mb-3">{engagement.name}</h3>
-                  <p className="text-sm text-muted leading-relaxed">{engagement.description}</p>
+                  <h3 className="font-display font-bold text-lg mb-2">{engagement.name}</h3>
+                  <p className="text-sm text-muted leading-relaxed mb-4">{engagement.description}</p>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-muted">
+                    <span className="flex items-center gap-1">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                      {engagement.role}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                      {engagement.where}
+                    </span>
+                    {engagement.slug && (
+                      <span className="flex items-center gap-1 text-accent">
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        View project
+                      </span>
+                    )}
+                  </div>
                 </motion.div>
+                </Link>
               ))}
             </div>
           </div>
