@@ -161,7 +161,7 @@ export default function Home() {
             >
               <span className="font-mono text-xs text-accent mb-3 block">Active Engagements</span>
               <h2 className="font-display font-bold text-4xl md:text-5xl">
-                What I{"'"}ve
+                What I{"'"}m
                 <br />
                 <span className="text-muted">building now.</span>
               </h2>
@@ -170,16 +170,16 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
+                  name: 'Consensus 2026 Hackathon',
+                  description: 'Two live projects at Consensus Miami: AgentPay Solana (mobile-first AI agent payment governance on Solana Seeker) and Agent Studio (AWS Bedrock + Coinbase x402 AI agent pipeline on Base).',
+                },
+                {
                   name: 'Bolaveau Group / S57',
                   description: 'COO & organizational build-out for a $140M interior design + construction company. Full org structure, financial model, AI-augmented operations platform.',
                 },
                 {
                   name: 'ALBS Client Portal',
                   description: 'End-to-end client lifecycle automation — intake, CRM pipeline, dual-calendar booking, onboarding wizard, and Stripe billing.',
-                },
-                {
-                  name: 'Prospyr Multi-Agent System',
-                  description: '3 autonomous AI agents running 24/7 — handling client onboarding, security monitoring, email, and business operations across 3 servers.',
                 },
               ].map((engagement, i) => (
                 <motion.div
