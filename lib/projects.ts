@@ -293,7 +293,7 @@ export const projects: Project[] = [
       '4 Lambda functions + 3 DynamoDB tables + CloudWatch dashboard with 6 widgets',
       'Coinbase Smart Wallet integration on Base Sepolia',
       '5 financial services data products gated by x402 protocol',
-      'Presented at EasyA Miami × Ripple Hackathon — demonstrated end-to-end AI agent commerce with on-chain settlement',
+      'Presented at Consensus 2026 (Coinbase + AWS track) — demonstrated end-to-end AI agent commerce with on-chain settlement',
     ],
     tags: ['AWS', 'Bedrock', 'Coinbase', 'x402', 'Base', 'AI Agents', 'CDK', 'Lambda', 'DynamoDB', 'Hackathon'],
     category: 'Hackathon',
