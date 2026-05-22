@@ -134,10 +134,10 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '3', label: 'AI agents running' },
-                  { value: '10+', label: 'Projects live in production' },
+                  { value: '4', label: 'AI agents running' },
+                  { value: '13+', label: 'Projects live in production' },
                   { value: '24/7', label: 'Autonomous operations' },
-                  { value: '6', label: 'Industries served' },
+                  { value: '7', label: 'Industries served' },
                 ].map(({ value, label }) => (
                   <div key={label} className="bg-surface border border-border rounded-xl p-5">
                     <div className="font-display font-bold text-3xl text-accent mb-1">{value}</div>
@@ -171,25 +171,25 @@ export default function Home() {
               {[
                 {
                   name: 'Consensus 2026 Hackathon',
-                  description: 'Two live projects competing across three tracks at Consensus Miami. AgentPay Solana: mobile-first AI agent payment governance on Solana Seeker (8 on-chain instructions, DeepSeek AI, x402 bridge). Agent Studio: AWS Bedrock + Coinbase Smart Wallet AI pipeline on Base (62 CloudFormation resources, 11 API endpoints).',
+                  description: 'Two projects across three tracks at Consensus Miami. AgentPay Solana: AI agent payment governance on Solana Seeker. Agent Studio: AWS Bedrock + Coinbase Smart Wallet AI pipeline on Base. Both shipped live demos.',
                   slug: 'agentpay-solana',
-                  timeline: 'May 2026',
+                  timeline: 'May 2026 — Completed',
                   role: 'Sole Architect & Developer',
                   where: 'Miami, FL',
                 },
-                {
+              {
                   name: 'Bolaveau Group / S57',
-                  description: 'COO & organizational build-out for a $140M interior design + construction company. Full org structure, financial model, and AI-augmented operations platform with 3D kitchen/bathroom editor.',
+                  description: 'COO & organizational build-out for a $140M interior design + construction company. Full org structure, financial model, AI-augmented operations platform with 3D kitchen/bathroom editor, and Florida construction compliance system.',
                   slug: null,
                   timeline: 'Ongoing',
                   role: 'COO & Architect',
                   where: 'South Florida',
                 },
-                {
+              {
                   name: 'ALBS Client Portal',
-                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, dual Outlook calendar sync, onboarding wizard, and Stripe billing. 48 services across 13 categories.',
+                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, OSINT enrichment pipeline (Apollo, Sherlock, GhostTrack), dual Outlook calendar sync, onboarding wizard, and Stripe billing. 48 services across 13 categories.',
                   slug: 'albs-portal',
-                  timeline: 'March-Present',
+                  timeline: 'March–Present',
                   role: 'Sole Architect & Developer',
                   where: 'onboarding.simplifyingbusinesses.com',
                 },
@@ -270,8 +270,8 @@ export default function Home() {
             <div className="flex gap-6">
               {[
                 { label: 'GitHub', href: 'https://github.com/FranklinIV94' },
-                { label: 'LinkedIn', href: '#' },
-                { label: 'Twitter', href: '#' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/franklin-bryant-36115363/' },
+                { label: 'Twitter', href: 'https://x.com/theycallmeking_' },
               ].map(({ label, href }) => (
                 <a
                   key={label}

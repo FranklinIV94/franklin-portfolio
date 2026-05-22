@@ -52,9 +52,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
           className="text-lg md:text-xl text-muted max-w-xl leading-relaxed mb-10"
         >
-          I build autonomous AI systems that research, execute, and scale —
-          directing AI-powered development to deliver results that used to
-          require entire teams.
+          I architect systems where AI executes.
+          Directing AI-powered development to deliver results that used to
+          require entire teams — and writing about what I learn along the way.
         </motion.p>
 
         {/* CTAs */}
@@ -78,6 +78,12 @@ export function Hero() {
             className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors duration-200"
           >
             Work with me →
+          </a>
+          <a
+            href="/blog/agentic-engineer"
+            className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors duration-200"
+          >
+            Latest: Agentic Engineer →
           </a>
         </motion.div>
 

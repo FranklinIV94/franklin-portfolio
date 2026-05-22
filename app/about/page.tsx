@@ -31,9 +31,9 @@ export default function AboutPage() {
                 className="space-y-5 text-muted leading-relaxed"
               >
                 <p>
-                  I&apos;m an AI business solutions architect based in Florida. I run two AI instances —
-                  Prospyr and Northstar — that handle everything from research and coding to client
-                  communications and system monitoring.
+                  I run a team of AI agents — Prospyr, Northstar, Southstar, and Zo — that handle
+                  everything from research and coding to client communications, security monitoring,
+                  and overnight intelligence briefings.
                 </p>
                 <p>
                   The core of how I work: I design outcomes and direct AI execution rather than
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 <p>
                   Before AI tooling matured, the gap between having a great idea and having a working
                   product was enormous. That gap has effectively collapsed. I help businesses
-                  understand and capture that leverage.
+                  understand and capture that leverage — and I write about what I learn along the way.
                 </p>
               </motion.div>
 
@@ -86,8 +86,8 @@ export default function AboutPage() {
               >
                 {[
                   {
-                    title: 'Prospyr + Northstar',
-                    desc: 'Two AI instances running 24/7. Prospyr handles communications and cloud operations; Northstar handles research, development, and heavy computation.',
+                    title: 'Prospyr + Northstar + Southstar + Zo',
+                    desc: 'Four AI agents running 24/7. Prospyr handles communications and cloud ops; Northstar handles research, development, and heavy computation; Southstar handles overnight research and competitive intelligence; Zo manages client-facing interactions and onboarding.',
                   },
                   {
                     title: 'Autonomous Agents',

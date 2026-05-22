@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="bg-canvas text-white antialiased">
+      <body className="bg-canvas text-white antialiased font-body">
         <div className="noise-overlay" aria-hidden="true" />
         {children}
       </body>

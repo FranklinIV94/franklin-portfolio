@@ -10,22 +10,22 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="mx-auto max-w-4xl px-6 py-16 font-sans text-gray-900 antialiased">
+    <article className="mx-auto max-w-4xl px-6 py-16">
       {/* Hero */}
       <header className="mb-16">
-        <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">
           Blog · May 10, 2026
         </div>
-        <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">
-          System of Action vs. System of Intelligence
+        <h1 className="font-display font-bold text-4xl leading-tight tracking-tight sm:text-5xl text-white">
+          System of Action vs.<br /><span className="text-gray-300">System of Intelligence</span>
         </h1>
-        <p className="mt-4 text-xl text-gray-500">
+        <p className="mt-4 text-xl text-gray-300 max-w-2xl">
           Google Cloud just announced the &ldquo;Agentic Data Cloud.&rdquo; It validates an architecture
           shift we&apos;ve been building toward for months — and changes how every business
           should think about their technology stack.
         </p>
-        <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
-          <span className="font-semibold text-gray-700">Franklin J Bryant IV</span>
+        <div className="mt-6 flex items-center gap-3 text-sm text-gray-300">
+          <span className="font-semibold text-white">Franklin J Bryant IV</span>
           <span>·</span>
           <span>COO, All Lines Business Solutions</span>
         </div>
@@ -38,16 +38,16 @@ export default function BlogPost() {
           alt="System of Intelligence → System of Action"
           className="w-full"
         />
-        <figcaption className="mt-3 text-center text-sm text-gray-400">
+        <figcaption className="mt-3 text-center text-sm text-gray-300">
           The shift from passive intelligence to proactive action
         </figcaption>
       </figure>
 
       {/* Intro */}
-      <div className="prose-custom">
-        <p className="lead">
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p className="text-lg text-gray-200 leading-relaxed">
           Google Cloud just published{' '}
-          <a href="https://cloud.google.com/transform/shift-system-of-action-architecting-the-agentic-data-cloud-ai" target="_blank" rel="noopener">
+          <a href="https://cloud.google.com/transform/shift-system-of-action-architecting-the-agentic-data-cloud-ai" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
             Architecting the Agentic Data Cloud
           </a>, and buried in the marketing is a genuinely useful framework. They identify three shifts happening right now that every business needs to understand — not because they&apos;re theoretical, but because they describe the architecture we&apos;ve been living in production for months.
         </p>
@@ -55,9 +55,9 @@ export default function BlogPost() {
 
       {/* Three Shifts */}
       <section className="mt-16">
-        <h2>The Three Shifts Google Identified</h2>
+        <h2 className="font-display font-bold text-3xl text-white mb-8">The Three Shifts Google Identified</h2>
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/three-shifts.jpg" alt="Three shifts in AI architecture" className="w-full" />
+          <img src="/blog/three-shifts.jpg" alt="Three shifts in AI architecture" className="w-full rounded-xl" />
         </figure>
 
         <div className="mt-8 grid gap-8 sm:grid-cols-3">
@@ -66,10 +66,10 @@ export default function BlogPost() {
             { num: '02', title: 'Reactive → Proactive', desc: 'Previous architectures told you what happened yesterday. Agents execute in the moment and shape the future. "The goal is no longer just to know. The goal is to act."' },
             { num: '03', title: 'Data → Knowledge', desc: 'Raw data isn\'t enough. Agents need a knowledge flywheel — understanding relationships, semantics, and usage patterns. Without context, they hallucinate on bad data.' },
           ].map(shift => (
-            <div key={shift.num} className="rounded-xl border border-gray-200 p-6">
-              <div className="text-3xl font-black text-green-500/20">{shift.num}</div>
-              <h4 className="mt-2 font-bold text-gray-900">{shift.title}</h4>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">{shift.desc}</p>
+            <div key={shift.num} className="rounded-xl border border-border bg-surface p-6">
+              <div className="text-3xl font-black text-accent/20">{shift.num}</div>
+              <h4 className="mt-2 font-bold text-white">{shift.title}</h4>
+              <p className="mt-2 text-sm leading-relaxed text-gray-300">{shift.desc}</p>
             </div>
           ))}
         </div>
@@ -77,17 +77,17 @@ export default function BlogPost() {
 
       {/* Intelligence vs Action */}
       <section className="mt-20">
-        <h2>System of Intelligence vs. System of Action</h2>
-        <p>
+        <h2 className="font-display font-bold text-3xl text-white mb-8">System of Intelligence vs. System of Action</h2>
+        <p className="text-gray-300 leading-relaxed">
           Google draws a sharp line between two architectures — and this distinction is the most useful
           thing in the entire paper:
         </p>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border-2 border-gray-200 bg-gray-50 p-6">
-            <h3 className="text-lg font-bold text-gray-500">System of Intelligence</h3>
-            <p className="mt-1 text-sm text-gray-400">The Last Generation</p>
-            <ul className="mt-4 space-y-2 text-sm text-gray-600">
+          <div className="rounded-xl border-2 border-border bg-surface p-6">
+            <h3 className="text-lg font-bold text-gray-300">System of Intelligence</h3>
+            <p className="mt-1 text-sm text-gray-300">The Last Generation</p>
+            <ul className="mt-4 space-y-2 text-sm text-gray-300">
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-red-400">✗</span>
                 Reports the news. Waits for a human to ask a question.
@@ -102,20 +102,20 @@ export default function BlogPost() {
               </li>
             </ul>
           </div>
-          <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6">
-            <h3 className="text-lg font-bold text-green-700">System of Action</h3>
-            <p className="mt-1 text-sm text-green-500">The Agentic Era</p>
-            <ul className="mt-4 space-y-2 text-sm text-gray-700">
+          <div className="rounded-xl border-2 border-accent/30 bg-accent/5 p-6">
+            <h3 className="text-lg font-bold text-accent">System of Action</h3>
+            <p className="mt-1 text-sm text-accent/60">The Agentic Era</p>
+            <ul className="mt-4 space-y-2 text-sm text-gray-300">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-green-500">✓</span>
+                <span className="mt-0.5 text-accent">✓</span>
                 Proactive. Operates on your behalf.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-green-500">✓</span>
+                <span className="mt-0.5 text-accent">✓</span>
                 Merges analytical insights with transactional power in one seamless loop.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-green-500">✓</span>
+                <span className="mt-0.5 text-accent">✓</span>
                 Your data doesn&apos;t just tell you there is a problem — it actually fixes it.
               </li>
             </ul>
@@ -125,13 +125,13 @@ export default function BlogPost() {
 
       {/* Four Failures */}
       <section className="mt-20">
-        <h2>Why Most Architectures Break at Agent Scale</h2>
-        <p>
+        <h2 className="font-display font-bold text-3xl text-white mb-4">Why Most Architectures Break at Agent Scale</h2>
+        <p className="text-gray-300 leading-relaxed">
           Google identifies four structural failures that kill agentic systems. These are worth
           checking your own stack against — because at agent scale, they&apos;re fatal.
         </p>
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/four-failures.jpg" alt="Four structural failures" className="w-full" />
+          <img src="/blog/four-failures.jpg" alt="Four structural failures" className="w-full rounded-xl" />
         </figure>
         <div className="mt-8 space-y-4">
           {[
@@ -140,11 +140,11 @@ export default function BlogPost() {
             { title: 'Trust Gap', desc: 'A catalog that says where things are isn\'t enough. Agents need rich context — what data means, relationships between data, how it\'s used. Without this, agents produce invalid outcomes.' },
             { title: 'Cost Spiral', desc: 'At agent scale, AI should be your greatest asset, not an unpredictable financial liability. Fragmented stacks explode costs under agentic workloads.' },
           ].map(failure => (
-            <div key={failure.title} className="flex gap-4 rounded-xl border border-gray-200 bg-white p-5">
-              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100 text-sm font-bold text-red-500">!</div>
+            <div key={failure.title} className="flex gap-4 rounded-xl border border-border bg-surface p-5">
+              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-500/10 text-sm font-bold text-red-400">!</div>
               <div>
-                <h4 className="font-bold text-gray-900">{failure.title}</h4>
-                <p className="mt-1 text-sm text-gray-600">{failure.desc}</p>
+                <h4 className="font-bold text-white">{failure.title}</h4>
+                <p className="mt-1 text-sm text-gray-300">{failure.desc}</p>
               </div>
             </div>
           ))}
@@ -153,15 +153,15 @@ export default function BlogPost() {
 
       {/* Prospyr Architecture */}
       <section className="mt-20">
-        <h2>What We&apos;re Building at Prospyr</h2>
-        <p>
+        <h2 className="font-display font-bold text-3xl text-white mb-4">What We&apos;re Building at Prospyr</h2>
+        <p className="text-gray-300 leading-relaxed">
           Here&apos;s the thing: the big cloud providers describe this as <em>new</em>. But if you&apos;ve been
           paying attention to the actual builders — the people deploying multi-agent systems in
           production — this framework describes what we&apos;ve been doing for months. Google&apos;s paper validates
           the architecture we built from first principles.
         </p>
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/prospyr-architecture.jpg" alt="Prospyr multi-agent architecture" className="w-full" />
+          <img src="/blog/prospyr-architecture.jpg" alt="Prospyr multi-agent architecture" className="w-full rounded-xl" />
         </figure>
 
         <div className="mt-8 space-y-6">
@@ -183,18 +183,18 @@ export default function BlogPost() {
               desc: 'Google notes that 90% of enterprise data is unstructured — locked in contracts, emails, PDFs, and images. Our pipeline combines Browser Use (for web-based data sources), LangExtract (for document intelligence), and multi-agent orchestration to activate dark data at scale. This is how we turn unstructured chaos into agent-accessible knowledge.',
             },
           ].map(point => (
-            <div key={point.title} className="rounded-xl border border-green-100 bg-gradient-to-br from-green-50/50 to-white p-6">
-              <h4 className="font-bold text-green-700">{point.title}</h4>
-              <p className="mt-2 leading-relaxed text-gray-600">{point.desc}</p>
+            <div key={point.title} className="rounded-xl border border-accent/20 bg-accent/5 p-6">
+              <h4 className="font-bold text-accent">{point.title}</h4>
+              <p className="mt-2 leading-relaxed text-gray-300">{point.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* What This Means */}
-      <section className="mt-20 rounded-2xl bg-gray-900 p-8 text-white sm:p-12">
-        <h2 className="text-white">What This Means for Business Owners</h2>
-        <p className="text-gray-400">
+      <section className="mt-20 rounded-2xl bg-surface border border-border p-8 sm:p-12">
+        <h2 className="font-display font-bold text-2xl text-white mb-4">What This Means for Business Owners</h2>
+        <p className="text-gray-300">
           If you&apos;re evaluating AI for your business in 2026, the System of Intelligence vs. System of
           Action framework gives you a clear lens:
         </p>
@@ -205,51 +205,31 @@ export default function BlogPost() {
             { q: 'Where is the trust boundary?', a: 'Autonomous action requires verification. Good systems design this in from the start.' },
             { q: 'What happens at scale?', a: 'A system that works for 10 transactions might collapse at 10,000. Agent-scale architecture is a different discipline.' },
           ].map(item => (
-            <div key={item.q} className="rounded-xl bg-white/5 p-5">
-              <h4 className="font-semibold text-green-400">{item.q}</h4>
-              <p className="mt-2 text-sm text-gray-400">{item.a}</p>
+            <div key={item.q} className="rounded-xl bg-white/5 border border-border p-5">
+              <h4 className="font-semibold text-accent">{item.q}</h4>
+              <p className="mt-2 text-sm text-gray-300">{item.a}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="mt-16 border-t border-gray-200 pt-16 text-center">
-        <p className="text-lg text-gray-500">
+      <div className="mt-16 bg-surface border border-border rounded-2xl p-8 text-center">
+        <p className="text-lg text-gray-300">
           The businesses that win the next five years won&apos;t be the ones with the best dashboards.
         </p>
-        <p className="mt-2 text-2xl font-black text-gray-900">
-          They&apos;ll be the ones that architect systems that act.
+        <p className="mt-2 text-2xl font-display font-bold text-white">
+          They&apos;ll be the ones that architect <span className="text-accent">systems that act</span>.
         </p>
         <div className="mt-8">
           <a
-            href="/"
-            className="inline-flex items-center gap-2 rounded-xl bg-green-500 px-6 py-3 font-semibold text-white transition-all hover:bg-green-600"
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-accent text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors"
           >
-            Learn More About Prospyr
+            Let&apos;s talk →
           </a>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="mt-16 border-t border-gray-200 pt-8 text-center text-sm text-gray-400">
-        <p>Franklin J Bryant IV is the COO of All Lines Business Solutions and architect of Prospyr, a multi-agent business operations platform.</p>
-        <p className="mt-1">
-          <a href="/" className="text-green-600 hover:underline">franklin.simplifyingbusinesses.com</a>
-        </p>
-      </footer>
-
-      <style>{`
-        article { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.75; }
-        article h2 { font-size: 1.875rem; font-weight: 900; letter-spacing: -0.02em; margin-top: 0; }
-        article h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
-        article p { margin-top: 1rem; color: #4b5563; font-size: 1.05rem; }
-        article p.lead { font-size: 1.2rem; color: #374151; line-height: 1.8; }
-        article a { color: #059669; text-decoration: underline; text-underline-offset: 2px; }
-        article a:hover { color: #047857; }
-        article figure { margin-left: auto; margin-right: auto; }
-        article img { display: block; width: 100%; height: auto; border-radius: 0.75rem; }
-      `}</style>
+      </div>
     </article>
   );
 }
