@@ -139,6 +139,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
           <span className="font-semibold text-white">All Lines Business Solutions</span>
           <span>·</span>
           <span>10 Years · 51 Active Clients · 5 Industries</span>
+          <span>·</span>
+          <span className="text-accent font-semibold">48 hrs nationwide · 7–10 days international</span>
         </div>
       </header>
 
@@ -186,6 +188,9 @@ export default function CityPage({ params }: { params: { city: string } }) {
           </p>
           <p>
             <strong className="text-white">Cross-border, multi-state, multi-entity.</strong> We coordinate a foreign national in Los Angeles forming a Wyoming C-Corp from our Fort Lauderdale office. We manage three separate trust structures for a physician in Port Charlotte, each with different beneficiaries and tax implications, coordinated with a reviewing attorney. We handle bi-weekly payroll for construction firms and monthly bookkeeping for medical practices. These aren&apos;t simple returns — they&apos;re complex, multi-entity operations, and we handle them with AI precision.
+          </p>
+          <p>
+            <strong className="text-white">Nationwide and international reach.</strong> While we&apos;re on the ground in 12 cities across 7 states, our AI-powered operations serve clients nationwide — anywhere in the United States within 48 hours notice. International clients? 7–10 day lead time gets us there. Your AI business partner doesn&apos;t sleep, doesn&apos;t miss deadlines, and doesn&apos;t care about time zones.
           </p>
         </div>
       </section>

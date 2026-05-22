@@ -40,15 +40,15 @@ export default function GeoIndexPage() {
     <article className="mx-auto max-w-5xl px-6 py-16">
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">
-          AI-Integrated Operations · 12 Cities
+          AI-Integrated Operations · Nationwide & International
         </div>
         <h1 className="font-display font-bold text-4xl leading-tight tracking-tight sm:text-5xl text-white">
           Business Services Near You
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-3xl">
           All Lines Business Solutions delivers AI-Integrated Operations — bookkeeping, payroll, 
-          tax preparation, and business automation — to small and medium businesses across 12 cities. 
-          Your AI business partner handles the work so you can focus on growth.
+          tax preparation, and business automation — nationwide and internationally. 
+          <strong className="text-white">Anywhere in the United States within 48 hours. Anywhere international with 7–10 day lead time.</strong>
         </p>
       </header>
 
@@ -93,7 +93,7 @@ export default function GeoIndexPage() {
 
       {/* Cities */}
       <section className="mb-16">
-        <h2 className="font-display font-bold text-2xl text-white mb-6">Serving Businesses in 12 Cities</h2>
+        <h2 className="font-display font-bold text-2xl text-white mb-6">12 Cities. 7 States. Nationwide Reach. Global Capability.</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {cities.map(city => (
             <a
@@ -105,6 +105,11 @@ export default function GeoIndexPage() {
               <p className="mt-1 text-gray-400 text-sm">{city.state}</p>
             </a>
           ))}
+          <div className="rounded-xl border border-dashed border-accent/30 bg-accent/5 p-5 flex flex-col items-center justify-center text-center">
+            <span className="text-2xl mb-2">🌍</span>
+            <h3 className="font-bold text-accent">+ Anywhere</h3>
+            <p className="mt-1 text-gray-400 text-xs">48 hrs nationwide · 7–10 days international</p>
+          </div>
         </div>
       </section>
 
@@ -128,6 +133,9 @@ export default function GeoIndexPage() {
             Fort Lauderdale office. A physician in Port Charlotte needed three separate trust structures, each with different 
             beneficiaries and tax implications, coordinated with a reviewing attorney. These aren't simple returns. They're 
             complex, multi-entity operations — and we handle them with AI precision.
+          </p>
+          <p>
+            <strong className="text-white">We service the whole world.</strong> On the ground in 12 cities across 7 states, with nationwide reach — anywhere in the United States within 48 hours notice. International? 7–10 day lead time gets us there. Your AI business partner doesn't sleep, doesn't miss deadlines, and doesn't care about time zones.
           </p>
           <p>
             <strong className="text-white">Your AI business partner handles the work. You direct the growth.</strong> Prospyr 
