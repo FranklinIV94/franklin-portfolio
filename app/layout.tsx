@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Franklin J Bryant IV — AI Business Solutions Architect',
@@ -20,7 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-canvas text-white antialiased font-body">
         <div className="noise-overlay" aria-hidden="true" />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

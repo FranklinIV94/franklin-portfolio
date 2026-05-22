@@ -1,6 +1,5 @@
 'use client';
 
-import { Navbar } from '@/components/Navbar';
 import { projects } from '@/lib/projects';
 import { notFound } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -18,7 +17,7 @@ export default function ProjectPage({ params }: PageProps) {
 
   return (
     <>
-      <Navbar />
+      
       <main className="min-h-screen pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6">
           {/* Back */}

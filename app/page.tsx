@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { ProjectCard } from '@/components/ProjectCard';
 import { GithubShowcase } from '@/components/GithubShowcase';
@@ -23,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      
       <main>
         <Hero />
 

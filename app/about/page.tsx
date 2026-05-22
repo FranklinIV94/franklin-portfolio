@@ -1,13 +1,12 @@
 'use client';
 
-import { Navbar } from '@/components/Navbar';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
+      
       <main className="min-h-screen pt-32 pb-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">

@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 export default function ContactPage() {
@@ -54,7 +52,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Navbar />
+      
       <main className="min-h-screen pt-32 pb-24">
         <div className="max-w-xl mx-auto px-6">
           <motion.div
@@ -160,7 +158,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </main>
-      <Footer />
+      
     </>
   );
 }

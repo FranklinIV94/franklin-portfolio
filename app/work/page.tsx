@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Navbar } from '@/components/Navbar';
 import { ProjectCard } from '@/components/ProjectCard';
 import { projects, type Category } from '@/lib/projects';
 import { motion } from 'framer-motion';
@@ -20,7 +19,7 @@ export default function WorkPage() {
 
   return (
     <>
-      <Navbar />
+      
       <main className="min-h-screen pt-32 pb-24">
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
