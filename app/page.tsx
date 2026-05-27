@@ -133,8 +133,8 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '4', label: 'AI agents running' },
-                  { value: '13+', label: 'Projects live in production' },
+                  { value: '7', label: 'AI agents running' },
+                  { value: '15+', label: 'Projects live in production' },
                   { value: '24/7', label: 'Autonomous operations' },
                   { value: '7', label: 'Industries served' },
                 ].map(({ value, label }) => (
@@ -169,28 +169,68 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  name: 'Consensus 2026 Hackathon',
-                  description: 'Two projects across three tracks at Consensus Miami. AgentPay Solana: AI agent payment governance on Solana Seeker. Agent Studio: AWS Bedrock + Coinbase Smart Wallet AI pipeline on Base. Both shipped live demos.',
-                  slug: 'agentpay-solana',
-                  timeline: 'May 2026 — Completed',
-                  role: 'Sole Architect & Developer',
-                  where: 'Miami, FL',
+                  name: 'Agent Code of Conduct',
+                  description: 'Open-source governance framework for AI agent infrastructure — roles, hierarchy, ethics, enforcement, defense-in-depth security, command responsibility, and scaling provisions. Production-tested across 7 agents.',
+                  slug: 'agent-code-of-conduct',
+                  timeline: 'May 2026 — Shipped',
+                  role: 'Architect & Author',
+                  where: 'Open Source',
                 },
               {
-                  name: 'Bolaveau Group / S57',
-                  description: 'COO & organizational build-out for a $140M interior design + construction company. Full org structure, financial model, AI-augmented operations platform with 3D kitchen/bathroom editor, and Florida construction compliance system.',
-                  slug: null,
+                  name: 'Showroom Automation',
+                  description: 'Premium e-commerce and product showcase platform — "Artisanal Speakeasy" aesthetic (pitch black + gold), Supabase backend, multi-state sales tax architecture, CRM automation. Deployed for a Brooklyn home goods retailer. Active retainer.',
+                  slug: 'showroom-automation-1',
+                  timeline: 'May 2026 — Active',
+                  role: 'Sole Architect & Developer',
+                  where: 'Retail / E-commerce',
+                },
+              {
+                  name: 'Medical Practice Platform',
+                  description: 'HIPAA-ready patient portal with 4-role RBAC, AWS migration architecture (90% cost reduction), compliance decision framework. Built for a Florida medical practice. Resellable to any healthcare provider.',
+                  slug: 'medical-practice-1',
+                  timeline: 'May 2026 — Pre-production',
+                  role: 'Sole Architect & Developer',
+                  where: 'Healthcare',
+                },
+              {
+                  name: 'Construction Automation Platform',
+                  description: 'Full org build-out and operations platform for a $140M interior design + construction company. 3D kitchen/bathroom editor, financial model, Florida construction compliance, AI-augmented project management.',
+                  slug: 'construction-automation-1',
                   timeline: 'Ongoing',
                   role: 'COO & Architect',
                   where: 'South Florida',
                 },
               {
-                  name: 'ALBS Client Portal',
-                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, OSINT enrichment pipeline (Apollo, Sherlock, GhostTrack), dual Outlook calendar sync, onboarding wizard, and Stripe billing. 48 services across 13 categories.',
-                  slug: 'albs-portal',
+                  name: 'Client Onboarding Portal',
+                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, OSINT enrichment pipeline (Apollo, Sherlock, GhostTrack), dual Outlook calendar sync, onboarding wizard, and Stripe billing. 98 clients managed.',
+                  slug: 'client-onboarding-portal-1',
                   timeline: 'March–Present',
                   role: 'Sole Architect & Developer',
                   where: 'onboarding.simplifyingbusinesses.com',
+                },
+              {
+                  name: 'PEO Automation Platform',
+                  description: 'White-label HR workflow automation for Professional Employer Organizations. Employee onboarding, 9+ form types, multi-state W-4 support, admin workspace with team management and audit logging. Deployed on AWS (S3 + CloudFront + Lambda).',
+                  slug: 'peo-automation-1',
+                  timeline: 'April–May 2026 — Production',
+                  role: 'Sole Architect & Developer',
+                  where: 'www.mypeocoforms.com',
+                },
+                {
+                  name: 'Workers\' Comp Automation',
+                  description: 'AI-powered wage statement automation with human-in-the-loop verification. 5-stage pipeline: Intake → AI Extraction → Normalization → HITL Review → State-Compliant PDF. 50-state DWC form mappings.',
+                  slug: 'workers-comp-automation-1',
+                  timeline: 'May 2026',
+                  role: 'Sole Architect & Developer',
+                  where: 'Insurance / Workers\' Comp',
+                },
+                {
+                  name: 'Training Platform',
+                  description: 'Modern LMS with immersive lesson player (text, quiz, video, callout blocks), course builder, progress tracking, and Supabase backend. Deployed for professional services training.',
+                  slug: 'training-platform-1',
+                  timeline: 'May 2026 — Production',
+                  role: 'Sole Architect & Developer',
+                  where: 'albs-learning-center.vercel.app',
                 },
               ].map((engagement, i) => (
                 <Link
