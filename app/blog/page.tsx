@@ -2,6 +2,13 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'research-intelligence-pipeline',
+    title: 'The Research Intelligence Pipeline',
+    excerpt: 'From paper to production in 24 hours — how we weaponized AI research into competitive advantage with a consume-connect-ship pipeline.',
+    date: 'May 31, 2026',
+    tag: 'Research',
+  },
+  {
     slug: 'pulled-punch',
     title: 'The Pulled Punch Problem',
     excerpt: 'When you do both sales and delivery, you subconsciously slow down marketing because you dread onboarding. Here\'s how AI changes the equation.',
