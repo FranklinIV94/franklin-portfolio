@@ -9,8 +9,36 @@ export const metadata = {
 };
 
 export default function BlogPost() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Crypto Compliance After NexFundAI',
+    description: 'The FBI created a real cryptocurrency token to catch market manipulators. Here\'s what it means for your business.',
+    author: {
+      '@type': 'Person',
+      name: 'Franklin J Bryant IV',
+      url: 'https://franklin.simplifyingbusinesses.com',
+    },
+    datePublished: '2026-05-21',
+    dateModified: '2026-05-21',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Franklin J Bryant IV',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://franklin.simplifyingbusinesses.com/logo.png',
+      },
+    },
+    mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/crypto-compliance-after-nexfundai',
+    keywords: ['crypto compliance', 'NexFundAI', 'FBI enforcement', 'regulatory risk', 'business compliance', 'cryptocurrency'],
+  };
+
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">

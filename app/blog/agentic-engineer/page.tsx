@@ -1,6 +1,7 @@
 export const metadata = {
   title: "I'm Not an AI Engineer. I'm an Agentic Engineer. — Franklin J Bryant IV",
   description: 'The biggest opportunity in AI isn\'t building models — it\'s building businesses where AI is the execution layer. Why agentic engineering is a fundamentally different skill set than what most people are learning.',
+  keywords: ['agentic engineering', 'AI architecture', 'autonomous systems', 'AI agents', 'business automation', 'Prospyr 305'],
   openGraph: {
     title: "I'm Not an AI Engineer. I'm an Agentic Engineer.",
     description: 'Why the future of business isn\'t about using AI — it\'s about building systems where AI executes.',
@@ -9,8 +10,36 @@ export const metadata = {
 };
 
 export default function AgenticEngineer() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: "I'm Not an AI Engineer. I'm an Agentic Engineer.",
+    description: 'The biggest opportunity in AI isn\'t building models — it\'s building businesses where AI is the execution layer.',
+    author: {
+      '@type': 'Person',
+      name: 'Franklin J Bryant IV',
+      url: 'https://franklin.simplifyingbusinesses.com',
+    },
+    datePublished: '2026-05-17',
+    dateModified: '2026-05-17',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Franklin J Bryant IV',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://franklin.simplifyingbusinesses.com/logo.png',
+      },
+    },
+    mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/agentic-engineer',
+    keywords: ['agentic engineering', 'AI architecture', 'autonomous systems', 'AI agents', 'business automation', 'Prospyr 305'],
+  };
+
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">

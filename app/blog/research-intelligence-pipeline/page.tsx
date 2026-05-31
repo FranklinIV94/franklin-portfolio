@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'The Research Intelligence Pipeline: From Paper to Production in 24 Hours — Franklin J Bryant IV',
   description: 'How we turned a week of AI research papers into production insights, connected every finding to our stack, and built a research pipeline that delivers competitive advantage in real time.',
+  keywords: ['AI research', 'intelligence pipeline', 'competitive advantage', 'R&D automation', 'Prospyr 305', 'agentic engineering'],
   openGraph: {
     title: 'The Research Intelligence Pipeline',
     description: 'From paper to production in 24 hours — how we weaponized AI research.',
@@ -9,8 +10,36 @@ export const metadata = {
 };
 
 export default function ResearchIntelligencePipeline() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'The Research Intelligence Pipeline',
+    description: 'From paper to production in 24 hours — how we weaponized AI research into competitive advantage with a consume-connect-ship pipeline.',
+    author: {
+      '@type': 'Person',
+      name: 'Franklin J Bryant IV',
+      url: 'https://franklin.simplifyingbusinesses.com',
+    },
+    datePublished: '2026-05-31',
+    dateModified: '2026-05-31',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Franklin J Bryant IV',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://franklin.simplifyingbusinesses.com/logo.png',
+      },
+    },
+    mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/research-intelligence-pipeline',
+    keywords: ['AI research', 'intelligence pipeline', 'competitive advantage', 'R&D automation', 'Prospyr 305', 'agentic engineering'],
+  };
+
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">

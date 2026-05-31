@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'System of Action vs. System of Intelligence — Franklin J Bryant IV',
   description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months — and it changes how every business should think about their technology stack.',
+  keywords: ['system of action', 'agentic architecture', 'Google Cloud', 'AI infrastructure', 'business systems', 'Prospyr 305'],
   openGraph: {
     title: 'System of Action vs. System of Intelligence',
     description: 'What Google just validated about the architecture we\'re already building.',
@@ -9,8 +10,36 @@ export const metadata = {
 };
 
 export default function BlogPost() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'System of Action vs. System of Intelligence',
+    description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months — and it changes how every business should think about their technology stack.',
+    author: {
+      '@type': 'Person',
+      name: 'Franklin J Bryant IV',
+      url: 'https://franklin.simplifyingbusinesses.com',
+    },
+    datePublished: '2026-05-10',
+    dateModified: '2026-05-10',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Franklin J Bryant IV',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://franklin.simplifyingbusinesses.com/logo.png',
+      },
+    },
+    mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/system-of-action',
+    keywords: ['system of action', 'agentic architecture', 'Google Cloud', 'AI infrastructure', 'business systems', 'Prospyr 305'],
+  };
+
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">

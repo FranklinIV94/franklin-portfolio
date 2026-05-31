@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'The Pulled Punch Problem — Franklin J Bryant IV',
   description: 'When you do both sales and delivery, you subconsciously slow down marketing because you dread onboarding more clients. Here\'s how to fix it — and why AI changes everything.',
+  keywords: ['AI strategy', 'sales operations', 'onboarding automation', 'business growth', 'agentic engineering', 'service business'],
   openGraph: {
     title: 'The Pulled Punch Problem',
     description: 'Why founders subconsciously sabotage their own marketing — and the AI architecture that solves it.',
@@ -9,8 +10,36 @@ export const metadata = {
 };
 
 export default function BlogPost() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'The Pulled Punch Problem',
+    description: 'When you do both sales and delivery, you subconsciously slow down marketing because you dread onboarding more clients.',
+    author: {
+      '@type': 'Person',
+      name: 'Franklin J Bryant IV',
+      url: 'https://franklin.simplifyingbusinesses.com',
+    },
+    datePublished: '2026-05-21',
+    dateModified: '2026-05-21',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Franklin J Bryant IV',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://franklin.simplifyingbusinesses.com/logo.png',
+      },
+    },
+    mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/pulled-punch',
+    keywords: ['AI strategy', 'sales operations', 'onboarding automation', 'business growth', 'agentic engineering', 'service business'],
+  };
+
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* Hero */}
       <header className="mb-16">
