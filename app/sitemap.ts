@@ -1,43 +1,44 @@
 import { MetadataRoute } from 'next';
- 
+
+const BASE_URL = 'https://franklin.simplifyingbusinesses.com';
+
+const cities = [
+  'miami', 'tampa', 'cape-coral', 'punta-gorda', 'west-palm-beach',
+  'fort-lauderdale', 'atlanta', 'dallas', 'manhattan', 'los-angeles',
+  'san-diego', 'las-vegas', 'fort-myers',
+];
+
+const blogPosts = [
+  'research-intelligence-pipeline',
+  'pulled-punch',
+  'crypto-compliance-after-nexfundai',
+  'agentic-engineer',
+  'context-beats-compute',
+  'system-of-action',
+  'build-the-system',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://franklin.simplifyingbusinesses.com';
-  
-  const cities = [
-    'miami', 'tampa', 'cape-coral', 'punta-gorda', 'west-palm-beach',
-    'fort-lauderdale', 'atlanta', 'dallas', 'manhattan', 'los-angeles',
-    'san-diego', 'las-vegas'
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: BASE_URL, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${BASE_URL}/work`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
+    { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/geo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ];
 
-  const blogPosts = [
-    'research-intelligence-pipeline',
-    'pulled-punch',
-    'crypto-compliance-after-nexfundai',
-    'agentic-engineer',
-    'context-beats-compute',
-    'system-of-action',
-  ];
-
-  const staticPages = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 1.0 },
-    { url: `${baseUrl}/work`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-    { url: `${baseUrl}/geo`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-  ];
-
-  const cityPages = cities.map(city => ({
-    url: `${baseUrl}/geo/${city}`,
+  const cityPages: MetadataRoute.Sitemap = cities.map(city => ({
+    url: `${BASE_URL}/geo/${city}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
 
-  const blogPages = blogPosts.map(slug => ({
-    url: `${baseUrl}/blog/${slug}`,
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map(slug => ({
+    url: `${BASE_URL}/blog/${slug}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
 

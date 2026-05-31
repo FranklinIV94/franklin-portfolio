@@ -82,6 +82,13 @@ const cities: Record<string, {
     neighborhoods: ['Gaslamp Quarter', 'La Jolla', 'North Park', 'Hillcrest', 'Pacific Beach', 'Mission Valley'],
     description: 'San Diego\'s business community spans healthcare, biotech, defense, and professional services. These businesses need bookkeeping, payroll, and tax preparation that keeps up with a growing regional economy. Our AI-Integrated Operations handle the operational load so San Diego business owners can focus on innovation and growth.',
   },
+  'fort-myers': {
+    name: 'Fort Myers', state: 'FL', slug: 'fort-myers',
+    population: '500K metro (Cape Coral–Fort Myers)',
+    industries: ['Healthcare', 'Construction', 'Real Estate', 'Professional Services', 'Hospitality'],
+    neighborhoods: ['McGregor Boulevard', 'Downtown Fort Myers', 'Whiskey Creek', 'San Carlos Park', 'Estero', 'South Fort Myers'],
+    description: 'Fort Myers is the economic engine of Southwest Florida, with healthcare systems, construction firms, real estate agencies, and hospitality businesses driving growth. Our AI-Integrated Operations handle payroll, bookkeeping, tax preparation, and client communications so Fort Myers business owners can focus on growth in one of Florida\'s fastest-growing markets.',
+  },
   'las-vegas': {
     name: 'Las Vegas', state: 'NV', slug: 'las-vegas',
     population: '2.3M metro',
