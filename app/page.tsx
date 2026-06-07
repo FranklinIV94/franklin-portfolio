@@ -202,7 +202,7 @@ export default function Home() {
                 },
               {
                   name: 'Client Onboarding Portal',
-                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, OSINT enrichment pipeline (Apollo, Sherlock, GhostTrack), dual Outlook calendar sync, onboarding wizard, and Stripe billing. 17 active clients, 151 total leads.',
+                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, OSINT enrichment pipeline (Apollo, Sherlock, GhostTrack), dual Outlook calendar sync, onboarding wizard, and Stripe billing. 151 leads, 17 active clients managed.',
                   slug: 'albs-portal',
                   timeline: 'March–Present',
                   role: 'Sole Architect & Developer',
