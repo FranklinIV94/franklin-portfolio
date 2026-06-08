@@ -118,7 +118,7 @@ export default function AboutPage() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     'Next.js', 'TypeScript', 'Python', 'Node.js', 'Prisma',
-                    'PostgreSQL', 'Stripe', 'Ethers.js', 'Vercel', 'Cloudflare',
+                    'PostgreSQL', 'Stripe', 'Ethers.js', 'AWS', 'Azure', 'Vercel', 'Railway', 'Cloudflare',
                     'AI Agents', 'OpenAI', 'Anthropic', 'Blockchain', 'Solidity',
                   ].map((tech) => (
                     <span

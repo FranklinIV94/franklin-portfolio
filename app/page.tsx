@@ -304,7 +304,7 @@ export default function Home() {
         <footer className="border-t border-border">
           <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted">
-              © {new Date().getFullYear()} Franklin J Bryant IV. Built with AI, deployed on Vercel.
+              © {new Date().getFullYear()} Franklin J Bryant IV. Built with AI, deployed on AWS, Azure, Vercel & Railway.
             </p>
             <div className="flex gap-6">
               {[
