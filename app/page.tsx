@@ -1,14 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import { Hero } from '@/components/Hero';
 import { ProjectCard } from '@/components/ProjectCard';
 import { GithubShowcase } from '@/components/GithubShowcase';
-import { projects, type Category } from '@/lib/projects';
+import { projects } from '@/lib/projects';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
-const categories: (Category | 'All')[] = ['All', 'Production', 'Hackathon', 'Internal'];
 
 const marqueeItems = [
   `${projects.length} projects shipped`,
@@ -29,15 +26,7 @@ function bentoSpan(i: number): { className: string; featured: boolean } {
 }
 
 export default function Home() {
-  const [activeFilter, setActiveFilter] = useState<Category | 'All'>('All');
-
-  const filtered = activeFilter === 'All'
-    ? projects
-    : projects.filter((p) => p.category === activeFilter);
-
-  const featured = filtered.filter((p) => p.featured).sort((a, b) => a.order - b.order);
-  const secondary = filtered.filter((p) => !p.featured).sort((a, b) => a.order - b.order);
-  const ordered = [...featured, ...secondary];
+  const topProjects = projects.filter((p) => p.featured).sort((a, b) => a.order - b.order).slice(0, 4);
 
   return (
     <>
@@ -71,42 +60,11 @@ export default function Home() {
                 <em className="italic text-muted font-[340]">without me.</em>
               </h2>
             </div>
-            <Link
-              href="/work"
-              className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-accent transition-all pb-1.5 border-b border-border hover:border-accent group"
-            >
-              All {projects.length} projects
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
           </motion.div>
 
-          {/* Filter tabs */}
-          <div className="flex flex-wrap items-center gap-3 mb-10">
-            {categories.map((filter) => {
-              const count = filter === 'All'
-                ? projects.length
-                : projects.filter((p) => p.category === filter).length;
-              return (
-                <button
-                  key={filter}
-                  onClick={() => setActiveFilter(filter)}
-                  className={`font-mono text-xs px-4 py-2 rounded-full border transition-all duration-200 ${
-                    activeFilter === filter
-                      ? 'bg-accent text-accent-ink border-accent'
-                      : 'border-border text-muted hover:border-accent/40 hover:text-white'
-                  }`}
-                >
-                  {filter}<span className="ml-1.5 opacity-60">{count}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Bento grid — all projects preserved */}
+          {/* Bento grid — top 4 featured projects only */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-[18px] md:auto-rows-auto">
-            {ordered.map((project, i) => {
+            {topProjects.map((project, i) => {
               const span = bentoSpan(i);
               return (
                 <ProjectCard
@@ -120,13 +78,18 @@ export default function Home() {
             })}
           </div>
 
-          {/* Mobile view all */}
-          <Link
-            href="/work"
-            className="md:hidden flex items-center justify-center gap-2 text-sm text-muted hover:text-accent transition-colors mt-8 py-4 border border-border rounded-full"
-          >
-            All {projects.length} projects →
-          </Link>
+          {/* View all link — prominent */}
+          <div className="flex justify-center mt-12">
+            <Link
+              href="/work"
+              className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-accent transition-all pb-1.5 border-b border-border hover:border-accent group"
+            >
+              View all {projects.length} projects
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
         </section>
 
         {/* GitHub Showcase */}
