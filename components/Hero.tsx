@@ -18,19 +18,6 @@ export function Hero() {
       <div className="hero-grid-lines" aria-hidden="true" />
 
       <motion.div style={{ y, opacity }} className="max-w-6xl mx-auto px-6 md:px-8 relative z-10 w-full">
-        {/* Eyebrow pill */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease }}
-          className="mb-10"
-        >
-          <span className="inline-flex items-center gap-2.5 font-mono text-[11.5px] uppercase tracking-[0.08em] text-muted bg-white/[0.028] border border-border px-4 py-2 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shadow-[0_0_12px_rgba(200,255,87,0.8)]" />
-            AI Business Solutions Architect — Available for projects
-          </span>
-        </motion.div>
-
         {/* Oversized serif headline */}
         <h1 className="hero-headline font-display font-[380] text-[clamp(52px,8.4vw,118px)] leading-[1.02] tracking-[-0.025em] mb-11 max-w-[1080px]">
           <motion.span
