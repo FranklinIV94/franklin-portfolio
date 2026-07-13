@@ -73,10 +73,10 @@ export function Hero() {
               Work with me
             </a>
             <a
-              href="/blog/agentic-engineer"
+              href="/blog/who-guards-the-guardians"
               className="inline-flex items-center gap-2.5 border border-border text-muted font-medium text-[15px] px-[30px] py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:text-white hover:border-white/30"
             >
-              Latest: Agentic Engineer →
+              Latest: Who Guards the Guardians? →
             </a>
           </motion.div>
         </div>
