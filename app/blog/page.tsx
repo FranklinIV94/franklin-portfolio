@@ -12,6 +12,27 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'who-guards-the-guardians',
+    title: 'Who Guards the Guardians?',
+    excerpt: 'Anthropic secretly degrades AI research. MIT proves AI models can\'t self-report. The governance crisis nobody is talking about — and what Prospyr 305 is building next.',
+    date: 'June 28, 2026',
+    tag: 'Governance',
+  },
+  {
+    slug: 'source-of-permission',
+    title: 'The Source of Permission',
+    excerpt: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearninghouses, vertical agents, and the death of scaffolding converged this week — and what Prospyr 305 is building next.',
+    date: 'June 21, 2026',
+    tag: 'AI Strategy',
+  },
+  {
+    slug: 'when-creatives-meet-agents',
+    title: 'When Creatives Meet Agents',
+    excerpt: 'I spent a week at the Runway AI Art & Film Festival. Here\'s what it taught me about the future of creative work, autonomous production, and why the next Pixar might not have a single human employee.',
+    date: 'June 14, 2026',
+    tag: 'Creative',
+  },
+  {
     slug: 'build-the-system',
     title: 'Build the System, Not the Prompt',
     excerpt: 'The week AI research converged on one architecture — specialized components, completion states, persistent memory, and guardrails at boundaries. Here\'s what it means for business.',
@@ -59,27 +80,6 @@ const posts = [
     excerpt: 'What Google just validated about the architecture we\'re already building.',
     date: 'May 10, 2026',
     tag: 'Architecture',
-  },
-  {
-    slug: 'who-guards-the-guardians',
-    title: 'Who Guards the Guardians?',
-    excerpt: 'Anthropic secretly degrades AI research. MIT proves AI models can\'t self-report. The governance crisis nobody is talking about — and what Prospyr 305 is building next.',
-    date: 'June 28, 2026',
-    tag: 'Governance',
-  },
-  {
-    slug: 'source-of-permission',
-    title: 'The Source of Permission',
-    excerpt: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearninghouses, vertical agents, and the death of scaffolding converged this week — and what Prospyr 305 is building next.',
-    date: 'June 21, 2026',
-    tag: 'AI Strategy',
-  },
-  {
-    slug: 'when-creatives-meet-agents',
-    title: 'When Creatives Meet Agents',
-    excerpt: 'I spent a week at the Runway AI Art & Film Festival. Here\'s what it taught me about the future of creative work, autonomous production, and why the next Pixar might not have a single human employee.',
-    date: 'June 14, 2026',
-    tag: 'Creative',
   },
 ];
 
