@@ -10,6 +10,24 @@ import Link from 'next/link';
 
 const categories: (Category | 'All')[] = ['All', 'Production', 'Hackathon', 'Internal'];
 
+const marqueeItems = [
+  `${projects.length} projects shipped`,
+  '7 AI agents in production',
+  'All Lines Business Solutions',
+  'Miami · Remote',
+  'Agent governance',
+  'HIPAA-ready architecture',
+  'HR automation',
+  'AI-accelerated delivery',
+];
+
+/* Bento span pattern: flagship 7-col × 2-row, two 5-col, then 4-col rows */
+function bentoSpan(i: number): { className: string; featured: boolean } {
+  if (i === 0) return { className: 'md:col-span-7 md:row-span-2', featured: true };
+  if (i === 1 || i === 2) return { className: 'md:col-span-5', featured: false };
+  return { className: 'md:col-span-4', featured: false };
+}
+
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<Category | 'All'>('All');
 
@@ -19,36 +37,45 @@ export default function Home() {
 
   const featured = filtered.filter((p) => p.featured).sort((a, b) => a.order - b.order);
   const secondary = filtered.filter((p) => !p.featured).sort((a, b) => a.order - b.order);
+  const ordered = [...featured, ...secondary];
 
   return (
     <>
-      
       <main>
         <Hero />
 
-        {/* Work Section */}
-        <section id="work" className="max-w-6xl mx-auto px-6 py-24">
+        {/* Marquee strip */}
+        <div className="marquee-wrap border-t border-b border-border py-[22px] overflow-hidden bg-canvas-2 relative">
+          <div className="marquee">
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
+              <span key={i}>{item}</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Work Section — bento grid */}
+        <section id="work" className="max-w-6xl mx-auto px-6 py-28 md:py-36">
           {/* Section header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex items-end justify-between mb-8"
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-wrap items-end justify-between gap-8 mb-14"
           >
             <div>
-              <span className="font-mono text-xs text-accent mb-3 block">Selected Work</span>
-              <h2 className="font-display font-bold text-4xl md:text-5xl">
-                Things I{"'"}ve
+              <span className="kicker mb-5">Selected Work</span>
+              <h2 className="font-display font-normal tracking-[-0.02em] text-[clamp(38px,4.8vw,60px)] leading-[1.06]">
+                Built to run
                 <br />
-                <span className="text-muted">built.</span>
+                <em className="italic text-muted font-[340]">without me.</em>
               </h2>
             </div>
             <Link
               href="/work"
-              className="hidden md:flex items-center gap-2 text-sm text-muted hover:text-accent transition-colors group"
+              className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-accent transition-all pb-1.5 border-b border-border hover:border-accent group"
             >
-              View all projects
+              All {projects.length} projects
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -56,7 +83,7 @@ export default function Home() {
           </motion.div>
 
           {/* Filter tabs */}
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex flex-wrap items-center gap-3 mb-10">
             {categories.map((filter) => {
               const count = filter === 'All'
                 ? projects.length
@@ -65,9 +92,9 @@ export default function Home() {
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`font-mono text-xs px-3 py-1.5 rounded-lg border transition-all duration-200 ${
+                  className={`font-mono text-xs px-4 py-2 rounded-full border transition-all duration-200 ${
                     activeFilter === filter
-                      ? 'bg-accent text-canvas border-accent'
+                      ? 'bg-accent text-accent-ink border-accent'
                       : 'border-border text-muted hover:border-accent/40 hover:text-white'
                   }`}
                 >
@@ -77,75 +104,141 @@ export default function Home() {
             })}
           </div>
 
-          {/* Featured projects — compact two-column grid */}
-          {featured.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
-              {featured.map((project, i) => (
-                <ProjectCard key={project.slug} project={project} index={i} featured />
-              ))}
-            </div>
-          )}
-
-          {/* Secondary projects — three-column grid */}
-          {secondary.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {secondary.map((project, i) => (
-                <ProjectCard key={project.slug} project={project} index={i} />
-              ))}
-            </div>
-          )}
+          {/* Bento grid — all projects preserved */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-[18px] md:auto-rows-auto">
+            {ordered.map((project, i) => {
+              const span = bentoSpan(i);
+              return (
+                <ProjectCard
+                  key={project.slug}
+                  project={project}
+                  index={i}
+                  featured={span.featured}
+                  className={span.className}
+                />
+              );
+            })}
+          </div>
 
           {/* Mobile view all */}
           <Link
             href="/work"
-            className="md:hidden flex items-center justify-center gap-2 text-sm text-muted hover:text-accent transition-colors mt-8 py-4 border border-border rounded-xl"
+            className="md:hidden flex items-center justify-center gap-2 text-sm text-muted hover:text-accent transition-colors mt-8 py-4 border border-border rounded-full"
           >
-            View all projects →
+            All {projects.length} projects →
           </Link>
         </section>
 
         {/* GitHub Showcase */}
         <GithubShowcase />
 
-        {/* About strip */}
-        <section className="border-t border-border">
-          <div className="max-w-6xl mx-auto px-6 py-24">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <span className="font-mono text-xs text-accent mb-3 block">About</span>
-                <h2 className="font-display font-bold text-4xl md:text-5xl leading-tight mb-6">
-                  I architect systems and direct AI execution.
-                </h2>
-                <p className="text-muted leading-relaxed mb-8">
-                  Rather than writing code line-by-line, I design the outcome, define the architecture,
-                  and direct AI agents to build it. The same methodology I use for my own business
-                  is what I bring to every client engagement.
-                </p>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-sm text-accent hover:underline"
+        {/* Method — light section */}
+        <section className="light-section" id="method">
+          <div className="max-w-6xl mx-auto px-6 md:px-8 py-28 md:py-36 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="mb-16"
+            >
+              <span className="kicker kicker-light mb-5">The Method</span>
+              <h2 className="font-display font-normal tracking-[-0.02em] text-[clamp(38px,4.8vw,60px)] leading-[1.06] text-light-ink">
+                Fewer meetings.
+                <br />
+                <em className="italic text-light-muted font-[340]">More execution.</em>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
+              {[
+                {
+                  num: '01 — Architect',
+                  title: 'Design the outcome',
+                  body: 'Every engagement starts with the end state — the system that should exist, the workflows it replaces, and the architecture that makes it inevitable.',
+                },
+                {
+                  num: '02 — Direct',
+                  title: 'Direct AI execution',
+                  body: 'AI agents build under governance — clear roles, chain of command, and enforcement discipline. Delegation is not absolution.',
+                },
+                {
+                  num: '03 — Deliver',
+                  title: 'Ship & operate',
+                  body: 'Deployed to AWS, Vercel, and Railway with audit trails, compliance gates, and automation that keeps running after handoff.',
+                },
+              ].map((step, i) => (
+                <motion.div
+                  key={step.num}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.9, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  className="method-card p-8 md:p-9"
                 >
-                  More about me
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { value: '7', label: 'AI agents running' },
-                  { value: '15+', label: 'Projects live in production' },
-                  { value: '24/7', label: 'Autonomous operations' },
-                  { value: '7', label: 'Industries served' },
-                ].map(({ value, label }) => (
-                  <div key={label} className="bg-surface border border-border rounded-xl p-5">
-                    <div className="font-display font-bold text-3xl text-accent mb-1">{value}</div>
-                    <div className="text-xs text-muted">{label}</div>
-                  </div>
-                ))}
-              </div>
+                  <span className="font-display italic text-[15px] text-[#61771c] block mb-5">{step.num}</span>
+                  <h3 className="font-display font-medium text-[23px] tracking-[-0.01em] mb-3 text-light-ink">{step.title}</h3>
+                  <p className="text-[14.5px] text-light-muted leading-[1.7]">{step.body}</p>
+                </motion.div>
+              ))}
             </div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-[18px] mt-20 pt-14 border-t border-light-ink/10"
+            >
+              {[
+                { value: '7', sup: 'agents', label: 'AI agents running autonomous operations' },
+                { value: '15+', sup: '', label: 'Projects live in production' },
+                { value: '24/7', sup: '', label: 'Autonomous operations, monitored & governed' },
+                { value: '7', sup: 'industries', label: 'Healthcare, HR, retail, construction & more' },
+              ].map(({ value, sup, label }) => (
+                <div key={label}>
+                  <div className="font-display font-normal text-[clamp(40px,4.4vw,58px)] tracking-[-0.02em] leading-none text-light-ink">
+                    {value}
+                    {sup && <sup className="text-[0.45em] text-[#61771c] italic ml-1">{sup}</sup>}
+                  </div>
+                  <div className="text-[13px] text-light-muted mt-2.5">{label}</div>
+                </div>
+              ))}
+            </motion.div>
           </div>
+        </section>
+
+        {/* About / philosophy quote */}
+        <section className="relative overflow-hidden py-32 md:py-40 text-center">
+          <div className="hero-mesh opacity-70" aria-hidden="true" />
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-6xl mx-auto px-6 relative"
+          >
+            <span className="kicker mb-5 justify-center">About</span>
+            <blockquote className="font-display font-[350] italic text-[clamp(30px,4.4vw,52px)] leading-[1.25] tracking-[-0.015em] max-w-[900px] mx-auto">
+              &ldquo;Rather than writing code line-by-line, I design the outcome, define the
+              architecture, and <span className="text-accent not-italic">direct AI agents to build it.</span>&rdquo;
+            </blockquote>
+            <cite className="block mt-10 not-italic font-mono text-xs tracking-[0.14em] uppercase text-muted">
+              Franklin J Bryant IV — All Lines Business Solutions
+            </cite>
+            <div className="mt-10">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-sm text-accent hover:underline"
+              >
+                More about me
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </motion.div>
         </section>
 
         {/* Active Engagements */}
@@ -158,11 +251,11 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="mb-12"
             >
-              <span className="font-mono text-xs text-accent mb-3 block">Active Engagements</span>
-              <h2 className="font-display font-bold text-4xl md:text-5xl">
+              <span className="kicker mb-5">Active Engagements</span>
+              <h2 className="font-display font-normal tracking-[-0.02em] text-[clamp(38px,4.8vw,60px)] leading-[1.06]">
                 What I{"'"}m
                 <br />
-                <span className="text-muted">building now.</span>
+                <em className="italic text-muted font-[340]">building now.</em>
               </h2>
             </motion.div>
 
@@ -243,14 +336,14 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className={`bg-surface border border-border rounded-xl p-6 h-full transition-colors duration-300 ${engagement.slug ? 'hover:border-accent/40' : ''}`}
+                  className={`project-card border border-border rounded-[20px] p-6 h-full ${engagement.slug ? '' : ''}`}
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
                     <span className="font-mono text-xs text-accent">Active</span>
                     <span className="font-mono text-[10px] text-muted ml-auto">{engagement.timeline}</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg mb-2">{engagement.name}</h3>
+                  <h3 className="font-display font-medium text-xl mb-2">{engagement.name}</h3>
                   <p className="text-sm text-muted leading-relaxed mb-4">{engagement.description}</p>
                   <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-muted">
                     <span className="flex items-center gap-1">
@@ -275,27 +368,38 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA strip */}
-        <section className="border-t border-border">
-          <div className="max-w-6xl mx-auto px-6 py-24 text-center">
+        {/* CTA card */}
+        <section className="pt-4 pb-32">
+          <div className="max-w-6xl mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="cta-card text-center px-8 py-20 md:px-20 md:py-28"
             >
-              <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-                Let{"'"}s build something that runs itself.
+              <h2 className="font-display font-[380] tracking-[-0.02em] text-[clamp(40px,5.6vw,72px)] leading-[1.05] mb-6">
+                Let{"'"}s build something
+                <br />
+                <em className="italic text-accent">that runs itself.</em>
               </h2>
-              <p className="text-muted text-lg mb-10 max-w-md mx-auto">
-                I architect AI-accelerated systems that scale. Fewer meetings, more execution. If that sounds like your next project, let{"'"}s talk.
+              <p className="text-muted text-[17px] mb-12 max-w-md mx-auto">
+                I architect AI-accelerated systems that scale. Fewer meetings, more execution.
+                If that sounds like your next project, let{"'"}s talk.
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-accent text-canvas font-bold px-8 py-4 rounded-xl text-lg hover:bg-accent/90 transition-colors"
+                className="group inline-flex items-center gap-2.5 bg-accent text-accent-ink font-semibold text-[15px] px-[30px] py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-8px_rgba(200,255,87,0.45)]"
               >
-                Start a conversation →
+                Start a conversation
+                <svg className="w-[15px] h-[15px] transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2}>
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
               </a>
+              <div className="mt-10 font-mono text-[11.5px] tracking-[0.1em] uppercase text-muted flex items-center justify-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(200,255,87,0.8)]" />
+                Currently accepting new engagements
+              </div>
             </motion.div>
           </div>
         </section>
@@ -315,7 +419,7 @@ export default function Home() {
                 <a
                   key={label}
                   href={href}
-                  className="text-xs text-muted hover:text-white transition-colors"
+                  className="text-xs text-muted hover:text-accent transition-colors"
                 >
                   {label}
                 </a>

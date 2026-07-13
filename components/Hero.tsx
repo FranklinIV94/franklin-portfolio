@@ -1,7 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -10,110 +12,107 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-      {/* Ambient background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl" />
-      </div>
+    <section ref={ref} className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-40 pb-28">
+      {/* Gradient mesh + radial-masked grid lines */}
+      <div className="hero-mesh" aria-hidden="true" />
+      <div className="hero-grid-lines" aria-hidden="true" />
 
-      <motion.div style={{ y, opacity }} className="max-w-6xl mx-auto px-6 py-32 relative z-10">
-        {/* Eyebrow */}
+      <motion.div style={{ y, opacity }} className="max-w-6xl mx-auto px-6 md:px-8 relative z-10 w-full">
+        {/* Eyebrow pill */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-6"
+          transition={{ duration: 1, ease }}
+          className="mb-10"
         >
-          <span className="inline-flex items-center gap-2 font-mono text-xs text-accent bg-accent-dim border border-accent/20 px-3 py-1.5 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Available for projects
+          <span className="inline-flex items-center gap-2.5 font-mono text-[11.5px] uppercase tracking-[0.08em] text-muted bg-white/[0.028] border border-border px-4 py-2 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shadow-[0_0_12px_rgba(200,255,87,0.8)]" />
+            AI Business Solutions Architect — Available for projects
           </span>
         </motion.div>
 
-        {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-          className="font-display font-bold text-6xl md:text-8xl leading-[0.95] tracking-tight mb-6"
-        >
-          AI Business
-          <br />
-          <span className="text-muted">Solutions</span>
-          <br />
-          <span className="text-accent">Architect.</span>
-        </motion.h1>
-
-        {/* Subheading */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-          className="text-lg md:text-xl text-muted max-w-xl leading-relaxed mb-10"
-        >
-          I architect systems where AI executes.
-          Directing AI-powered development to deliver results that used to
-          require entire teams — and writing about what I learn along the way.
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-wrap gap-4"
-        >
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2 bg-white text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent transition-colors duration-200"
+        {/* Oversized serif headline */}
+        <h1 className="hero-headline font-display font-[380] text-[clamp(52px,8.4vw,118px)] leading-[1.02] tracking-[-0.025em] mb-11 max-w-[1080px]">
+          <motion.span
+            className="block"
+            initial={{ opacity: 0, y: 36 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, delay: 0.1, ease }}
           >
-            View my work
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors duration-200"
+            I architect systems
+          </motion.span>
+          <motion.span
+            className="block"
+            initial={{ opacity: 0, y: 36 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, delay: 0.2, ease }}
           >
-            Work with me →
-          </a>
-          <a
-            href="/blog/agentic-engineer"
-            className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors duration-200"
-          >
-            Latest: Agentic Engineer →
-          </a>
-        </motion.div>
+            <span className="text-muted">where</span> <em>AI executes.</em>
+          </motion.span>
+        </h1>
 
-        {/* Tech stack pills */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-wrap gap-2 mt-12"
-        >
-          {['Next.js', 'TypeScript', 'AI Agents', 'Blockchain', 'Node.js', 'Python'].map((tech) => (
-            <span
-              key={tech}
-              className="font-mono text-xs text-muted bg-surface border border-border px-3 py-1.5 rounded-lg"
+        {/* Sub + CTAs */}
+        <div className="flex flex-wrap items-end justify-between gap-12">
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease }}
+            className="text-[17.5px] text-muted max-w-[460px] leading-[1.7]"
+          >
+            <strong className="text-white font-medium">AI Business Solutions Architect.</strong>{' '}
+            Directing AI-powered development to deliver results that used to require entire
+            teams — and writing about what I learn along the way.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease }}
+            className="flex flex-wrap gap-3.5"
+          >
+            <a
+              href="#work"
+              className="group inline-flex items-center gap-2.5 bg-accent text-accent-ink font-semibold text-[15px] px-[30px] py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-8px_rgba(200,255,87,0.45)]"
             >
-              {tech}
-            </span>
-          ))}
-        </motion.div>
-      </motion.div>
+              View selected work
+              <svg className="w-[15px] h-[15px] transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2}>
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2.5 border border-border-strong text-white font-semibold text-[15px] px-[30px] py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.055]"
+            >
+              Work with me
+            </a>
+            <a
+              href="/blog/agentic-engineer"
+              className="inline-flex items-center gap-2.5 border border-border text-muted font-medium text-[15px] px-[30px] py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:text-white hover:border-white/30"
+            >
+              Latest: Agentic Engineer →
+            </a>
+          </motion.div>
+        </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-xs text-muted font-mono">scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-muted to-transparent" />
+        {/* Meta row: stack + scroll hint */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease }}
+          className="mt-20 pt-8 border-t border-border flex flex-wrap items-center justify-between gap-6"
+        >
+          <div className="flex flex-wrap gap-6">
+            {['Next.js', 'TypeScript', 'AI Agents', 'Blockchain', 'Node.js', 'Python'].map((tech) => (
+              <span
+                key={tech}
+                className="font-mono text-[11.5px] uppercase tracking-[0.06em] text-muted hover:text-accent transition-colors duration-300"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="hero-scroll">Scroll</div>
+        </motion.div>
       </motion.div>
     </section>
   );

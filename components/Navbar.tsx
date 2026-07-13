@@ -29,8 +29,8 @@ export function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo / Name */}
-        <Link href="/" className="font-display font-bold text-lg tracking-tight">
-          Franklin<span className="text-accent">.</span>
+        <Link href="/" className="font-display font-medium text-xl tracking-[-0.01em]">
+          Franklin <em className="italic text-accent">Bryant</em>
         </Link>
 
         {/* Desktop nav */}
