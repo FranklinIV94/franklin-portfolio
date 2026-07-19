@@ -59,6 +59,18 @@ export default function VerificationIsTheScarcity() {
         </div>
       </header>
 
+      {/* Hero image */}
+      <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
+        <img
+          src="/blog/verification-scarcity-hero.jpg"
+          alt="Abstract visualization: a glowing green checkmark at the center of a filtering funnel, raw data fragments rejected around it"
+          className="w-full"
+        />
+        <figcaption className="mt-2 text-xs text-gray-500 text-center">
+          The scarcity isn&apos;t data &mdash; it&apos;s the judgment that says which data is good.
+        </figcaption>
+      </figure>
+
       {/* Body */}
       <div className="space-y-8 text-lg leading-relaxed text-gray-200">
 
@@ -87,6 +99,16 @@ export default function VerificationIsTheScarcity() {
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white mt-12">The Law That Determines Everything</h2>
+        <figure className="my-8 overflow-hidden rounded-2xl border border-border">
+          <img
+            src="/blog/verification-scarcity-funnel.jpg"
+            alt="Abstract: raw data pouring into a mesh funnel, most rejected as grey, a few verified items emerging at the bottom glowing green"
+            className="w-full"
+          />
+          <figcaption className="mt-2 text-xs text-gray-500 text-center">
+            Whatever a machine can verify, machines will eventually learn to mine without you.
+          </figcaption>
+        </figure>
         <p className="text-2xl font-display text-white border-l-4 border-accent pl-6 italic">
           Whatever a machine can verify, machines will eventually learn without you. Whatever still needs a human to say &ldquo;this is good&rdquo; keeps paying humans.
         </p>

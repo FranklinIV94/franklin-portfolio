@@ -5,6 +5,7 @@ export const metadata = {
   openGraph: {
     title: 'From Loops to Graphs: What We Learned This Week',
     description: 'One week of AI infrastructure research — seven threads pulled together.',
+    images: ['/blog/loops-to-graphs-hero.jpg'],
   },
 };
 
@@ -58,6 +59,18 @@ export default function BlogPost() {
         </div>
       </header>
 
+      {/* Hero image */}
+      <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
+        <img
+          src="/blog/loops-to-graphs-hero.jpg"
+          alt="Abstract visualization: isolated feedback loops on the left transforming into an interconnected network graph of loop-nodes on the right, with glowing green connections"
+          className="w-full"
+        />
+        <figcaption className="mt-2 text-xs text-gray-500 text-center">
+          From isolated loops to a grounded graph of loops &mdash; the shift that defines this week&apos;s research.
+        </figcaption>
+      </figure>
+
       {/* Intro */}
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p className="text-lg text-gray-200 leading-relaxed">
@@ -69,6 +82,16 @@ export default function BlogPost() {
       {/* Section 1: Loops to Graphs */}
       <section className="mt-16">
         <h2 className="font-display font-bold text-3xl text-white mb-4">The Big Shift: Loop Engineering to Graph Engineering</h2>
+        <figure className="my-8 overflow-hidden rounded-2xl border border-border">
+          <img
+            src="/blog/loops-to-graphs-network.jpg"
+            alt="Abstract network of interconnected loop-nodes with green glowing connections and ground anchors"
+            className="w-full"
+          />
+          <figcaption className="mt-2 text-xs text-gray-500 text-center">
+            A graph of loops: each node is an improvement cycle, anchored to measurements it can&apos;t tune.
+          </figcaption>
+        </figure>
         <p className="text-gray-300 leading-relaxed">
           Carlos Perez (IntuitMachine) articulated something every team building AI agents is starting
           to feel. The single improvement loop &mdash; measure a metric, adjust, repeat &mdash; is the atom
