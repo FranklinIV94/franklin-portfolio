@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'verification-is-the-scarcity',
+    title: 'Verification Is the Scarcity',
+    excerpt: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable — and what Prospyr 305 is building on the same principle.',
+    date: 'July 18, 2026',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'who-guards-the-guardians',
     title: 'Who Guards the Guardians?',
     excerpt: 'Anthropic secretly degrades AI research. MIT proves AI models can\'t self-report. The governance crisis nobody is talking about — and what Prospyr 305 is building next.',
