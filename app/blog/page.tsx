@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'loops-to-graphs-week-in-review-july-18',
+    title: 'From Loops to Graphs: What We Learned This Week',
+    excerpt: 'One week of AI infrastructure research — seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
+    date: 'July 18, 2026',
+    tag: 'Research',
+  },
+  {
     slug: 'verification-is-the-scarcity',
     title: 'Verification Is the Scarcity',
     excerpt: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable — and what Prospyr 305 is building on the same principle.',
