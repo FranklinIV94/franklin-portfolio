@@ -50,7 +50,7 @@ export default function BlogPost() {
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
           Every small business needs an AI team. None can afford one. The opportunity isn&apos;t
-          building AI &mdash; it&apos;s becoming that team for one industry you understand better
+          building AI. It&apos;s becoming that team for one industry you understand better
           than anyone in the room.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-300">
@@ -81,8 +81,8 @@ export default function BlogPost() {
         </p>
 
         <p>
-          The AI market has a segmentation problem. On one side, you have the platforms &mdash;
-          OpenAI, Anthropic, Google, Meta, Baseten &mdash; building models and infrastructure.
+          The AI market has a segmentation problem. On one side, you have the platforms:
+          OpenAI, Anthropic, Google, Meta, Baseten. Building models and infrastructure.
           On the other, you have businesses running on QuickBooks, paper intake forms, and a
           receptionist who also does the scheduling. Between them sits a gap nobody has figured
           out how to close at scale.
@@ -90,8 +90,8 @@ export default function BlogPost() {
 
         <p>
           That gap is where the next decade&apos;s businesses are being built. Not in the model layer.
-          Not in the infrastructure layer. In the <strong className="text-white">application layer</strong> &mdash;
-          but not the way everyone thinks about applications.
+          Not in the infrastructure layer. In the <strong className="text-white">application layer</strong>.
+          But not the way everyone thinks about applications.
         </p>
       </div>
 
@@ -135,7 +135,8 @@ export default function BlogPost() {
       <section className="mt-16">
         <h2 className="font-display font-bold text-3xl text-white mb-4">The Play</h2>
         <p className="text-gray-300 leading-relaxed">
-          Here&apos;s the model that works. I&apos;ve been running it for two years.
+          Here&apos;s the model that works. I&apos;ve been running it for two years through
+          Prospyr 305, the development arm that grew out of All Lines Business Solutions.
         </p>
         <ol className="mt-6 space-y-4 pl-6 text-gray-300 leading-relaxed list-decimal">
           <li>
@@ -143,7 +144,7 @@ export default function BlogPost() {
             &ldquo;healthcare.&rdquo; Something specific enough that you can learn the vocabulary,
             the compliance landscape, the workflow pain points, and the software they already
             hate. Medical practices. PEOs. Auto body shops. Claims management. The narrower the
-            better &mdash; you&apos;re not competing with McKinsey, you&apos;re competing with the
+            better. You&apos;re not competing with McKinsey, you&apos;re competing with the
             guy who set up their QuickBooks in 2014 and never called back.
           </li>
           <li>
@@ -165,7 +166,7 @@ export default function BlogPost() {
             nobody talks about. A retainer caps your earnings at the hours you bill. But if
             you&apos;re lifting a client&apos;s margins by 25% through automation, the value you
             create dwarfs the retainer. For startups, take equity. For established businesses,
-            structure performance milestones &mdash; you get a bonus tied to the margin
+            structure performance milestones where you get a bonus tied to the margin
             improvement you can measure. Don&apos;t leave the upside on the table, but
             don&apos;t walk into a doctor&apos;s office and ask for ownership. Read the room.
           </li>
@@ -176,7 +177,7 @@ export default function BlogPost() {
       <figure className="my-8 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/team-never-hired-workflow.jpg"
-          alt="Abstract workflow diagram showing five stages: Pick, Learn, Build, Price, Scale &mdash; with green connecting lines between stages"
+          alt="Abstract workflow diagram showing five stages with green connecting lines between stages"
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -188,25 +189,27 @@ export default function BlogPost() {
       <section className="mt-16">
         <h2 className="font-display font-bold text-3xl text-white mb-4">What This Looks Like in Practice</h2>
         <p className="text-gray-300 leading-relaxed">
-          I run All Lines Business Solutions. We&apos;re the AI team for accounting and tax
-          practices, medical offices, PEOs, and claims management firms. Each engagement
-          follows the same arc.
+          All Lines Business Solutions is the parent. Accountancy, business consulting,
+          administrative services. The work that pays the bills and teaches you how
+          businesses actually run. Prospyr 305 is what grew out of it: the development
+          and AI infrastructure arm that builds the systems ALBS clients need but no
+          off-the-shelf software provides.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
-          The client has a stack of manual processes eating 30-50% of their staff&apos;s time.
-          We map the workflow, identify the automation points, and build the system. Not a
-          prototype &mdash; production software, deployed, integrated with their existing tools,
-          running 24/7. Patient portals that handle HIPAA compliance. Onboarding platforms
-          that generate state-specific W-4 PDFs. Lead pipelines that enrich prospects with
-          OSINT data and send personalized cold outreach via Microsoft Graph.
+          Through ALBS, I sit with practice owners and learn their workflows. Through
+          Prospyr 305, I build the systems that replace them. A medical practice gets
+          a HIPAA-ready patient portal. A PEO gets an onboarding platform that generates
+          state-specific W-4 PDFs. A claims firm gets lead capture, CRM, and document
+          automation. Production software, deployed, integrated with their existing tools,
+          running 24/7.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
-          Behind the scenes, four AI agents run the business itself: one handles strategy
-          and client relationships, one orchestrates operations, one runs research and
-          infrastructure, one manages daily execution. They coordinate via a shared memory
-          system, maintain an Obsidian knowledge graph, and produce competitive intelligence
-          overnight. The agents aren&apos;t a product we sell. They&apos;re how we deliver
-          the work.
+          Behind the scenes, Prospyr 305 runs on four AI agents of its own: one handles
+          strategy and client relationships, one orchestrates operations, one runs research
+          and infrastructure, one manages daily execution. They coordinate via a shared
+          memory system, maintain an Obsidian knowledge graph, and produce competitive
+          intelligence overnight. The agents aren&apos;t a product we sell. They&apos;re
+          how we deliver the work.
         </p>
         <div className="mt-6 rounded-xl border border-accent/20 bg-accent/5 p-6">
           <h4 className="font-bold text-accent">The insight that took two years to learn</h4>
@@ -230,8 +233,8 @@ export default function BlogPost() {
           <li>
             <strong className="text-white">Models are good enough.</strong> GLM-5.2 hits 280
             tokens per second on optimized inference. DeepSeek R1 reasons through complex
-            problems. Qwen writes production code. You don&apos;t need GPT-4 at $20/1M tokens
-            &mdash; you need a local model on a $20/month box that handles 80% of the work
+            problems. Qwen writes production code. You don&apos;t need GPT-4 at $20/1M tokens.
+            You need a local model on a $20/month box that handles 80% of the work
             and a fallback to a frontier model for the 20% that matters.
           </li>
           <li>
@@ -256,18 +259,18 @@ export default function BlogPost() {
           Here&apos;s what happens when you do this long enough: the work compounds. Each
           client teaches you the industry better. Each system you build becomes a template
           for the next. Each workflow you automate generates data that makes the next
-          automation smarter. After two years, you&apos;re not building from scratch &mdash;
-          you&apos;re adapting patterns from a library of solved problems.
+          automation smarter. After two years, you&apos;re not building from scratch.
+          You&apos;re adapting patterns from a library of solved problems.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
           That library is the real asset. Not the code, not the clients, not the retainer
-          revenue. The pattern library &mdash; the accumulated knowledge of what works in
+          revenue. The pattern library. The accumulated knowledge of what works in
           medical practices, what fails in PEOs, what matters in claims management, what
           nobody in accounting has figured out yet. That&apos;s the moat. And it only deepens
           with every engagement.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
-          The VCs funding agent startups &mdash; Sequoia, a16z, Kleiner Perkins &mdash; are
+          The VCs funding agent startups at Sequoia, a16z, and Kleiner Perkins are
           betting on companies that build AI for everyone. That&apos;s a hard business.
           The easier business, the one that compounds faster, is building AI for someone
           specific. One industry. Deep context. Real problems. Measurable outcomes.
@@ -290,7 +293,7 @@ export default function BlogPost() {
       {/* Footer */}
       <footer className="mt-16 pt-8 border-t border-gray-700 text-sm text-gray-400">
         <p>
-          <strong className="text-white">Franklin J Bryant IV</strong> is COO of All Lines Business Solutions and founder of Prospyr 305, building AI agent systems, vertical automation platforms, and compliance infrastructure for small and mid-size businesses. He runs four AI agents in production, maintains an Obsidian knowledge graph of 1,200+ pages, and hasn&apos;t taken a manual intake form seriously since 2024.
+          <strong className="text-white">Franklin J Bryant IV</strong> is COO of All Lines Business Solutions and founder of Prospyr 305, the AI development arm building autonomous workflow systems, vertical automation platforms, and compliance infrastructure for small and mid-size businesses. He runs four AI agents in production, maintains an Obsidian knowledge graph of 1,200+ pages, and hasn&apos;t taken a manual intake form seriously since 2024.
         </p>
       </footer>
     </article>
