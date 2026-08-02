@@ -8,6 +8,7 @@ export const metadata = {
   },
 };
 
+
 export default function BuildTheSystem() {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -19,6 +20,12 @@ export default function BuildTheSystem() {
       name: 'Franklin J Bryant IV',
       url: 'https://franklin.simplifyingbusinesses.com',
       alternateName: 'Franklin Jordan Bryant',
+      sameAs: [
+        'https://github.com/FranklinIV94',
+        'https://www.linkedin.com/in/franklin-bryant-36115363/',
+        'https://x.com/theycallmeking_',
+        'https://www.crunchbase.com/organization/all-lines-business-solutions',
+      ],
     },
     datePublished: '2026-05-31',
     dateModified: '2026-05-31',
@@ -40,6 +47,7 @@ export default function BuildTheSystem() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">

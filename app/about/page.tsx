@@ -4,9 +4,33 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function AboutPage() {
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Franklin J Bryant IV',
+    alternateName: 'Franklin Jordan Bryant IV',
+    url: 'https://franklin.simplifyingbusinesses.com',
+    jobTitle: 'AI Business Solutions Architect',
+    description: 'Founder of All Lines Business Solutions. AI infrastructure architect building autonomous systems that operate, transact, and scale.',
+    sameAs: [
+      'https://github.com/FranklinIV94',
+      'https://www.linkedin.com/in/franklin-bryant-36115363/',
+      'https://x.com/theycallmeking_',
+      'https://www.crunchbase.com/organization/all-lines-business-solutions',
+    ],
+    worksFor: {
+      '@type': 'Organization',
+      name: 'All Lines Business Solutions',
+      alternateName: 'ALBS',
+    },
+  };
+
   return (
     <>
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <main className="min-h-screen pt-32 pb-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -21,6 +45,9 @@ export default function AboutPage() {
                 <h1 className="font-display font-bold text-5xl md:text-6xl leading-tight mb-8">
                   Franklin J Bryant IV<span className="text-accent">.</span>
                 </h1>
+                <p className="text-lg text-gray-400 mb-8">
+                  Franklin Jordan Bryant IV — AI Business Solutions Architect, COO of All Lines Business Solutions, and founder of the Agent Code of Conduct.
+                </p>
               </motion.div>
 
               <motion.div
@@ -30,6 +57,7 @@ export default function AboutPage() {
                 className="space-y-5 text-muted leading-relaxed"
               >
                 <p>
+                  I&apos;m Franklin Jordan Bryant IV, an AI Business Solutions Architect based in Miami, Florida.
                   I run a team of AI agents — Prospyr, Northstar, Southstar, and Zo — that handle
                   everything from research and coding to client communications, security monitoring,
                   and overnight intelligence briefings.
@@ -38,11 +66,20 @@ export default function AboutPage() {
                   The core of how I work: I design outcomes and direct AI execution rather than
                   writing code line-by-line. This isn&apos;t about replacing developers — it&apos;s about
                   amplifying what one person with the right architectural thinking can deliver.
+                  Eighteen projects shipped. Seven AI agents in production. Industries spanning
+                  healthcare, HR, retail, construction, and insurance.
                 </p>
                 <p>
                   My firm, <span className="text-white">All Lines Business Solutions (ALBS)</span>, applies
                   this same methodology to consulting and accounting engagements. AI-accelerated
-                  development isn&apos;t just our service — it&apos;s how we run the business.
+                  development isn&apos;t just our service — it&apos;s how we run the business. We serve
+                  clients across Florida, Georgia, Texas, New York, and California.
+                </p>
+                <p>
+                  I authored the <span className="text-white">Agent Code of Conduct</span> — an open-source
+                  governance framework for AI agent infrastructure, now in production across seven agents.
+                  I write about AI governance, agent architecture, and the business of building systems
+                  that run themselves.
                 </p>
                 <p>
                   Before AI tooling matured, the gap between having a great idea and having a working

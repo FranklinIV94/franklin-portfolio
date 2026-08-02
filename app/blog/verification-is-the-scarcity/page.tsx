@@ -19,6 +19,12 @@ export default function VerificationIsTheScarcity() {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
       url: 'https://franklin.simplifyingbusinesses.com',
+      sameAs: [
+        'https://github.com/FranklinIV94',
+        'https://www.linkedin.com/in/franklin-bryant-36115363/',
+        'https://x.com/theycallmeking_',
+        'https://www.crunchbase.com/organization/all-lines-business-solutions',
+      ],
     },
     datePublished: '2026-07-18',
     dateModified: '2026-07-18',
