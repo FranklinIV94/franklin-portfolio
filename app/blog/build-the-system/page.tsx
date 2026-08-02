@@ -9,8 +9,37 @@ export const metadata = {
 };
 
 export default function BuildTheSystem() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Build the System, Not the Prompt',
+    description: "The week AI research converged on one architecture: specialized components, completion states, persistent memory, and guardrails at boundaries. Here's what it means for business.",
+    author: {
+      '@type': 'Person',
+      name: 'Franklin J Bryant IV',
+      url: 'https://franklin.simplifyingbusinesses.com',
+      alternateName: 'Franklin Jordan Bryant',
+    },
+    datePublished: '2026-05-31',
+    dateModified: '2026-05-31',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Franklin J Bryant IV',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://franklin.simplifyingbusinesses.com/logo.png',
+      },
+    },
+    mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/build-the-system',
+    keywords: ['agentic architecture', 'AI infrastructure', 'business systems', 'Prospyr 305', 'specialized components', 'persistent memory', 'guardrails'],
+  };
+
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">

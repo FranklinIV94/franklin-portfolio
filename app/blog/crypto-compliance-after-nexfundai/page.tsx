@@ -17,6 +17,7 @@ export default function BlogPost() {
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
+      alternateName: 'Franklin Jordan Bryant',
       url: 'https://franklin.simplifyingbusinesses.com',
     },
     datePublished: '2026-05-21',
@@ -24,6 +25,7 @@ export default function BlogPost() {
     publisher: {
       '@type': 'Organization',
       name: 'Franklin J Bryant IV',
+      alternateName: 'Franklin Jordan Bryant',
       logo: {
         '@type': 'ImageObject',
         url: 'https://franklin.simplifyingbusinesses.com/logo.png',

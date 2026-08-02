@@ -24,18 +24,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Franklin J Bryant IV',
+    alternateName: 'Franklin Jordan Bryant',
+    additionalName: ['Franklin Bryant', 'Franklin Bryant IV', 'Franklin Bryant AI'],
     url: 'https://franklin.simplifyingbusinesses.com',
     jobTitle: 'AI Business Solutions Architect',
     description: 'I build autonomous AI systems that operate, transact, and scale. Founder of All Lines Business Solutions.',
+    knowsAbout: [
+      'AI implementation',
+      'business automation',
+      'agentic engineering',
+      'AI security audits',
+      'tax preparation',
+      'business operations',
+      'data security',
+      'AI-accelerated development',
+      'insurance',
+    ],
     sameAs: [
       'https://github.com/FranklinIV94',
       'https://www.linkedin.com/in/franklin-bryant-36115363/',
       'https://x.com/theycallmeking_',
+      'https://www.crunchbase.com/person/franklin-bryant-fb1a',
     ],
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Florida Atlantic University',
+    },
     worksFor: {
       '@type': 'Organization',
       name: 'All Lines Business Solutions',
       alternateName: 'ALBS',
+      url: 'https://simplifyingbusinesses.com',
     },
   };
 
