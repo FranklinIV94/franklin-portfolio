@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'The Research Intelligence Pipeline: From Paper to Production in 24 Hours — Franklin J Bryant IV',
   description: 'How we turned a week of AI research papers into production insights, connected every finding to our stack, and built a research pipeline that delivers competitive advantage in real time.',
-  keywords: ['AI research', 'intelligence pipeline', 'competitive advantage', 'R&D automation', 'Prospyr 305', 'agentic engineering'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI research', 'intelligence pipeline', 'competitive advantage', 'R&D automation', 'Prospyr 305', 'agentic engineering'],
   openGraph: {
     title: 'The Research Intelligence Pipeline',
     description: 'From paper to production in 24 hours — how we weaponized AI research.',
@@ -39,7 +39,7 @@ export default function ResearchIntelligencePipeline() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/research-intelligence-pipeline',
-    keywords: ['AI research', 'intelligence pipeline', 'competitive advantage', 'R&D automation', 'Prospyr 305', 'agentic engineering'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI research', 'intelligence pipeline', 'competitive advantage', 'R&D automation', 'Prospyr 305', 'agentic engineering'],
   };
 
   return (

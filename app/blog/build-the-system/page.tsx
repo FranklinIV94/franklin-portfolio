@@ -38,7 +38,7 @@ export default function BuildTheSystem() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/build-the-system',
-    keywords: ['agentic architecture', 'AI infrastructure', 'business systems', 'Prospyr 305', 'specialized components', 'persistent memory', 'guardrails'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'agentic architecture', 'AI infrastructure', 'business systems', 'Prospyr 305', 'specialized components', 'persistent memory', 'guardrails'],
   };
 
   return (

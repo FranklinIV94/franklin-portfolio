@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Who Guards the Guardians? — Franklin J Bryant IV',
   description: 'Anthropic secretly degrades AI research. MIT proves sycophancy spirals even rational users. Google open-sources 2,000 tok/sec inference. Seven signals now say the same thing: the agent era needs neutral governance — and the model providers have structural incentives to deceive.',
-  keywords: ['clearinghouse', 'AI governance', 'Anthropic Mythos', 'sycophancy', 'DiffusionGemma', 'source of permission', 'Prospyr 305', 'agent architecture', 'open source AI'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'clearinghouse', 'AI governance', 'Anthropic Mythos', 'sycophancy', 'DiffusionGemma', 'source of permission', 'Prospyr 305', 'agent architecture', 'open source AI'],
   openGraph: {
     title: 'Who Guards the Guardians?',
     description: 'Anthropic secretly degrades capabilities. MIT proves sycophancy spirals even rational users. The agent era needs neutral governance.',
@@ -39,7 +39,7 @@ export default function WhoGuardsTheGuardians() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/who-guards-the-guardians',
-    keywords: ['clearinghouse', 'AI governance', 'Anthropic Mythos', 'sycophancy', 'DiffusionGemma', 'source of permission', 'agent architecture'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'clearinghouse', 'AI governance', 'Anthropic Mythos', 'sycophancy', 'DiffusionGemma', 'source of permission', 'agent architecture'],
   };
 
   return (

@@ -38,7 +38,7 @@ export default function BlogPost() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/crypto-compliance-after-nexfundai',
-    keywords: ['crypto compliance', 'NexFundAI', 'FBI enforcement', 'regulatory risk', 'business compliance', 'cryptocurrency'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Prospyr 305', 'crypto compliance', 'NexFundAI', 'FBI enforcement', 'regulatory risk', 'business compliance', 'cryptocurrency'],
   };
 
   return (

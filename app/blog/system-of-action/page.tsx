@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'System of Action vs. System of Intelligence — Franklin J Bryant IV',
   description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months — and it changes how every business should think about their technology stack.',
-  keywords: ['system of action', 'agentic architecture', 'Google Cloud', 'AI infrastructure', 'business systems', 'Prospyr 305'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'system of action', 'agentic architecture', 'Google Cloud', 'AI infrastructure', 'business systems', 'Prospyr 305'],
   openGraph: {
     title: 'System of Action vs. System of Intelligence',
     description: 'What Google just validated about the architecture we\'re already building.',
@@ -39,7 +39,7 @@ export default function BlogPost() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/system-of-action',
-    keywords: ['system of action', 'agentic architecture', 'Google Cloud', 'AI infrastructure', 'business systems', 'Prospyr 305'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'system of action', 'agentic architecture', 'Google Cloud', 'AI infrastructure', 'business systems', 'Prospyr 305'],
   };
 
   return (

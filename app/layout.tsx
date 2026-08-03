@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://franklin.simplifyingbusinesses.com'),
   title: 'Franklin J Bryant IV — AI Business Solutions Architect',
   description: 'I build autonomous AI systems that operate, transact, and scale. Founder of All Lines Business Solutions.',
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'AI business solutions', 'agentic engineering', 'autonomous systems', 'ALBS', 'Prospyr 305', 'AI automation', 'business automation'],
   openGraph: {
     title: 'Franklin J Bryant IV — AI Business Solutions Architect',
     description: 'I build autonomous AI systems that operate, transact, and scale.',

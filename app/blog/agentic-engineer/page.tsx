@@ -1,7 +1,7 @@
 export const metadata = {
   title: "I'm Not an AI Engineer. I'm an Agentic Engineer. — Franklin J Bryant IV",
   description: 'The biggest opportunity in AI isn\'t building models — it\'s building businesses where AI is the execution layer. Why agentic engineering is a fundamentally different skill set than what most people are learning.',
-  keywords: ['agentic engineering', 'AI architecture', 'autonomous systems', 'AI agents', 'business automation', 'Prospyr 305'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'agentic engineering', 'AI architecture', 'autonomous systems', 'AI agents', 'business automation', 'Prospyr 305'],
   openGraph: {
     title: "I'm Not an AI Engineer. I'm an Agentic Engineer.",
     description: 'Why the future of business isn\'t about using AI — it\'s about building systems where AI executes.',
@@ -39,7 +39,7 @@ export default function AgenticEngineer() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/agentic-engineer',
-    keywords: ['agentic engineering', 'AI architecture', 'autonomous systems', 'AI agents', 'business automation', 'Prospyr 305'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'agentic engineering', 'AI architecture', 'autonomous systems', 'AI agents', 'business automation', 'Prospyr 305'],
   };
 
   return (

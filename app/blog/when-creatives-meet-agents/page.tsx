@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'When Creatives Meet Agents — Franklin J Bryant IV',
   description: 'I spent a week at the Runway AI Art & Film Festival and a private event in Beverly Hills with artists, filmmakers, musicians, and producers. Here\'s what the creative world actually needs from agentic engineering — and why the next wave of AI isn\'t about replacing creatives, it\'s about engineering the infrastructure that lets them scale.',
-  keywords: ['AI film festival', 'Runway AI', 'agentic engineering', 'creative AI', 'Prospyr 305', 'AI collaboration', 'creative industries', 'agent workforce', 'AI infrastructure', 'Beverly Hills', 'David Rivero'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI film festival', 'Runway AI', 'agentic engineering', 'creative AI', 'Prospyr 305', 'AI collaboration', 'creative industries', 'agent workforce', 'AI infrastructure', 'Beverly Hills', 'David Rivero'],
   openGraph: {
     title: 'When Creatives Meet Agents',
     description: 'The Runway AI Art & Film Festival showed what AI can create. The next question is: what can AI build around it? Agentic engineering for creative industries.',
@@ -39,7 +39,7 @@ export default function WhenCreativesMeetAgents() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/when-creatives-meet-agents',
-    keywords: ['AI film festival', 'Runway AI', 'agentic engineering', 'creative AI', 'Prospyr 305'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI film festival', 'Runway AI', 'agentic engineering', 'creative AI', 'Prospyr 305'],
   };
 
   return (

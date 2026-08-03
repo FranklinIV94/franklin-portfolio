@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Blog — Franklin J Bryant IV',
   description: 'On AI, business, and building systems that run themselves. Agentic engineering, compliance, research pipelines, and the future of autonomous business operations.',
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'AI business', 'agentic engineering', 'autonomous systems', 'ALBS', 'Prospyr 305'],
   openGraph: {
     title: 'Blog — Franklin J Bryant IV',
     description: 'On AI, business, and building systems that run themselves.',

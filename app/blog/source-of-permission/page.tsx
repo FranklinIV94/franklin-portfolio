@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'The Source of Permission — Franklin J Bryant IV',
   description: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearinghouses, vertical agents, and the death of scaffolding converged this week — and what Prospyr 305 is building next.',
-  keywords: ['clearinghouse', 'AI agents', 'source of permission', 'Prospyr 305', 'agentic engineering', 'vertical agents', 'governance', 'Fable 5'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'clearinghouse', 'AI agents', 'source of permission', 'Prospyr 305', 'agentic engineering', 'vertical agents', 'governance', 'Fable 5'],
   openGraph: {
     title: 'The Source of Permission',
     description: 'The SaaS moat was owning data. The AI moat is owning permissions. Here\'s what converged this week.',
@@ -39,7 +39,7 @@ export default function SourceOfPermission() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/source-of-permission',
-    keywords: ['clearinghouse', 'AI agents', 'source of permission', 'Prospyr 305', 'agentic engineering', 'vertical agents', 'governance'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'clearinghouse', 'AI agents', 'source of permission', 'Prospyr 305', 'agentic engineering', 'vertical agents', 'governance'],
   };
 
   return (

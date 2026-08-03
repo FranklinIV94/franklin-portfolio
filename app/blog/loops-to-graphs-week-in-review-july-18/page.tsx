@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'From Loops to Graphs: What We Learned This Week — Franklin J Bryant IV',
   description: 'One week of AI infrastructure research — seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
-  keywords: ['agent architecture', 'AI infrastructure', 'loop engineering', 'graph engineering', 'CDP', 'Kimi K3', 'GPU benchmarks', 'Prospyr 305', 'research'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'agent architecture', 'AI infrastructure', 'loop engineering', 'graph engineering', 'CDP', 'Kimi K3', 'GPU benchmarks', 'Prospyr 305', 'research'],
   openGraph: {
     title: 'From Loops to Graphs: What We Learned This Week',
     description: 'One week of AI infrastructure research — seven threads pulled together.',
@@ -37,7 +37,7 @@ export default function BlogPost() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/loops-to-graphs-week-in-review-july-18',
-    keywords: ['agent architecture', 'AI infrastructure', 'loop engineering', 'graph engineering', 'CDP', 'Kimi K3', 'GPU benchmarks', 'Prospyr 305', 'research'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'agent architecture', 'AI infrastructure', 'loop engineering', 'graph engineering', 'CDP', 'Kimi K3', 'GPU benchmarks', 'Prospyr 305', 'research'],
   };
 
   return (

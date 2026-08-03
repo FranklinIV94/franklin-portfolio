@@ -1,7 +1,7 @@
 export const metadata = {
   title: '7 Trillion Passwords Couldn\'t Crack This Bitcoin Wallet. AI Did It in Minutes. — Franklin J Bryant IV',
   description: 'How contextual intelligence beat brute force — and what it means for business. A Bitcoin recovery story and new research prove: better retrieval > more compute.',
-  keywords: ['contextual intelligence', 'AI vs brute force', 'Bitcoin recovery', 'context window', 'business AI', 'computational advantage'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Prospyr 305', 'contextual intelligence', 'AI vs brute force', 'Bitcoin recovery', 'context window', 'business AI', 'computational advantage'],
   openGraph: {
     title: '7 Trillion Passwords Couldn\'t Crack This Bitcoin Wallet. AI Did It in Minutes.',
     description: 'How contextual intelligence beat brute force — and what it means for business.',
@@ -39,7 +39,7 @@ export default function ContextBeatsCompute() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/context-beats-compute',
-    keywords: ['contextual intelligence', 'AI vs brute force', 'Bitcoin recovery', 'context window', 'business AI', 'computational advantage'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Prospyr 305', 'contextual intelligence', 'AI vs brute force', 'Bitcoin recovery', 'context window', 'business AI', 'computational advantage'],
   };
 
   return (

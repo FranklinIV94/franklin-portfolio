@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'The Pulled Punch Problem — Franklin J Bryant IV',
   description: 'When you do both sales and delivery, you subconsciously slow down marketing because you dread onboarding more clients. Here\'s how to fix it — and why AI changes everything.',
-  keywords: ['AI strategy', 'sales operations', 'onboarding automation', 'business growth', 'agentic engineering', 'service business'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Prospyr 305', 'AI strategy', 'sales operations', 'onboarding automation', 'business growth', 'agentic engineering', 'service business'],
   openGraph: {
     title: 'The Pulled Punch Problem',
     description: 'Why founders subconsciously sabotage their own marketing — and the AI architecture that solves it.',
@@ -39,7 +39,7 @@ export default function BlogPost() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/pulled-punch',
-    keywords: ['AI strategy', 'sales operations', 'onboarding automation', 'business growth', 'agentic engineering', 'service business'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Prospyr 305', 'AI strategy', 'sales operations', 'onboarding automation', 'business growth', 'agentic engineering', 'service business'],
   };
 
   return (

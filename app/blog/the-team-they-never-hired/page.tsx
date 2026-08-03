@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'The Team They Never Hired — Franklin J Bryant IV',
   description: "Every small business needs an AI team. None can afford one. The opportunity isn't building AI — it's becoming the AI team for one industry you understand better than anyone in the room.",
-  keywords: ['AI agents', 'small business', 'vertical AI', 'AI consulting', 'business automation', 'ALBS', 'Prospyr 305', 'AI strategy'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI agents', 'small business', 'vertical AI', 'AI consulting', 'business automation', 'Prospyr 305', 'AI strategy'],
   openGraph: {
     title: 'The Team They Never Hired',
     description: 'Every small business needs an AI team. None can afford one. The opportunity is becoming that team for one industry.',
@@ -37,7 +37,7 @@ export default function BlogPost() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/the-team-they-never-hired',
-    keywords: ['AI agents', 'small business', 'vertical AI', 'AI consulting', 'business automation', 'ALBS', 'Prospyr 305', 'AI strategy'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI agents', 'small business', 'vertical AI', 'AI consulting', 'business automation', 'Prospyr 305', 'AI strategy'],
   };
 
   return (

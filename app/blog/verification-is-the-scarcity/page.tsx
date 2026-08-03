@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Verification Is the Scarcity — Franklin J Bryant IV',
   description: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable — and what Prospyr 305 is building on the same principle.',
-  keywords: ['verification', 'AI training data', 'SENTINEL', 'Prospyr 305', 'AI transformation', 'supply chain resilience', 'agent architecture', 'trust as moat'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'verification', 'AI training data', 'SENTINEL', 'Prospyr 305', 'AI transformation', 'supply chain resilience', 'agent architecture', 'trust as moat'],
   openGraph: {
     title: 'Verification Is the Scarcity',
     description: 'AI training data is a gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable.',
@@ -37,7 +37,7 @@ export default function VerificationIsTheScarcity() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/verification-is-the-scarcity',
-    keywords: ['verification', 'AI training data', 'SENTINEL', 'AI transformation', 'supply chain resilience'],
+    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'verification', 'AI training data', 'SENTINEL', 'AI transformation', 'supply chain resilience'],
   };
 
   return (
