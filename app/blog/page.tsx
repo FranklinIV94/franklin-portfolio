@@ -12,6 +12,27 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'the-team-they-never-hired',
+    title: 'The Team They Never Hired',
+    excerpt: "Every small business needs an AI team. None can afford one. The opportunity isn't building AI — it's becoming the AI team for one industry you understand better than anyone in the room.",
+    date: 'July 27, 2026',
+    tag: 'AI Strategy',
+  },
+  {
+    slug: 'loops-to-graphs-week-in-review-july-18',
+    title: 'From Loops to Graphs: What We Learned This Week',
+    excerpt: 'One week of AI infrastructure research — seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
+    date: 'July 18, 2026',
+    tag: 'Research',
+  },
+  {
+    slug: 'verification-is-the-scarcity',
+    title: 'Verification Is the Scarcity',
+    excerpt: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable — and what Prospyr 305 is building on the same principle.',
+    date: 'July 18, 2026',
+    tag: 'Architecture',
+  },
+  {
     slug: 'when-creatives-meet-agents',
     title: 'When Creatives Meet Agents',
     excerpt: 'I spent a week at the Runway AI Art & Film Festival and a private event in Beverly Hills with artists, filmmakers, and producers. Here\'s what the creative world actually needs from agentic engineering — and why the next wave of AI isn\'t about replacing creatives, it\'s about engineering the infrastructure that lets them scale.',
