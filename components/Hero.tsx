@@ -1,13 +1,15 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { getLatestBlogPost } from '@/lib/blog';
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const latestPost = getLatestBlogPost();
 
   return (
     <section ref={ref} className="relative min-h-screen flex flex-col justify-center overflow-hidden">
@@ -80,10 +82,10 @@ export function Hero() {
             Hire my firm →
           </a>
           <a
-            href="/blog/who-guards-the-guardians"
+            href={`/blog/${latestPost.slug}`}
             className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors duration-200"
           >
-            Who Guards the Guardians? →
+            {latestPost.title} →
           </a>
         </motion.div>
 
