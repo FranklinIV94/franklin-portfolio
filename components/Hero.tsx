@@ -20,19 +20,6 @@ export function Hero() {
       </div>
 
       <motion.div style={{ y, opacity }} className="max-w-6xl mx-auto px-6 py-32 relative z-10">
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-6"
-        >
-          <span className="inline-flex items-center gap-2 font-mono text-xs text-accent bg-accent-dim border border-accent/20 px-3 py-1.5 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Available for projects
-          </span>
-        </motion.div>
-
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
