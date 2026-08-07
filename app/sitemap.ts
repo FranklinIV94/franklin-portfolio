@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { blogPosts } from '@/lib/blog';
 
 const BASE_URL = 'https://franklin.simplifyingbusinesses.com';
 
@@ -6,16 +7,6 @@ const cities = [
   'miami', 'tampa', 'cape-coral', 'punta-gorda', 'west-palm-beach',
   'fort-lauderdale', 'atlanta', 'dallas', 'manhattan', 'los-angeles',
   'san-diego', 'las-vegas', 'fort-myers',
-];
-
-const blogPosts = [
-  'research-intelligence-pipeline',
-  'pulled-punch',
-  'crypto-compliance-after-nexfundai',
-  'agentic-engineer',
-  'context-beats-compute',
-  'system-of-action',
-  'build-the-system',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -35,8 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map(slug => ({
-    url: `${BASE_URL}/blog/${slug}`,
+  // Derive from the single source of truth in lib/blog.ts so every published
+  // post — past and future — is always in the sitemap. No stale hardcode.
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map(post => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.7,

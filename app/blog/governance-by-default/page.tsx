@@ -1,20 +1,43 @@
 export const metadata = {
   title: 'Governance Is the Plumbing. Digestion Is the Moat. — Franklin J Bryant IV',
   description: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing, not a moat. The moat is digestion — making AI disappear into the outcome for businesses that will never touch a model.',
-  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Cloudflare OS', 'AI governance', 'agent orchestration', 'digestion layer', 'AI moat', 'Prospyr 305', 'AI transformation', 'enterprise AI', 'agent architecture'],
+  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Cloudflare OS', 'AI governance', 'agent orchestration', 'digestion layer', 'AI moat', 'Prospyr 305', 'AI transformation', 'enterprise AI', 'agent architecture', 'AI trust', 'AI security', 'AI adoption'],
+  alternates: {
+    canonical: '/blog/governance-by-default',
+  },
   openGraph: {
+    type: 'article',
+    siteName: 'Franklin J Bryant IV',
     title: 'Governance Is the Plumbing. Digestion Is the Moat.',
     description: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing. The real moat is digestion — making AI disappear into the outcome.',
-    images: ['/blog/governance-by-default-hero.jpg'],
+    url: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default',
+    images: [
+      {
+        url: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default-hero.jpg',
+        width: 1600,
+        height: 900,
+        alt: 'Green energy dome shielding a city at night — governance as invisible protection',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@theycallmeking_',
+    title: 'Governance Is the Plumbing. Digestion Is the Moat.',
+    description: 'Cloudflare OS proves governance is necessary — but not a moat. Digestion is the moat: making AI disappear into the outcome.',
+    images: ['https://franklin.simplifyingbusinesses.com/blog/governance-by-default-hero.jpg'],
   },
 };
 
 export default function GovernanceByDefault() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: 'Governance Is the Plumbing. Digestion Is the Moat.',
     description: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing, not a moat. The moat is digestion — making AI disappear into the outcome for businesses that will never touch a model.',
+    image: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default-hero.jpg',
+    inLanguage: 'en',
+    articleSection: 'Architecture',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -37,7 +60,7 @@ export default function GovernanceByDefault() {
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default',
-    keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Cloudflare OS', 'AI governance', 'agent orchestration', 'digestion layer', 'AI moat', 'Prospyr 305', 'AI transformation', 'enterprise AI'],
+    keywords: ['Franklin J Bryant IV', 'Cloudflare OS', 'AI governance', 'agent orchestration', 'digestion layer', 'AI moat', 'Prospyr 305', 'enterprise AI'],
   };
 
   return (
