@@ -11,8 +11,8 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'governance-by-default',
-    title: 'Governance by Default',
-    excerpt: 'Cloudflare OS proved the architecture matters more than the models. But governance is just the floor. The real moat is the digestion layer — making AI disappear into outcomes for people who will never touch a model.',
+    title: 'Governance Is the Plumbing. Digestion Is the Moat.',
+    excerpt: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing, not a moat. The real moat is digestion — making AI disappear into the outcome for businesses that will never touch a model.',
     date: 'August 7, 2026',
     dateISO: '2026-08-07',
     tag: 'Architecture',
