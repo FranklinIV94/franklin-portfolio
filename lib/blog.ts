@@ -10,6 +10,14 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'agent-to-retainer',
+    title: 'How to Turn an AI Agent Into a Retainer',
+    excerpt: 'Sell the role. Manage adoption. Prove the result. The four-layer offer that turns a one-off AI build into a recurring retainer — and the weekly ledger that keeps it renewed.',
+    date: 'August 7, 2026',
+    dateISO: '2026-08-07',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'governance-by-default',
     title: 'Governance Is the Plumbing. Digestion Is the Moat.',
     excerpt: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing, not a moat. The real moat is digestion — making AI disappear into the outcome for businesses that will never touch a model.',
