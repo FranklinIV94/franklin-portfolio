@@ -10,6 +10,14 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'governance-by-default',
+    title: 'Governance by Default',
+    excerpt: 'Cloudflare OS proved the architecture matters more than the models. But governance is just the floor. The real moat is the digestion layer — making AI disappear into outcomes for people who will never touch a model.',
+    date: 'August 7, 2026',
+    dateISO: '2026-08-07',
+    tag: 'Architecture',
+  },
+  {
     slug: 'the-team-they-never-hired',
     title: 'The Team They Never Hired',
     excerpt: "Every small business needs an AI team. None can afford one. The opportunity isn't building AI — it's becoming the AI team for one industry you understand better than anyone in the room.",
