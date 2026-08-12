@@ -190,9 +190,9 @@ export default function AgentToRetainer() {
           mindset:
         </p>
 
-        <div className="my-8 overflow-hidden rounded-xl border border-border">
-          <div className="grid grid-cols-1 sm:grid-cols-2">
-            <div className="border-b sm:border-b-0 sm:border-r border-border p-6">
+        <div className="my-8 rounded-xl border border-border overflow-x-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 min-w-0">
+            <div className="border-b sm:border-b-0 sm:border-r border-border p-6 overflow-hidden">
               <h3 className="font-display font-semibold text-xl text-red-400 mb-3 flex items-center gap-2">
                 <span className="text-red-400 font-bold">&times;</span> Do not
               </h3>
@@ -202,9 +202,9 @@ export default function AgentToRetainer() {
                 <li>Hope they use it on their own.</li>
               </ul>
             </div>
-            <div className="p-6">
+            <div className="p-6 overflow-hidden">
               <h3 className="font-display font-semibold text-xl text-accent mb-3 flex items-center gap-2">
-                <span className="text-accent font-bold">&check;</span> Do instead
+                <span className="text-accent font-bold">&#10003;</span> Do instead
               </h3>
               <ul className="space-y-2 text-gray-300">
                 <li>Coach adoption like it&apos;s on the payroll.</li>
