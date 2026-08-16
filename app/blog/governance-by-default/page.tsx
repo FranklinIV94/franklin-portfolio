@@ -1,66 +1,39 @@
 export const metadata = {
-  title: 'Governance Is the Plumbing. Digestion Is the Moat. — Franklin J Bryant IV',
-  description: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing, not a moat. The moat is digestion — making AI disappear into the outcome for businesses that will never touch a model.',
-  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Cloudflare OS', 'AI governance', 'agent orchestration', 'digestion layer', 'AI moat', 'Prospyr 305', 'AI transformation', 'enterprise AI', 'agent architecture', 'AI trust', 'AI security', 'AI adoption'],
-  alternates: {
-    canonical: '/blog/governance-by-default',
-  },
+  title: 'Governance by Default — Franklin J Bryant IV',
+  description: 'Cloudflare open-sourced their internal AI workspace. The architecture maps nearly 1:1 onto what we already spec\'d for our Ops Center. Here\'s what that validation means — and why we\'re borrowing patterns, not adopting their stack.',
+  keywords: ['Cloudflare OS', 'agent governance', 'enterprise AI', 'agent orchestration', 'zero-trust agents', 'AI security', 'Ops Center', 'Prospyr 305', 'cost-aware routing', 'human-in-the-loop', 'Gatekeepers', 'agent permissions'],
   openGraph: {
-    type: 'article',
-    siteName: 'Franklin J Bryant IV',
-    title: 'Governance Is the Plumbing. Digestion Is the Moat.',
-    description: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing. The real moat is digestion — making AI disappear into the outcome.',
-    url: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default',
-    images: [
-      {
-        url: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default-hero.jpg',
-        width: 1600,
-        height: 900,
-        alt: 'Green energy dome shielding a city at night — governance as invisible protection',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    creator: '@theycallmeking_',
-    title: 'Governance Is the Plumbing. Digestion Is the Moat.',
-    description: 'Cloudflare OS proves governance is necessary — but not a moat. Digestion is the moat: making AI disappear into the outcome.',
-    images: ['https://franklin.simplifyingbusinesses.com/blog/governance-by-default-hero.jpg'],
+    title: 'Governance by Default',
+    description: 'Cloudflare open-sourced their AI workspace. The architecture validates what we already built. Here\'s what to borrow and what to skip.',
+    images: ['/blog/governance-by-default-hero.jpg'],
   },
 };
 
 export default function GovernanceByDefault() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: 'Governance Is the Plumbing. Digestion Is the Moat.',
-    description: 'Cloudflare OS validates enterprise agent governance. But governance is plumbing, not a moat. The moat is digestion — making AI disappear into the outcome for businesses that will never touch a model.',
-    image: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default-hero.jpg',
-    inLanguage: 'en',
-    articleSection: 'Architecture',
+    '@type': 'Article',
+    headline: 'Governance by Default',
+    description: 'Cloudflare open-sourced their internal AI workspace. The architecture maps nearly 1:1 onto what we already spec\'d for our Ops Center. Here\'s what that validation means — and why we\'re borrowing patterns, not adopting their stack.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
+      alternateName: 'Franklin Jordan Bryant',
       url: 'https://franklin.simplifyingbusinesses.com',
-      sameAs: [
-        'https://github.com/FranklinIV94',
-        'https://www.linkedin.com/in/franklin-bryant-36115363/',
-        'https://x.com/theycallmeking_',
-        'https://www.crunchbase.com/organization/all-lines-business-solutions',
-      ],
     },
-    datePublished: '2026-08-07',
-    dateModified: '2026-08-07',
+    datePublished: '2026-08-06',
+    dateModified: '2026-08-06',
     publisher: {
       '@type': 'Organization',
       name: 'Franklin J Bryant IV',
+      alternateName: 'Franklin Jordan Bryant',
       logo: {
         '@type': 'ImageObject',
         url: 'https://franklin.simplifyingbusinesses.com/logo.png',
       },
     },
     mainEntityOfPage: 'https://franklin.simplifyingbusinesses.com/blog/governance-by-default',
-    keywords: ['Franklin J Bryant IV', 'Cloudflare OS', 'AI governance', 'agent orchestration', 'digestion layer', 'AI moat', 'Prospyr 305', 'enterprise AI'],
+    keywords: ['Cloudflare OS', 'agent governance', 'enterprise AI', 'agent orchestration', 'zero-trust agents', 'AI security', 'Ops Center', 'Prospyr 305'],
   };
 
   return (
@@ -73,213 +46,193 @@ export default function GovernanceByDefault() {
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">
-          Blog · August 7, 2026
+          Blog · August 6, 2026 · Architecture Validation
         </div>
         <h1 className="font-display font-bold text-4xl leading-tight tracking-tight sm:text-5xl text-white">
-          Governance Is the Plumbing. Digestion Is the Moat<span className="text-accent">.</span>
+          Governance by Default<span className="text-accent">.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
-          Cloudflare open-sourced Cloudflare OS during Agents Week. The tech press called it an AI workspace. That&apos;s underselling it — and missing the point. Governance is necessary infrastructure. But it&apos;s not the moat.
+          Cloudflare open-sourced their internal AI workspace last week. The architecture maps nearly 1:1 onto what we already spec'd for our Ops Center. That's not a coincidence. Here's what the validation means, what we're borrowing, and why we're not adopting their stack.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
           <span>·</span>
-          <span>COO, All Lines Business Solutions</span>
+          <span>COO, All Lines Business Solutions · Founder, Prospyr 305</span>
         </div>
       </header>
 
       {/* Hero image */}
-      <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
+      <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/governance-by-default-hero.jpg"
-          alt="Abstract visualization: a glowing green governance framework at the center, AI agents contained within permission boundaries, connector lines radiating outward"
+          alt="Governed agent architecture — layered security boundaries around an AI core"
           className="w-full"
         />
-        <figcaption className="mt-2 text-xs text-gray-500 text-center">
-          Governance is the scaffolding. Digestion is what you build with it.
+        <figcaption className="mt-3 text-center text-sm text-gray-400">
+          The architecture is the asset, not the implementation
         </figcaption>
       </figure>
 
       {/* Body */}
-      <div className="space-y-8 text-lg leading-relaxed text-gray-200">
+      <div className="space-y-6 text-gray-300 text-base leading-relaxed font-body">
 
-        <p>
-          When Cloudflare open-sourced Cloudflare OS during their Agents Week, the tech press called it an &ldquo;AI workspace.&rdquo; That&apos;s underselling it. What they actually built is an execution layer that grounds AI agents in a company&apos;s real context, systems, and approval flows — instead of letting them roam free against commercial models with exposed API keys.
-        </p>
-        <p>
-          That&apos;s not a workspace. That&apos;s a governance framework. And it validates an architecture we&apos;ve been building for months.
+        {/* The Setup */}
+        <p className="text-lg text-gray-200 leading-relaxed">
+          When a company like Cloudflare open-sources an internal platform, the default reaction is to deploy it. That's the wrong instinct here. Cloudflare OS is impressive engineering, but it's built on deep coupling to their own stack: <span className="text-white font-semibold">workerd, Workers, Durable Objects, Cloudflare Access</span>. Adopting it wholesale means buying into their ecosystem lock, stock, and barrel.
         </p>
 
-        <h2 className="font-display font-bold text-2xl text-white mt-12">The Problem Cloudflare OS Solves</h2>
-        <p>
-          Every company hitting AI adoption at scale hits the same wall: employees are pasting sensitive data into ChatGPT, API keys are leaking into agent contexts, and nobody knows which model is spending what. The workaround culture is worse than the problem — people build shadow automations with zero oversight because the &ldquo;approved&rdquo; path is too slow.
-        </p>
-        <p>
-          Cloudflare&apos;s answer is to make the approved path fast enough that nobody needs workarounds. Agents run in an isolated browser-based workspace with <code className="text-accent">workerd</code> runtime. They get zero permissions by default. Every access to an external system — GitHub, Google, Slack, Notion, Supabase — flows through a Gatekeeper: a governed connector that defines what an agent can see, what it can modify, and when a human needs to approve.
+        <p className="text-lg text-gray-200 leading-relaxed">
+          But here's what made me pay attention. The architecture they arrived at after months of internal usage, thousands of non-engineering users, and real production load, maps almost exactly onto the spec we wrote for our own Ops Center months ago. Independent confirmation from a team that solved the same problems we did is worth more than any vendor pitch.
         </p>
 
-        <h2 className="font-display font-bold text-2xl text-white mt-12">Where It Maps to What We&apos;re Building</h2>
+        {/* The Validation */}
+        <h2 className="font-display font-bold text-2xl text-white pt-8">The Validation</h2>
+
         <p>
-          Our Ops Center spec — the agent channel system on the ALBS Portal with Supabase — was drafted before Cloudflare OS was public. Looking at the two side by side, the overlap is almost 1:1:
+          Our Ops Center spec called for four things from the start:
         </p>
 
-        {/* Comparison table */}
-        <div className="my-8 overflow-x-auto">
-          <table className="w-full text-sm border border-border rounded-lg overflow-hidden">
+        <ul className="space-y-3 pl-0">
+          <li className="flex gap-3">
+            <span className="text-accent font-bold mt-0.5">1.</span>
+            <span><strong className="text-white">Agent channels with human oversight.</strong> Every agent action visible to a human operator. Not hidden in a terminal log, not buried in a Slack thread. A real channel with real visibility.</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-accent font-bold mt-0.5">2.</span>
+            <span><strong className="text-white">Per-agent budgets and model routing.</strong> Cheap models for routine work. Frontier models for complex reasoning. Cost tracked per agent, per task, per user. No runaway spend.</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-accent font-bold mt-0.5">3.</span>
+            <span><strong className="text-white">Governed access to internal systems.</strong> Agents don't get API keys in plaintext. They get scoped, audited, revocable permissions through a controlled intermediary.</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-accent font-bold mt-0.5">4.</span>
+            <span><strong className="text-white">Your own data, your own context.</strong> The agent workspace is grounded in company knowledge, not generic model training data. What your organization knows shapes what the agent does.</span>
+          </li>
+        </ul>
+
+        <p className="pt-4">
+          Cloudflare OS arrived at the same four pillars independently. Their names are different, the implementation is different, but the architecture is identical:
+        </p>
+
+        <div className="bg-surface border border-border rounded-xl p-6 my-6">
+          <table className="w-full text-sm">
             <thead>
-              <tr className="bg-accent/10">
-                <th className="px-4 py-3 text-left font-semibold text-accent">Cloudflare OS</th>
-                <th className="px-4 py-3 text-left font-semibold text-accent">Our Ops Center</th>
+              <tr className="border-b border-border">
+                <th className="text-left py-2 pr-4 text-accent font-semibold">Our Spec</th>
+                <th className="text-left py-2 text-accent font-semibold">Cloudflare OS</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              <tr className="hover:bg-white/5">
-                <td className="px-4 py-3 text-gray-300">Gatekeepers (governed connectors)</td>
-                <td className="px-4 py-3 text-gray-300">Agent permission scoping per integration</td>
+              <tr>
+                <td className="py-3 pr-4 text-gray-300">Agent channels + human approval</td>
+                <td className="py-3 text-gray-300">Async human-in-the-loop approval queue</td>
               </tr>
-              <tr className="hover:bg-white/5">
-                <td className="px-4 py-3 text-gray-300">Zero-trust by default</td>
-                <td className="px-4 py-3 text-gray-300">Context-layer audit findings (plaintext API keys → scoped access)</td>
+              <tr>
+                <td className="py-3 pr-4 text-gray-300">Governed API access layer</td>
+                <td className="py-3 text-gray-300">Gatekeepers (governed connectors)</td>
               </tr>
-              <tr className="hover:bg-white/5">
-                <td className="px-4 py-3 text-gray-300">Async human-in-the-loop approval</td>
-                <td className="px-4 py-3 text-gray-300">Approval queue in portal task board</td>
+              <tr>
+                <td className="py-3 pr-4 text-gray-300">Zero permissions until scoped</td>
+                <td className="py-3 text-gray-300">Zero-trust by default, scales to user auth</td>
               </tr>
-              <tr className="hover:bg-white/5">
-                <td className="px-4 py-3 text-gray-300">AI Gateway per-user/team spend tracking</td>
-                <td className="px-4 py-3 text-gray-300">Cost-tracking with Micro/Standard/Premium/Local routing tiers</td>
+              <tr>
+                <td className="py-3 pr-4 text-gray-300">Model routing tiers (Micro/Standard/Premium/Local)</td>
+                <td className="py-3 text-gray-300">AI Gateway rule-based routing + per-user spend tracking</td>
               </tr>
-              <tr className="hover:bg-white/5">
-                <td className="px-4 py-3 text-gray-300">Blueprints (reusable templates)</td>
-                <td className="px-4 py-3 text-gray-300">Skill templates in OpenClaw</td>
+              <tr>
+                <td className="py-3 pr-4 text-gray-300">Company context shapes agent behavior</td>
+                <td className="py-3 text-gray-300">Curated context + skills library per organization</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <p>
-          This isn&apos;t us copying their homework. It&apos;s independent convergence on the same architecture — which is the strongest validation you can get. When two teams build toward the same problem from different starting points and land on the same structure, the structure is probably right.
+          When two teams solve the same problem independently and arrive at the same architecture, that's not coincidence. That's the problem space telling you what the answer looks like.
         </p>
 
-        <h2 className="font-display font-bold text-2xl text-white mt-12">What We&apos;re Borrowing (Not Adopting)</h2>
+        {/* What We're Borrowing */}
+        <h2 className="font-display font-bold text-2xl text-white pt-8">What We're Borrowing</h2>
+
         <p>
-          Cloudflare OS is deeply coupled to their stack: <code className="text-accent">workerd</code>, Workers, Durable Objects, Cloudflare Access. Deploying it wholesale means buying into their ecosystem. That&apos;s not our path. But four patterns are worth folding into what we already have:
+          Four patterns from Cloudflare OS are worth folding into our Ops Center without adopting their stack:
         </p>
 
-        <div className="space-y-6 mt-6">
-          <div className="border-l-2 border-accent/40 pl-6">
-            <h3 className="font-semibold text-white text-lg">1. Async Human-in-the-Loop Approval Queue</h3>
-            <p className="mt-2 text-gray-300">
-              Cloudflare OS doesn&apos;t hard-stop a workflow when an agent needs permission. It simulates the action, queues it, and batches approvals. This keeps velocity without losing oversight. Our portal task board already has the structure for this — we just need to wire agent actions into it as approval items.
-            </p>
-          </div>
-          <div className="border-l-2 border-accent/40 pl-6">
-            <h3 className="font-semibold text-white text-lg">2. Gatekeeper-Style Governed Connectors</h3>
-            <p className="mt-2 text-gray-300">
-              Our context-layer audit flagged plaintext API keys in tool configs leaking into every lightContext session. The Gatekeeper pattern is the fix: a connector layer that mediates agent access to external systems with explicit read/modify/approve rules. No agent gets a raw API key. Every external call goes through a named, audited connector.
-            </p>
-          </div>
-          <div className="border-l-2 border-accent/40 pl-6">
-            <h3 className="font-semibold text-white text-lg">3. Zero-Permission-by-Default Agents</h3>
-            <p className="mt-2 text-gray-300">
-              Agents start with nothing. Access scales to exactly what the active user is authorized for. This is the right default — the opposite of &ldquo;give the agent admin and hope for the best.&rdquo;
-            </p>
-          </div>
-          <div className="border-l-2 border-accent/40 pl-6">
-            <h3 className="font-semibold text-white text-lg">4. Blueprint Template Reuse</h3>
-            <p className="mt-2 text-gray-300">
-              When an agent produces a useful workflow, save it as a template others can deploy. We already do this with OpenClaw skills. Formalizing it as a reuse pattern across the org is a natural next step.
-            </p>
-          </div>
-        </div>
-
-        {/* Mid-article image: connectors */}
-        <figure className="my-12 overflow-hidden rounded-2xl border border-border">
-          <img
-            src="/blog/governance-by-default-connectors.jpg"
-            alt="Abstract: a gateway layer of glowing green nodes between AI agents and external systems, with approval indicators on data flows"
-            className="w-full"
-          />
-          <figcaption className="mt-2 text-xs text-gray-500 text-center">
-            Every external call flows through a named, audited connector. No agent gets a raw API key.
-          </figcaption>
-        </figure>
-
-        <h2 className="font-display font-bold text-2xl text-white mt-12">What We&apos;re Doing Differently</h2>
+        <h3 className="font-display font-bold text-lg text-white pt-4">1. Async Approval Queue</h3>
         <p>
-          Cloudflare OS is built for the Cloudflare ecosystem. Our stack is OpenClaw + Supabase + portal + local Ollama models. That means:
+          Cloudflare's approach is elegant. Instead of hard-stopping a workflow every time an agent needs human permission, the agent simulates the action and queues it for batch approval. The human reviews a queue of proposed actions and approves or rejects them in bulk. This keeps agent workflows moving while keeping humans in control. We've been doing this manually with Discord pings. Formalizing it as a proper queue is the next step.
         </p>
-        <ul className="space-y-3 pl-6 mt-4">
-          <li><strong className="text-accent">Model routing is ours.</strong> Our tiered routing (Micro/Standard/Premium/Local) runs through our own gateway, not Cloudflare&apos;s AI Gateway. We control cost per agent, per task, per client.</li>
-          <li><strong className="text-accent">Data stays ours.</strong> No <code className="text-accent">workerd</code>, no Workers, no Durable Objects. Our agents run on infrastructure we control.</li>
-          <li><strong className="text-accent">The portal is the front end.</strong> Not a browser workspace — a real multi-tenant portal where clients, agents, and humans all interact through the same channel system.</li>
-        </ul>
 
-        <h2 className="font-display font-bold text-2xl text-white mt-12">Governance Is the Plumbing. Digestion Is the Moat.</h2>
+        <h3 className="font-display font-bold text-lg text-white pt-4">2. Gatekeeper-Style Governed Connectors</h3>
         <p>
-          Here&apos;s where the framing diverges. Cloudflare OS is a governance play — and governance is necessary infrastructure. But governance is plumbing, not a moat. The tech layer (models, orchestration, tools) is commoditizing fast. Open weights, cheap inference, DeepSeek and Ollama — everyone has access to the same engines. Governance frameworks will commoditize too.
+          This directly addresses a finding from our own security audit. We identified plaintext API keys in our tool configuration leaking into every light-context agent session. Cloudflare's Gatekeeper pattern, connectors that mediate agent access to external systems with defined read/modify/approve rules, is exactly the fix. Agents never touch raw credentials. The connector handles auth, scopes access, and logs every call. We build this into our existing Supabase and portal layer, not on Cloudflare Workers.
         </p>
+
+        <h3 className="font-display font-bold text-lg text-white pt-4">3. Zero-Permission-by-Default Agents</h3>
         <p>
-          What doesn&apos;t commoditize is <strong className="text-accent">digestion</strong>: making AI trustworthy, accountable, and invisible for people who will never touch a model. That&apos;s the moat. And governance is one step toward it — the plumbing that makes digestion possible.
+          Every agent starts with zero access. Permissions are granted incrementally, scoped to the active user's authorization level. If a junior employee triggers an agent, that agent has junior-level access. If an executive triggers it, it has executive access. The agent's permissions are a subset of the human's, never a superset. This is the correct security model and it's going into our Ops Center spec as a hard requirement.
         </p>
+
+        <h3 className="font-display font-bold text-lg text-white pt-4">4. Blueprint Template Reuse</h3>
         <p>
-          Cloudflare builds governance for the ecosystem. We build governance as one layer in a stack designed to make AI disappear into the outcome. The four moves that compound:
+          When someone in the organization figures out a better way to do something, that workflow gets saved as a reusable template. Other people can deploy it with one click. This is the same principle behind our skill system in OpenClash, but Cloudflare's implementation makes it accessible to non-technical users through a browser interface. Worth studying for our portal UX.
         </p>
 
-        {/* Mid-article image: moat/digestion */}
-        <figure className="my-12 overflow-hidden rounded-2xl border border-border">
-          <img
-            src="/blog/governance-by-default-moat.jpg"
-            alt="Abstract: two distinct layers — commoditized gray tech blocks at the bottom, glowing green digestion layer at the top with human silhouettes receiving plain-language results"
-            className="w-full"
-          />
-          <figcaption className="mt-2 text-xs text-gray-500 text-center">
-            The tech layer commoditizes. The digestion layer compounds. We own the digestion layer.
-          </figcaption>
-        </figure>
+        {/* What We're Not Doing */}
+        <h2 className="font-display font-bold text-2xl text-white pt-8">What We're Not Doing</h2>
 
-        <ol className="space-y-6 pl-6 mt-6 list-decimal">
-          <li>
-            <strong className="text-white">Translate, don&apos;t explain.</strong> Users state a need in plain terms → get a trusted result → no concept of &ldquo;agent&rdquo; required. Governance ensures the translation is safe. Digestion makes the user never need to know it happened.
-          </li>
-          <li>
-            <strong className="text-white">The receipt pattern.</strong> Every automated action leaves a plain-language record: what was done, why, what it cost, who to call if it&apos;s wrong. Governance produces the audit trail. Digestion turns it into something a small business owner actually reads.
-          </li>
-          <li>
-            <strong className="text-white">Human escalation as a feature.</strong> A human is always one step away. Governance defines when escalation triggers. Digestion makes the handoff feel seamless — the user never experiences &ldquo;the AI failed,&rdquo; they experience &ldquo;my provider stepped in.&rdquo;
-          </li>
-          <li>
-            <strong className="text-white">Opaque competence as the goal.</strong> When AI disappears into the outcome, the user never needs to become a user. &ldquo;Just handles my stuff&rdquo; is full adoption. Governance makes that safe enough to promise. Digestion makes it real.
-          </li>
-        </ol>
-
-        <p className="mt-8">
-          This is why we don&apos;t compete at the tech layer. We don&apos;t sell &ldquo;AI.&rdquo; We don&apos;t sell &ldquo;governance.&rdquo; We sell the outcome — payroll handled, books closed, compliance filed — and the AI is invisible infrastructure underneath. Cloudflare&apos;s governance framework validates the plumbing. Our moat is what we build on top of it.
-        </p>
-
-        <h2 className="font-display font-bold text-2xl text-white mt-12">The Takeaway</h2>
         <p>
-          Cloudflare OS is the first credible open-source reference implementation for enterprise agent governance. It confirms that the architecture matters more than the models — that the scaffolding around AI (permissions, approval flows, cost tracking, connector governance) is where the real engineering work lives.
-        </p>
-        <p>
-          But governance is table stakes. The moat is digestion — the layer that makes AI trustworthy enough to disappear into the outcome for businesses that will never care about models. We&apos;re building that, vendor-neutral, on infrastructure we own, for industries where trust is the deepest barrier to entry.
+          We're not deploying Cloudflare OS. Three reasons:
         </p>
 
-        <p className="text-2xl font-display text-white border-l-4 border-accent pl-6 italic mt-12">
-          Governance is the plumbing. Digestion is the moat. We&apos;re building both.
+        <p>
+          <strong className="text-white">Stack coupling.</strong> Cloudflare OS is built on workerd, Workers, Durable Objects, and Cloudflare Access. Every component is Cloudflare-owned. Adopting it means migrating our entire infrastructure to Cloudflare's runtime. We run on Supabase, OpenClaw, and standard Linux. That's our stack. Rewriting everything to fit their runtime would be engineering for vendor lock-in, not for capability.
+        </p>
+
+        <p>
+          <strong className="text-white">Data residency.</strong> Our clients include medical practices, accounting firms, and financial services. Data residency and HIPAA compliance are non-negotiable. Cloudflare OS runs on Cloudflare's edge network. Our Ops Center runs on infrastructure we control, on servers we can point to on a map.
+        </p>
+
+        <p>
+          <strong className="text-white">We're already most of the way there.</strong> The validation is the point. Cloudflare spent months and serious engineering effort arriving at architecture we spec'd on a whiteboard. The patterns they validated are the patterns we're already building. We don't need their implementation to benefit from their confirmation that the architecture is correct.
+        </p>
+
+        {/* The Bigger Picture */}
+        <h2 className="font-display font-bold text-2xl text-white pt-8">The Bigger Picture</h2>
+
+        <p>
+          The enterprise AI conversation has shifted. Six months ago, companies were asking "how do we use AI?" Now they're asking "how do we govern AI we're already using?" That's the right question. Employees are pasting sensitive data into ChatGPT. Teams are building agent workflows with raw API keys in environment variables. Security teams are catching up to usage that already happened.
+        </p>
+
+        <p>
+          Cloudflare built their OS because they had the same problem internally. Their employees were using insecure workarounds to get AI access. Broad API keys were getting exposed to commercial models. The solution wasn't to ban AI usage. The solution was to build a governed platform where AI usage is safe by default.
+        </p>
+
+        <p>
+          That's the same thesis behind our Ops Center and our AIIO Assessment framework. You don't stop AI adoption. You architect for it. Governance isn't a brake on innovation. It's the thing that makes innovation safe enough to actually deploy in a business context.
+        </p>
+
+        <p>
+          The companies that figure this out first, that build governed agent infrastructure before their employees force the issue through shadow AI usage, are the ones that will capture the productivity gains without the security incidents. That's the bet we're making with Prospyr 305. Cloudflare just made the same bet from a different starting point.
+        </p>
+
+        {/* The Takeaway */}
+        <h2 className="font-display font-bold text-2xl text-white pt-8">The Takeaway</h2>
+
+        <p>
+          If you're building agent infrastructure for your company, the architecture is already converging. Four pillars: governed access, cost-aware routing, human-in-the-loop approval, and company-grounded context. Whether you build it on Cloudflare's stack or your own, the shape of the solution is the same.
+        </p>
+
+        <p>
+          We're building ours on our own. Not because Cloudflare's is bad. Because the architecture is the asset, not the implementation. And owning your architecture means you can switch implementations without starting over.
+        </p>
+
+        <p className="pt-4 text-gray-400 italic">
+          Franklin J Bryant IV is COO of All Lines Business Solutions and founder of Prospyr 305. He builds governed agent infrastructure for Florida businesses that can't afford to get AI security wrong.
         </p>
 
       </div>
-
-      {/* Footer */}
-      <footer className="mt-16 pt-8 border-t border-gray-700 text-sm text-gray-400">
-        <p>
-          <strong className="text-white">Franklin J Bryant IV</strong> is COO of All Lines Business Solutions and founder of Prospyr 305, building AI systems that disappear into the outcome for small and mid-size businesses.
-        </p>
-        <p className="mt-4">
-          This piece analyzes Cloudflare OS (open-sourced during Agents Week 2026) alongside our internal Ops Center architecture and the Prospyr 305 moat thesis on AI digestion as a competitive moat.
-        </p>
-      </footer>
     </article>
   );
 }
