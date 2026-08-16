@@ -29,3 +29,6 @@ yarn-error.log*
 *.pem
 .vercel
 *.bak
+
+# gitnexus index metadata (regenerable)
+.gitnexus/
