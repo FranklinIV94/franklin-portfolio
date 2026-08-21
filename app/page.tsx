@@ -133,10 +133,10 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '7', label: 'AI agents running' },
-                  { value: '18+', label: 'Projects live in production' },
+                  { value: '14', label: 'AI agents running' },
+                  { value: '19', label: 'Projects in production' },
                   { value: '24/7', label: 'Autonomous operations' },
-                  { value: '9', label: 'Industries served' },
+                  { value: '26', label: 'Industries served' },
                 ].map(({ value, label }) => (
                   <div key={label} className="bg-surface border border-border rounded-xl p-5">
                     <div className="font-display font-bold text-3xl text-accent mb-1">{value}</div>
@@ -196,15 +196,15 @@ export default function Home() {
                   name: 'Construction Automation Platform',
                   description: 'Full org build-out and operations platform for a $140M interior design + construction company. 3D kitchen/bathroom editor, financial model, Florida construction compliance, AI-augmented project management.',
                   slug: 'construction-automation-1',
-                  timeline: 'Ongoing',
+                  timeline: 'Present',
                   role: 'COO & Architect',
                   where: 'South Florida',
                 },
               {
                   name: 'Client Onboarding Portal',
-                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, OSINT enrichment pipeline (Apollo, Sherlock, GhostTrack), dual Outlook calendar sync, onboarding wizard, and Stripe billing. 147 leads, 21 active clients, $7,067 MRR managed.',
+                  description: 'End-to-end client lifecycle automation — intake forms create CRM leads in under 5 seconds, OSINT enrichment pipeline (Apollo, Sherlock, GhostTrack), dual Outlook calendar sync, onboarding wizard, and Stripe billing. 100 leads + 50 active clients, $7,067 MRR managed.',
                   slug: 'albs-portal',
-                  timeline: 'March–Present',
+                  timeline: 'Present',
                   role: 'Sole Architect & Developer',
                   where: 'onboarding.simplifyingbusinesses.com',
                 },
