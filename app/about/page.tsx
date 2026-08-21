@@ -42,7 +42,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6 }}
               >
                 <span className="font-mono text-xs text-accent mb-3 block">About</span>
-                <h1 className="font-display font-bold text-5xl md:text-6xl leading-tight mb-8">
+                <h1 className="font-display font-bold text-4xl md:text-5xl leading-tight mb-8">
                   Franklin J Bryant IV<span className="text-accent">.</span>
                 </h1>
                 <p className="text-lg text-gray-400 mb-8">

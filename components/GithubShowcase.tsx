@@ -56,7 +56,7 @@ export function GithubShowcase() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <span className="font-mono text-xs text-accent mb-3 block">Open Source</span>
-            <h2 className="font-display font-bold text-4xl md:text-5xl">
+            <h2 className="font-display font-bold text-3xl md:text-4xl">
               GitHub<span className="text-accent">.</span>
             </h2>
           </div>

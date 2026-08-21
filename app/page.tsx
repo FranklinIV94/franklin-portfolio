@@ -38,10 +38,8 @@ export default function Home() {
           >
             <div>
               <span className="font-mono text-xs text-accent mb-3 block">Selected Work</span>
-              <h2 className="font-display font-bold text-4xl md:text-5xl">
-                Things I{"'"}ve
-                <br />
-                <span className="text-muted">built.</span>
+              <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight">
+                Things I{"'"}ve <span className="text-muted">built.</span>
               </h2>
             </div>
             <Link
@@ -113,7 +111,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="font-mono text-xs text-accent mb-3 block">About</span>
-                <h2 className="font-display font-bold text-4xl md:text-5xl leading-tight mb-6">
+                <h2 className="font-display font-bold text-2xl md:text-3xl leading-snug mb-6">
                   I architect systems and direct AI execution.
                 </h2>
                 <p className="text-muted leading-relaxed mb-8">
@@ -159,10 +157,8 @@ export default function Home() {
               className="mb-12"
             >
               <span className="font-mono text-xs text-accent mb-3 block">Active Engagements</span>
-              <h2 className="font-display font-bold text-4xl md:text-5xl">
-                What I{"'"}m
-                <br />
-                <span className="text-muted">building now.</span>
+              <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight">
+                What I{"'"}m <span className="text-muted">building now.</span>
               </h2>
             </motion.div>
 
@@ -293,7 +289,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
+                <h2 className="font-display font-bold text-2xl md:text-3xl leading-snug mb-6">
                   Let{"'"}s build something that runs itself.
                 </h2>
                 <p className="text-muted text-lg mb-10 max-w-md">

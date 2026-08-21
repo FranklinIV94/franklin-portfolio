@@ -38,7 +38,7 @@ export function ProjectCard({ project, index, featured = false, className = '' }
               <div className="flex items-center gap-3 mb-2 flex-wrap">
                 <h3
                   className={`font-display font-medium tracking-[-0.01em] text-white group-hover:text-accent transition-colors duration-300 ${
-                    featured ? 'text-3xl md:text-4xl' : 'text-[22px]'
+                    featured ? 'text-2xl md:text-3xl' : 'text-xl'
                   }`}
                 >
                   {project.title}
