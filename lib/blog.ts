@@ -10,6 +10,14 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'the-accountability-moat',
+    title: 'The Accountability Moat: Why AI Doesn\'t Kill Competitive Advantage, It Moves It',
+    excerpt: 'AI doesn\'t kill competitive advantage. It moves the moat to the one thing models can\'t own: accountability. Your clients are already checking your work against AI right now.',
+    date: 'August 19, 2026',
+    dateISO: '2026-08-19',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'agent-to-retainer',
     title: 'How to Turn an AI Agent Into a Retainer',
     excerpt: 'Sell the role. Manage adoption. Prove the result. The four-layer offer that turns a one-off AI build into a recurring retainer — and the weekly ledger that keeps it renewed.',
