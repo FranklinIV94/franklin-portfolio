@@ -52,12 +52,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       '@type': 'CollegeOrUniversity',
       name: 'Florida Atlantic University',
     },
-    worksFor: {
-      '@type': 'Organization',
-      name: 'All Lines Business Solutions',
-      alternateName: 'ALBS',
-      url: 'https://simplifyingbusinesses.com',
-    },
+    worksFor: [
+      {
+        '@type': 'Organization',
+        name: 'All Lines Business Solutions',
+        alternateName: 'ALBS',
+        url: 'https://simplifyingbusinesses.com',
+      },
+      {
+        '@type': 'Organization',
+        name: 'Prospyr 305',
+        alternateName: 'P305',
+        url: 'https://prospyr305.com',
+      },
+    ],
+    founder: [
+      {
+        '@type': 'Organization',
+        name: 'All Lines Business Solutions',
+        alternateName: 'ALBS',
+        url: 'https://simplifyingbusinesses.com',
+      },
+      {
+        '@type': 'Organization',
+        name: 'Prospyr 305',
+        alternateName: 'P305',
+        url: 'https://prospyr305.com',
+      },
+    ],
   };
 
   return (
@@ -65,6 +87,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="canonical" href="https://franklin.simplifyingbusinesses.com" />
+        <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
@@ -74,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="noise-overlay" aria-hidden="true" />
         <Navbar />
         {children}
+        <div google-add-preferred-source-btn data-theme="dark" />
         <Footer />
       </body>
     </html>
