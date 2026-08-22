@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Build the System, Not the Prompt — Franklin J Bryant IV",
+  title: "Build the System, Not the Prompt | Franklin J Bryant IV",
   description: "The week AI research converged on one architecture: specialized components, completion states, persistent memory, and guardrails at boundaries. Here's what it means for business.",
   openGraph: {
     title: "Build the System, Not the Prompt",
@@ -58,7 +58,7 @@ export default function BuildTheSystem() {
           <span className="text-accent">Not the Prompt.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
-          The week AI research converged on one architecture — and why we&apos;re already running it.
+          The week AI research converged on one architecture, and why we&apos;re already running it.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -71,7 +71,7 @@ export default function BuildTheSystem() {
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/build-the-system-hero.jpg"
-          alt="Interconnected AI agent architecture — specialized components with persistent memory and guardrails"
+          alt="Interconnected AI agent architecture: specialized components with persistent memory and guardrails"
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -82,19 +82,19 @@ export default function BuildTheSystem() {
       {/* Intro */}
       <div className="space-y-6 text-gray-300 text-base leading-relaxed font-body">
         <p className="text-lg text-gray-200 leading-relaxed">
-          Something unusual happened this week in AI research. Not one breakthrough — a convergence.
+          Something unusual happened this week in AI research. Not one breakthrough. A convergence.
         </p>
 
         <p>
-          Twelve papers, posts, and deep dives crossed our research desk. Different authors, different domains, different models. But every single piece pointed to the same architecture:
+          Twelve papers, posts, and deep dives crossed our research desk. Different authors, different domains, different models. But every single piece pointed to the same architecture.
         </p>
 
         <ul className="space-y-2 ml-4">
           <li><strong className="text-white">Specialized components</strong> that each do one thing well</li>
-          <li><strong className="text-white">Multi-pass validation</strong> — not single-shot generation</li>
-          <li><strong className="text-white">Completion-state driven</strong> — define what &quot;done&quot; looks like, iterate until convergence</li>
-          <li><strong className="text-white">Persistent memory</strong> — not starting from zero every time</li>
-          <li><strong className="text-white">Guardrails at boundaries</strong> — validate hard, fail loud, least privilege</li>
+          <li><strong className="text-white">Multi-pass validation</strong>, not single-shot generation</li>
+          <li><strong className="text-white">Completion-state driven</strong>: define what &quot;done&quot; looks like, iterate until convergence</li>
+          <li><strong className="text-white">Persistent memory</strong>, not starting from zero every time</li>
+          <li><strong className="text-white">Guardrails at boundaries</strong>: validate hard, fail loud, least privilege</li>
         </ul>
 
         <p>
@@ -105,7 +105,7 @@ export default function BuildTheSystem() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The Papers</h2>
 
         <p>
-          Here&apos;s what the research actually said — and what it means for business.
+          Here&apos;s what the research actually said, and what it means for business.
         </p>
 
         {/* Table: Papers */}
@@ -158,7 +158,7 @@ export default function BuildTheSystem() {
               </tr>
               <tr className="border-b border-border/50">
                 <td className="px-4 py-3 font-mono text-accent">7</td>
-                <td className="px-4 py-3 text-white font-semibold">CUSP — Forecasting Scientific Progress</td>
+                <td className="px-4 py-3 text-white font-semibold">CUSP: Forecasting Scientific Progress</td>
                 <td className="px-4 py-3">Models recognize plausible directions but <em>cannot forecast outcomes</em>. Systematic overconfidence.</td>
                 <td className="px-4 py-3">AI can surface directions. It can&apos;t predict results. Trust it for exploration, not prophecy.</td>
               </tr>
@@ -188,7 +188,7 @@ export default function BuildTheSystem() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The Hotz-Karpathy Resolution</h2>
 
         <p>
-          George Hotz published &quot;The Eternal Sloptember&quot; — a blistering critique that AI coding agents produce bloated, brittle, hard-to-audit code. Andrej Karpathy countered that agents boost productivity 10x+ — but admitted the output &quot;gives me a heart attack, it&apos;s really gross.&quot;
+          George Hotz published &quot;The Eternal Sloptember&quot;, a blistering critique that AI coding agents produce bloated, brittle, hard-to-audit code. Andrej Karpathy countered that agents boost productivity 10x+, but admitted the output &quot;gives me a heart attack, it&apos;s really gross.&quot;
         </p>
 
         <p>
@@ -196,7 +196,7 @@ export default function BuildTheSystem() {
         </p>
 
         <p>
-          Hotz&apos;s nightmare — one model producing, testing, and reviewing its own output — is exactly what happens without a pipeline. Of course the code is gross. No one is checking the work but the same entity that produced it.
+          Hotz&apos;s nightmare, one model producing, testing, and reviewing its own output, is exactly what happens without a pipeline. Of course the code is gross. No one is checking the work but the same entity that produced it.
         </p>
 
         <p>
@@ -211,11 +211,11 @@ export default function BuildTheSystem() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">Most Agents Are Built Backwards</h2>
 
         <p>
-          Benjamin Nweke&apos;s article — &quot;Most AI Agents Fail in Production Because They&apos;re Built Backwards&quot; — is the most production-grounded architecture piece I read this year. Not theory. Someone who shipped, broke, debugged for two days, and rebuilt.
+          Benjamin Nweke&apos;s article, &quot;Most AI Agents Fail in Production Because They&apos;re Built Backwards&quot;, is the most production-grounded architecture piece I read this year. Not theory. Someone who shipped, broke, debugged for two days, and rebuilt.
         </p>
 
         <p>
-          His thesis: <strong className="text-white">Agents don&apos;t fail because the model isn&apos;t good enough. They fail because the system around the model was designed backwards — goal first, architecture as an afterthought.</strong>
+          His thesis: <strong className="text-white">Agents don&apos;t fail because the model isn&apos;t good enough. They fail because the system around the model was designed backwards: goal first, architecture as an afterthought.</strong>
         </p>
 
         <p>
@@ -235,11 +235,11 @@ export default function BuildTheSystem() {
               <tr className="border-b border-border/50">
                 <td className="px-4 py-3 text-white font-semibold">Decision</td>
                 <td className="px-4 py-3">Decide what to do next given prepared context</td>
-                <td className="px-4 py-3">Model does parsing, memory management, AND retries — too many jobs</td>
+                <td className="px-4 py-3">Model does parsing, memory management, AND retries: too many jobs</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="px-4 py-3 text-white font-semibold">Orchestration</td>
-                <td className="px-4 py-3">Conditionals, routing, state machines — just code</td>
+                <td className="px-4 py-3">Conditionals, routing, state machines. Just code.</td>
                 <td className="px-4 py-3">Framework magic. Two-day debugging sessions for a retry bug that should be three lines.</td>
               </tr>
               <tr className="border-b border-border/50">
@@ -250,7 +250,7 @@ export default function BuildTheSystem() {
               <tr className="border-b border-border/50">
                 <td className="px-4 py-3 text-white font-semibold">Memory &amp; State</td>
                 <td className="px-4 py-3">What the system knows, and whether it&apos;s current</td>
-                <td className="px-4 py-3">Stale state produces hallucinations that aren&apos;t model problems — they&apos;re systems problems</td>
+                <td className="px-4 py-3">Stale state produces hallucinations that aren&apos;t model problems. They&apos;re systems problems.</td>
               </tr>
             </tbody>
           </table>
@@ -264,7 +264,7 @@ export default function BuildTheSystem() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The Completion State Pattern</h2>
 
         <p>
-          Rahul&apos;s &quot;20 Opus 4.8 Workflows That Make Money While You Sleep&quot; — 222K views, 603 bookmarks — is the most practical articulation of this architecture. The core concept: <strong className="text-white">completion states, not prompts.</strong>
+          Rahul&apos;s &quot;20 Opus 4.8 Workflows That Make Money While You Sleep&quot; (222K views, 603 bookmarks) is the most practical articulation of this architecture. The core concept: <strong className="text-white">completion states, not prompts.</strong>
         </p>
 
         <p>
@@ -272,7 +272,7 @@ export default function BuildTheSystem() {
         </p>
 
         <p>
-          This maps directly to what we&apos;re building. Our pipeline — Planner → Coder → Tester → Reviewer with a SHIP verdict — is completion-state-driven work. The Tester doesn&apos;t stop until all tests pass. The Reviewer doesn&apos;t approve until quality gates are met. The pattern extends from code to any business workflow:
+          This maps directly to what we&apos;re building. Our pipeline (Planner, Coder, Tester, Reviewer with a SHIP verdict) is completion-state-driven work. The Tester doesn&apos;t stop until all tests pass. The Reviewer doesn&apos;t approve until quality gates are met. The pattern extends from code to any business workflow:
         </p>
 
         <div className="my-10 overflow-x-auto rounded-xl border border-border">
@@ -312,7 +312,7 @@ export default function BuildTheSystem() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The 7 Basics Most People Are Missing</h2>
 
         <p>
-          Karpathy&apos;s working system — 258K views — distills to seven infrastructure patterns. Not secret prompts. Infrastructure.
+          Karpathy&apos;s working system (258K views) distills to seven infrastructure patterns. Not secret prompts. Infrastructure.
         </p>
 
         <div className="my-10 space-y-4">
@@ -339,7 +339,7 @@ export default function BuildTheSystem() {
               <span className="font-mono text-accent text-sm font-bold">03</span>
               <div>
                 <p className="text-white font-semibold">Build a Three-Layer System</p>
-                <p className="text-gray-400 text-sm mt-1">Raw notes → processed wiki → compressed config. New info drops in raw, gets processed into wiki, config stays lean. 30 min/day saved, compounding.</p>
+                <p className="text-gray-400 text-sm mt-1">Raw notes to processed wiki to compressed config. New info drops in raw, gets processed into wiki, config stays lean. 30 min/day saved, compounding.</p>
               </div>
             </div>
           </div>
@@ -366,7 +366,7 @@ export default function BuildTheSystem() {
               <span className="font-mono text-accent text-sm font-bold">06</span>
               <div>
                 <p className="text-white font-semibold">Small Steps, Evaluate, Commit</p>
-                <p className="text-gray-400 text-sm mt-1">Load full context → 2-3 options for next small step → pick one → evaluate/test/commit → repeat. Never ask for everything in one prompt.</p>
+                <p className="text-gray-400 text-sm mt-1">Load full context, pick 2-3 options for next small step, pick one, evaluate/test/commit, repeat. Never ask for everything in one prompt.</p>
               </div>
             </div>
           </div>
@@ -385,7 +385,7 @@ export default function BuildTheSystem() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">APIs Built for Humans Break Under Agent Use</h2>
 
         <p>
-          freeCodeCamp&apos;s deep dive on API design for AI agents hits a nerve: <strong className="text-white">APIs built for humans break under agent use.</strong> Not because agents are dumb — because APIs were never designed for a consumer that can&apos;t read Slack threads or infer &quot;this 404 usually means you forgot the workspace ID.&quot;
+          freeCodeCamp&apos;s deep dive on API design for AI agents hits a nerve: <strong className="text-white">APIs built for humans break under agent use.</strong> Not because agents are dumb. Because APIs were never designed for a consumer that can&apos;t read Slack threads or infer &quot;this 404 usually means you forgot the workspace ID.&quot;
         </p>
 
         <p>
@@ -396,12 +396,12 @@ export default function BuildTheSystem() {
           <div className="bg-surface border border-accent/30 rounded-xl p-5">
             <p className="text-accent font-semibold font-mono text-sm">PRINCIPLE 1</p>
             <p className="text-white font-semibold mt-1">Deterministic Behavior</p>
-            <p className="text-gray-400 text-sm mt-2">Same inputs + same state = predictable outcomes. No hidden magic, no silent coercion. Model lifecycle explicitly: draft → submitted → approved. Not an overloaded status field that means different things in different contexts.</p>
+            <p className="text-gray-400 text-sm mt-2">Same inputs + same state = predictable outcomes. No hidden magic, no silent coercion. Model lifecycle explicitly: draft, submitted, approved. Not an overloaded status field that means different things in different contexts.</p>
           </div>
           <div className="bg-surface border border-accent/30 rounded-xl p-5">
             <p className="text-accent font-semibold font-mono text-sm">PRINCIPLE 2</p>
             <p className="text-white font-semibold mt-1">Strong Schemas</p>
-            <p className="text-gray-400 text-sm mt-2">OpenAPI as contract, not souvenir. Every operation explains WHEN to use it. Every property has a realistic example. All responses documented — 4xx and 5xx with stable JSON shapes. Verbose is fine. Vague is death.</p>
+            <p className="text-gray-400 text-sm mt-2">OpenAPI as contract, not souvenir. Every operation explains WHEN to use it. Every property has a realistic example. All responses documented: 4xx and 5xx with stable JSON shapes. Verbose is fine. Vague is death.</p>
           </div>
           <div className="bg-surface border border-accent/30 rounded-xl p-5">
             <p className="text-accent font-semibold font-mono text-sm">PRINCIPLE 3</p>
@@ -414,7 +414,7 @@ export default function BuildTheSystem() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">Small Models Just Got a Lot More Useful</h2>
 
         <p>
-          NVIDIA&apos;s MOPD paper (Multi-Teacher On-Policy Distillation) cracked cross-tokenizer distillation — you can now distill knowledge from models with entirely different tokenizers into one set of weights. Qwen3-4B + Phi-4-Mini + Llama-3B → Llama-3.2-1B scored MMLU 32→46. That&apos;s a 45% relative improvement on a 1B model.
+          NVIDIA&apos;s MOPD paper (Multi-Teacher On-Policy Distillation) cracked cross-tokenizer distillation. You can now distill knowledge from models with entirely different tokenizers into one set of weights. Qwen3-4B + Phi-4-Mini + Llama-3B into Llama-3.2-1B scored MMLU 32 to 46. That&apos;s a 45% relative improvement on a 1B model.
         </p>
 
         <p>
@@ -422,7 +422,7 @@ export default function BuildTheSystem() {
         </p>
 
         {/* Financial Analysis */}
-        <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">AI-Powered Financial Analysis — The Toolkit</h2>
+        <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">AI-Powered Financial Analysis: The Toolkit</h2>
 
         <p>
           The financial analysis toolkit breakdown maps directly to competitive intelligence work. Four layers:
@@ -439,22 +439,22 @@ export default function BuildTheSystem() {
             </thead>
             <tbody className="text-gray-300">
               <tr className="border-b border-border/50">
-                <td className="px-4 py-3 text-white font-semibold">L0 — Data House</td>
+                <td className="px-4 py-3 text-white font-semibold">L0: Data House</td>
                 <td className="px-4 py-3">Parse SEC filings into clean data</td>
                 <td className="px-4 py-3">edgartools (MCP server included), BamSEC</td>
               </tr>
               <tr className="border-b border-border/50">
-                <td className="px-4 py-3 text-white font-semibold">L1 — Catch Liars</td>
+                <td className="px-4 py-3 text-white font-semibold">L1: Catch Liars</td>
                 <td className="px-4 py-3">Forensic scoring (earnings manipulation, bankruptcy, accruals)</td>
                 <td className="px-4 py-3">Beneish M-Score, Altman Z-Score, Piotroski F-Score, FinanceToolkit</td>
               </tr>
               <tr className="border-b border-border/50">
-                <td className="px-4 py-3 text-white font-semibold">L2 — Read the Words</td>
+                <td className="px-4 py-3 text-white font-semibold">L2: Read the Words</td>
                 <td className="px-4 py-3">Diff year-over-year Risk Factors / MD&A for what&apos;s new or cut</td>
                 <td className="px-4 py-3">edgar-crawler, Hudson Labs, AlphaSense</td>
               </tr>
               <tr className="border-b border-border/50">
-                <td className="px-4 py-3 text-white font-semibold">L3 — Orchestration</td>
+                <td className="px-4 py-3 text-white font-semibold">L3: Orchestration</td>
                 <td className="px-4 py-3">Multi-agent investor personas, open-source Bloomberg terminal</td>
                 <td className="px-4 py-3">ai-hedge-fund, OpenBB (MCP server included), FinGPT</td>
               </tr>
@@ -474,7 +474,7 @@ export default function BuildTheSystem() {
         </p>
 
         <p>
-          We didn&apos;t read these papers and then build our stack. We built our stack, then read these papers and discovered that the most rigorous minds in the field converged on the same architecture — independently. <strong className="text-white">That&apos;s the strongest validation possible.</strong>
+          We didn&apos;t read these papers and then build our stack. We built our stack, then read these papers and discovered that the most rigorous minds in the field converged on the same architecture, independently. <strong className="text-white">That&apos;s the strongest validation possible.</strong>
         </p>
 
         <p>
@@ -489,21 +489,21 @@ export default function BuildTheSystem() {
         <div className="mt-16 pt-8 border-t border-border">
           <h3 className="font-display font-bold text-xl text-white mb-4">Sources</h3>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li>• SkillOpt — Microsoft Research, DAIR.AI weekly roundup</li>
-            <li>• Compiling Agentic Workflows into Weights — DAIR.AI weekly roundup</li>
-            <li>• AutoScientists — Harvard, DAIR.AI weekly roundup</li>
-            <li>• Language Models Need Sleep — DAIR.AI weekly roundup</li>
-            <li>• Life-Harness — 116/126 settings improved, DAIR.AI weekly roundup</li>
-            <li>• &quot;Most AI Agents Fail in Production Because They&apos;re Built Backwards&quot; — Benjamin Nweke, Towards Data Science</li>
-            <li>• &quot;Stop Giving Every Agent Its Own Skull&quot; — Pejman Pour-Moezzi (Magoosh founder)</li>
-            <li>• &quot;20 Opus 4.8 Workflows That Make Money While You Sleep&quot; — @sairahul1</li>
-            <li>• &quot;The Eternal Sloptember&quot; — George Hotz</li>
-            <li>• Karpathy&apos;s 7 Basics — @ScottyBeamIO, 258K views</li>
-            <li>• &quot;How to Design APIs for AI Agents&quot; — David Aniebo, freeCodeCamp</li>
-            <li>• &quot;15 Claude Code Repositories Most Developers Have Never Heard Of&quot; — @thegreatest_sv</li>
-            <li>• NVIDIA MOPD — Pavlo Molchanov, arxiv.org/pdf/2605.21699</li>
-            <li>• AI-Powered Financial Analysis Toolkit — @gemchange_ltd</li>
-            <li>• Google SRE, Google Pay, Google AI Threat Defense — three articles on agentic operations</li>
+            <li>• SkillOpt, Microsoft Research, DAIR.AI weekly roundup</li>
+            <li>• Compiling Agentic Workflows into Weights, DAIR.AI weekly roundup</li>
+            <li>• AutoScientists, Harvard, DAIR.AI weekly roundup</li>
+            <li>• Language Models Need Sleep, DAIR.AI weekly roundup</li>
+            <li>• Life-Harness, 116/126 settings improved, DAIR.AI weekly roundup</li>
+            <li>• &quot;Most AI Agents Fail in Production Because They&apos;re Built Backwards&quot;, Benjamin Nweke, Towards Data Science</li>
+            <li>• &quot;Stop Giving Every Agent Its Own Skull&quot;, Pejman Pour-Moezzi (Magoosh founder)</li>
+            <li>• &quot;20 Opus 4.8 Workflows That Make Money While You Sleep&quot;, @sairahul1</li>
+            <li>• &quot;The Eternal Sloptember&quot;, George Hotz</li>
+            <li>• Karpathy&apos;s 7 Basics, @ScottyBeamIO, 258K views</li>
+            <li>• &quot;How to Design APIs for AI Agents&quot;, David Aniebo, freeCodeCamp</li>
+            <li>• &quot;15 Claude Code Repositories Most Developers Have Never Heard Of&quot;, @thegreatest_sv</li>
+            <li>• NVIDIA MOPD, Pavlo Molchanov, arxiv.org/pdf/2605.21699</li>
+            <li>• AI-Powered Financial Analysis Toolkit, @gemchange_ltd</li>
+            <li>• Google SRE, Google Pay, Google AI Threat Defense: three articles on agentic operations</li>
           </ul>
         </div>
       </div>

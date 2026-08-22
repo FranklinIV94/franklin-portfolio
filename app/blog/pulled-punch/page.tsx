@@ -1,10 +1,10 @@
 export const metadata = {
-  title: 'The Pulled Punch Problem — Franklin J Bryant IV',
-  description: 'When you do both sales and delivery, you subconsciously slow down marketing because you dread onboarding more clients. Here\'s how to fix it — and why AI changes everything.',
+  title: 'The Pulled Punch Problem | Franklin J Bryant IV',
+  description: 'When you do both sales and delivery, you subconsciously slow down marketing because you dread onboarding more clients. Here\'s how to fix it, and why AI changes everything.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Prospyr 305', 'AI strategy', 'sales operations', 'onboarding automation', 'business growth', 'agentic engineering', 'service business'],
   openGraph: {
     title: 'The Pulled Punch Problem',
-    description: 'Why founders subconsciously sabotage their own marketing — and the AI architecture that solves it.',
+    description: 'Why founders subconsciously sabotage their own marketing, and the AI architecture that solves it.',
     images: ['/blog/pulled-punch-hero.jpg'],
   },
 };
@@ -27,8 +27,8 @@ export default function BlogPost() {
         'https://www.crunchbase.com/organization/all-lines-business-solutions',
       ],
     },
-    datePublished: '2026-05-21',
-    dateModified: '2026-05-21',
+    datePublished: '2026-05-23',
+    dateModified: '2026-05-23',
     publisher: {
       '@type': 'Organization',
       name: 'Franklin J Bryant IV',
@@ -52,7 +52,7 @@ export default function BlogPost() {
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">
-          Blog · May 21, 2026
+          Blog · May 23, 2026
         </div>
         <h1 className="font-display font-bold text-4xl leading-tight tracking-tight sm:text-5xl text-white">
           The Pulled Punch<br /><span className="text-gray-300">Problem</span>
@@ -60,7 +60,7 @@ export default function BlogPost() {
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
           When you do both sales and delivery, you subconsciously slow down marketing
           because you dread onboarding more clients. Here&apos;s why that&apos;s killing
-          your growth — and what to do about it.
+          your growth, and what to do about it.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-300">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -73,7 +73,7 @@ export default function BlogPost() {
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/pulled-punch-hero.jpg"
-          alt="A figure at a crossroads — one path lit with warm light, the other tangled with machinery"
+          alt="A figure at a crossroads: one path lit with warm light, the other tangled with machinery"
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -85,12 +85,12 @@ export default function BlogPost() {
       <section className="space-y-6 text-gray-300 leading-relaxed">
         <p className="text-lg text-gray-200 leading-relaxed">
           There&apos;s a moment every service business founder hits. You close a big client,
-          feel the rush — and then immediately feel the dread. <em>Now I have to deliver this.</em>
+          feel the rush, and then immediately feel the dread. <em>Now I have to deliver this.</em>
         </p>
 
         <p>
           So next time you sit down to write that outreach email, or record that content,
-          or go to that networking event — you hesitate. Not because you don&apos;t want more
+          or go to that networking event, you hesitate. Not because you don&apos;t want more
           clients. Because you&apos;re <em>afraid of getting them.</em>
         </p>
 
@@ -103,7 +103,7 @@ export default function BlogPost() {
         </p>
 
         <p>
-          Daniel Fazio — who runs a $1.4M/month portfolio across Client Ascension and List Kit —
+          Daniel Fazio, who runs a $1.4M/month portfolio across Client Ascension and List Kit,
           gave this a name: <strong className="text-white">the pulled punch phenomenon.</strong>
         </p>
 
@@ -113,15 +113,15 @@ export default function BlogPost() {
             results, you will consciously or subconsciously pull punches on your marketing because
             you dread the operational headache of onboarding more people.&quot;
           </p>
-          <p className="mt-3 text-sm text-gray-400">— Daniel Fazio, Cold Email Wizard ($1.4M/month)</p>
+          <p className="mt-3 text-sm text-gray-400">, Daniel Fazio, Cold Email Wizard ($1.4M/month)</p>
         </div>
 
         <p>
-          That word — <em>subconsciously</em> — is the knife. You don&apos;t even know you&apos;re
+          That word, <em>subconsciously</em>, is the knife. You don&apos;t even know you&apos;re
           doing it. You tell yourself you&apos;ll send that email tomorrow. You tell yourself the
           content can wait. You tell yourself one more week of the current client load before you
           start outreach. But the truth is simpler: you&apos;re pulling punches because the
-          alternative — actually succeeding — scares you more than failing quietly.
+          alternative, actually succeeding, scares you more than failing quietly.
         </p>
       </section>
 
@@ -159,14 +159,14 @@ export default function BlogPost() {
 
           <p>
             We chose path two. I spend 90% of my day on relationships, sales calls, and
-            strategy. Our AI system — Prospyr — handles the delivery: payroll processing,
+            strategy. Our AI system, Prospyr, handles the delivery: payroll processing,
             bookkeeping, tax preparation, email management, client communications, research.
             When I close a client, onboarding doesn&apos;t add operational weight to my week.
             It adds context to a system that was designed to scale.
           </p>
 
           <p>
-            <strong className="text-white">51 active clients across 5 industries.</strong> A foreign national in Los Angeles forming a C-Corp in Wyoming, coordinated from our Fort Lauderdale office. A physician with three separate trust structures, each with different beneficiaries and tax implications, all coordinated with a reviewing attorney. Construction firms with bi-weekly payroll. Medical practices with monthly bookkeeping. Each one adds complexity. The system absorbs it — because the system was built for it.
+            <strong className="text-white">51 active clients across 5 industries.</strong> A foreign national in Los Angeles forming a C-Corp in Wyoming, coordinated from our Fort Lauderdale office. A physician with three separate trust structures, each with different beneficiaries and tax implications, all coordinated with a reviewing attorney. Construction firms with bi-weekly payroll. Medical practices with monthly bookkeeping. Each one adds complexity. The system absorbs it, because the system was built for it.
           </p>
         </div>
       </section>
@@ -176,8 +176,8 @@ export default function BlogPost() {
         <h2 className="font-display font-bold text-3xl text-white mb-8">Why This Works <em className="font-normal text-gray-400">Now</em></h2>
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>
-            The pulled punch problem isn&apos;t new. What&apos;s new is that the second path —
-            building an operational layer that scales without you — is now accessible to
+            The pulled punch problem isn&apos;t new. What&apos;s new is that the second path,
+            building an operational layer that scales without you, is now accessible to
             businesses like ours. It used to require enterprise software budgets and dev teams.
             Now it requires context.
           </p>
@@ -190,7 +190,7 @@ export default function BlogPost() {
           </p>
 
           <div className="rounded-xl border border-white/10 bg-white/5 p-6 my-8">
-            <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">Our Software 3.0 Stack — These files <em>are</em> our program</p>
+            <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">Our Software 3.0 Stack: These files <em>are</em> our program</p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <span className="text-accent font-mono text-sm font-semibold mt-0.5 shrink-0">MEMORY.md</span>
@@ -198,22 +198,22 @@ export default function BlogPost() {
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-accent font-mono text-sm font-semibold mt-0.5 shrink-0">SOUL.md</span>
-                <span className="text-gray-300 text-sm">Identity, tone, boundaries — the &quot;who you are&quot; that makes context personal</span>
+                <span className="text-gray-300 text-sm">Identity, tone, boundaries: the &quot;who you are&quot; that makes context personal</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-accent font-mono text-sm font-semibold mt-0.5 shrink-0">PRINCIPLES.md</span>
-                <span className="text-gray-300 text-sm">Operational philosophy that evolves from mistakes — the living rulebook</span>
+                <span className="text-gray-300 text-sm">Operational philosophy that evolves from mistakes: the living rulebook</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-accent font-mono text-sm font-semibold mt-0.5 shrink-0">REGRESSIONS.md</span>
-                <span className="text-gray-300 text-sm">What broke, why, and what principle prevents it — the error log that makes us better</span>
+                <span className="text-gray-300 text-sm">What broke, why, and what principle prevents it: the error log that makes us better</span>
               </div>
             </div>
           </div>
 
           <p>
-            When Kimi&apos;s K2.6 &quot;one-person army&quot; demo went viral this week — role isolation,
-            shared context, task delegation — we didn&apos;t see a demo. We saw our own architecture.
+            When Kimi&apos;s K2.6 &quot;one-person army&quot; demo went viral this week (role isolation,
+            shared context, task delegation), we didn&apos;t see a demo. We saw our own architecture.
             Separate agents for cold outreach, email sync, research, and daily metrics. Different
             roles, shared memory, coordinated execution. <strong className="text-white">Their
             proof of concept is our production system.</strong>
@@ -221,7 +221,7 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {/* 4. The Honest Part — this goes BEFORE the sales pitch */}
+      {/* 4. The Honest Part: this goes BEFORE the sales pitch */}
       <section className="mt-20">
         <h2 className="font-display font-bold text-3xl text-white mb-8">The Honest Part</h2>
         <div className="space-y-6 text-gray-300 leading-relaxed">
@@ -230,14 +230,14 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Prospyr sent an email to a client — a high-value client — and attributed their
+            Prospyr sent an email to a client (a high-value client) and attributed their
             business to their executive assistant instead of to them. The AI saw the assistant&apos;s
             name on the email thread and assumed the business was theirs.
           </p>
 
           <p>
             It also formatted the email in plain text, which Microsoft Outlook rendered with
-            encoding artifacts — weird characters, broken line breaks, the kind of thing that
+            encoding artifacts: weird characters, broken line breaks, the kind of thing that
             makes you look like you&apos;re sending spam from a 2003 BlackBerry.
           </p>
 
@@ -285,7 +285,7 @@ export default function BlogPost() {
         <h2 className="font-display font-bold text-3xl text-white mb-8">New Opportunity vs. Improvement</h2>
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>
-            There&apos;s a second insight from Fazio that reframed our entire positioning — and
+            There&apos;s a second insight from Fazio that reframed our entire positioning, and
             it&apos;s the one that matters most if you&apos;re still selling an improvement offer
             instead of a new opportunity.
           </p>
@@ -297,7 +297,7 @@ export default function BlogPost() {
               clients.&apos; Target people who aren&apos;t doing the mechanism yet. The TAM is
               exponentially larger.&quot;
             </p>
-            <p className="mt-3 text-sm text-gray-400">— Daniel Fazio</p>
+            <p className="mt-3 text-sm text-gray-400">, Daniel Fazio</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
@@ -305,8 +305,8 @@ export default function BlogPost() {
               <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Improvement Offer</p>
               <p className="text-white font-medium text-lg">&quot;Better accounting&quot;</p>
               <ul className="mt-3 space-y-2 text-sm text-gray-400">
-                <li>✗ Small TAM — only people already doing it</li>
-                <li>✗ Price competition — race to the bottom</li>
+                <li>✗ Small TAM: only people already doing it</li>
+                <li>✗ Price competition: race to the bottom</li>
                 <li>✗ &quot;Why switch? My accountant is fine.&quot;</li>
               </ul>
             </div>
@@ -314,8 +314,8 @@ export default function BlogPost() {
               <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2">New Opportunity</p>
               <p className="text-white font-medium text-lg">&quot;AI-Integrated Operations&quot;</p>
               <ul className="mt-3 space-y-2 text-sm text-gray-300">
-                <li>✓ Massive TAM — every business not yet using AI</li>
-                <li>✓ Value competition — transformation, not optimization</li>
+                <li>✓ Massive TAM: every business not yet using AI</li>
+                <li>✓ Value competition: transformation, not optimization</li>
                 <li>✓ &quot;I didn&apos;t know this was possible.&quot;</li>
               </ul>
             </div>
@@ -323,7 +323,7 @@ export default function BlogPost() {
 
           <p>
             When we tell a client &quot;your AI business partner handles payroll, bookkeeping,
-            tax preparation, email management, and research — and you direct it like an
+            tax preparation, email management, and research, and you direct it like an
             orchestra conductor,&quot; that&apos;s not an improvement on their current accountant.
             That&apos;s a fundamentally different way to operate a business.
           </p>
@@ -358,7 +358,7 @@ export default function BlogPost() {
             Our AI system doesn&apos;t sleep. When a lead comes in, it classifies them by
             industry, size, and service need. It pulls relevant references from our 51-client
             database. It drafts a personalized reply that sounds like it came from someone who
-            already understands their business — because it did. A medical practice gets
+            already understands their business, because it did. A medical practice gets
             references to our other medical clients. A construction company sees that we
             handle their exact SIC codes.
           </p>
@@ -372,7 +372,7 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {/* 7. What Aaron Wright Sees Coming — shorter, punchier */}
+      {/* 7. What Aaron Wright Sees Coming: shorter, punchier */}
       <section className="mt-20">
         <h2 className="font-display font-bold text-3xl text-white mb-8">We&apos;re Not Reading About the Future</h2>
         <div className="space-y-6 text-gray-300 leading-relaxed">
@@ -385,8 +385,8 @@ export default function BlogPost() {
           </p>
 
           <p>
-            He described an autonomous marketing agent — prospecting, writing copy, booking
-            meetings, sending invoices — for $2,000/month versus $20,000/month for a human team.
+            He described an autonomous marketing agent (prospecting, writing copy, booking
+            meetings, sending invoices) for $2,000/month versus $20,000/month for a human team.
           </p>
 
           <p>
@@ -399,7 +399,7 @@ export default function BlogPost() {
             <p className="text-gray-200 italic leading-relaxed">
               &quot;You can outsource your thinking, but you can&apos;t outsource your understanding.&quot;
             </p>
-            <p className="mt-2 text-sm text-gray-400">— Aaron Wright, &quot;Agentic Capital Markets&quot;</p>
+            <p className="mt-2 text-sm text-gray-400">, Aaron Wright, &quot;Agentic Capital Markets&quot;</p>
           </div>
 
           <p>
@@ -416,7 +416,7 @@ export default function BlogPost() {
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>
             If you&apos;re a service business owner pulling punches on marketing because you&apos;re
-            afraid of onboarding — you already know it. You&apos;ve felt it. The hesitation before
+            afraid of onboarding, you already know it. You&apos;ve felt it. The hesitation before
             hitting send on that outreach email. The client you didn&apos;t follow up with because
             you were buried in delivery. The content you keep meaning to create but never do.
           </p>
@@ -440,8 +440,8 @@ export default function BlogPost() {
           Ready to Stop Pulling Punches?
         </h3>
         <p className="mt-3 text-gray-300">
-          All Lines Business Solutions delivers AI-Integrated Operations — payroll,
-          bookkeeping, tax preparation, email management, and research — so you can
+          All Lines Business Solutions delivers AI-Integrated Operations: payroll,
+          bookkeeping, tax preparation, email management, and research, so you can
           focus on selling instead of dreading delivery.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">

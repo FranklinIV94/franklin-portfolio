@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'The Team They Never Hired — Franklin J Bryant IV',
-  description: "Every small business needs an AI team. None can afford one. The opportunity isn't building AI — it's becoming the AI team for one industry you understand better than anyone in the room.",
+  title: 'The Team They Never Hired | Franklin J Bryant IV',
+  description: "Every small business needs an AI team. None can afford one. The opportunity isn't building AI. It's becoming the AI team for one industry you understand better than anyone in the room.",
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI agents', 'small business', 'vertical AI', 'AI consulting', 'business automation', 'Prospyr 305', 'AI strategy'],
   openGraph: {
     title: 'The Team They Never Hired',
@@ -14,7 +14,7 @@ export default function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'The Team They Never Hired',
-    description: 'Every small business needs an AI team. None can afford one. The opportunity isn\'t building AI — it\'s becoming the AI team for one industry you understand better than anyone in the room.',
+    description: 'Every small business needs an AI team. None can afford one. The opportunity isn\'t building AI. It\'s becoming the AI team for one industry you understand better than anyone in the room.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -122,7 +122,7 @@ export default function BlogPost() {
           automation without Salesforce.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
-          These are not AI problems. They are <strong className="text-white">business problems
+          These aren't AI problems. They're <strong className="text-white">business problems
           that AI makes solvable</strong> by a team of one or two people instead of a team of
           fifteen. But that team of one or two needs to understand the industry, not just the
           technology. The models are commodities. The context is the moat.
@@ -150,7 +150,7 @@ export default function BlogPost() {
             &ldquo;healthcare.&rdquo; Something specific enough that you can learn the vocabulary,
             the compliance landscape, the workflow pain points, and the software they already
             hate. Medical practices. PEOs. Auto body shops. Claims management. The narrower the
-            better. You&apos;re not competing with McKinsey, you&apos;re competing with the
+            better. You&apos;re not competing with McKinsey. You&apos;re competing with the
             guy who set up their QuickBooks in 2014 and never called back.
           </li>
           <li>

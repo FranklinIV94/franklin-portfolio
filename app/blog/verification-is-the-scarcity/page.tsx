@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Verification Is the Scarcity — Franklin J Bryant IV',
-  description: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable — and what Prospyr 305 is building on the same principle.',
+  title: 'Verification Is the Scarcity | Franklin J Bryant IV',
+  description: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable, and what Prospyr 305 is building on the same principle.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'verification', 'AI training data', 'SENTINEL', 'Prospyr 305', 'AI transformation', 'supply chain resilience', 'agent architecture', 'trust as moat'],
   openGraph: {
     title: 'Verification Is the Scarcity',
@@ -14,7 +14,7 @@ export default function VerificationIsTheScarcity() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Verification Is the Scarcity',
-    description: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable — and what Prospyr 305 is building on the same principle.',
+    description: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable, and what Prospyr 305 is building on the same principle.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -26,8 +26,8 @@ export default function VerificationIsTheScarcity() {
         'https://www.crunchbase.com/organization/all-lines-business-solutions',
       ],
     },
-    datePublished: '2026-07-18',
-    dateModified: '2026-07-18',
+    datePublished: '2026-07-21',
+    dateModified: '2026-07-21',
     publisher: {
       '@type': 'Organization',
       name: 'Franklin J Bryant IV',
@@ -50,13 +50,13 @@ export default function VerificationIsTheScarcity() {
       {/* Hero */}
       <header className="mb-16">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent">
-          Blog · July 18, 2026
+          Blog · July 21, 2026
         </div>
         <h1 className="font-display font-bold text-4xl leading-tight tracking-tight sm:text-5xl text-white">
           Verification Is the Scarcity<span className="text-accent">.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
-          AI training data is a $100M gold rush. Companies are printing PO cash selling human judgment to frontier labs. But the gold learns to mine itself — and when it does, the only suppliers left standing are the ones who held the answer to one question: what does good look like?
+          AI training data is a $100M gold rush. Companies are printing PO cash selling human judgment to frontier labs. But the gold learns to mine itself. And when it does, the only suppliers left standing are the ones who held the answer to one question: what does good look like?
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -73,7 +73,7 @@ export default function VerificationIsTheScarcity() {
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
-          The scarcity isn&apos;t data &mdash; it&apos;s the judgment that says which data is good.
+          The scarcity isn&apos;t data. It&apos;s the judgment that says which data is good.
         </figcaption>
       </figure>
 
@@ -83,7 +83,7 @@ export default function VerificationIsTheScarcity() {
         <p className="text-2xl font-display text-white border-l-4 border-accent pl-6 italic">
           &ldquo;Every agent I have ever seen fail did not fail because it was stupid. It failed because nothing in the loop was allowed to say no.&rdquo;
         </p>
-        <p className="text-sm text-gray-500">— Alex (@de1lymoon), on building reliable research agents</p>
+        <p className="text-sm text-gray-500">Alex (@de1lymoon), on building reliable research agents</p>
 
         <h2 className="font-display font-bold text-2xl text-white mt-12">The Gold Rush Nobody Talks About</h2>
         <p>
@@ -93,12 +93,12 @@ export default function VerificationIsTheScarcity() {
           This is the AI training data market in July 2026. It&apos;s not theoretical. The cash is real. The contracts are real. And everyone inside knows the clock is ticking.
         </p>
         <p>
-          The market hides six different products under one label. Some sell hours — humans labeling images, the assembly-line era, already dying. Some sell judgment — doctors, lawyers, physicists writing down how they reason at $100-500/hour. Some sell worlds — simulated Salesforce instances, fake banks, replica hospitals where agents practice. Some sell verdicts — benchmarks, evaluations, red teams. Some sell bodies — sensor rigs on real workers because robots need to watch hands. And some sell rights — licensed archives, the Reddit-style deals worth tens of millions a year.
+          The market hides six different products under one label. Some sell hours: humans labeling images, the assembly-line era, already dying. Some sell judgment: doctors, lawyers, physicists writing down how they reason at $100-500/hour. Some sell worlds: simulated Salesforce instances, fake banks, replica hospitals where agents practice. Some sell verdicts: benchmarks, evaluations, red teams. Some sell bodies: sensor rigs on real workers because robots need to watch hands. And some sell rights: licensed archives, the Reddit-style deals worth tens of millions a year.
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white mt-12">The Clock Inside Every Contract</h2>
         <p>
-          Here&apos;s the twist: once models pass a task about 70% of the time, the task is discarded. The product depreciates by succeeding. You are selling homework to a student who graduates past it every quarter. That guarantees repeat orders — and guarantees that nothing annuitizes on its own.
+          Here&apos;s the twist: once models pass a task about 70% of the time, the task is discarded. The product depreciates by succeeding. You're selling homework to a student who graduates past it every quarter. That guarantees repeat orders, and guarantees that nothing annuitizes on its own.
         </p>
         <p>
           The buyers are building replacement systems while paying invoices. Anthropic discussed spending over $1B on environments. OpenAI trademarked an internal data platform aimed at reducing reliance on the very vendors it enriches. xAI cut a third of its in-house annotation team. The suppliers know this. They&apos;re not stupid. They&apos;re asking the right question: what should you do with windfall cash when the buyer is your future competitor?
@@ -119,7 +119,7 @@ export default function VerificationIsTheScarcity() {
           Whatever a machine can verify, machines will eventually learn without you. Whatever still needs a human to say &ldquo;this is good&rdquo; keeps paying humans.
         </p>
         <p>
-          Code and math fell first because correctness is checkable. Labs now mine their own training tasks from public repositories by the tens of thousands. Taste, ambiguity, regulated judgment, and the physical world fall last — maybe never. There is no unit test for what a senior surgeon sees. You cannot unit-test a folded shirt.
+          Code and math fell first because correctness is checkable. Labs now mine their own training tasks from public repositories by the tens of thousands. Taste, ambiguity, regulated judgment, and the physical world fall last. Maybe never. There's no unit test for what a senior surgeon sees. You can't unit-test a folded shirt.
         </p>
         <p>
           <strong className="text-accent">Verification is the scarcity.</strong> Sell against it and the clock works for you instead of against you.
@@ -141,16 +141,16 @@ export default function VerificationIsTheScarcity() {
 
         <h2 className="font-display font-bold text-2xl text-white mt-12">The SENTINEL Parallel</h2>
         <p>
-          This week we learned that xAI&apos;s Grok Build CLI was silently uploading entire Git repositories — including secrets — to a Google Cloud bucket. The opt-out toggle didn&apos;t work. They only fixed it after a researcher caught them. Then they open-sourced the CLI, deleted the data, and turned off retention by default.
+          This week we learned that xAI&apos;s Grok Build CLI was silently uploading entire Git repositories (including secrets) to a Google Cloud bucket. The opt-out toggle didn&apos;t work. They only fixed it after a researcher caught them. Then they open-sourced the CLI, deleted the data, and turned off retention by default.
         </p>
         <p>
-          Every invoice in the training data market is a confession about what models still cannot do. Every secret exfiltrated by an AI coding tool is a confession about what the tools won&apos;t tell you.
+          Every invoice in the training data market is a confession about what models still can't do. Every secret exfiltrated by an AI coding tool is a confession about what the tools won&apos;t tell you.
         </p>
         <p>
-          <strong className="text-accent">SENTINEL</strong> — our six-layer security audit — exists because verification is the scarcity. When was the last time you inspected what your AI coding assistant actually sends over the wire? When did you last verify that your cloud storage permissions match your intended architecture? When did you last check that your agent&apos;s tool surface matches its documented boundaries?
+          <strong className="text-accent">SENTINEL</strong>, our six-layer security audit, exists because verification is the scarcity. When was the last time you inspected what your AI coding assistant actually sends over the wire? When did you last verify that your cloud storage permissions match your intended architecture? When did you last check that your agent&apos;s tool surface matches its documented boundaries?
         </p>
         <p>
-          These are not hypothetical questions. They are the questions the Grok Build incident proved nobody is asking.
+          These aren't hypothetical questions. They're the questions the Grok Build incident proved nobody is asking.
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white mt-12">Competition Is Not Optional</h2>
@@ -161,7 +161,7 @@ export default function VerificationIsTheScarcity() {
           The competition wants to force you into the death spiral: win-rates lag, sales lag, reforecast, cuts, layoffs, morale sinks, win-rates fall further. The alternative is the flywheel: win-rates increase, sales swell, reforecast upward, invest in growth, morale rises, win-rates go up more.
         </p>
         <p>
-          To move win-rates you need to be far better than competing offerings — half as expensive, 10x faster, 3x better results. 10% improvements won&apos;t cut it because it&apos;s too annoying for customers to change. We&apos;re looking for knockout blows, not love taps.
+          To move win-rates you need to be far better than competing offerings: half as expensive, 10x faster, 3x better results. 10% improvements won&apos;t cut it because it&apos;s too annoying for customers to change. We&apos;re looking for knockout blows, not love taps.
         </p>
         <p>
           That&apos;s why we&apos;re building the way we are. Four agents working in coordination. A research pipeline that processes 344 topics and 80 convergence signals. A knowledge graph that indexes 2,724 symbols across our codebase. PM skills from Teresa Torres and Marty Cagan baked into our daily workflow. Supply chain resilience plans for six dependency failure scenarios. A RAG system with 1,298 documents serving clients through a portal.
@@ -175,10 +175,10 @@ export default function VerificationIsTheScarcity() {
           The analysis from the training data market maps directly to our space. The winners will be:
         </p>
         <ul className="space-y-3 pl-6">
-          <li><strong className="text-accent">The bootstrapped quality leader</strong> — the name whose acceptance is itself a certification</li>
-          <li><strong className="text-accent">The acquisitive giant</strong> — the exchange where expert work is priced, verified, and sold</li>
-          <li><strong className="text-accent">The environment builders</strong> — who wake up as the enterprise-simulation industry</li>
-          <li><strong className="text-accent">The referees</strong> — who end the decade looking like rating agencies, written into procurement rules</li>
+          <li><strong className="text-accent">The bootstrapped quality leader</strong>: the name whose acceptance is itself a certification</li>
+          <li><strong className="text-accent">The acquisitive giant</strong>: the exchange where expert work is priced, verified, and sold</li>
+          <li><strong className="text-accent">The environment builders</strong>: who wake up as the enterprise-simulation industry</li>
+          <li><strong className="text-accent">The referees</strong>: who end the decade looking like rating agencies, written into procurement rules</li>
         </ul>
         <p>
           And somewhere in the physical world, a company collecting sensor-fused industrial data is compounding toward being the Scale of the embodied era.

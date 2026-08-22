@@ -1,10 +1,10 @@
 export const metadata = {
-  title: 'From Loops to Graphs: What We Learned This Week — Franklin J Bryant IV',
-  description: 'One week of AI infrastructure research — seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
+  title: 'From Loops to Graphs: What We Learned This Week | Franklin J Bryant IV',
+  description: 'One week of AI infrastructure research: seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'agent architecture', 'AI infrastructure', 'loop engineering', 'graph engineering', 'CDP', 'Kimi K3', 'GPU benchmarks', 'Prospyr 305', 'research'],
   openGraph: {
     title: 'From Loops to Graphs: What We Learned This Week',
-    description: 'One week of AI infrastructure research — seven threads pulled together.',
+    description: 'One week of AI infrastructure research: seven threads pulled together.',
     images: ['/blog/loops-to-graphs-hero.jpg'],
   },
 };
@@ -14,7 +14,7 @@ export default function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'From Loops to Graphs: What We Learned This Week',
-    description: 'One week of AI infrastructure research — seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
+    description: 'One week of AI infrastructure research: seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -73,7 +73,7 @@ export default function BlogPost() {
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
-          From isolated loops to a grounded graph of loops &mdash; the shift that defines this week&apos;s research.
+          From isolated loops to a grounded graph of loops. The shift that defines this week&apos;s research.
         </figcaption>
       </figure>
 
@@ -100,7 +100,7 @@ export default function BlogPost() {
         </figure>
         <p className="text-gray-300 leading-relaxed">
           Carlos Perez (IntuitMachine) articulated something every team building AI agents is starting
-          to feel. The single improvement loop &mdash; measure a metric, adjust, repeat &mdash; is the atom
+          to feel. The single improvement loop (measure a metric, adjust, repeat) is the atom
           of getting better. But single loops fail in four predictable ways.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
@@ -109,7 +109,7 @@ export default function BlogPost() {
           measurement decays while the dashboard stays green.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
-          The emerging answer isn&apos;t a better loop. It&apos;s a <strong className="text-white">graph of loops</strong> &mdash;
+          The emerging answer isn&apos;t a better loop. It&apos;s a <strong className="text-white">graph of loops</strong>:
           networks of improvement cycles that watch, feed, constrain, and correct each other.
           Champion-challenger loops. Drift monitors. Audit cycles on held-out data the training loop
           can&apos;t see.
@@ -117,7 +117,7 @@ export default function BlogPost() {
         <p className="mt-4 text-gray-300 leading-relaxed">
           But here&apos;s the deeper insight: even graphs of loops fail if they&apos;re ungrounded. If every
           loop watches another loop and none touches reality, you get elaborate mutual confirmation.
-          The graph needs <strong className="text-white">anchors</strong> &mdash; measurements that can&apos;t
+          The graph needs <strong className="text-white">anchors</strong>: measurements that can&apos;t
           be argued with, frozen rules the optimizer can&apos;t tune, and human judgment about what
           &ldquo;better&rdquo; means at the root.
         </p>
@@ -161,13 +161,13 @@ export default function BlogPost() {
       <section className="mt-20">
         <h2 className="font-display font-bold text-3xl text-white mb-4">CDP: How Agents Actually Control Browsers</h2>
         <p className="text-gray-300 leading-relaxed">
-          Kyle Jeong from Browserbase wrote a deep guide on Chrome DevTools Protocol &mdash; the wire
+          Kyle Jeong from Browserbase wrote a deep guide on Chrome DevTools Protocol: the wire
           protocol between DevTools and Chromium that every browser agent sits on top of.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
           The wire format is simple: JSON commands over WebSocket with IDs for matching responses.
           Events flow back when browser state changes. The hard part isn&apos;t sending messages.
-          It&apos;s tracking the lifecycle churn &mdash; targets appearing and disappearing, execution
+          It&apos;s tracking the lifecycle churn: targets appearing and disappearing, execution
           contexts destroyed on navigation, cross-origin iframes split into separate processes by
           Site Isolation.
         </p>
@@ -179,7 +179,7 @@ export default function BlogPost() {
           <h4 className="font-bold text-accent">Our connection</h4>
           <p className="mt-2 leading-relaxed text-gray-300">
             Browser-harness wraps CDP with self-healing helpers so agents control Chrome without
-            managing session lifecycle. This article validated the approach &mdash; don&apos;t build on
+            managing session lifecycle. This article validated the approach: don&apos;t build on
             raw CDP, but understand it to make the right architecture decisions.
           </p>
         </div>
@@ -199,8 +199,8 @@ export default function BlogPost() {
           don&apos;t want this model unsupervised on factual tasks.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
-          On price, K3 is $3/$15 per million tokens. DeepSeek V4 Pro is $0.44/$0.87 &mdash; roughly 7x
-          cheaper. GLM-5.2 (our current model) is $1.40/$4.40 &mdash; a third to half the price of K3.
+          On price, K3 is $3/$15 per million tokens. DeepSeek V4 Pro is $0.44/$0.87, roughly 7x
+          cheaper. GLM-5.2 (our current model) is $1.40/$4.40, a third to half the price of K3.
         </p>
         <div className="mt-6 rounded-xl border border-accent/20 bg-accent/5 p-6">
           <h4 className="font-bold text-accent">Our take</h4>
@@ -225,7 +225,7 @@ export default function BlogPost() {
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
           The &ldquo;AI-ready&rdquo; mini PCs with 96GB unified memory are traps. DDR5 bandwidth is
-          ~256 GB/s. A used RTX 3090 at $800 has 936 GB/s &mdash; 3.4x faster for a quarter the price.
+          ~256 GB/s. A used RTX 3090 at $800 has 936 GB/s. 3.4x faster for a quarter the price.
         </p>
         <div className="mt-6 rounded-xl border border-accent/20 bg-accent/5 p-6">
           <h4 className="font-bold text-accent">Value pick</h4>
@@ -250,7 +250,7 @@ export default function BlogPost() {
           machine when you load it. Dataset loaders are an attack surface, not a data ingestion path.
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
-          Suno got hit differently &mdash; a repo leak exposed their entire training pipeline. 6.18M
+          Suno got hit differently. A repo leak exposed their entire training pipeline. 6.18M
           songs indexed from Genius, 2.7M matched to YouTube, automated audio downloads at scale,
           7.8TB training dataset built from copyrighted material. It&apos;s code-level evidence of
           industrial-scale copyright harvesting, the exact pattern the RIAA lawsuits alleged.
@@ -259,7 +259,7 @@ export default function BlogPost() {
           <h4 className="font-bold text-accent">What we&apos;re taking from this</h4>
           <p className="mt-2 leading-relaxed text-gray-300">
             Treat Hugging Face pulls as untrusted code execution. Sanitize anything that touches a
-            template engine. And assume your repos could become public &mdash; don&apos;t put anything
+            template engine. And assume your repos could become public. Don&apos;t put anything
             in version control that you can&apos;t defend.
           </p>
         </div>
@@ -271,7 +271,7 @@ export default function BlogPost() {
         <p className="text-gray-300 leading-relaxed">
           Rishabh Kaul identified a pattern across the fastest-growing AI infrastructure companies.
           They&apos;re not selling to &ldquo;enterprise&rdquo; generically. They&apos;re selling to the
-          companies furthest ahead &mdash; Anthropic, OpenAI, Lovable, Harvey &mdash; the AI-native
+          companies furthest ahead (Anthropic, OpenAI, Lovable, Harvey): the AI-native
           companies on valuation treadmills hitting technical bottlenecks nobody else has experienced
           yet.
         </p>

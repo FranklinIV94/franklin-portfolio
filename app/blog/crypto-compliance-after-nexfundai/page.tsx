@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Crypto Compliance After NexFundAI — Franklin J Bryant IV',
-  description: 'The FBI created a real cryptocurrency token to catch market manipulators. Here\'s what it means for your business — and what you need to do now.',
+  title: 'Crypto Compliance After NexFundAI | Franklin J Bryant IV',
+  description: 'The FBI created a real cryptocurrency token to catch market manipulators. Here\'s what it means for your business, and what you need to do now.',
   openGraph: {
     title: 'Crypto Compliance After NexFundAI',
     description: 'The FBI\'s Operation Token Mirrors changed crypto enforcement forever. What every business needs to know.',
@@ -57,7 +57,7 @@ export default function BlogPost() {
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
           The FBI created a real cryptocurrency token to catch market manipulators. Here&apos;s what
-          it means for your business — and what you need to do now.
+          it means for your business, and what you need to do now.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-300">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -70,7 +70,7 @@ export default function BlogPost() {
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/nexfundai-hero.jpg"
-          alt="NexFundAI — FBI crypto sting operation illustration"
+          alt="NexFundAI: FBI crypto sting operation illustration"
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-300">
@@ -81,7 +81,7 @@ export default function BlogPost() {
       {/* Intro */}
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p className="text-lg text-gray-200 leading-relaxed">
-          If you&apos;re in crypto — investing, trading, running a token project, or accepting crypto payments — you need to understand what happened with Operation Token Mirrors.
+          If you&apos;re in crypto (investing, trading, running a token project, or accepting crypto payments), you need to understand what happened with Operation Token Mirrors.
         </p>
 
         <p>
@@ -89,7 +89,7 @@ export default function BlogPost() {
         </p>
 
         <p>
-          They created NexFundAI: a real ERC-20 token on Ethereum, with a real website, real branding, real liquidity on Uniswap. Then they hired market makers to pump it. And when people took the bait — wash trading, pump-and-dump schemes, artificial volume — the FBI arrested them.
+          They created NexFundAI: a real ERC-20 token on Ethereum, with a real website, real branding, real liquidity on Uniswap. Then they hired market makers to pump it. And when people took the bait (wash trading, pump-and-dump schemes, artificial volume), the FBI arrested them.
         </p>
 
         <div className="rounded-xl border border-accent/20 bg-accent/5 p-6 text-center">
@@ -108,7 +108,7 @@ export default function BlogPost() {
             In May 2024, the FBI launched NexFundAI as part of <strong>Operation Token Mirrors</strong>. Undercover agents posed as a crypto project team and approached market-making firms, asking for help creating fake trading activity.
           </p>
           <p>
-            The market makers agreed. They executed wash trades — rapidly buying and selling the same token to create the illusion of demand. They coordinated pump-and-dump schemes. They did everything that crypto market manipulators do every day.
+            The market makers agreed. They executed wash trades, rapidly buying and selling the same token to create the illusion of demand. They coordinated pump-and-dump schemes. They did everything that crypto market manipulators do every day.
           </p>
           <p>
             Except this time, every transaction was recorded on a blockchain the FBI controlled. Every conversation was documented. And every participant was building their own criminal case file.
@@ -134,25 +134,25 @@ export default function BlogPost() {
             {
               num: '01',
               title: 'Your Counterparty Could Be the FBI',
-              desc: 'NexFundAI looked legitimate. Real website. Real token. Real liquidity. Standard due diligence — checking for a whitepaper, looking at the token contract, verifying the liquidity pool — would have passed NexFundAI with flying colors.',
+              desc: 'NexFundAI looked legitimate. Real website. Real token. Real liquidity. Standard due diligence (checking for a whitepaper, looking at the token contract, verifying the liquidity pool) would have passed NexFundAI with flying colors.',
               takeaway: 'The old "look before you leap" approach is dead. You need to know who you\'re leaping with, not just what you\'re leaping into.',
             },
             {
               num: '02',
               title: 'Market Makers Are Now a Risk Vector',
-              desc: 'The FBI hired actual market-making firms to create fake volume. Companies like Gotbit, CLS Global, and ZM Quant were implicated. If you\'re a token project using a third-party market maker, and that market maker engages in wash trading on your token, you could be next — even if you didn\'t explicitly authorize it.',
+              desc: 'The FBI hired actual market-making firms to create fake volume. Companies like Gotbit, CLS Global, and ZM Quant were implicated. If you\'re a token project using a third-party market maker, and that market maker engages in wash trading on your token, you could be next, even if you didn\'t explicitly authorize it.',
               takeaway: 'Vet your market makers. Get compliance guarantees in writing. If they won\'t provide them, walk away.',
             },
             {
               num: '03',
               title: 'Wash Trading = Federal Charges',
               desc: 'The core crime was wash trading: rapidly buying and selling the same asset to create fake volume and attract real investors. This isn\'t a gray area. It\'s securities fraud. And the FBI has now demonstrated they\'ll create entire ecosystems to catch you doing it.',
-              takeaway: 'If your volume looks artificially inflated, it might not just be bad for investors — it might be bait.',
+              takeaway: 'If your volume looks artificially inflated, it might not just be bad for investors. It might be bait.',
             },
             {
               num: '04',
               title: '"I Didn\'t Know" Won\'t Save You',
-              desc: 'Several defendants argued they were just providing a service. The DOJ\'s position: if you\'re creating fake volume to attract real investors, that\'s fraud — regardless of what your client asked you to do.',
+              desc: 'Several defendants argued they were just providing a service. The DOJ\'s position: if you\'re creating fake volume to attract real investors, that\'s fraud, regardless of what your client asked you to do.',
               takeaway: 'Willful ignorance is not a defense. Proactive compliance is.',
             },
           ].map(item => (
@@ -182,9 +182,9 @@ export default function BlogPost() {
           </div>
           <ul className="space-y-3">
             {[
-              { title: 'Screen every counterparty.', desc: 'Not just the token — the people behind it, the market makers they use, the exchanges they\'re listed on.' },
+              { title: 'Screen every counterparty.', desc: 'Not just the token. The people behind it, the market makers they use, the exchanges they\'re listed on.' },
               { title: 'Document everything.', desc: 'If a token you invested in gets caught up in an enforcement action, you\'ll need to prove you were a victim, not a participant.' },
-              { title: 'Avoid suspicious volume patterns.', desc: 'If the volume-to-liquidity ratio looks too good to be true, it probably is — and it might be the FBI.' },
+              { title: 'Avoid suspicious volume patterns.', desc: 'If the volume-to-liquidity ratio looks too good to be true, it probably is. And it might be the FBI.' },
             ].map(item => (
               <li key={item.title} className="flex items-start gap-3">
                 <span className="mt-1 text-accent flex-shrink-0">✓</span>
@@ -248,10 +248,10 @@ export default function BlogPost() {
         <h2 className="font-display font-bold text-2xl text-white mb-4">The Bottom Line</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            The government isn&apos;t just watching crypto anymore. They&apos;re <em>in</em> crypto. And if you&apos;re not doing proper compliance, you&apos;re not just risking a bad trade — you&apos;re risking federal charges.
+            The government isn&apos;t just watching crypto anymore. They&apos;re <em>in</em> crypto. And if you&apos;re not doing proper compliance, you&apos;re not just risking a bad trade. You&apos;re risking federal charges.
           </p>
           <p>
-            ALBS offers crypto compliance audits, tax preparation for crypto traders and investors, and advisory services for token projects. If this article made you nervous, it should — and we can help.
+            ALBS offers crypto compliance audits, tax preparation for crypto traders and investors, and advisory services for token projects. If this article made you nervous, it should. And we can help.
           </p>
         </div>
 
@@ -281,22 +281,22 @@ export default function BlogPost() {
         <ul className="space-y-2 text-sm text-gray-400">
           <li>
             <a href="https://www.justice.gov/usao-ma/pr/eighteen-individuals-and-entities-charged-international-operation-targeting-widespread" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-              DOJ Press Release — 18 Individuals and Entities Charged in International Crypto Market Manipulation Operation
+              DOJ Press Release: 18 Individuals and Entities Charged in International Crypto Market Manipulation Operation
             </a>
           </li>
           <li>
             <a href="https://cryptobriefing.com/fbi-nexfundai-sting-crypto-manipulation/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-              Crypto Briefing — FBI NexFundAI Sting: What It Means for Crypto
+              Crypto Briefing: FBI NexFundAI Sting: What It Means for Crypto
             </a>
           </li>
           <li>
             <a href="https://fieldeffect.com/blog/fbis-fake-cryptocurrency-company-used-to-bust-crypto-manipulators" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-              Field Effect — How the FBI Used a Fake Crypto Company to Bust Manipulators
+              Field Effect: How the FBI Used a Fake Crypto Company to Bust Manipulators
             </a>
           </li>
           <li>
             <a href="https://www.trmlabs.com/resources/blog/fbi-creates-token-project-in-trojan-horse-crypto-operation-that-seizes-25-million" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-              TRM Labs — FBI Creates Token Project in Trojan Horse Crypto Operation
+              TRM Labs: FBI Creates Token Project in Trojan Horse Crypto Operation
             </a>
           </li>
         </ul>

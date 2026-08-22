@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'System of Action vs. System of Intelligence — Franklin J Bryant IV',
-  description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months — and it changes how every business should think about their technology stack.',
+  title: 'System of Action vs. System of Intelligence | Franklin J Bryant IV',
+  description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months, and it changes how every business should think about their technology stack.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'system of action', 'agentic architecture', 'Google Cloud', 'AI infrastructure', 'business systems', 'Prospyr 305'],
   openGraph: {
     title: 'System of Action vs. System of Intelligence',
@@ -14,7 +14,7 @@ export default function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'System of Action vs. System of Intelligence',
-    description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months — and it changes how every business should think about their technology stack.',
+    description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months, and it changes how every business should think about their technology stack.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -58,7 +58,7 @@ export default function BlogPost() {
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
           Google Cloud just announced the &ldquo;Agentic Data Cloud.&rdquo; It validates an architecture
-          shift we&apos;ve been building toward for months — and changes how every business
+          shift we&apos;ve been building toward for months, and changes how every business
           should think about their technology stack.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-300">
@@ -86,7 +86,7 @@ export default function BlogPost() {
           Google Cloud just published{' '}
           <a href="https://cloud.google.com/transform/shift-system-of-action-architecting-the-agentic-data-cloud-ai" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
             Architecting the Agentic Data Cloud
-          </a>, and buried in the marketing is a genuinely useful framework. They identify three shifts happening right now that every business needs to understand — not because they&apos;re theoretical, but because they describe the architecture we&apos;ve been living in production for months.
+          </a>, and buried in the marketing is a genuinely useful framework. They identify three shifts happening right now that every business needs to understand, not because they&apos;re theoretical, but because they describe the architecture we&apos;ve been living in production for months.
         </p>
       </div>
 
@@ -101,7 +101,7 @@ export default function BlogPost() {
           {[
             { num: '01', title: 'Human Scale → Agent Scale', desc: 'Your data platform now needs to support always-on, high-velocity, autonomous operations. Agents monitor and operate your business 24/7 at digital speed. The practitioner becomes an orchestrator, not an operator.' },
             { num: '02', title: 'Reactive → Proactive', desc: 'Previous architectures told you what happened yesterday. Agents execute in the moment and shape the future. "The goal is no longer just to know. The goal is to act."' },
-            { num: '03', title: 'Data → Knowledge', desc: 'Raw data isn\'t enough. Agents need a knowledge flywheel — understanding relationships, semantics, and usage patterns. Without context, they hallucinate on bad data.' },
+            { num: '03', title: 'Data → Knowledge', desc: 'Raw data isn\'t enough. Agents need a knowledge flywheel: understanding relationships, semantics, and usage patterns. Without context, they hallucinate on bad data.' },
           ].map(shift => (
             <div key={shift.num} className="rounded-xl border border-border bg-surface p-6">
               <div className="text-3xl font-black text-accent/20">{shift.num}</div>
@@ -116,7 +116,7 @@ export default function BlogPost() {
       <section className="mt-20">
         <h2 className="font-display font-bold text-3xl text-white mb-8">System of Intelligence vs. System of Action</h2>
         <p className="text-gray-300 leading-relaxed">
-          Google draws a sharp line between two architectures — and this distinction is the most useful
+          Google draws a sharp line between two architectures, and this distinction is the most useful
           thing in the entire paper:
         </p>
 
@@ -153,7 +153,7 @@ export default function BlogPost() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-accent">✓</span>
-                Your data doesn&apos;t just tell you there is a problem — it actually fixes it.
+                Your data doesn&apos;t just tell you there is a problem. It actually fixes it.
               </li>
             </ul>
           </div>
@@ -165,7 +165,7 @@ export default function BlogPost() {
         <h2 className="font-display font-bold text-3xl text-white mb-4">Why Most Architectures Break at Agent Scale</h2>
         <p className="text-gray-300 leading-relaxed">
           Google identifies four structural failures that kill agentic systems. These are worth
-          checking your own stack against — because at agent scale, they&apos;re fatal.
+          checking your own stack against, because at agent scale, they&apos;re fatal.
         </p>
         <figure className="my-10 overflow-hidden rounded-xl">
           <img src="/blog/four-failures.jpg" alt="Four structural failures" className="w-full rounded-xl" />
@@ -174,7 +174,7 @@ export default function BlogPost() {
           {[
             { title: 'Fragmented Stack', desc: 'When your data platform is glued together from disjointed parts, agents can\'t form a complete picture. Every seam is a failure point under agentic load.' },
             { title: 'Walled Gardens', desc: 'Vendors demand you move everything into their ecosystem. When you do, your security perimeter dissolves. Access controls, identity management, and lineage get left behind.' },
-            { title: 'Trust Gap', desc: 'A catalog that says where things are isn\'t enough. Agents need rich context — what data means, relationships between data, how it\'s used. Without this, agents produce invalid outcomes.' },
+            { title: 'Trust Gap', desc: 'A catalog that says where things are isn\'t enough. Agents need rich context: what data means, relationships between data, how it\'s used. Without this, agents produce invalid outcomes.' },
             { title: 'Cost Spiral', desc: 'At agent scale, AI should be your greatest asset, not an unpredictable financial liability. Fragmented stacks explode costs under agentic workloads.' },
           ].map(failure => (
             <div key={failure.title} className="flex gap-4 rounded-xl border border-border bg-surface p-5">
@@ -193,8 +193,8 @@ export default function BlogPost() {
         <h2 className="font-display font-bold text-3xl text-white mb-4">What We&apos;re Building at Prospyr</h2>
         <p className="text-gray-300 leading-relaxed">
           Here&apos;s the thing: the big cloud providers describe this as <em>new</em>. But if you&apos;ve been
-          paying attention to the actual builders — the people deploying multi-agent systems in
-          production — this framework describes what we&apos;ve been doing for months. Google&apos;s paper validates
+          paying attention to the actual builders, the people deploying multi-agent systems in
+          production, this framework describes what we&apos;ve been doing for months. Google&apos;s paper validates
           the architecture we built from first principles.
         </p>
         <figure className="my-10 overflow-hidden rounded-xl">
@@ -205,11 +205,11 @@ export default function BlogPost() {
           {[
             {
               title: 'Multi-Agent by Design',
-              desc: 'Prospyr Prime, Northstar, Southstar, and Zo aren\'t a single chatbot with tools — they\'re specialized agents with distinct roles, persistent memory, and coordinated execution. Each agent owns a domain. They delegate across extended workflows. This is System of Action architecture: agents don\'t surface information, they execute.',
+              desc: 'Prospyr Prime, Northstar, Southstar, and Zo aren\'t a single chatbot with tools. They\'re specialized agents with distinct roles, persistent memory, and coordinated execution. Each agent owns a domain. They delegate across extended workflows. This is System of Action architecture: agents don\'t surface information, they execute.',
             },
             {
               title: 'Memory as Architecture',
-              desc: 'Every agent decision, client interaction, and project update flows through a persistent memory system. Daily logs feed into long-term memory. Long-term memory shapes future decisions. This is the knowledge flywheel Google describes — implemented with structured markdown and Obsidian, not a proprietary data lake you can\'t escape.',
+              desc: 'Every agent decision, client interaction, and project update flows through a persistent memory system. Daily logs feed into long-term memory. Long-term memory shapes future decisions. This is the knowledge flywheel Google describes, implemented with structured markdown and Obsidian, not a proprietary data lake you can\'t escape.',
             },
             {
               title: 'Trust Through Human-in-the-Loop',
@@ -217,7 +217,7 @@ export default function BlogPost() {
             },
             {
               title: 'Dark Data Activation',
-              desc: 'Google notes that 90% of enterprise data is unstructured — locked in contracts, emails, PDFs, and images. Our pipeline combines Browser Use (for web-based data sources), LangExtract (for document intelligence), and multi-agent orchestration to activate dark data at scale. This is how we turn unstructured chaos into agent-accessible knowledge.',
+              desc: 'Google notes that 90% of enterprise data is unstructured, locked in contracts, emails, PDFs, and images. Our pipeline combines Browser Use (for web-based data sources), LangExtract (for document intelligence), and multi-agent orchestration to activate dark data at scale. This is how we turn unstructured chaos into agent-accessible knowledge.',
             },
           ].map(point => (
             <div key={point.title} className="rounded-xl border border-accent/20 bg-accent/5 p-6">

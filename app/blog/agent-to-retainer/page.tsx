@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'How to Turn an AI Agent Into a Retainer — Franklin J Bryant IV',
-  description: 'Sell the role. Manage adoption. Prove the result. The four-layer offer that turns a one-off AI build into a recurring retainer — and the weekly ledger that keeps it renewed.',
+  title: 'How to Turn an AI Agent Into a Retainer | Franklin J Bryant IV',
+  description: 'Sell the role. Manage adoption. Prove the result. The four-layer offer that turns a one-off AI build into a recurring retainer, plus the weekly ledger that keeps it renewed.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'AI agent', 'AI retainer', 'recurring revenue', 'AI services', 'agent adoption', 'AI value', 'managed AI', 'Prospyr 305', 'AI business', 'AI value ledger'],
   alternates: {
     canonical: '/blog/agent-to-retainer',
@@ -16,7 +16,7 @@ export const metadata = {
         url: 'https://franklin.simplifyingbusinesses.com/blog/agent-to-retainer-hero.jpg',
         width: 1600,
         height: 900,
-        alt: 'Abstract: a single glowing green agent node feeding a rising value graph through a ledger — the retainer flywheel',
+        alt: 'Abstract: a single glowing green agent node feeding a rising value graph through a ledger, the retainer flywheel',
       },
     ],
   },
@@ -34,7 +34,7 @@ export default function AgentToRetainer() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: 'How to Turn an AI Agent Into a Retainer',
-    description: 'Sell the role. Manage adoption. Prove the result. The four-layer offer that turns a one-off AI build into a recurring retainer — and the weekly ledger that keeps it renewed.',
+    description: 'Sell the role. Manage adoption. Prove the result. The four-layer offer that turns a one-off AI build into a recurring retainer, plus the weekly ledger that keeps it renewed.',
     image: 'https://franklin.simplifyingbusinesses.com/blog/agent-to-retainer-hero.jpg',
     inLanguage: 'en',
     articleSection: 'AI Strategy',
@@ -92,7 +92,7 @@ export default function AgentToRetainer() {
       <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/agent-to-retainer-hero.jpg"
-          alt="Abstract: a single glowing green agent node feeding a rising value graph through a ledger — the retainer flywheel"
+          alt="Abstract: a single glowing green agent node feeding a rising value graph through a ledger, the retainer flywheel"
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -159,27 +159,27 @@ export default function AgentToRetainer() {
         <h2 className="font-display font-bold text-2xl text-white mt-12">What to Track Every Week</h2>
         <p>
           The ledger is the whole game. If you can&apos;t show value in a number your client already
-          believes in, you don&apos;t have a retainer &mdash; you have a favor. Five metrics cover it:
+          believes in, you don&apos;t have a retainer. You have a favor. Five metrics cover it:
         </p>
         <ul className="space-y-3 pl-0">
           <li className="flex gap-3">
-            <span className="text-accent font-bold">&mdash;</span>
+            <span className="text-accent font-bold">&bull;</span>
             <span><strong className="text-white">Tasks completed.</strong> Raw throughput the agent actually did.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-accent font-bold">&mdash;</span>
+            <span className="text-accent font-bold">&bull;</span>
             <span><strong className="text-white">Estimated human time returned.</strong> Hours the client&apos;s team got back. This is the number they feel.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-accent font-bold">&mdash;</span>
-            <span><strong className="text-white">Client-approved hourly value.</strong> Not your hourly &mdash; <em>theirs</em>. What their time is worth to them, agreed in advance.</span>
+            <span className="text-accent font-bold">&bull;</span>
+            <span><strong className="text-white">Client-approved hourly value.</strong> Not your hourly rate. <em>theirs</em>. What their time is worth to them, agreed in advance.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-accent font-bold">&mdash;</span>
-            <span><strong className="text-white">Issues resolved.</strong> Proof the reliability layer is doing its job &mdash; things broke and you fixed them fast.</span>
+            <span className="text-accent font-bold">&bull;</span>
+            <span><strong className="text-white">Issues resolved.</strong> Proof the reliability layer is doing its job. Things broke and you fixed them fast.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-accent font-bold">&mdash;</span>
+            <span className="text-accent font-bold">&bull;</span>
             <span><strong className="text-white">Next workflow to add.</strong> The expansion path. Shows the relationship compounds instead of plateauing.</span>
           </li>
         </ul>
@@ -216,20 +216,20 @@ export default function AgentToRetainer() {
         </div>
 
         <p>
-          The &ldquo;do instead&rdquo; column is the retainer. It&apos;s more work &mdash; but it&apos;s the work
+          The &ldquo;do instead&rdquo; column is the retainer. It&apos;s more work, but it&apos;s the work
           a client will <em className="text-white">renew</em>. A delivered login is a sunk cost they&apos;re done with. A managed,
           measured, compounding result is a line item they protect.
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white mt-12">Why This Wins on the Moat</h2>
         <p>
-          This isn&apos;t just a pricing model &mdash; it&apos;s the digestion layer made into a product.
+          This isn&apos;t just a pricing model. It&apos;s the digestion layer made into a product.
           The client never needs to understand the agent. They understand the job getting done, the
           ledger proving it, and the human one step away if it breaks. That&apos;s exactly what makes
           AI trustworthy for the people who will never touch a model.
         </p>
         <p>
-          Everyone can build an agent. The moat is <strong className="text-white">owning the managed result</strong> &mdash;
+          Everyone can build an agent. The moat is <strong className="text-white">owning the managed result</strong>:
           adoption, reliability, and proof. Turn that into a retainer and you&apos;re not selling AI.
           You&apos;re selling a job, handled, with receipts. That&apos;s a business.
         </p>

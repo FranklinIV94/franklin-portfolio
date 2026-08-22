@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "I'm Not an AI Engineer. I'm an Agentic Engineer. — Franklin J Bryant IV",
-  description: 'The biggest opportunity in AI isn\'t building models — it\'s building businesses where AI is the execution layer. Why agentic engineering is a fundamentally different skill set than what most people are learning.',
+  title: "I'm Not an AI Engineer. I'm an Agentic Engineer. | Franklin J Bryant IV",
+  description: 'The biggest opportunity in AI isn\'t building models. It\'s building businesses where AI is the execution layer. Why agentic engineering is a fundamentally different skill set than what most people are learning.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'agentic engineering', 'AI architecture', 'autonomous systems', 'AI agents', 'business automation', 'Prospyr 305'],
   openGraph: {
     title: "I'm Not an AI Engineer. I'm an Agentic Engineer.",
-    description: 'Why the future of business isn\'t about using AI — it\'s about building systems where AI executes.',
+    description: 'Why the future of business isn\'t about using AI. It\'s about building systems where AI executes.',
     images: ['/blog/agentic-engineer-hero.jpg'],
   },
 };
@@ -14,7 +14,7 @@ export default function AgenticEngineer() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: "I'm Not an AI Engineer. I'm an Agentic Engineer.",
-    description: 'The biggest opportunity in AI isn\'t building models — it\'s building businesses where AI is the execution layer.',
+    description: 'The biggest opportunity in AI isn\'t building models. It\'s building businesses where AI is the execution layer.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -58,7 +58,7 @@ export default function AgenticEngineer() {
           <span className="text-accent">I&apos;m an Agentic Engineer.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
-          Why the future of business isn&apos;t about using AI — it&apos;s about building systems where AI executes.
+          Why the future of business isn&apos;t about using AI. It&apos;s about building systems where AI executes.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -71,11 +71,11 @@ export default function AgenticEngineer() {
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/agentic-engineer-hero.jpg"
-          alt="Agentic engineering command center — autonomous systems orchestrating business operations"
+          alt="Agentic engineering command center: autonomous systems orchestrating business operations"
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
-          The agentic engineer doesn&apos;t write every line of code — they architect systems where AI executes reliably
+          The agentic engineer doesn&apos;t write every line of code. They architect systems where AI executes reliably.
         </figcaption>
       </figure>
 
@@ -86,7 +86,7 @@ export default function AgenticEngineer() {
         </p>
 
         <p>
-          Learn Python. Take Karpathy&apos;s course. Build a RAG app. Deploy on Hugging Face. Done — you&apos;re an AI engineer.
+          Learn Python. Take Karpathy&apos;s course. Build a RAG app. Deploy on Hugging Face. Done. You&apos;re an AI engineer.
         </p>
 
         <p>
@@ -158,7 +158,7 @@ export default function AgenticEngineer() {
         </p>
 
         <p>
-          When a trust document has the wrong beneficiary name, that&apos;s not a hallucination — that&apos;s a malpractice issue. When a client&apos;s financial data leaks, that&apos;s not a model safety problem — that&apos;s a federal violation.
+          When a trust document has the wrong beneficiary name, that&apos;s not a hallucination. That&apos;s a malpractice issue. When a client&apos;s financial data leaks, that&apos;s not a model safety problem. That&apos;s a federal violation.
         </p>
 
         <p className="text-accent font-semibold">
@@ -178,7 +178,7 @@ export default function AgenticEngineer() {
             { icon: '📋', title: 'Client Onboarding Portal', desc: 'Intake forms, auto-lead creation, OSINT enrichment (Apollo, Sherlock, GhostTrack), routing. Built in a week. Live and collecting leads.', tag: 'Production' },
             { icon: '📑', title: 'Estate Planning System', desc: 'Three trusts for a physician client. Tracks 5 blocking items before execution. Coordinates with reviewing attorney. Plain-language client briefings.', tag: 'Production' },
             { icon: '🏗️', title: 'Construction Compliance System', desc: 'Maps every Florida permit, inspection, and structural test. Defines who holds what document, when, and what happens when they don\'t.', tag: 'Production' },
-            { icon: '🌙', title: 'Overnight Agents', desc: 'Research competitors, monitor market shifts, maintain a knowledge vault, deliver morning briefings. Not reminders — autonomous workers producing real intel.', tag: 'Production' },
+            { icon: '🌙', title: 'Overnight Agents', desc: 'Research competitors, monitor market shifts, maintain a knowledge vault, deliver morning briefings. Not reminders. Autonomous workers producing real intel.', tag: 'Production' },
           ].map(system => (
             <div key={system.title} className="rounded-xl border border-border bg-surface p-6">
               <div className="flex items-center gap-3 mb-2">
@@ -221,7 +221,7 @@ export default function AgenticEngineer() {
         </p>
 
         <p>
-          The &quot;agentic&quot; part isn&apos;t the model — it&apos;s the system you build around the model that gives it continuity. We use curated memory files: long-term memory, daily logs, task state, and a knowledge vault. Every time the agent starts, it reads these files and reconstructs context from scratch.
+          The &quot;agentic&quot; part isn&apos;t the model. It&apos;s the system you build around the model that gives it continuity. We use curated memory files: long-term memory, daily logs, task state, and a knowledge vault. Every time the agent starts, it reads these files and reconstructs context from scratch.
         </p>
 
         <div className="my-6 bg-accent/5 border border-accent/20 rounded-xl p-6">
@@ -239,7 +239,7 @@ export default function AgenticEngineer() {
         </h3>
 
         <p>
-          Most people give agents vibes: <em>&quot;improve the dashboard,&quot;</em> <em>&quot;make onboarding smoother.&quot;</em> Agents interpret vibes by optimizing for whatever is easiest to prove. They&apos;ll make things look cleaner, add tests that pass, reduce steps — none of which means the product got better.
+          Most people give agents vibes: <em>&quot;improve the dashboard,&quot;</em> <em>&quot;make onboarding smoother.&quot;</em> Agents interpret vibes by optimizing for whatever is easiest to prove. They&apos;ll make things look cleaner, add tests that pass, reduce steps. None of which means the product got better.
         </p>
 
         <p>
@@ -251,7 +251,7 @@ export default function AgenticEngineer() {
             { num: '1', label: 'Observable behavior', desc: 'What the user can see and verify' },
             { num: '2', label: 'Negative cases', desc: 'What must NOT happen under any circumstance' },
             { num: '3', label: 'Scope boundaries', desc: 'Which files and systems can be touched' },
-            { num: '4', label: 'Validation evidence', desc: 'Tests, lint, screenshots, file paths — proof outside the chat' },
+            { num: '4', label: 'Validation evidence', desc: 'Tests, lint, screenshots, file paths: proof outside the chat' },
             { num: '5', label: 'Stop conditions', desc: 'When to stop and report blockers' },
           ].map(item => (
             <div key={item.num} className="flex items-start gap-3 bg-surface border border-border rounded-lg p-4">
@@ -276,7 +276,7 @@ export default function AgenticEngineer() {
         </p>
 
         <p>
-          The security posture isn&apos;t an afterthought — it&apos;s the foundation. If the model can&apos;t be trusted with the data, the system can&apos;t be trusted with the client.
+          The security posture isn&apos;t an afterthought. It&apos;s the foundation. If the model can&apos;t be trusted with the data, the system can&apos;t be trusted with the client.
         </p>
 
         {/* Pillar 4 */}
@@ -306,18 +306,18 @@ export default function AgenticEngineer() {
         </div>
 
         <p className="text-sm text-gray-400 italic">
-          These aren&apos;t aspirations. They&apos;re operational rules enforced every session. And they came from failure — each law was written because something broke and we needed a principle that would have prevented it.
+          These aren&apos;t aspirations. They&apos;re operational rules enforced every session. And they came from failure: each law was written because something broke and we needed a principle that would have prevented it.
         </p>
 
         {/* What Roadmaps Get Wrong */}
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">What the Roadmaps Get Wrong</h2>
 
         <p>
-          The &quot;Zero to AI Engineer&quot; roadmaps are not wrong. They&apos;re incomplete. They teach you the building blocks — Python, transformers, embeddings, RAG, agents, deployment.
+          The &quot;Zero to AI Engineer&quot; roadmaps are not wrong. They&apos;re incomplete.
         </p>
 
         <p>
-          What they skip is the part where you take those building blocks and build something that works for a business.
+          They teach you the building blocks: Python, transformers, embeddings, RAG, agents, deployment.
         </p>
 
         <div className="my-8 grid gap-3">
@@ -353,9 +353,9 @@ export default function AgenticEngineer() {
             </thead>
             <tbody className="divide-y divide-border">
               {[
-                { player: 'OpenAI', move: '$4B DeployCo — FDEs embedded in enterprise', target: 'Fortune 500' },
-                { player: 'Anthropic', move: 'Claude Platform on AWS — managed agents', target: 'Enterprise AWS' },
-                { player: 'Google', move: '50+ MCP servers — managed endpoints', target: 'Enterprise GCP' },
+                { player: 'OpenAI', move: '$4B DeployCo: FDEs embedded in enterprise', target: 'Fortune 500' },
+                { player: 'Anthropic', move: 'Claude Platform on AWS: managed agents', target: 'Enterprise AWS' },
+                { player: 'Google', move: '50+ MCP servers: managed endpoints', target: 'Enterprise GCP' },
                 { player: 'ALBS', move: 'AI-accelerated development for SMB/mid-market', target: 'The gap they\'re missing' },
               ].map(row => (
                 <tr key={row.player} className={row.player === 'ALBS' ? 'bg-accent/5' : ''}>
@@ -375,7 +375,7 @@ export default function AgenticEngineer() {
         </p>
 
         <p>
-          That&apos;s where we operate. That&apos;s where the gap is. And that&apos;s where agentic engineering — not just AI engineering — creates real value.
+          That&apos;s where we operate. That&apos;s where the gap is. And that&apos;s where agentic engineering, not just AI engineering, creates real value.
         </p>
 
         <p>
@@ -399,21 +399,21 @@ export default function AgenticEngineer() {
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
               <a href="https://x.com/dair_ai/status/2056018543850754283" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                DAIR.AI — Top AI Papers of the Week (May 11-17, 2026)
+                DAIR.AI: Top AI Papers of the Week (May 11-17, 2026)
               </a>
-              <span className="text-gray-500"> — Memory Curse, δ-mem, Is Grep All You Need?</span>
+              <span className="text-gray-500">, Memory Curse, δ-mem, Is Grep All You Need?</span>
             </li>
             <li>
               <a href="https://x.com/nurijanian/status/2055927283991654775" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                George @nurijanian — /goal for Product Managers
+                George @nurijanian: /goal for Product Managers
               </a>
-              <span className="text-gray-500"> — Agent loops, definition of done, and the Ralph Wiggum pattern</span>
+              <span className="text-gray-500">, Agent loops, definition of done, and the Ralph Wiggum pattern</span>
             </li>
             <li>
               <a href="https://x.com/Shruti_0810/status/2055676059480395990" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                Shruti — Zero to AI Engineer Roadmap
+                Shruti: Zero to AI Engineer Roadmap
               </a>
-              <span className="text-gray-500"> — The roadmap that sparked this response</span>
+              <span className="text-gray-500">, The roadmap that sparked this response</span>
             </li>
           </ul>
         </div>
@@ -422,7 +422,7 @@ export default function AgenticEngineer() {
       {/* CTA */}
       <div className="mt-16 bg-surface border border-border rounded-2xl p-8 text-center">
         <h3 className="font-display font-bold text-2xl mb-3 text-white">Building with AI? Let&apos;s talk.</h3>
-        <p className="text-gray-400 mb-6">I architect AI-accelerated systems that research, execute, and scale — with security-first methodology and production-tested architecture.</p>
+        <p className="text-gray-400 mb-6">I architect AI-accelerated systems that research, execute, and scale, with security-first methodology and production-tested architecture.</p>
         <a
           href="/contact"
           className="inline-flex items-center gap-2 bg-accent text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors"

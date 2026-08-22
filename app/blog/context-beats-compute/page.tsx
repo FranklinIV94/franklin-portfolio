@@ -1,10 +1,10 @@
 export const metadata = {
-  title: '7 Trillion Passwords Couldn\'t Crack This Bitcoin Wallet. AI Did It in Minutes. — Franklin J Bryant IV',
-  description: 'How contextual intelligence beat brute force — and what it means for business. A Bitcoin recovery story and new research prove: better retrieval > more compute.',
+  title: '7 Trillion Passwords Couldn\'t Crack This Bitcoin Wallet. AI Did It in Minutes. | Franklin J Bryant IV',
+  description: 'How contextual intelligence beat brute force, and what it means for business. A Bitcoin recovery story and new research prove: better retrieval beats more compute.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'Prospyr 305', 'contextual intelligence', 'AI vs brute force', 'Bitcoin recovery', 'context window', 'business AI', 'computational advantage'],
   openGraph: {
     title: '7 Trillion Passwords Couldn\'t Crack This Bitcoin Wallet. AI Did It in Minutes.',
-    description: 'How contextual intelligence beat brute force — and what it means for business.',
+    description: 'How contextual intelligence beat brute force, and what it means for business.',
     images: ['/blog/context-vs-compute-hero.jpg'],
   },
 };
@@ -14,7 +14,7 @@ export default function ContextBeatsCompute() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: '7 Trillion Passwords Couldn\'t Crack This Bitcoin Wallet. AI Did It in Minutes.',
-    description: 'How contextual intelligence beat brute force — and what it means for business.',
+    description: 'How contextual intelligence beat brute force, and what it means for business.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -58,7 +58,7 @@ export default function ContextBeatsCompute() {
           <span className="text-accent">AI Did It in Minutes.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
-          How contextual intelligence beat brute force — and what it means for business.
+          How contextual intelligence beat brute force, and what it means for business.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -71,7 +71,7 @@ export default function ContextBeatsCompute() {
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/context-vs-compute-hero.jpg"
-          alt="Brute Force vs Contextual Intelligence — the pattern that changes everything"
+          alt="Brute Force vs Contextual Intelligence: the pattern that changes everything"
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -107,7 +107,7 @@ export default function ContextBeatsCompute() {
         </div>
 
         <p>
-          Then he uploaded his entire old college computer — files, documents, notes, everything — into <strong className="text-accent">Claude</strong>. And Claude cracked it.
+          Then he uploaded his entire old college computer (files, documents, notes, everything) into <strong className="text-accent">Claude</strong>. And Claude cracked it.
         </p>
 
         <p>
@@ -120,7 +120,7 @@ export default function ContextBeatsCompute() {
           <ul className="space-y-3 text-gray-300">
             <li className="flex items-start gap-3">
               <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-bold text-accent">1</span>
-              <span>Analyzed the full contents of an old college computer — files, documents, notes</span>
+              <span>Analyzed the full contents of an old college computer: files, documents, notes</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-bold text-accent">2</span>
@@ -204,7 +204,7 @@ export default function ContextBeatsCompute() {
         </div>
 
         <p>
-          The pattern is the same in both the Bitcoin story and the Exa research: <strong className="text-white">contextual intelligence destroys brute force</strong>. More passwords, more parameters, more compute — none of it matters if you&apos;re looking in the wrong places. What matters is finding the <em>right</em> information and connecting it correctly.
+          The pattern is the same in both the Bitcoin story and the Exa research: <strong className="text-white">contextual intelligence destroys brute force</strong>. More passwords, more parameters, more compute. None of it matters if you&apos;re looking in the wrong places. What matters is finding the <em>right</em> information and connecting it correctly.
         </p>
 
         {/* Cross-backend transfer */}
@@ -215,11 +215,11 @@ export default function ContextBeatsCompute() {
           </p>
           <ul className="space-y-3 text-sm text-gray-300">
             <li className="flex items-start gap-2"><span className="text-accent mt-0.5">→</span> Agents trained on Exa perform better <strong className="text-white">regardless</strong> of which search engine they use at inference</li>
-            <li className="flex items-start gap-2"><span className="text-accent mt-0.5">→</span> Using Exa at inference improves performance for <strong className="text-white">both</strong> trained agents — even the SERP-trained one</li>
-            <li className="flex items-start gap-2"><span className="text-accent mt-0.5">→</span> Exa returns relevant answers <strong className="text-white">10.7% more often</strong> per search call — denser reward signal compounds over training</li>
+            <li className="flex items-start gap-2"><span className="text-accent mt-0.5">→</span> Using Exa at inference improves performance for <strong className="text-white">both</strong> trained agents, even the SERP-trained one</li>
+            <li className="flex items-start gap-2"><span className="text-accent mt-0.5">→</span> Exa returns relevant answers <strong className="text-white">10.7% more often</strong> per search call. Denser reward signal compounds over training</li>
           </ul>
           <p className="text-sm text-gray-400 mt-4">
-            This means models trained on better search don&apos;t just perform better — they learn <em>better search strategies</em> that transfer to any backend.
+            This means models trained on better search don&apos;t just perform better. They learn <em>better search strategies</em> that transfer to any backend.
           </p>
         </div>
 
@@ -229,7 +229,7 @@ export default function ContextBeatsCompute() {
         <figure className="my-10 overflow-hidden rounded-xl">
           <img src="/blog/context-vs-compute-pipeline.jpg" alt="Context Pipeline: from scattered data to organized knowledge to AI action" className="w-full rounded-xl" />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
-            The context pipeline — transforming scattered data into organized, agent-accessible knowledge
+            The context pipeline: transforming scattered data into organized, agent-accessible knowledge
           </figcaption>
         </figure>
 
@@ -238,7 +238,7 @@ export default function ContextBeatsCompute() {
         </p>
 
         <p>
-          The smarter approach — the one that actually delivers results — is giving AI the right context at the right time. Full business context. Connected data. Semantic understanding of what matters and what doesn&apos;t.
+          The smarter approach, the one that actually delivers results, is giving AI the right context at the right time. Full business context. Connected data. Semantic understanding of what matters and what doesn&apos;t.
         </p>
 
         {/* Comparison */}
@@ -261,7 +261,7 @@ export default function ContextBeatsCompute() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-red-400">✗</span>
-                Reactive — wait for AI to hallucinate, then correct
+                Reactive: wait for AI to hallucinate, then correct
               </li>
             </ul>
           </div>
@@ -283,7 +283,7 @@ export default function ContextBeatsCompute() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-accent">✓</span>
-                Proactive — AI finds the right answer, not more answers
+                Proactive: AI finds the right answer, not more answers
               </li>
             </ul>
           </div>
@@ -307,11 +307,11 @@ export default function ContextBeatsCompute() {
         </div>
 
         <p>
-          For businesses investing in AI, this means your priority shouldn&apos;t be buying the biggest model. It should be building the best context pipeline — connecting your data, your documents, your institutional knowledge into something your AI can actually reason over.
+          For businesses investing in AI, this means your priority shouldn&apos;t be buying the biggest model. It should be building the best context pipeline: connecting your data, your documents, your institutional knowledge into something your AI can actually reason over.
         </p>
 
         <p>
-          The @cprkrn story proves it at the individual level: one person, one AI, one breakthrough — not from more compute, but from better context. The Exa research proves it at scale: across every benchmark tested, better retrieval beats bigger models.
+          The @cprkrn story proves it at the individual level: one person, one AI, one breakthrough, not from more compute, but from better context. The Exa research proves it at scale: across every benchmark tested, better retrieval beats bigger models.
         </p>
 
         <p className="text-lg text-gray-200 leading-relaxed">
@@ -344,7 +344,7 @@ export default function ContextBeatsCompute() {
       {/* CTA */}
       <div className="mt-16 bg-surface border border-border rounded-2xl p-8 text-center">
         <h3 className="font-display font-bold text-2xl mb-3 text-white">Want AI that actually works?</h3>
-        <p className="text-gray-400 mb-6">I build AI-accelerated systems that research, execute, and scale — with security-first methodology.</p>
+        <p className="text-gray-400 mb-6">I build AI-accelerated systems that research, execute, and scale, with security-first methodology.</p>
         <a
           href="/contact"
           className="inline-flex items-center gap-2 bg-accent text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors"

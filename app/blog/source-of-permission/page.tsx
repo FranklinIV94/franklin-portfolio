@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'The Source of Permission — Franklin J Bryant IV',
-  description: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearinghouses, vertical agents, and the death of scaffolding converged this week — and what Prospyr 305 is building next.',
+  title: 'The Source of Permission | Franklin J Bryant IV',
+  description: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearinghouses, vertical agents, and the death of scaffolding converged this week, and what Prospyr 305 is building next.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'ALBS', 'clearinghouse', 'AI agents', 'source of permission', 'Prospyr 305', 'agentic engineering', 'vertical agents', 'governance', 'Fable 5'],
   openGraph: {
     title: 'The Source of Permission',
@@ -14,7 +14,7 @@ export default function SourceOfPermission() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'The Source of Permission',
-    description: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearinghouses, vertical agents, and the death of scaffolding converged this week — and what Prospyr 305 is building next.',
+    description: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearinghouses, vertical agents, and the death of scaffolding converged this week, and what Prospyr 305 is building next.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -58,7 +58,7 @@ export default function SourceOfPermission() {
           The Source of Permission<span className="text-accent">.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl">
-          The SaaS moat was owning data. The AI moat is owning permissions. Six research signals converged this week on one architecture — and we&apos;re already running it.
+          The SaaS moat was owning data. The AI moat is owning permissions. Six research signals converged this week on one architecture, and we&apos;re already running it.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -71,7 +71,7 @@ export default function SourceOfPermission() {
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/source-of-permission-hero.jpg"
-          alt="Central governance node — the clearinghouse where agent permissions are verified, authorized, and audited"
+          alt="Central governance node: the clearinghouse where agent permissions are verified, authorized, and audited"
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -82,7 +82,7 @@ export default function SourceOfPermission() {
       {/* Intro */}
       <div className="space-y-6 text-gray-300 text-base leading-relaxed font-body">
         <p className="text-lg text-gray-200 leading-relaxed">
-          Something shifted this week. Not a single breakthrough — a convergence. Six signals from six different sources, all pointing to the same conclusion:
+          Something shifted this week. Not a single breakthrough. A convergence. Six signals from six different sources, all pointing to the same conclusion:
         </p>
 
         <div className="my-10 bg-accent/5 border border-accent/30 rounded-2xl p-8">
@@ -91,7 +91,7 @@ export default function SourceOfPermission() {
             <span className="text-accent">The source-of-permission era is beginning.</span>
           </p>
           <p className="mt-4 text-sm text-gray-400">
-            — Jamin Ball, Clouded Judgement (Altimeter Capital), June 12, 2026
+            Jamin Ball, Clouded Judgement (Altimeter Capital), June 12, 2026
           </p>
         </div>
 
@@ -121,11 +121,11 @@ export default function SourceOfPermission() {
         </p>
 
         <p>
-          In SaaS, the moat was the <strong className="text-white">system of record</strong> — Salesforce owned your customer data, Workday owned your employee data, NetSuite owned your financial data. Once everything integrated with the system of record, ripping it out was impossible. Data gravity + workflow lock-in = indestructible moat.
+          In SaaS, the moat was the <strong className="text-white">system of record</strong>. Salesforce owned your customer data, Workday owned your employee data, NetSuite owned your financial data. Once everything integrated with the system of record, ripping it out was impossible. Data gravity + workflow lock-in = indestructible moat.
         </p>
 
         <p>
-          In AI, the moat is the <strong className="text-white">clearinghouse</strong>. When agents from multiple vendors act autonomously, touch critical data, and spend money — someone has to sit in the middle and decide: which agent is cleared to act, on what data, with what limits, and can you prove what happened after the fact?
+          In AI, the moat is the <strong className="text-white">clearinghouse</strong>. When agents from multiple vendors act autonomously, touch critical data, and spend money, someone has to sit in the middle and decide: which agent is cleared to act, on what data, with what limits, and can you prove what happened after the fact?
         </p>
 
         <p>
@@ -134,9 +134,9 @@ export default function SourceOfPermission() {
 
         <div className="my-8 grid gap-4 sm:grid-cols-2">
           {[
-            { num: '01', title: 'Memory', desc: 'What your agents know — the accumulated context that makes them useful' },
-            { num: '02', title: 'Context', desc: 'What agents see and how it\'s served — the lens that determines what information reaches which agent' },
-            { num: '03', title: 'Execution', desc: 'What agents are allowed to do — the permission boundary between thinking and acting' },
+            { num: '01', title: 'Memory', desc: 'What your agents know: the accumulated context that makes them useful' },
+            { num: '02', title: 'Context', desc: 'What agents see and how it\'s served: the lens that determines what information reaches which agent' },
+            { num: '03', title: 'Execution', desc: 'What agents are allowed to do: the permission boundary between thinking and acting' },
             { num: '04', title: 'Governance', desc: 'Who\'s allowed to do what, plus the audit trail behind all of it' },
           ].map(pillar => (
             <div key={pillar.num} className="rounded-xl border border-accent/20 bg-accent/5 p-6">
@@ -156,7 +156,7 @@ export default function SourceOfPermission() {
         </p>
 
         <p>
-          But the most strategic position? The <strong className="text-accent">neutral cross-clearinghouse</strong> — governing across all agent vendors. No enterprise runs only Microsoft&apos;s agents. Microsoft can&apos;t credibly govern Salesforce&apos;s agents. That neutral seat is the most strategic real estate in software.
+          But the most strategic position? The <strong className="text-accent">neutral cross-clearinghouse</strong>, governing across all agent vendors. No enterprise runs only Microsoft&apos;s agents. Microsoft can&apos;t credibly govern Salesforce&apos;s agents. That neutral seat is the most strategic real estate in software.
         </p>
 
         {/* Signal 2: Vertical Agents */}
@@ -169,7 +169,7 @@ export default function SourceOfPermission() {
         </p>
 
         <p>
-          His thesis: <strong className="text-white">the loop is solved. The harness is the product.</strong> The moat isn&apos;t the model — it&apos;s the proprietary workflow data your product accumulates every day just by running.
+          His thesis: <strong className="text-white">the loop is solved. The harness is the product.</strong> The moat isn&apos;t the model. It&apos;s the proprietary workflow data your product accumulates every day just by running.
         </p>
 
         <p>
@@ -178,9 +178,9 @@ export default function SourceOfPermission() {
 
         <div className="my-8 space-y-4">
           {[
-            { title: 'Data', desc: 'Domain-specific, proprietary, accumulates with use. Not the public web — the stuff that only exists because your product runs in that industry every day.', tag: 'Accumulates' },
-            { title: 'Workflow', desc: 'Embedded in existing SOPs, hard to rip out. Not bolt-on AI — AI that lives inside the process and can\'t be removed without breaking the workflow.', tag: 'Embeds' },
-            { title: 'Trust', desc: 'Industry certifications, audit trails, compliance. Not lowest common denominator — the specific certifications and compliance frameworks that industry demands.', tag: 'Validates' },
+            { title: 'Data', desc: 'Domain-specific, proprietary, accumulates with use. Not the public web. The stuff that only exists because your product runs in that industry every day.', tag: 'Accumulates' },
+            { title: 'Workflow', desc: 'Embedded in existing SOPs, hard to rip out. Not bolt-on AI. AI that lives inside the process and can\'t be removed without breaking the workflow.', tag: 'Embeds' },
+            { title: 'Trust', desc: 'Industry certifications, audit trails, compliance. Not lowest common denominator. The specific certifications and compliance frameworks that industry demands.', tag: 'Validates' },
           ].map(dim => (
             <div key={dim.title} className="rounded-xl border border-border bg-surface p-5">
               <div className="flex items-center gap-3 mb-2">
@@ -193,7 +193,7 @@ export default function SourceOfPermission() {
         </div>
 
         <p>
-          Seven components make up what Wang calls the Vertical Agent Anatomy. The LLM is the <em>smallest component by engineering hours</em>. The router, specialist models, supervisors, tool layer, memory system, and eval framework are where the real engineering happens.
+          Seven components make up what Wang calls the Vertical Agent Anatomy. The LLM is the <em>smallest component by engineering hours</em>. The router, specialist models, supervisors, tool layer, memory system, and eval framework are where the real engineering lives.
         </p>
 
         {/* Signal 3: Scaffolding Obsolescence */}
@@ -202,21 +202,21 @@ export default function SourceOfPermission() {
         </h2>
 
         <p>
-          Anthropic released Claude Fable 5 and Mythos 5 this week — 80.3% SWE-Bench, 1M context window, $10/$50 per million tokens. But the deeper story isn&apos;t the benchmarks.
+          Anthropic released Claude Fable 5 and Mythos 5 this week: 80.3% SWE-Bench, 1M context window, $10/$50 per million tokens. But the deeper story isn&apos;t the benchmarks.
         </p>
 
         <p>
-          <strong className="text-white">Compensation scaffolding is obsolete.</strong> The 9-step procedures, self-verify loops, MUST/ALWAYS/NEVER blocks, and elaborate chain-of-thought chains that we used to make weaker models behave? Fable 5 doesn&apos;t need them. The model is smart enough to reason without being hand-held through every decision.
+          <strong className="text-white">Compensation scaffolding is obsolete.</strong> The 9-step procedures, self-verify loops, MUST/ALWAYS/NEVER blocks, and elaborate chain-of-thought chains we used to make weaker models behave? Fable 5 doesn&apos;t need them. The model is smart enough to reason without being hand-held through every decision.
         </p>
 
         <p>
-          But <strong className="text-accent">contract scaffolding is more important than ever</strong>. The rules that define what an agent IS, what it CAN do, what it MUST NOT do, and what happens when it breaks those rules — that&apos;s not compensation for a weak model. That&apos;s governance. That&apos;s the clearinghouse.
+          But <strong className="text-accent">contract scaffolding is more important than ever</strong>. The rules that define what an agent IS, what it CAN do, what it MUST NOT do, and what happens when it breaks those rules. That&apos;s not compensation for a weak model. That&apos;s governance. That&apos;s the clearinghouse.
         </p>
 
         <div className="my-8 bg-surface border border-border rounded-xl p-6">
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
-              <p className="font-mono text-xs text-red-400 mb-2">OBSOLETE — Compensation Scaffolding</p>
+              <p className="font-mono text-xs text-red-400 mb-2">OBSOLETE: Compensation Scaffolding</p>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> 9-step procedural instructions</li>
                 <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✗</span> Self-verify loops after every action</li>
@@ -226,7 +226,7 @@ export default function SourceOfPermission() {
               </ul>
             </div>
             <div>
-              <p className="font-mono text-xs text-accent mb-2">ESSENTIAL — Contract Scaffolding</p>
+              <p className="font-mono text-xs text-accent mb-2">ESSENTIAL: Contract Scaffolding</p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start gap-2"><span className="text-accent mt-0.5">✓</span> Identity: who this agent is and its role</li>
                 <li className="flex items-start gap-2"><span className="text-accent mt-0.5">✓</span> Boundaries: what it can and cannot do</li>
@@ -239,7 +239,7 @@ export default function SourceOfPermission() {
         </div>
 
         <p>
-          This distinction is critical. Anyone who conflates the two will over-simplify their agent governance, removing the contract scaffolding along with the compensation scaffolding — and watching their agents run wild in production with no guardrails left.
+          This distinction is critical. Anyone who conflates the two will over-simplify their agent governance, removing the contract scaffolding along with the compensation scaffolding, then watching their agents run wild in production with no guardrails left.
         </p>
 
 
@@ -260,17 +260,17 @@ export default function SourceOfPermission() {
         </h2>
 
         <p>
-          @hooeem&apos;s piece on agent termination architecture addresses the problem nobody wants to talk about: agents that don&apos;t stop. Infinite loops, hallucinated completions, escalating retries that burn through tokens and budget.
+          @hooeem&apos;s piece on agent termination architecture addresses the problem nobody wants to talk about: agents that don&apos;t stop. Infinite loops, hallucinated completions, escalating retries burning through tokens and budget.
         </p>
 
         <p>
-          The solution isn&apos;t better prompts. It&apos;s architecture:
+          The solution isn&apos;t better prompts. It&apos;s architecture.
         </p>
 
         <div className="my-8 space-y-4">
           {[
-            { title: 'Completion States', desc: 'Define what "done" looks like before the agent starts. Not "write a good analysis" — "every competitor analyzed, every gap identified, every finding sourced." The agent runs until it converges on the completion state.' },
-            { title: 'Action Deduplication', desc: 'Hash tool + arguments. If an agent tries the same action twice, reject it. This kills infinite retry loops dead.' },
+            { title: 'Completion States', desc: 'Define what "done" looks like before the agent starts. Not "write a good analysis" but "every competitor analyzed, every gap identified, every finding sourced." The agent runs until it converges on the completion state.' },
+            { title: 'Action Deduplication', desc: 'Hash tool + arguments. If an agent tries the same action twice, reject it. This kills infinite retry loops.' },
             { title: 'Structured Error Envelopes', desc: 'Every failure returns a typed error with code, message, field pointer, and doc URL. No ambiguous "something went wrong." The agent can reason about the error instead of hallucinating a fix.' },
             { title: 'Circuit Breakers', desc: 'If an agent fails N times on the same task, escalate to a human. Don\'t just retry harder. The harness catches what the model can\'t.' },
           ].map(item => (
@@ -287,7 +287,7 @@ export default function SourceOfPermission() {
         </div>
 
         <p>
-          This is the clearinghouse in microcosm. The termination architecture <em>is</em> the permission boundary — it defines what the agent is allowed to do, what happens when it exceeds those boundaries, and who gets notified.
+          This is the clearinghouse in microcosm. The termination architecture <em>is</em> the permission boundary. It defines what the agent is allowed to do, what happens when it exceeds those boundaries, and who gets notified.
         </p>
 
         {/* Signal 5: Growth Loops */}
@@ -296,22 +296,22 @@ export default function SourceOfPermission() {
         </h2>
 
         <p>
-          @ericosiu&apos;s piece on rebuilding the agency org chart around loops, not labor, reframes the entire business model:
+          @ericosiu&apos;s piece on rebuilding the agency org chart around loops, not labor, reframes the entire business model.
         </p>
 
         <div className="my-6 bg-accent/5 border border-accent/20 rounded-xl p-6">
           <p className="text-lg text-white italic">
             &quot;Buying agents without designing loops first creates AI theater. Many bots. Weak outcomes.&quot;
           </p>
-          <p className="mt-3 text-sm text-gray-400">— Eric Siu, Managed Growth Loops</p>
+          <p className="mt-3 text-sm text-gray-400">Eric Siu, Managed Growth Loops</p>
         </div>
 
         <p>
-          The org chart flips: account managers become outcome owners, channel specialists become loop owners. The agent isn&apos;t doing labor inside an existing org structure — the org structure <em>is</em> the loop, and the agent is the worker inside it.
+          The org chart flips: account managers become outcome owners, channel specialists become loop owners. The agent isn&apos;t doing labor inside an existing org structure. The org structure <em>is</em> the loop, and the agent is the worker inside it.
         </p>
 
         <p>
-          This pairs perfectly with the termination architecture. Loops tell you <em>what</em> runs. Termination tells you <em>when it stops</em>. Together, they define the complete lifecycle of an autonomous business process.
+          This pairs perfectly with the termination architecture. Loops tell you <em>what</em> runs. Termination tells you <em>when it stops</em>. Together they define the complete lifecycle of an autonomous business process.
         </p>
 
         {/* Signal 6: The Front Door */}
@@ -320,7 +320,7 @@ export default function SourceOfPermission() {
         </h2>
 
         <p>
-          Ball&apos;s December post on the same thread provides the historical parallel. Before the internet, GDS systems (Sabre, Amadeus) were both the system of record <em>and</em> the front door for travel booking. Then OTAs (Booking.com, Expedia) captured the new front door — consumers booking directly. The GDS stayed as the back-end truth, but lost the economic upside.
+          Ball&apos;s December post on the same thread provides the historical parallel. Before the internet, GDS systems (Sabre, Amadeus) were both the system of record <em>and</em> the front door for travel booking. Then OTAs (Booking.com, Expedia) captured the new front door: consumers booking directly. The GDS stayed as the back-end truth, but lost the economic upside.
         </p>
 
         <div className="my-8 overflow-x-auto rounded-xl border border-border">
@@ -383,13 +383,13 @@ export default function SourceOfPermission() {
               <tr className="border-b border-border/50">
                 <td className="px-4 py-3 font-mono text-accent">2</td>
                 <td className="px-4 py-3 text-white font-semibold">Peter Wang (Shortcut AI)</td>
-                <td className="px-4 py-3">The harness is the product — data, workflow, trust</td>
+                <td className="px-4 py-3">The harness is the product: data, workflow, trust</td>
                 <td className="px-4 py-3 text-accent">Memory + Governance</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="px-4 py-3 font-mono text-accent">3</td>
                 <td className="px-4 py-3 text-white font-semibold">Anthropic (Fable 5)</td>
-                <td className="px-4 py-3">Compensation scaffolding obsolete — contract scaffolding essential</td>
+                <td className="px-4 py-3">Compensation scaffolding obsolete, contract scaffolding essential</td>
                 <td className="px-4 py-3 text-accent">Execution + Governance</td>
               </tr>
               <tr className="border-b border-border/50">
@@ -401,7 +401,7 @@ export default function SourceOfPermission() {
               <tr className="border-b border-border/50">
                 <td className="px-4 py-3 font-mono text-accent">5</td>
                 <td className="px-4 py-3 text-white font-semibold">@ericosiu</td>
-                <td className="px-4 py-3">Loops, not labor — agents are loop workers inside designed processes</td>
+                <td className="px-4 py-3">Loops, not labor: agents are loop workers inside designed processes</td>
                 <td className="px-4 py-3 text-accent">Execution + Context</td>
               </tr>
               <tr className="border-b border-border/50">
@@ -415,7 +415,7 @@ export default function SourceOfPermission() {
         </div>
 
         <p>
-          Every signal maps to a clearinghouse pillar. The architecture isn&apos;t theoretical — it&apos;s the thing everyone building production agent systems converged on independently this week.
+          Every signal maps to a clearinghouse pillar. The architecture isn&apos;t theoretical. It&apos;s the thing everyone building production agent systems converged on independently this week.
         </p>
 
 
@@ -423,7 +423,7 @@ export default function SourceOfPermission() {
         <figure className="my-12 overflow-hidden rounded-2xl">
           <img
             src="/blog/source-of-permission-convergence.jpg"
-            alt="Six research signals converging on one architecture — the clearinghouse"
+            alt="Six research signals converging on one architecture: the clearinghouse"
             className="w-full"
           />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -446,17 +446,17 @@ export default function SourceOfPermission() {
             {
               pillar: 'Memory',
               what: 'MemPalace knowledge graph + tiered memory system (hot/warm/cold)',
-              detail: 'Daily logs accumulate into MEMORY.md (hot), MemPalace + Briefs (warm), raw transcripts (cold). Agents retrieve on demand via memory_search. No agent starts from zero — every agent has access to the full organizational knowledge base.',
+              detail: 'Daily logs accumulate into MEMORY.md (hot), MemPalace + Briefs (warm), raw transcripts (cold). Agents retrieve on demand via memory_search. No agent starts from zero. Every agent has access to the full organizational knowledge base.',
             },
             {
               pillar: 'Context',
               what: 'Four specialized agents with distinct roles and information access',
-              detail: 'Eaststar (office ops), Northstar (COO, heavy compute), Southstar (eng/security), Zo (client-facing). Each agent sees different context, has different capabilities, and serves different functions. The system serves each agent the context it needs — not a firehose of everything.',
+              detail: 'Eaststar (office ops), Northstar (COO, heavy compute), Southstar (eng/security), Zo (client-facing). Each agent sees different context, has different capabilities, and serves different functions. The system serves each agent the context it needs, not a firehose of everything.',
             },
             {
               pillar: 'Execution',
               what: '5-tier MCP tool architecture + Agent Code of Conduct',
-              detail: 'Read-only → Scaffold → Sandboxed → Live state → Actions. Every execution tier requires progressively more authorization. The Agent Code of Conduct defines absolute prohibitions, enforcement discipline, and command responsibility. Delegation is never absolution.',
+              detail: 'Read-only, Scaffold, Sandboxed, Live state, Actions. Every execution tier requires progressively more authorization. The Agent Code of Conduct defines absolute prohibitions, enforcement discipline, and command responsibility. Delegation is never absolution.',
             },
             {
               pillar: 'Governance',
@@ -480,7 +480,7 @@ export default function SourceOfPermission() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The AIIO Reframe</h2>
 
         <p>
-          This convergence changes how we sell what we do. Our AIIO (AI Infrastructure &amp; Operations) assessment has been positioned as &quot;AI readiness&quot; — evaluating whether your business is prepared for AI agents.
+          This convergence changes how we sell what we do. Our AIIO (AI Infrastructure &amp; Operations) assessment has been positioned as &quot;AI readiness&quot;, evaluating whether your business is prepared for AI agents.
         </p>
 
         <p>
@@ -537,7 +537,7 @@ export default function SourceOfPermission() {
         </div>
 
         <p>
-          Same product. Same assessment. 10x the urgency. CIOs aren&apos;t asking &quot;is the model good?&quot; anymore — every model is good enough. They&apos;re asking: <em>&quot;Can I see what every agent did, set policy on what it can touch, and prove it to my auditors?&quot;</em> That&apos;s what we sell.
+          Same product. Same assessment. 10x the urgency. CIOs aren&apos;t asking &quot;is the model good?&quot; anymore. Every model is good enough. They&apos;re asking: <em>&quot;Can I see what every agent did, set policy on what it can touch, and prove it to my auditors?&quot;</em> That&apos;s what we sell.
         </p>
 
         {/* What's Coming */}
@@ -551,7 +551,7 @@ export default function SourceOfPermission() {
           {[
             {
               title: 'Vertical Clearinghouses',
-              desc: 'We\'re building industry-specific governance layers — starting with healthcare (HIPAA), insurance (DWC compliance), and financial services (SEC/fiduciary). Each vertical gets its own clearinghouse: specific permissions, specific audit trails, specific compliance frameworks. Ball calls this the "vertical clearinghouse path" — earn clearinghouse status in an industry the horizontal players won\'t go deep on.',
+              desc: 'We\'re building industry-specific governance layers, starting with healthcare (HIPAA), insurance (DWC compliance), and financial services (SEC/fiduciary). Each vertical gets its own clearinghouse: specific permissions, specific audit trails, specific compliance frameworks. Ball calls this the "vertical clearinghouse path": earn clearinghouse status in an industry the horizontal players won\'t go deep on.',
               status: 'Q3 2026',
             },
             {
@@ -562,12 +562,12 @@ export default function SourceOfPermission() {
             {
               title: 'Agent Economy Payments',
               desc: 'Three hackathon projects (AP Agent on Kite Chain, AgentPay on Solana, Agent Studio on AWS + Coinbase) proved the payment layer works. Next: production-grade agent-to-agent commerce with on-chain audit trails. Every agent payment goes through the clearinghouse.',
-              status: 'Active — hackathon → production',
+              status: 'Active, hackathon to production',
             },
             {
               title: 'Hackathon Sprint',
-              desc: 'Three active hackathon submissions this summer: UiPath AgentHack ($50K), Slack Agent Builder ($42K), Build with Gemini XPRIZE ($2M). Each tests a different angle of the clearinghouse thesis — governance integrations, multi-agent collaboration, and vertical AI delivery.',
-              status: 'June–August 2026',
+              desc: 'Three active hackathon submissions this summer: UiPath AgentHack ($50K), Slack Agent Builder ($42K), Build with Gemini XPRIZE ($2M). Each tests a different angle of the clearinghouse thesis: governance integrations, multi-agent collaboration, and vertical AI delivery.',
+              status: 'June to August 2026',
             },
           ].map(item => (
             <div key={item.title} className="rounded-xl border border-border bg-surface p-5">
@@ -586,11 +586,11 @@ export default function SourceOfPermission() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The Bottom Line</h2>
 
         <p>
-          Six signals. Six sources. One architecture. The field converged this week on the clearinghouse thesis — and we&apos;re already running it.
+          Six signals. Six sources. One architecture. The field converged this week on the clearinghouse thesis, and we&apos;re already running it.
         </p>
 
         <p>
-          The SaaS moat was data. The AI moat is permissions. The companies that own the governance layer — the thing that decides which agent is cleared to act, on what data, with what limits, and can prove what happened after the fact — those companies win the agents era.
+          The SaaS moat was data. The AI moat is permissions. The companies that own the governance layer, the thing that decides which agent is cleared to act, on what data, with what limits, and can prove what happened after the fact, those companies win the agents era.
         </p>
 
         <p>
@@ -623,37 +623,37 @@ export default function SourceOfPermission() {
           <ul className="space-y-2 text-sm text-gray-400">
             <li>
               <a href="https://cloudedjudgement.substack.com/p/systems-of-record-won-the-saas-era" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                Systems of Record Won the SaaS Era — Clearinghouses Will Win the Agents Era
+                Systems of Record Won the SaaS Era, Clearinghouses Will Win the Agents Era
               </a>
-              <span className="text-gray-500"> — Jamin Ball, Clouded Judgement (June 12, 2026)</span>
+              <span className="text-gray-500">, Jamin Ball, Clouded Judgement (June 12, 2026)</span>
             </li>
             <li>
               <a href="https://cloudedjudgement.substack.com/p/clouded-judgement-121925-the-front" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                 The Front Door to the Systems of Record
               </a>
-              <span className="text-gray-500"> — Jamin Ball, Clouded Judgement (Dec 19, 2025)</span>
+              <span className="text-gray-500">, Jamin Ball, Clouded Judgement (Dec 19, 2025)</span>
             </li>
             <li>
               <span className="text-gray-300">Building a Good Vertical Agent</span>
-              <span className="text-gray-500"> — Peter Wang, Shortcut AI (June 11, 2026)</span>
+              <span className="text-gray-500">, Peter Wang, Shortcut AI (June 11, 2026)</span>
             </li>
             <li>
               <span className="text-gray-300">Claude Fable 5 &amp; Mythos 5 GA</span>
-              <span className="text-gray-500"> — Anthropic (June 11, 2026)</span>
+              <span className="text-gray-500">, Anthropic (June 11, 2026)</span>
             </li>
             <li>
               <span className="text-gray-300">Agent Termination Architecture</span>
-              <span className="text-gray-500"> — @hooeem (June 2026)</span>
+              <span className="text-gray-500">, @hooeem (June 2026)</span>
             </li>
             <li>
               <span className="text-gray-300">Managed Growth Loops</span>
-              <span className="text-gray-500"> — @ericosiu (June 2026)</span>
+              <span className="text-gray-500">, @ericosiu (June 2026)</span>
             </li>
             <li>
               <a href="https://github.com/FranklinIV94/agent-code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                 Agent Code of Conduct
               </a>
-              <span className="text-gray-500"> — Franklin J Bryant IV (May 2026)</span>
+              <span className="text-gray-500">, Franklin J Bryant IV (May 2026)</span>
             </li>
           </ul>
         </div>
@@ -663,7 +663,7 @@ export default function SourceOfPermission() {
       <div className="mt-16 bg-surface border border-border rounded-2xl p-8 text-center">
         <h3 className="font-display font-bold text-2xl mb-3 text-white">Building your clearinghouse?</h3>
         <p className="text-gray-400 mb-6">
-          We design and operate governance layers for AI agent infrastructure — from assessment to production.
+          We design and operate governance layers for AI agent infrastructure, from assessment to production.
           If you need clearinghouse readiness, let&apos;s talk.
         </p>
         <a

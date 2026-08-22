@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Governance by Default — Franklin J Bryant IV',
-  description: 'Cloudflare open-sourced their internal AI workspace. The architecture maps nearly 1:1 onto what we already spec\'d for our Ops Center. Here\'s what that validation means — and why we\'re borrowing patterns, not adopting their stack.',
+  title: 'Governance by Default | Franklin J Bryant IV',
+  description: 'Cloudflare open-sourced their internal AI workspace. The architecture maps nearly 1:1 onto what we already spec\'d for our Ops Center. Here\'s what that validation means, and why we\'re borrowing patterns, not adopting their stack.',
   keywords: ['Cloudflare OS', 'agent governance', 'enterprise AI', 'agent orchestration', 'zero-trust agents', 'AI security', 'Ops Center', 'Prospyr 305', 'cost-aware routing', 'human-in-the-loop', 'Gatekeepers', 'agent permissions'],
   openGraph: {
     title: 'Governance by Default',
@@ -14,7 +14,7 @@ export default function GovernanceByDefault() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Governance by Default',
-    description: 'Cloudflare open-sourced their internal AI workspace. The architecture maps nearly 1:1 onto what we already spec\'d for our Ops Center. Here\'s what that validation means — and why we\'re borrowing patterns, not adopting their stack.',
+    description: 'Cloudflare open-sourced their internal AI workspace. The architecture maps nearly 1:1 onto what we already spec\'d for our Ops Center. Here\'s what that validation means, and why we\'re borrowing patterns, not adopting their stack.',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -65,7 +65,7 @@ export default function GovernanceByDefault() {
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/governance-by-default-hero.jpg"
-          alt="Governed agent architecture — layered security boundaries around an AI core"
+          alt="Governed agent architecture: layered security boundaries around an AI core"
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
