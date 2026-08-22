@@ -622,5 +622,28 @@ export const projects: Project[] = [
     featured: false,
     order: 13,
   },
+  {
+    slug: 'alverra-international',
+    title: 'Alverra International',
+    tagline: 'Exclusive US Importer of the German-Milled Asche Board',
+    description: 'A premium heritage-brand import house website for Alverra International — sole U.S. importer of the Asche Board (solid European ash, milled in Germany). Elegant cream-and-gold editorial aesthetic with video hero, a subtle procedural Three.js ash atmosphere (gold particle field + rotating ash board, mouse parallax), letter-of-intent partnership flow, and a founder section for Anastasiia Amosova. Built for an E-2 visa application review.',
+    challenge: 'The client needed a website that felt like a luxury import house — not a template e-commerce page. It had to communicate provenance ("European craft in American spaces"), support a partnership/letter-of-intent flow, and make a strong visual impression for an E-2 visa application. No existing template captured the heritage aesthetic.',
+    approach: 'Designed a single-page editorial layout with a Cormorant Garamond serif + cream/gold palette. Built a background video hero, then layered a subtle Three.js procedural ash-grain atmosphere (drifting gold particles + a slowly rotating 3D ash board, honoring prefers-reduced-motion). Added a separate letter-of-intent page with a form that composes a branded PDF for admin review.',
+    solution: 'Live at alverra-draft.vercel.app with the heritage aesthetic fully implemented. The hero pairs a cinematic product video with a subtle 3D ash atmosphere. The founder section profiles Anastasiia Amosova. The LOI page generates a clean, branded letter of intent for the E-2 review file.',
+    results: [
+      'Editorial heritage aesthetic — cream/gold, Cormorant Garamond serif',
+      'Three.js procedural ash atmosphere: gold grain particles + rotating board, mouse parallax, reduced-motion aware',
+      'Three.js component sourced via the threeui skill and restyled to the Alverra brand',
+      'Letter-of-intent page with branded PDF generation for admin/E-2 review',
+      'Founder section for Anastasiia Amosova',
+    ],
+    tags: ['Three.js', 'WebGL', 'Next.js', 'E-Commerce', 'E-2 Visa', 'Brand', 'Editorial'],
+    category: 'Production',
+    role: 'Sole Architect & Developer',
+    timeline: 'August 2026',
+    liveUrl: 'https://alverra-draft.vercel.app',
+    featured: false,
+    order: 16,
+  },
 ];
 
