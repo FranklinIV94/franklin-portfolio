@@ -352,7 +352,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div>
                 <p className="text-sm text-muted mb-2">
-                  © {new Date().getFullYear()} Franklin J Bryant IV. Built with AI, deployed on Vercel.
+                  © {new Date().getFullYear()} Franklin J Bryant IV. Architected and deployed with AI.
                 </p>
               </div>
               <div>
