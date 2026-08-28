@@ -161,6 +161,33 @@ export default function ProjectPage({ params }: PageProps) {
             </section>
           </motion.div>
 
+          {/* Related work */}
+          {(() => {
+            const related = projects
+              .filter((p) => p.slug !== project.slug && p.domains.some((d) => project.domains.includes(d)))
+              .slice(0, 3);
+            if (related.length === 0) return null;
+            return (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                className="mt-20"
+              >
+                <h2 className="font-display font-bold text-2xl mb-6 text-accent">Related Work</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {related.map((p, i) => (
+                    <Link key={p.slug} href={`/work/${p.slug}`} className="group block bg-surface border border-border rounded-xl p-5 hover:border-accent/40 transition-colors">
+                      <span className="font-mono text-[10px] text-accent mb-2 block">{p.domains[0]}</span>
+                      <h3 className="font-display font-bold text-lg mb-1 group-hover:text-accent transition-colors">{p.title}</h3>
+                      <p className="text-xs text-muted line-clamp-2">{p.tagline}</p>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })()}
+
           {/* Bottom CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

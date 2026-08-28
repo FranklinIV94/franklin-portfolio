@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { ProjectCard } from '@/components/ProjectCard';
 import { projects, type Category, type Domain, type Tier } from '@/lib/projects';
 import { motion } from 'framer-motion';
@@ -17,6 +17,19 @@ export default function WorkPage() {
   const [activeTier, setActiveTier] = useState<Tier | 'All'>('All');
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<SortKey>('newest');
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  // Keyboard shortcut: "/" focuses search (command-palette feel)
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === '/' && document.activeElement?.tagName !== 'INPUT') {
+        e.preventDefault();
+        searchRef.current?.focus();
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
 
   const filtered = useMemo(() => {
     let list = projects;
@@ -68,9 +81,10 @@ export default function WorkPage() {
           <div className="relative mb-6 md:max-w-md">
             <svg className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
             <input
+              ref={searchRef}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search projects…"
+              placeholder="Search projects… (press /)"
               className="w-full bg-surface border border-border rounded-lg pl-9 pr-3 py-2 text-sm text-white placeholder:text-muted/60 focus:outline-none focus:border-accent/50 transition-colors"
             />
           </div>
