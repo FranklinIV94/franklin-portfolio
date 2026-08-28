@@ -43,9 +43,9 @@ export function ProjectCard({ project, index, featured = false, className = '' }
                 >
                   {project.title}
                 </h3>
-                {project.featured && (
+                {project.tier === 'flagship' && (
                   <span className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-accent border border-accent/30 px-3 py-1 rounded-full bg-canvas/50 backdrop-blur">
-                    Featured
+                    Flagship
                   </span>
                 )}
               </div>

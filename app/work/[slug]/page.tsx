@@ -46,9 +46,14 @@ export default function ProjectPage({ params }: PageProps) {
             className="mb-12"
           >
             <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags.map((tag) => (
-                <span key={tag} className="font-mono text-xs text-muted bg-surface border border-border px-3 py-1 rounded-lg">
-                  {tag}
+              {project.tier === 'flagship' && (
+                <span className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-accent border border-accent/30 px-3 py-1 rounded-full bg-canvas/50">
+                  Flagship
+                </span>
+              )}
+              {project.domains.map((d) => (
+                <span key={d} className="font-mono text-xs text-muted bg-surface border border-border px-3 py-1 rounded-lg">
+                  {d}
                 </span>
               ))}
             </div>
@@ -129,6 +134,31 @@ export default function ProjectPage({ params }: PageProps) {
                 </ul>
               </section>
             )}
+
+            {/* Stack & role */}
+            <section>
+              <h2 className="font-display font-bold text-2xl mb-6 text-accent">Stack &amp; Role</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-surface border border-border rounded-xl p-6">
+                  <span className="text-xs text-accent block mb-2">Role</span>
+                  <p className="text-slate-300">{project.role}</p>
+                </div>
+                <div className="bg-surface border border-border rounded-xl p-6">
+                  <span className="text-xs text-accent block mb-2">Timeline</span>
+                  <p className="text-slate-300">{project.timeline}</p>
+                </div>
+              </div>
+              <div className="mt-6 bg-surface border border-border rounded-xl p-6">
+                <span className="text-xs text-accent block mb-3">Stack</span>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="font-mono text-xs text-muted bg-canvas border border-border px-3 py-1 rounded-lg">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </section>
           </motion.div>
 
           {/* Bottom CTA */}

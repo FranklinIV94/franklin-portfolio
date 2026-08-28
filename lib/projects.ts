@@ -1,4 +1,16 @@
 export type Category = 'Production' | 'Hackathon' | 'Internal';
+export type Tier = 'flagship' | 'selected' | 'archive';
+export type Domain =
+  | 'AI Agents'
+  | 'Web3 & Payments'
+  | 'Business Ops'
+  | 'Healthcare'
+  | 'Insurance'
+  | 'Tax & Finance'
+  | 'Construction'
+  | 'E-Commerce'
+  | 'Governance'
+  | 'Security';
 
 export interface Project {
   slug: string;
@@ -16,6 +28,8 @@ export interface Project {
   liveUrl?: string;
   repoUrl?: string;
   featured: boolean;
+  tier: Tier;
+  domains: Domain[];
   order: number;
 }
 
@@ -41,6 +55,8 @@ export const projects: Project[] = [
     timeline: 'May 2026',
     repoUrl: 'https://github.com/FranklinIV94/agent-code-of-conduct',
     featured: true,
+    tier: 'flagship',
+    domains: ['AI Agents', 'Governance', 'Security'],
     order: -1,
   },
   {
@@ -64,6 +80,8 @@ export const projects: Project[] = [
     timeline: 'May 2026',
     liveUrl: 'https://vita-showroom.vercel.app',
     featured: true,
+    tier: 'selected',
+    domains: ['E-Commerce', 'Business Ops'],
     order: 0.5,
   },
   {
@@ -86,6 +104,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'May 2026',
     featured: true,
+    tier: 'selected',
+    domains: ['Healthcare'],
     order: 0.6,
   },
   {
@@ -112,6 +132,8 @@ export const projects: Project[] = [
     liveUrl: 'https://www.mypeocoforms.com',
     repoUrl: 'https://github.com/FranklinIV94/peo-automation-1',
     featured: true,
+    tier: 'selected',
+    domains: ['Business Ops', 'Insurance'],
     order: 0,
   },
   {
@@ -133,6 +155,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'April 2026',
     featured: true,
+    tier: 'selected',
+    domains: ['Insurance', 'Business Ops'],
     order: 1,
   },
   {
@@ -159,6 +183,8 @@ export const projects: Project[] = [
     timeline: 'March 2026',
     repoUrl: 'https://github.com/FranklinIV94/prospyr-inc',
     featured: true,
+    tier: 'flagship',
+    domains: ['AI Agents', 'Business Ops'],
     order: 2,
   },
   {
@@ -182,6 +208,8 @@ export const projects: Project[] = [
     liveUrl: 'https://hackathon-kite.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/hackathon-2026',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents', 'Web3 & Payments'],
     order: 3,
   },
   {
@@ -209,6 +237,8 @@ export const projects: Project[] = [
     timeline: 'March–May 2026',
     liveUrl: 'https://onboarding.simplifyingbusinesses.com',
     featured: true,
+    tier: 'flagship',
+    domains: ['Business Ops', 'AI Agents'],
     order: 4,
   },
   {
@@ -233,6 +263,8 @@ export const projects: Project[] = [
     timeline: 'April 2026',
     liveUrl: 'https://vercel-app-sooty-nu.vercel.app',
     featured: true,
+    tier: 'archive',
+    domains: ['Business Ops'],
     order: 5,
   },
   {
@@ -254,6 +286,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'March 2026',
     featured: true,
+    tier: 'archive',
+    domains: ['AI Agents', 'Business Ops'],
     order: 5,
   },
   {
@@ -276,6 +310,8 @@ export const projects: Project[] = [
     role: 'Architect & Author',
     timeline: 'June 2026',
     featured: false,
+    tier: 'selected',
+    domains: ['AI Agents', 'Business Ops'],
     order: 12,
   },
   {
@@ -297,6 +333,8 @@ export const projects: Project[] = [
     role: 'Architect & Author',
     timeline: 'July 2026',
     featured: false,
+    tier: 'archive',
+    domains: ['AI Agents', 'Business Ops'],
     order: 13,
   },
   {
@@ -319,6 +357,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'July 2026',
     featured: false,
+    tier: 'selected',
+    domains: ['Tax & Finance', 'Business Ops'],
     order: 14,
   },
   {
@@ -340,6 +380,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'July 2026',
     featured: false,
+    tier: 'archive',
+    domains: ['AI Agents'],
     order: 15,
   },
   {
@@ -363,6 +405,8 @@ export const projects: Project[] = [
     liveUrl: 'https://github.com/FranklinIV94/kite-hackathon',
     repoUrl: 'https://github.com/FranklinIV94/kite-hackathon',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents', 'Web3 & Payments'],
     order: 7,
   },
   {
@@ -385,6 +429,8 @@ export const projects: Project[] = [
     timeline: 'March 2026',
     repoUrl: 'https://github.com/FranklinIV94/hackathon-2026',
     featured: false,
+    tier: 'archive',
+    domains: ['AI Agents'],
     order: 8,
   },
   {
@@ -411,6 +457,8 @@ export const projects: Project[] = [
     liveUrl: 'https://tax-simplifier.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/ALBS-Tax-Simplifier',
     featured: true,
+    tier: 'selected',
+    domains: ['Tax & Finance', 'Business Ops'],
     order: 7,
   },
   {
@@ -437,6 +485,8 @@ export const projects: Project[] = [
     liveUrl: 'https://agentpay-solana.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/agentpay-solana',
     featured: true,
+    tier: 'flagship',
+    domains: ['Web3 & Payments', 'AI Agents'],
     order: 9,
   },
   {
@@ -463,6 +513,8 @@ export const projects: Project[] = [
     liveUrl: 'https://agent-studio-fawn.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/agent-studio',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents'],
     order: 10,
   },
   {
@@ -488,6 +540,8 @@ export const projects: Project[] = [
     liveUrl: 'https://alllinescc.com',
     repoUrl: 'https://github.com/FranklinIV94/alcc-website',
     featured: true,
+    tier: 'selected',
+    domains: ['Insurance', 'Business Ops'],
     order: 5,
   },
   {
@@ -509,6 +563,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'June–August 2026',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents'],
     order: 11,
   },
   {
@@ -531,6 +587,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'May 2026',
     featured: false,
+    tier: 'selected',
+    domains: ['Insurance', 'Business Ops'],
     order: 6,
   },
   {
@@ -554,6 +612,8 @@ export const projects: Project[] = [
     timeline: 'May 2026',
     liveUrl: 'https://albs-learning-center.vercel.app',
     featured: false,
+    tier: 'selected',
+    domains: ['Business Ops'],
     order: 7,
   },
   {
@@ -576,6 +636,8 @@ export const projects: Project[] = [
     role: 'Co-Founder & AI Infrastructure Lead',
     timeline: 'July 2026',
     featured: false,
+    tier: 'flagship',
+    domains: ['AI Agents', 'Business Ops'],
     order: 11,
   },
   {
@@ -598,6 +660,8 @@ export const projects: Project[] = [
     role: 'CFO & AI Infrastructure Lead',
     timeline: 'July 2026',
     featured: false,
+    tier: 'selected',
+    domains: ['AI Agents', 'Business Ops'],
     order: 12,
   },
   {
@@ -620,6 +684,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'July 2026',
     featured: false,
+    tier: 'archive',
+    domains: ['Web3 & Payments', 'Business Ops'],
     order: 13,
   },
   {
@@ -643,6 +709,8 @@ export const projects: Project[] = [
     timeline: 'August 2026',
     liveUrl: 'https://alverra-draft.vercel.app',
     featured: false,
+    tier: 'selected',
+    domains: ['E-Commerce', 'Business Ops'],
     order: 16,
   },
 ];
