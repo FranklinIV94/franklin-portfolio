@@ -10,6 +10,14 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'the-cost-of-waiting',
+    title: 'The Cost of Waiting',
+    excerpt: "AI isn't just changing your industry. It's changing the cost of money itself. Harvard proved one person with AI matches a two-person team. The model they used is 11 generations out of date. The window to get ahead of this is closing.",
+    date: 'August 29, 2026',
+    dateISO: '2026-08-29',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'the-accountability-moat',
     title: 'The Accountability Moat: Why AI Doesn\'t Kill Competitive Advantage, It Moves It',
     excerpt: 'AI doesn\'t kill competitive advantage. It moves the moat to the one thing models can\'t own: accountability. Your clients are already checking your work against AI right now.',
