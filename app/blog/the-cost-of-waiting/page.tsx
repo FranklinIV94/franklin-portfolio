@@ -100,7 +100,7 @@ export default function TheCostOfWaiting() {
         </p>
 
         <p>
-          Let that sink in. A model that&rsquo;s ancient by AI standards doubled per-person output. What does a current frontier model do? What does the model coming in six months do? The gap between adopters and non-adopters isn&rsquo;t widening linearly. It&rsquo;s compounding.
+          Let that sink in. A model that&rsquo;s ancient by AI standards doubled per-person output. What does a current frontier model do? What does the model coming in six months do? The gap between adopters and non-adopters isn&rsquo;t widening linearly. It&rsquo;s compounding. As I argued in <a href="/blog/build-the-system" className="text-accent hover:underline">Build the System, Not the Prompt</a>, the advantage isn&rsquo;t in the model. It&rsquo;s in the system you build around it.
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white pt-8">The Macro Squeeze</h2>
@@ -144,8 +144,19 @@ export default function TheCostOfWaiting() {
           You&rsquo;re getting squeezed from both sides. Higher financing costs on top. Lower-margin competitors underneath. And the gap widens every quarter you wait.
         </p>
 
+        <figure className="my-8 overflow-hidden rounded-xl border border-border">
+          <img
+            src="/blog/cost-of-waiting-squeeze.jpg"
+            alt="A small business storefront being squeezed from above by rising capital costs and from below by AI-powered competitors with lower operating costs"
+            className="w-full"
+          />
+          <figcaption className="mt-2 text-xs text-gray-500 text-center">
+            The two-sided squeeze: capital costs press down, AI competitors press up
+          </figcaption>
+        </figure>
+
         <p>
-          This isn&rsquo;t a technology problem. It&rsquo;s a survival problem.
+          This isn&rsquo;t a technology problem. It&rsquo;s a survival problem. And it&rsquo;s the same dynamic I described in <a href="/blog/system-of-action" className="text-accent hover:underline">System of Action vs. System of Intelligence</a>: the shift from systems that report to systems that act isn&rsquo;t coming. It&rsquo;s here. The only question is whether you&rsquo;re building one or still reading dashboards.
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white pt-8">The Framing Problem</h2>
@@ -188,8 +199,23 @@ export default function TheCostOfWaiting() {
           A company called Panacea is doing this in life sciences regulatory consulting. They signed $500,000 in contracts in two months. Ninety percent of their seven-figure pipeline is inbound. Their entire model is internal AI platform, expert owns the outcome, fixed-fee pricing instead of hourly. They replaced the incentive to work slowly with the incentive to work fast. The faster they deliver, the bigger their margin, and the happier the client.
         </p>
 
+        <figure className="my-8 overflow-hidden rounded-xl border border-border">
+          <img
+            src="/blog/cost-of-waiting-accountability.jpg"
+            alt="An AI agent does work in the background while a human professional reviews, signs, and seals the output in the foreground. The accountability layer."
+            className="w-full"
+          />
+          <figcaption className="mt-2 text-xs text-gray-500 text-center">
+            AI does the work. A professional with something to lose signs off on it.
+          </figcaption>
+        </figure>
+
         <p>
           That&rsquo;s not a theory. That&rsquo;s a business with half a million in signed contracts in sixty days.
+        </p>
+
+        <p>
+          I wrote about this dynamic in <a href="/blog/the-accountability-moat" className="text-accent hover:underline">The Accountability Moat</a>. The argument hasn&rsquo;t changed: the model is not the moat. Accountability is. But accountability without speed is just liability. AI gives you the speed. The credential gives you the trust. You need both.
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white pt-8">What We&rsquo;ve Learned Running This Model</h2>
@@ -252,7 +278,7 @@ export default function TheCostOfWaiting() {
 
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-sm text-gray-400 italic">
-            Franklin Bryant IV is COO of All Lines Business Solutions and a leading voice in practical AI implementation for small business. He is the creator of the <a href="/work/aiio-assessment" className="text-accent hover:underline">AIIO Assessment</a> framework, a structured evaluation that identifies automation opportunities and quantifies ROI before a single dollar is spent, and <a href="/work/sentinel-security-audit" className="text-accent hover:underline">SENTINEL</a>, a comprehensive AI security audit for agent infrastructure. He&rsquo;s currently pursuing his Enrolled Agent credential. Learn more at <a href="https://franklin.simplifyingbusinesses.com" className="text-accent hover:underline">franklin.simplifyingbusinesses.com</a>.
+            Franklin Bryant IV is COO of All Lines Business Solutions and a leading voice in practical AI implementation for small business. He is the creator of the AIIO Assessment framework, a structured evaluation that identifies automation opportunities and quantifies ROI before a single dollar is spent, and SENTINEL, a comprehensive AI security audit for agent infrastructure. He&rsquo;s currently pursuing his Enrolled Agent credential. Learn more at <a href="https://franklin.simplifyingbusinesses.com" className="text-accent hover:underline">franklin.simplifyingbusinesses.com</a>.
           </p>
         </div>
 
