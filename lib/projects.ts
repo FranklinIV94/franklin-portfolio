@@ -1,4 +1,16 @@
 export type Category = 'Production' | 'Hackathon' | 'Internal';
+export type Tier = 'flagship' | 'selected' | 'archive';
+export type Domain =
+  | 'AI Agents'
+  | 'Web3 & Payments'
+  | 'Business Ops'
+  | 'Healthcare'
+  | 'Insurance'
+  | 'Tax & Finance'
+  | 'Construction'
+  | 'E-Commerce'
+  | 'Governance'
+  | 'Security';
 
 export interface Project {
   slug: string;
@@ -16,6 +28,8 @@ export interface Project {
   liveUrl?: string;
   repoUrl?: string;
   featured: boolean;
+  tier: Tier;
+  domains: Domain[];
   order: number;
 }
 
@@ -40,7 +54,9 @@ export const projects: Project[] = [
     role: 'Architect & Author',
     timeline: 'May 2026',
     repoUrl: 'https://github.com/FranklinIV94/agent-code-of-conduct',
-    featured: true,
+    featured: false,
+    tier: 'selected',
+    domains: ['AI Agents', 'Governance', 'Security'],
     order: -1,
   },
   {
@@ -64,6 +80,8 @@ export const projects: Project[] = [
     timeline: 'May 2026',
     liveUrl: 'https://vita-showroom.vercel.app',
     featured: true,
+    tier: 'selected',
+    domains: ['E-Commerce', 'Business Ops'],
     order: 0.5,
   },
   {
@@ -86,6 +104,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'May 2026',
     featured: true,
+    tier: 'flagship',
+    domains: ['Healthcare'],
     order: 0.6,
   },
   {
@@ -112,6 +132,8 @@ export const projects: Project[] = [
     liveUrl: 'https://www.mypeocoforms.com',
     repoUrl: 'https://github.com/FranklinIV94/peo-automation-1',
     featured: true,
+    tier: 'flagship',
+    domains: ['Business Ops', 'Insurance'],
     order: 0,
   },
   {
@@ -133,6 +155,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'April 2026',
     featured: true,
+    tier: 'selected',
+    domains: ['Insurance', 'Business Ops'],
     order: 1,
   },
   {
@@ -158,7 +182,9 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'March 2026',
     repoUrl: 'https://github.com/FranklinIV94/prospyr-inc',
-    featured: true,
+    featured: false,
+    tier: 'selected',
+    domains: ['AI Agents', 'Business Ops'],
     order: 2,
   },
   {
@@ -182,6 +208,8 @@ export const projects: Project[] = [
     liveUrl: 'https://hackathon-kite.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/hackathon-2026',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents', 'Web3 & Payments'],
     order: 3,
   },
   {
@@ -209,7 +237,9 @@ export const projects: Project[] = [
     timeline: 'March–May 2026',
     liveUrl: 'https://onboarding.simplifyingbusinesses.com',
     featured: true,
-    order: 4,
+    tier: 'flagship',
+    domains: ['Business Ops', 'AI Agents'],
+    order: -1,
   },
   {
     slug: 'calendar-hub',
@@ -233,6 +263,8 @@ export const projects: Project[] = [
     timeline: 'April 2026',
     liveUrl: 'https://vercel-app-sooty-nu.vercel.app',
     featured: true,
+    tier: 'archive',
+    domains: ['Business Ops'],
     order: 5,
   },
   {
@@ -254,6 +286,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'March 2026',
     featured: true,
+    tier: 'archive',
+    domains: ['AI Agents', 'Business Ops'],
     order: 5,
   },
   {
@@ -275,7 +309,9 @@ export const projects: Project[] = [
     category: 'Production',
     role: 'Architect & Author',
     timeline: 'June 2026',
-    featured: false,
+    featured: true,
+    tier: 'selected',
+    domains: ['AI Agents', 'Business Ops'],
     order: 12,
   },
   {
@@ -296,7 +332,9 @@ export const projects: Project[] = [
     category: 'Production',
     role: 'Architect & Author',
     timeline: 'July 2026',
-    featured: false,
+    featured: true,
+    tier: 'archive',
+    domains: ['AI Agents', 'Business Ops'],
     order: 13,
   },
   {
@@ -319,6 +357,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'July 2026',
     featured: false,
+    tier: 'selected',
+    domains: ['Tax & Finance', 'Business Ops'],
     order: 14,
   },
   {
@@ -340,6 +380,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'July 2026',
     featured: false,
+    tier: 'archive',
+    domains: ['AI Agents'],
     order: 15,
   },
   {
@@ -363,6 +405,8 @@ export const projects: Project[] = [
     liveUrl: 'https://github.com/FranklinIV94/kite-hackathon',
     repoUrl: 'https://github.com/FranklinIV94/kite-hackathon',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents', 'Web3 & Payments'],
     order: 7,
   },
   {
@@ -385,6 +429,8 @@ export const projects: Project[] = [
     timeline: 'March 2026',
     repoUrl: 'https://github.com/FranklinIV94/hackathon-2026',
     featured: false,
+    tier: 'archive',
+    domains: ['AI Agents'],
     order: 8,
   },
   {
@@ -411,6 +457,8 @@ export const projects: Project[] = [
     liveUrl: 'https://tax-simplifier.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/ALBS-Tax-Simplifier',
     featured: true,
+    tier: 'selected',
+    domains: ['Tax & Finance', 'Business Ops'],
     order: 7,
   },
   {
@@ -436,7 +484,9 @@ export const projects: Project[] = [
     timeline: 'May 2026',
     liveUrl: 'https://agentpay-solana.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/agentpay-solana',
-    featured: true,
+    featured: false,
+    tier: 'selected',
+    domains: ['Web3 & Payments', 'AI Agents'],
     order: 9,
   },
   {
@@ -463,6 +513,8 @@ export const projects: Project[] = [
     liveUrl: 'https://agent-studio-fawn.vercel.app',
     repoUrl: 'https://github.com/FranklinIV94/agent-studio',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents'],
     order: 10,
   },
   {
@@ -488,6 +540,8 @@ export const projects: Project[] = [
     liveUrl: 'https://alllinescc.com',
     repoUrl: 'https://github.com/FranklinIV94/alcc-website',
     featured: true,
+    tier: 'selected',
+    domains: ['Insurance', 'Business Ops'],
     order: 5,
   },
   {
@@ -509,6 +563,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'June–August 2026',
     featured: true,
+    tier: 'selected',
+    domains: ['AI Agents'],
     order: 11,
   },
   {
@@ -531,6 +587,8 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'May 2026',
     featured: false,
+    tier: 'selected',
+    domains: ['Insurance', 'Business Ops'],
     order: 6,
   },
   {
@@ -554,6 +612,8 @@ export const projects: Project[] = [
     timeline: 'May 2026',
     liveUrl: 'https://albs-learning-center.vercel.app',
     featured: false,
+    tier: 'selected',
+    domains: ['Business Ops'],
     order: 7,
   },
   {
@@ -576,29 +636,33 @@ export const projects: Project[] = [
     role: 'Co-Founder & AI Infrastructure Lead',
     timeline: 'July 2026',
     featured: false,
+    tier: 'selected',
+    domains: ['AI Agents', 'Business Ops'],
     order: 11,
   },
   {
     slug: 'xprize-bioconversion',
-    title: 'XPRIZE Bioconversion — Digital Twin',
-    tagline: 'Digital Twin Prototypes for Industrial Bioconversion',
-    description: 'Digital twin simulation platform for industrial bioconversion processes — built as an XPRIZE competition entry. Two digital twin prototypes completed, business model validated, and a real customer prospect identified. Franklin serves as CFO and AI infrastructure lead.',
-    challenge: 'Industrial bioconversion processes are complex, capital-intensive, and difficult to optimize without simulation. The XPRIZE competition required AI-driven solutions for bioconversion with a marketable product in under 45 days.',
-    approach: 'Joined Venezuelan team as CFO and AI infrastructure lead. Built two digital twin prototypes simulating bioconversion processes. Integrated with existing David app and business model. B2B engagement structure with international arbitration (U.S. vs Venezuela).',
-    solution: 'Two digital twin prototypes completed. Business model validated with real customer prospect and EU entity (Fin Nova) interested in purchasing. Project approximately 40% complete with API connections being fixed to reach 50-60%.',
+    title: 'BioSustain — Bioconversion Digital Twin',
+    tagline: 'Digital Twin Simulation for Industrial Bioconversion',
+    description: 'A digital twin simulation platform for industrial bioconversion processes — turning complex, capital-intensive bioconversion into a marketable, validated product. Two digital twin prototypes completed, a business model validated, and a real customer prospect identified. Franklin serves as CFO and AI infrastructure lead.',
+    challenge: 'Industrial bioconversion processes are complex, capital-intensive, and difficult to optimize without simulation. The team needed AI-driven simulation to make bioconversion marketable and investable — not just a lab experiment.',
+    approach: 'Joined the BioSustain team as CFO and AI infrastructure lead. Built two digital twin prototypes simulating bioconversion processes. Integrated with the existing application and business model. Structured a B2B engagement framework for international delivery.',
+    solution: 'Two digital twin prototypes completed. Business model validated with a real customer prospect and an EU entity (Fin Nova) interested in purchasing. Project approximately 40% complete with API connections being fixed to reach 50-60%.',
     results: [
       'Two digital twin prototypes simulating bioconversion processes',
       'Business model validated — real customer prospect identified',
       'EU entity (Fin Nova) expressed purchase interest',
-      'B2B engagement with international arbitration framework',
-      'XPRIZE competition entry — project at 40% completion',
+      'B2B engagement framework for international delivery',
+      'Live SaaS platform with real client onboarding',
     ],
-    tags: ['XPRIZE', 'Digital Twin', 'Bioconversion', 'AI', 'CFO', 'Partnership'],
-    category: 'Hackathon',
+    tags: ['Digital Twin', 'Bioconversion', 'AI', 'CFO', 'Partnership', 'SaaS'],
+    category: 'Production',
     role: 'CFO & AI Infrastructure Lead',
     timeline: 'July 2026',
-    featured: false,
-    order: 12,
+    featured: true,
+    tier: 'flagship',
+    domains: ['AI Agents', 'Business Ops'],
+    order: 2,
   },
   {
     slug: 'helcim-billing-module',
@@ -620,7 +684,34 @@ export const projects: Project[] = [
     role: 'Sole Architect & Developer',
     timeline: 'July 2026',
     featured: false,
+    tier: 'archive',
+    domains: ['Web3 & Payments', 'Business Ops'],
     order: 13,
+  },
+  {
+    slug: 'alverra-international',
+    title: 'Alverra International',
+    tagline: 'Exclusive US Importer of the German-Milled Asche Board',
+    description: 'A premium heritage-brand import house website for Alverra International — sole U.S. importer of the Asche Board (solid European ash, milled in Germany). Elegant cream-and-gold editorial aesthetic with video hero, a subtle procedural Three.js ash atmosphere (gold particle field + rotating ash board, mouse parallax), letter-of-intent partnership flow, and a founder section for Anastasiia Amosova.',
+    challenge: 'The client needed a website that felt like a luxury import house — not a template e-commerce page. It had to communicate provenance ("European craft in American spaces"), support a partnership/letter-of-intent flow, and make a strong visual impression for a heritage brand launch. No existing template captured the aesthetic.',
+    approach: 'Designed a single-page editorial layout with a Cormorant Garamond serif + cream/gold palette. Built a background video hero, then layered a subtle Three.js procedural ash-grain atmosphere (drifting gold particles + a slowly rotating 3D ash board, honoring prefers-reduced-motion). Added a separate letter-of-intent page with a form that composes a branded PDF for admin review.',
+    solution: 'Live at alverra-draft.vercel.app with the heritage aesthetic fully implemented. The hero pairs a cinematic product video with a subtle 3D ash atmosphere. The founder section profiles Anastasiia Amosova. The LOI page generates a clean, branded letter of intent for partnership and trade-allocation inquiries.',
+    results: [
+      'Editorial heritage aesthetic — cream/gold, Cormorant Garamond serif',
+      'Three.js procedural ash atmosphere: gold grain particles + rotating board, mouse parallax, reduced-motion aware',
+      'Three.js component sourced via the threeui skill and restyled to the Alverra brand',
+      'Letter-of-intent page with branded PDF generation for partnership inquiries',
+      'Founder section for Anastasiia Amosova',
+    ],
+    tags: ['Three.js', 'WebGL', 'Next.js', 'E-Commerce', 'Brand', 'Editorial'],
+    category: 'Production',
+    role: 'Sole Architect & Developer',
+    timeline: 'August 2026',
+    liveUrl: 'https://alverra-draft.vercel.app',
+    featured: true,
+    tier: 'flagship',
+    domains: ['E-Commerce', 'Business Ops'],
+    order: 16,
   },
 ];
 
