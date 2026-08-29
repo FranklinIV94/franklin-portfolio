@@ -294,7 +294,7 @@ export default function Home() {
                   I architect AI-accelerated systems that scale. Fewer meetings, more execution. If that sounds like your next project, let{'\''}s talk.
                 </p>
                 <a
-                  href="https://calendar.simplifyingbusinesses.com"
+                  href="https://dist-intake-src.vercel.app/"
                   className="inline-flex items-center gap-2 bg-accent text-canvas font-bold px-8 py-4 rounded-xl text-lg hover:bg-accent/90 transition-colors"
                 >
                   Book 15 minutes →

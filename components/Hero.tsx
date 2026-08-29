@@ -55,7 +55,7 @@ export function Hero() {
         >
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://calendar.simplifyingbusinesses.com"
+              href="https://dist-intake-src.vercel.app/"
               className="inline-flex items-center gap-2 bg-accent text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors duration-200"
             >
               Book 15 minutes
