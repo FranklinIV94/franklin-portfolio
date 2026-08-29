@@ -94,8 +94,8 @@ export const projects: Project[] = [
     approach: 'Built a Next.js 14 SSR app with Supabase Auth supporting 4 roles (patient/staff/provider/admin) via JWT custom claims. Designed AWS migration plan that cuts hosting costs by 90%. Authored a full compliance decision framework covering PHI vs PII classification, BAA triggers, and hosting compliance matrices.',
     solution: 'Portal architecture is complete with RBAC, session timeout design, audit log foundation, and patient identity verification. AWS migration decision report authored with phased cutover (hosting first, data plane second). Comprehensive HIPAA compliance gap analysis with 5 remaining items before go-live.',
     results: [
+      'AWS migration plan projected 90% cut in hosting cost vs enterprise tier',
       'Next.js 14 SSR with 4-role Supabase Auth (patient/staff/provider/admin)',
-      'AWS migration plan: 90% cost reduction from enterprise hosting',
       'HIPAA compliance gap analysis with 5 items remaining',
       'BAA compliance framework for PHI workloads',
       'Pre-production — awaiting hosting decision',
@@ -119,6 +119,7 @@ export const projects: Project[] = [
     approach: 'Built a full-stack platform with tokenized form links per employee, a multi-step onboarding wizard, Supabase backend, and a real-time admin dashboard. Migrated from Vercel to AWS for cost savings and BAA compliance readiness.',
     solution: 'Admins generate unique form links per employee, send via email, and track submission status in real time. Employees complete forms on any device. Federal and state W-4 PDFs are pre-filled with employee data and merged into a downloadable package. Full audit logging with CSV/PDF export and date range filtering.',
     results: [
+      '40+ state W-4 variants auto-filled from a single employee entry',
       'Full employee onboarding flow with 7-step wizard + 9+ form types',
       'Federal W-4 + 40+ state W-4 PDFs with AcroForm pre-fill via pdf-lib',
       'Real-time admin dashboard with team management and audit logging',
@@ -696,16 +697,16 @@ export const projects: Project[] = [
   {
     slug: 'alverra-international',
     title: 'Alverra International',
-    tagline: 'Exclusive US Importer of the German-Milled Asche Board',
-    description: 'A premium heritage-brand import house website for Alverra International — sole U.S. importer of the Asche Board (solid European ash, milled in Germany). Elegant cream-and-gold editorial aesthetic with video hero, a subtle procedural Three.js ash atmosphere (gold particle field + rotating ash board, mouse parallax), letter-of-intent partnership flow, and a founder section for Anastasiia Amosova.',
+    tagline: 'Exclusive US Importer of the Asche Board (thermo-modified European ash)',
+    description: 'A premium heritage-brand import house website for Alverra International — sole U.S. importer of the Asche Board, a solid thermo-modified European ash cladding board. Elegant cream-and-gold editorial aesthetic with video hero, a subtle procedural Three.js ash atmosphere (gold particle field + rotating ash board, mouse parallax), letter-of-intent partnership flow, and a founder section for Anastasiia Amosova.',
     challenge: 'The client needed a website that felt like a luxury import house — not a template e-commerce page. It had to communicate provenance ("European craft in American spaces"), support a partnership/letter-of-intent flow, and make a strong visual impression for a heritage brand launch. No existing template captured the aesthetic.',
     approach: 'Designed a single-page editorial layout with a Cormorant Garamond serif + cream/gold palette. Built a background video hero, then layered a subtle Three.js procedural ash-grain atmosphere (drifting gold particles + a slowly rotating 3D ash board, honoring prefers-reduced-motion). Added a separate letter-of-intent page with a form that composes a branded PDF for admin review.',
     solution: 'Live at alverra-draft.vercel.app with the heritage aesthetic fully implemented. The hero pairs a cinematic product video with a subtle 3D ash atmosphere. The founder section profiles Anastasiia Amosova. The LOI page generates a clean, branded letter of intent for partnership and trade-allocation inquiries.',
     results: [
+      'Letter-of-intent flow turns partnership inquiries into branded PDFs for admin review',
       'Editorial heritage aesthetic — cream/gold, Cormorant Garamond serif',
       'Three.js procedural ash atmosphere: gold grain particles + rotating board, mouse parallax, reduced-motion aware',
       'Three.js component sourced via the threeui skill and restyled to the Alverra brand',
-      'Letter-of-intent page with branded PDF generation for partnership inquiries',
       'Founder section for Anastasiia Amosova',
     ],
     tags: ['Three.js', 'WebGL', 'Next.js', 'E-Commerce', 'Brand', 'Editorial'],

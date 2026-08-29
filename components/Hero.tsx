@@ -91,7 +91,7 @@ export function Hero() {
               <div className="text-xs text-muted">agents running 24/7</div>
             </a>
             <a href="/work?status=Production" className="group">
-              <div className="font-display font-bold text-2xl text-white group-hover:text-accent transition-colors">19</div>
+              <div className="font-display font-bold text-2xl text-white group-hover:text-accent transition-colors">16</div>
               <div className="text-xs text-muted">systems in production</div>
             </a>
             <div>

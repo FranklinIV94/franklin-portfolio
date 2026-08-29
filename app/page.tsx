@@ -176,7 +176,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { value: '14', label: 'AI agents running' },
-                  { value: '19', label: 'Projects in production' },
+                  { value: '16', label: 'Projects in production' },
                   { value: '24/7', label: 'Autonomous operations' },
                   { value: '26', label: 'Industries served' },
                 ].map(({ value, label }) => (

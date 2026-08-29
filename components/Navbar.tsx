@@ -59,10 +59,10 @@ export function Navbar() {
             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </a>
           <a
-            href="/contact"
+            href="https://dist-intake-src.vercel.app/"
             className="text-sm bg-accent text-canvas font-semibold px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors duration-200"
           >
-            Get in touch
+            Book 15 minutes
           </a>
         </div>
 
@@ -112,10 +112,10 @@ export function Navbar() {
             </div>
           </div>
           <a
-            href="/contact"
+            href="https://dist-intake-src.vercel.app/"
             className="text-sm bg-accent text-canvas font-semibold px-4 py-2 rounded-lg text-center mt-2"
           >
-            Get in touch
+            Book 15 minutes
           </a>
         </div>
       </div>

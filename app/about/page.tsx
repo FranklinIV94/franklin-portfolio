@@ -66,7 +66,7 @@ export default function AboutPage() {
                   The core of how I work: I design outcomes and direct AI execution rather than
                   writing code line-by-line. This isn&apos;t about replacing developers — it&apos;s about
                   amplifying what one person with the right architectural thinking can deliver.
-                  Eighteen projects shipped. Seven AI agents in production. Industries spanning
+                  Sixteen projects in production. Fourteen AI agents running 24/7. Industries spanning
                   healthcare, HR, retail, construction, and insurance.
                 </p>
                 <p>
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   I authored the <span className="text-white">Agent Code of Conduct</span> — an open-source
-                  governance framework for AI agent infrastructure, now in production across seven agents.
+                  governance framework for AI agent infrastructure, now in production across fourteen agents.
                   I write about AI governance, agent architecture, and the business of building systems
                   that run themselves.
                 </p>
