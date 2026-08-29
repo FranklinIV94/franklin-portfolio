@@ -67,6 +67,29 @@ export function ProjectCard({ project, index, featured = false, className = '' }
             {project.description}
           </p>
 
+          {/* Outcome line (flagship only) */}
+          {featured && project.results && project.results.length > 0 && (
+            <div className="mb-6">
+              <div className="text-xs text-accent uppercase tracking-wide mb-2">Outcome</div>
+              <p className="text-sm text-slate-300 leading-relaxed">{project.results[0]}</p>
+            </div>
+          )}
+
+          {/* Read the case study (flagship only) */}
+          {featured && project.caseStudy && (
+            <div className="mb-6">
+              <Link
+                href={project.caseStudy}
+                className="inline-flex items-center gap-2 text-sm text-accent hover:underline"
+              >
+                Read the case study
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          )}
+
           <div className="mt-auto">
             {/* Tags — max 4 visible */}
             <div className="flex flex-wrap gap-1.5 mb-4">

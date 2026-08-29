@@ -25,7 +25,9 @@ const LANG_COLORS: Record<string, string> = {
 };
 
 function formatDate(iso: string): string {
+  if (!iso) return 'recently';
   const d = new Date(iso);
+  if (isNaN(d.getTime())) return 'recently';
   const now = new Date();
   const diff = Math.floor((now.getTime() - d.getTime()) / 1000);
   if (diff < 60) return 'just now';
@@ -93,10 +95,10 @@ export function GithubShowcase() {
           </div>
         )}
 
-        {/* Repo grid */}
+        {/* Repo grid — cap at 6, hide no-description repos */}
         {!loading && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {repos.map((repo, i) => (
+            {repos.filter((r) => r.description).slice(0, 6).map((repo, i) => (
               <motion.a
                 key={repo.name}
                 href={repo.url}

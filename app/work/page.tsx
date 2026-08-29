@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState, useEffect, useRef } from 'react';
-import { ProjectCard } from '@/components/ProjectCard';
+import Link from 'next/link';
 import { projects, type Category, type Domain, type Tier } from '@/lib/projects';
 import { motion } from 'framer-motion';
 
@@ -19,7 +19,7 @@ export default function WorkPage() {
   const [sort, setSort] = useState<SortKey>('newest');
   const searchRef = useRef<HTMLInputElement>(null);
 
-  // Keyboard shortcut: "/" focuses search (command-palette feel)
+  // Keyboard shortcut: "/" focuses search
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === '/' && document.activeElement?.tagName !== 'INPUT') {
@@ -45,7 +45,6 @@ export default function WorkPage() {
           .includes(q)
       );
     }
-    // sort
     if (sort === 'tier') {
       const tierOrder = { flagship: 0, selected: 1, archive: 2 };
       list = [...list].sort((a, b) => (tierOrder[a.tier] - tierOrder[b.tier]) || (a.order - b.order));
@@ -182,18 +181,60 @@ export default function WorkPage() {
             {query.trim() && <> · matching "{query.trim()}"</>}
           </div>
 
-          {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filtered.map((project, i) => (
-              <ProjectCard key={project.slug} project={project} index={i} featured={project.tier === 'flagship'} />
+          {/* Archive rows — dense, scannable */}
+          <div className="flex flex-col">
+            {filtered.map((p, i) => (
+              <motion.div
+                key={p.slug}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.02 }}
+              >
+                <Link
+                  href={`/work/${p.slug}`}
+                  className="group flex items-center gap-4 py-4 border-b border-border hover:bg-surface/50 transition-colors px-2 rounded-lg"
+                >
+                  {/* Title + summary */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-display font-medium text-white group-hover:text-accent transition-colors truncate">
+                        {p.title}
+                      </h3>
+                      {p.tier === 'flagship' && (
+                        <span className="font-mono text-[9px] uppercase tracking-wider text-accent border border-accent/30 px-1.5 py-0.5 rounded-full shrink-0">
+                          Flagship
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted truncate mt-0.5">{p.tagline}</p>
+                  </div>
+                  {/* Domain chips */}
+                  <div className="hidden md:flex gap-1.5 shrink-0">
+                    {p.domains.slice(0, 2).map((d) => (
+                      <span key={d} className="font-mono text-[9px] text-muted border border-border px-2 py-0.5 rounded-md">
+                        {d}
+                      </span>
+                    ))}
+                  </div>
+                  {/* Status + year */}
+                  <div className="hidden lg:flex items-center gap-3 shrink-0 text-xs text-muted">
+                    <span>{p.category}</span>
+                    <span className="w-1 h-1 rounded-full bg-border" />
+                    <span>{p.timeline.split(' ').pop()}</span>
+                  </div>
+                  {/* Arrow */}
+                  <svg className="w-4 h-4 text-muted group-hover:text-accent group-hover:translate-x-1 transition-all shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </motion.div>
             ))}
+            {filtered.length === 0 && (
+              <div className="text-center py-20 text-muted">
+                No projects match. Try clearing the search or a filter.
+              </div>
+            )}
           </div>
-
-          {filtered.length === 0 && (
-            <div className="text-center py-20 text-muted">
-              No projects match. Try clearing the search or a filter.
-            </div>
-          )}
         </div>
       </main>
     </>

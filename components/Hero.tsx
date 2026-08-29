@@ -46,34 +46,66 @@ export function Hero() {
           require entire teams — and writing about what I learn along the way.
         </motion.p>
 
-        {/* CTAs */}
+        {/* CTAs — ONE primary + quiet email */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-col gap-4"
         >
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2 bg-white text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent transition-colors duration-200"
-          >
-            View my work
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://calendar.simplifyingbusinesses.com"
+              className="inline-flex items-center gap-2 bg-accent text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors duration-200"
+            >
+              Book 15 minutes
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <a
+              href={`/blog/${latestPost.slug}`}
+              className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors duration-200"
+            >
+              {latestPost.title} →
+            </a>
+          </div>
+          <p className="text-xs text-muted">
+            Booking runs on software I built. It&apos;ll be on my calendar before you close the tab.
+          </p>
+          <a href="mailto:franklin@prospyr305.com" className="text-xs text-muted hover:text-accent transition-colors">
+            Prefer email? franklin@prospyr305.com
           </a>
-          <a
-            href="https://prospyr305.com"
-            className="inline-flex items-center gap-2 border border-accent/30 text-accent font-semibold px-6 py-3 rounded-xl hover:border-accent hover:bg-accent/10 transition-all duration-200"
-          >
-            Hire my firm →
-          </a>
-          <a
-            href={`/blog/${latestPost.slug}`}
-            className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors duration-200"
-          >
-            {latestPost.title} →
-          </a>
+        </motion.div>
+
+        {/* Proof strip — into the fold */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="mt-12 border-t border-border pt-8"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="/work/agent-code-of-conduct" className="group">
+              <div className="font-display font-bold text-2xl text-white group-hover:text-accent transition-colors">14</div>
+              <div className="text-xs text-muted">agents running 24/7</div>
+            </a>
+            <a href="/work?status=Production" className="group">
+              <div className="font-display font-bold text-2xl text-white group-hover:text-accent transition-colors">19</div>
+              <div className="text-xs text-muted">systems in production</div>
+            </a>
+            <div>
+              <div className="font-display font-bold text-2xl text-white">26</div>
+              <div className="text-xs text-muted">industries served</div>
+            </div>
+            <div>
+              <div className="font-display font-bold text-2xl text-white">1</div>
+              <div className="text-xs text-muted">architect, built &amp; operated</div>
+            </div>
+          </div>
+          <div className="mt-4 font-mono text-xs text-muted">
+            Consensus 2026 · XPRIZE · UiPath &amp; Slack agent programs
+          </div>
         </motion.div>
 
         {/* Tech stack pills */}

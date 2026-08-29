@@ -294,11 +294,14 @@ export default function Home() {
                   I architect AI-accelerated systems that scale. Fewer meetings, more execution. If that sounds like your next project, let{'\''}s talk.
                 </p>
                 <a
-                  href="/contact"
+                  href="https://calendar.simplifyingbusinesses.com"
                   className="inline-flex items-center gap-2 bg-accent text-canvas font-bold px-8 py-4 rounded-xl text-lg hover:bg-accent/90 transition-colors"
                 >
-                  Start a conversation →
+                  Book 15 minutes →
                 </a>
+                <p className="text-xs text-muted mt-3">
+                  Booking runs on software I built. It&apos;ll be on my calendar before you close the tab.
+                </p>
               </motion.div>
 
               <motion.div
@@ -313,7 +316,7 @@ export default function Home() {
                   Prospyr 305
                 </h3>
                 <p className="text-muted text-sm leading-relaxed mb-6">
-                  Agentic design & engineering for businesses that want more than a solo architect. Full agent workforces, MCP infrastructure, 24/7 autonomous operations, and adversarial security testing.
+                  Agentic design &amp; engineering for businesses that want more than a solo architect. Full agent workforces, MCP infrastructure, 24/7 autonomous operations, and adversarial security testing.
                 </p>
                 <div className="flex flex-col gap-3">
                   <a
@@ -321,13 +324,6 @@ export default function Home() {
                     className="inline-flex items-center justify-between gap-2 text-sm font-medium text-white hover:text-accent transition-colors group"
                   >
                     <span>Explore Prospyr 305</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                  </a>
-                  <a
-                    href="https://prospyr305.com/possibilities"
-                    className="inline-flex items-center justify-between gap-2 text-sm font-medium text-muted hover:text-accent transition-colors group"
-                  >
-                    <span>See what we can build</span>
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </a>
                   <a

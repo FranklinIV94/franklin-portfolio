@@ -30,6 +30,7 @@ export interface Project {
   featured: boolean;
   tier: Tier;
   domains: Domain[];
+  caseStudy?: string;
   order: number;
 }
 
@@ -106,6 +107,7 @@ export const projects: Project[] = [
     featured: true,
     tier: 'flagship',
     domains: ['Healthcare'],
+    caseStudy: '/work/medical-practice-1',
     order: 0.6,
   },
   {
@@ -134,6 +136,7 @@ export const projects: Project[] = [
     featured: true,
     tier: 'flagship',
     domains: ['Business Ops', 'Insurance'],
+    caseStudy: '/work/peo-automation-1',
     order: 0,
   },
   {
@@ -239,6 +242,7 @@ export const projects: Project[] = [
     featured: true,
     tier: 'flagship',
     domains: ['Business Ops', 'AI Agents'],
+    caseStudy: '/work/albs-portal',
     order: -1,
   },
   {
@@ -662,6 +666,7 @@ export const projects: Project[] = [
     featured: true,
     tier: 'flagship',
     domains: ['AI Agents', 'Business Ops'],
+    caseStudy: '/work/xprize-bioconversion',
     order: 2,
   },
   {
@@ -711,6 +716,7 @@ export const projects: Project[] = [
     featured: true,
     tier: 'flagship',
     domains: ['E-Commerce', 'Business Ops'],
+    caseStudy: '/work/alverra-international',
     order: 16,
   },
 ];

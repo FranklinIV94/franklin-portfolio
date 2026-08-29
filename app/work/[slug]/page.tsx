@@ -99,41 +99,48 @@ export default function ProjectPage({ params }: PageProps) {
             className="border-t border-border mb-16"
           />
 
-          {/* Case study sections */}
+          {/* Case study sections — Outcome leads, above the fold */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="space-y-16"
           >
+            {/* Outcome — lead with it */}
+            {project.results.length > 0 && (
+              <section>
+                <h2 className="font-display font-bold text-2xl mb-4 text-accent">Outcome</h2>
+                <p className="text-muted leading-relaxed text-lg">{project.results[0]}</p>
+                {project.results.length > 1 && (
+                  <ul className="mt-4 space-y-2">
+                    {project.results.slice(1).map((result, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
+                        <span className="text-slate-300">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            )}
+
+            {/* Problem */}
             <section>
-              <h2 className="font-display font-bold text-2xl mb-4 text-accent">The Challenge</h2>
+              <h2 className="font-display font-bold text-2xl mb-4 text-accent">The Problem</h2>
               <p className="text-muted leading-relaxed text-lg">{project.challenge}</p>
             </section>
 
+            {/* Architecture */}
             <section>
-              <h2 className="font-display font-bold text-2xl mb-4 text-accent">The Approach</h2>
+              <h2 className="font-display font-bold text-2xl mb-4 text-accent">The Architecture</h2>
               <p className="text-muted leading-relaxed text-lg">{project.approach}</p>
             </section>
 
+            {/* Solution */}
             <section>
               <h2 className="font-display font-bold text-2xl mb-4 text-accent">The Solution</h2>
               <p className="text-muted leading-relaxed text-lg">{project.solution}</p>
             </section>
-
-            {project.results.length > 0 && (
-              <section>
-                <h2 className="font-display font-bold text-2xl mb-6 text-accent">Results</h2>
-                <ul className="space-y-3">
-                  {project.results.map((result, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
-                      <span className="text-slate-300">{result}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
 
             {/* Stack & role */}
             <section>
