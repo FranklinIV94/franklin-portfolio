@@ -67,7 +67,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
             {flagships.map((project, i) => (
-              <ProjectCard key={project.slug} project={project} index={i} featured />
+              <ProjectCard
+                key={project.slug}
+                project={project}
+                index={i}
+                featured
+                // 5 flagships in a 2-col grid = 2+2+1. Make the 5th span both
+                // columns as a full-width rectangle so the row fills cleanly.
+                wide={i === flagships.length - 1 && flagships.length % 2 === 1}
+                className={i === flagships.length - 1 && flagships.length % 2 === 1 ? 'md:col-span-2' : ''}
+              />
             ))}
           </div>
 

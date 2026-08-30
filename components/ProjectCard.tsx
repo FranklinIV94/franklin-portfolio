@@ -8,10 +8,11 @@ interface ProjectCardProps {
   project: Project;
   index: number;
   featured?: boolean;
+  wide?: boolean;
   className?: string;
 }
 
-export function ProjectCard({ project, index, featured = false, className = '' }: ProjectCardProps) {
+export function ProjectCard({ project, index, featured = false, wide = false, className = '' }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 36 }}
@@ -32,6 +33,79 @@ export function ProjectCard({ project, index, featured = false, className = '' }
             featured ? 'p-7 md:p-9' : 'p-6'
           }`}
         >
+          {/* Wide (full-width rectangle) layout — content side by side */}
+          {wide ? (
+            <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-10 h-full">
+              {/* Left: header + description */}
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3 flex-wrap">
+                  <h3 className="font-display font-medium tracking-[-0.01em] text-white group-hover:text-accent transition-colors duration-300 text-2xl md:text-3xl">
+                    {project.title}
+                  </h3>
+                  {project.tier === 'flagship' && (
+                    <span className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-accent border border-accent/30 px-3 py-1 rounded-full bg-canvas/50 backdrop-blur">
+                      Flagship
+                    </span>
+                  )}
+                </div>
+                <p className="text-muted leading-relaxed text-base max-w-2xl mb-4">{project.tagline}</p>
+                <p className="text-slate-400 leading-relaxed text-base mb-4">{project.description}</p>
+                {project.results && project.results.length > 0 && (
+                  <div className="mb-4">
+                    <div className="text-xs text-accent uppercase tracking-wide mb-2">Outcome</div>
+                    <p className="text-sm text-slate-300 leading-relaxed">{project.results[0]}</p>
+                  </div>
+                )}
+                {project.caseStudy && (
+                  <div className="mb-4">
+                    <Link href={project.caseStudy} className="inline-flex items-center gap-2 text-sm text-accent hover:underline">
+                      Read the case study
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                )}
+              </div>
+              {/* Right: tags + meta + links */}
+              <div className="md:w-72 shrink-0 flex flex-col">
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {project.tags.slice(0, 4).map((tag) => (
+                    <span key={tag} className="font-mono text-[10.5px] text-muted border border-border px-2.5 py-1 rounded-md">{tag}</span>
+                  ))}
+                  {project.tags.length > 4 && <span className="font-mono text-[10px] text-muted">+{project.tags.length - 4}</span>}
+                </div>
+                <div className="flex items-center gap-3 text-[10px] text-muted flex-wrap mb-4">
+                  <span>{project.timeline}</span>
+                  <span className="w-1 h-1 rounded-full bg-border" />
+                  <span>{project.role}</span>
+                  <span className="w-1 h-1 rounded-full bg-border" />
+                  <span className="text-accent/70">{project.category}</span>
+                </div>
+                {(project.liveUrl || project.repoUrl) && (
+                  <div className="flex gap-3 mt-auto pt-6 border-t border-border">
+                    {project.liveUrl && (
+                      <span className="inline-flex items-center gap-1.5 text-xs text-accent">
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Live Demo
+                      </span>
+                    )}
+                    {project.repoUrl && (
+                      <span className="inline-flex items-center gap-1.5 text-xs text-muted">
+                        <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          ) : (
+            <>
           {/* Header */}
           <div className="flex items-start justify-between mb-4 gap-4">
             <div>
@@ -137,6 +211,8 @@ export function ProjectCard({ project, index, featured = false, className = '' }
               </div>
             )}
           </div>
+            </>
+          )}
         </div>
       </Link>
     </motion.div>
