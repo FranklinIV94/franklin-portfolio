@@ -76,4 +76,20 @@ export const showcaseCategories: ShowcaseCategory[] = [
   //   blurb: 'Delivered builds for real businesses.',
   //   items: [ { slug: '...', title: '...', tag: '...', desc: '...', file: '/showcase/client-work/....html' } ],
   // },
+  {
+    id: 'engineering',
+    label: 'Engineering',
+    blurb:
+      'Proof of how systems actually run — live, read-only views of the agent fleet and the infrastructure behind it.',
+    items: [
+      {
+        slug: 'agent-fleet',
+        title: 'Agent Fleet — Live',
+        tag: 'Live System',
+        desc: 'A read-only view of the agent fleet running right now — who is online, what each is working on, and live activity. Real data, refreshing every 15 seconds.',
+        file: '/showcase/engineering/agent-fleet.html',
+        ratio: 'aspect-[4/3]',
+      },
+    ],
+  },
 ];

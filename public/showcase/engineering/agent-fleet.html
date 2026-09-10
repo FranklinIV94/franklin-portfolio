@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Fleet — Live</title>
+<style>
+  :root{
+    --bg:#0a0b0f; --surface:#111116; --border:rgba(255,255,255,.07);
+    --fg:#f4f3ee; --muted:#6b6b7a; --accent:#c8ff57; --accent-dim:rgba(200,255,87,.12);
+    --green:#3eb002; --amber:#f59e0b; --red:#ef4444;
+    --font:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font);background:var(--bg);color:var(--fg);min-height:100vh;overflow-x:hidden}
+
+  /* animated mesh background — ties to design-craft */
+  .mesh{position:fixed;inset:0;z-index:0;filter:blur(80px);opacity:.5;pointer-events:none}
+  .blob{position:absolute;border-radius:50%;animation:drift 8s ease-in-out infinite}
+  .blob-1{width:420px;height:420px;background:rgba(200,255,87,.10);top:-120px;left:-100px}
+  .blob-2{width:380px;height:380px;background:rgba(62,176,2,.08);top:-80px;right:-80px;animation-delay:-3s}
+  .blob-3{width:300px;height:300px;background:rgba(200,255,87,.05);bottom:-100px;left:30%;animation-delay:-6s}
+  @keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,16px)}}
+  @media (prefers-reduced-motion:reduce){.blob{animation:none}}
+
+  .wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:48px 24px}
+
+  /* header — minimal */
+  .head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px}
+  .head h1{font-size:28px;font-weight:800;letter-spacing:-.5px}
+  .head h1 em{color:var(--accent);font-style:normal}
+  .head .live{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .head .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+  /* stat strip — glanceable numbers */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:32px}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px}
+  .stat .num{font-size:30px;font-weight:800;letter-spacing:-1px}
+  .stat .num.green{color:var(--accent)}
+  .stat .lbl{font-size:11px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.5px}
+
+  /* agent grid — visual nodes */
+  .agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:32px}
+  .agent{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;position:relative;overflow:hidden;transition:border-color .2s}
+  .agent:hover{border-color:rgba(200,255,87,.3)}
+  .agent .row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .agent .avatar{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;background:var(--accent-dim);border:1px solid rgba(200,255,87,.2)}
+  .agent .name{font-size:14px;font-weight:600}
+  .agent .role{font-size:11px;color:var(--muted)}
+  .agent .status{position:absolute;top:16px;right:16px;width:9px;height:9px;border-radius:50%}
+  .agent .status.on{background:var(--green);box-shadow:0 0 8px var(--green)}
+  .agent .status.busy{background:var(--amber);box-shadow:0 0 8px var(--amber)}
+  .agent .status.off{background:var(--muted)}
+  .agent .job{font-size:12px;color:var(--muted);line-height:1.4;min-height:34px}
+  .agent .job b{color:var(--fg);font-weight:500}
+
+  /* activity ticker — minimal, scrolls */
+  .activity{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}
+  .activity .t{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+  .tick{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+  .tick:last-child{border-bottom:none}
+  .tick .who{font-family:var(--mono);font-size:11px;color:var(--accent);min-width:70px}
+  .tick .what{color:var(--muted);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tick .st{font-size:10px;font-family:var(--mono);text-transform:uppercase}
+  .tick .st.done{color:var(--green)} .tick .st.run{color:var(--amber)} .tick .st.fail{color:var(--red)}
+
+  .foot{margin-top:24px;font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center}
+  .err{color:var(--red);font-size:13px;text-align:center;padding:40px}
+</style>
+</head>
+<body>
+  <div class="mesh"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+  <div class="wrap">
+    <div class="head">
+      <h1>Agent <em>Fleet</em></h1>
+      <div class="live"><span class="dot"></span>LIVE</div>
+    </div>
+
+    <div class="stats" id="stats">
+      <div class="stat"><div class="num" id="nAgents">—</div><div class="lbl">Agents</div></div>
+      <div class="stat"><div class="num green" id="nActive">—</div><div class="lbl">Active now</div></div>
+      <div class="stat"><div class="num" id="nJobs">—</div><div class="lbl">Jobs · 24h</div></div>
+      <div class="stat"><div class="num" id="nPending">—</div><div class="lbl">Rechecks queued</div></div>
+    </div>
+
+    <div class="agents" id="agents"><div class="err">Loading fleet…</div></div>
+
+    <div class="activity">
+      <div class="t">Live activity</div>
+      <div id="ticks"><div class="err">Loading…</div></div>
+    </div>
+
+    <div class="foot">Read-only view · data refreshes every 15s</div>
+  </div>
+
+<script>
+const AGENTS = [
+  {name:'Prime', role:'Lead · Ops', emoji:'🛰️'},
+  {name:'Northstar', role:'Home · Local', emoji:'⭐'},
+  {name:'Eaststar', role:'Translator · Hetzner', emoji:'🌐'},
+  {name:'Southstar', role:'AWS · Deploy', emoji:'☁️'},
+  {name:'Atlas', role:'Understudy', emoji:'🗺️'},
+];
+
+async function load(){
+  try{
+    const r = await fetch('/api/fleet?kind=fleet');
+    const d = await r.json();
+    if(d.error) throw new Error(d.error);
+
+    const actions = d.actions || [];
+    const schedules = d.schedules || [];
+
+    // stats
+    document.getElementById('nAgents').textContent = AGENTS.length;
+    const recent = actions.filter(a=>a.status==='COMPLETED'||a.status==='INITIATED');
+    document.getElementById('nActive').textContent = new Set(actions.map(a=>a.agentName)).size;
+    document.getElementById('nJobs').textContent = actions.length;
+    document.getElementById('nPending').textContent = schedules.filter(s=>s.status==='PENDING').length;
+
+    // agent cards
+    const byAgent = {};
+    actions.forEach(a=>{ (byAgent[a.agentName]=byAgent[a.agentName]||[]).push(a); });
+    const grid = document.getElementById('agents');
+    grid.innerHTML = AGENTS.map(a=>{
+      const acts = byAgent[a.name.toLowerCase()] || [];
+      const last = acts[0];
+      const status = last && last.status==='INITIATED' ? 'busy' : (last ? 'on' : 'off');
+      const job = last ? `<b>${last.category||'task'}</b> · ${(last.scenario||'').slice(0,40)}` : 'Standing by';
+      return `<div class="agent">
+        <span class="status ${status}"></span>
+        <div class="row"><div class="avatar">${a.emoji}</div><div><div class="name">${a.name}</div><div class="role">${a.role}</div></div></div>
+        <div class="job">${job}</div>
+      </div>`;
+    }).join('');
+
+    // activity ticker
+    const tick = document.getElementById('ticks');
+    tick.innerHTML = actions.slice(0,8).map(a=>{
+      const st = a.status==='COMPLETED'?'done':a.status==='INITIATED'?'run':'fail';
+      return `<div class="tick"><span class="who">${a.agentName}</span><span class="what">${(a.scenario||a.category||'').slice(0,60)}</span><span class="st ${st}">${a.status}</span></div>`;
+    }).join('') || '<div class="err">No recent activity</div>';
+  }catch(e){
+    document.getElementById('agents').innerHTML = `<div class="err">Fleet offline — ${e.message}</div>`;
+  }
+}
+load();
+setInterval(load, 15000);
+</script>
+</body>
+</html>
