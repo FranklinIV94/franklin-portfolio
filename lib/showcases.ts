@@ -90,6 +90,14 @@ export const showcaseCategories: ShowcaseCategory[] = [
         file: '/showcase/engineering/agent-fleet.html',
         ratio: 'aspect-[4/3]',
       },
+      {
+        slug: 'model-armor',
+        title: 'Model Armor — Injection Blocked',
+        tag: 'Security',
+        desc: 'An interactive sandbox: try a prompt-injection attack and watch it get blocked at the deterministic gate — before it ever reaches the model. Every attempt audited.',
+        file: '/showcase/engineering/model-armor.html',
+        ratio: 'aspect-[4/3]',
+      },
     ],
   },
 ];
