@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blur Experiments — Project A · Weather Card</title>
+<style>
+  /* ── Tokens (design-constraint-system: five binding decisions) ── */
+  :root{
+    /* Type: Inter, small scale, two weights */
+    --font:'Inter',system-ui,sans-serif;
+    --fs-display:72px; --fs-title:22px; --fs-body:15px; --fs-meta:12px;
+    --fw-display:800; --fw-title:600; --fw-body:400; --fw-meta:500;
+
+    /* Color: Sunset theme — 3 hues same family, white at bottom */
+    --mesh-dark:#F97316;   /* top-left blob */
+    --mesh-mid:#FDBA74;   /* top-right blob */
+    --mesh-light:#FFF7ED; /* base wash */
+    --ink:#111111;        /* text on white zone */
+    --muted:#6B7280;      /* secondary text */
+
+    /* Spacing: 4px base, generous */
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s7:28px;
+
+    /* Shape: one radius */
+    --radius:40px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:var(--font);
+    background:#EFEFEF;               /* gray artboard, like his posts */
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    gap:48px;flex-wrap:wrap;padding:48px;
+  }
+
+  /* ── The two frames side by side: Shapes (construction) + Design ── */
+  .frame{width:320px;height:320px;border-radius:var(--radius);overflow:hidden;position:relative;background:var(--mesh-light);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+  .frame-label{position:absolute;top:14px;left:16px;font-size:var(--fs-meta);font-weight:var(--fw-meta);color:rgba(0,0,0,.45);letter-spacing:.5px;z-index:5}
+
+  /* ── The mesh: overlapping solid blobs, blurred (Layer Blur ~200) ── */
+  .mesh{position:absolute;inset:0;filter:blur(48px);}   /* ~200 in Figma ≈ 48px CSS */
+  .blob{position:absolute;border-radius:50%}
+  .blob-dark{width:240px;height:240px;background:var(--mesh-dark);top:-70px;left:-40px}
+  .blob-mid{width:220px;height:220px;background:var(--mesh-mid);top:-50px;right:-30px}
+  .blob-soft{width:180px;height:180px;background:#FDE68A;top:-20px;left:90px;opacity:.7}
+
+  /* ── UI on top, anchored to the white zone ── */
+  .ui{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:var(--s7);z-index:2}
+  .top{display:flex;justify-content:space-between;align-items:flex-start}
+  .temp{font-size:var(--fs-display);font-weight:var(--fw-display);color:var(--ink);line-height:.9;letter-spacing:-2px}
+  .city{font-size:var(--fs-title);font-weight:var(--fw-title);color:var(--ink);margin-top:var(--s1)}
+  .cond{font-size:var(--fs-body);color:var(--muted);margin-top:2px}
+  .hi-lo{font-size:var(--fs-body);font-weight:var(--fw-body);color:var(--ink);margin-top:var(--s3)}
+  .hi-lo b{font-weight:var(--fw-title)}
+  .sun{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FDE68A,#F97316);box-shadow:0 0 24px rgba(249,115,22,.5)}
+
+  /* Shapes frame: show raw blobs, no blur, plus a fake blur panel */
+  .shapes .mesh{filter:none}
+  .shapes .blob{border:1.5px dashed rgba(0,0,0,.25)}
+  .panel{position:absolute;bottom:14px;right:14px;background:rgba(255,255,255,.9);border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:10px 12px;font-size:11px;color:#374151;z-index:5;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+  .panel b{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#9CA3AF;margin-bottom:4px}
+  .panel .row{display:flex;justify-content:space-between;gap:16px;margin-top:2px}
+  .panel .row span:last-child{font-weight:600;color:#111}
+</style>
+</head>
+<body>
+
+  <!-- Shapes frame: construction, blobs visible, fake blur panel -->
+  <div class="frame shapes">
+    <div class="frame-label">Shapes</div>
+    <div class="mesh">
+      <div class="blob blob-dark"></div>
+      <div class="blob blob-mid"></div>
+      <div class="blob blob-soft"></div>
+    </div>
+    <div class="panel">
+      <b>Layer Blur</b>
+      <div class="row"><span>Type</span><span>Uniform</span></div>
+      <div class="row"><span>Value</span><span>200</span></div>
+    </div>
+  </div>
+
+  <!-- Design frame: blurred mesh + clean UI -->
+  <div class="frame">
+    <div class="frame-label">Design</div>
+    <div class="mesh">
+      <div class="blob blob-dark"></div>
+      <div class="blob blob-mid"></div>
+      <div class="blob blob-soft"></div>
+    </div>
+    <div class="ui">
+      <div class="top">
+        <div>
+          <div class="temp">31°</div>
+          <div class="city">Islamabad</div>
+          <div class="cond">Sunny</div>
+        </div>
+        <div class="sun"></div>
+      </div>
+      <div class="hi-lo"><b>↑ 31°</b> &nbsp; <b>↓ 16°</b></div>
+    </div>
+  </div>
+
+</body>
+</html>

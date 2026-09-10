@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blur Experiments — Project D · Motion</title>
+<style>
+  :root{
+    --font:'Inter',system-ui,sans-serif;
+    --fs-display:34px; --fs-title:20px; --fs-body:14px; --fs-meta:12px;
+    --fw-display:800; --fw-title:600; --fw-body:400; --fw-meta:500;
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s7:28px;
+    --radius:28px; --radius-sm:12px;
+    --mesh-dark:#F97316; --mesh-mid:#FDBA74; --mesh-light:#FFF7ED;
+    --text-primary:#111; --text-secondary:#6B7280;
+    --action:#F97316; --action-on:#fff;
+  }
+  [data-theme="sky"]{--mesh-dark:#1D4ED8;--mesh-mid:#38BDF8;--mesh-light:#F0F9FF;--action:#111;--action-on:#fff}
+  [data-theme="grape"]{--mesh-dark:#C084FC;--mesh-mid:#E9D5FF;--mesh-light:#FDF4FF;--action:#A855F7;--action-on:#fff}
+  [data-theme="mango"]{--mesh-dark:#F59E0B;--mesh-mid:#FB923C;--mesh-light:#FFF7ED;--action:#F97316;--action-on:#fff}
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font);background:#EFEFEF;padding:48px 24px;color:var(--text-primary)}
+  .page{max-width:1100px;margin:0 auto}
+  .page h1{font-size:26px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
+  .page .lede{font-size:14px;color:var(--text-secondary);margin-bottom:32px}
+  .section{margin-bottom:48px}
+  .section h2{font-size:16px;font-weight:700;margin-bottom:6px;color:#374151;text-transform:uppercase;letter-spacing:.5px}
+  .section .note{font-size:13px;color:var(--text-secondary);margin-bottom:16px}
+  .screen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+
+  .screen{height:480px;border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.12);background:var(--mesh-light)}
+  .mesh{position:absolute;inset:0;filter:blur(70px)}
+  .blob{position:absolute;border-radius:50%}
+  .blob-a{width:360px;height:360px;background:var(--mesh-dark);top:-120px;left:-90px}
+  .blob-b{width:320px;height:320px;background:var(--mesh-mid);top:-90px;right:-70px}
+  .blob-c{width:260px;height:260px;background:var(--mesh-light);top:-30px;left:60px;opacity:.8}
+  .content{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;height:100%;padding:var(--s6);gap:12px}
+  .h1{font-size:var(--fs-display);font-weight:var(--fw-display);line-height:1.05;letter-spacing:-1px}
+  .sub{font-size:var(--fs-body);color:var(--text-secondary);line-height:1.5}
+  .btn{display:flex;align-items:center;justify-content:center;height:48px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;border:none;font-family:var(--font);background:var(--action);color:var(--action-on)}
+  .chip{height:36px;padding:0 14px;border-radius:10px;border:1.5px solid #E5E7EB;display:flex;align-items:center;font-size:13px;font-weight:500;color:#374151;background:#fff;font-family:var(--font);cursor:pointer;transition:background .12s ease-out,color .12s ease-out,border-color .12s ease-out}
+  .chip.active{background:var(--text-primary);color:#fff;border-color:var(--text-primary)}
+  .weather{display:flex;flex-direction:column;justify-content:space-between;height:100%}
+  .weather .temp{font-size:72px;font-weight:800;line-height:.9;letter-spacing:-2px}
+  .weather .city{font-size:22px;font-weight:600;margin-top:4px}
+  .weather .cond{font-size:14px;color:var(--text-secondary)}
+  .weather .hi-lo{font-size:14px;font-weight:600;margin-top:12px}
+  .weather .sun{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FDE68A,var(--mesh-dark));box-shadow:0 0 24px rgba(249,115,22,.5)}
+
+  /* ═══ MOTION ═══ */
+  /* D1 · Weather mesh drift — blobs slowly drift 8-16px, 3s ease-in-out, loop */
+  .drift .blob-a{animation:driftA 3s ease-in-out infinite}
+  .drift .blob-b{animation:driftB 3s ease-in-out infinite}
+  .drift .blob-c{animation:driftC 3s ease-in-out infinite}
+  @keyframes driftA{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,8px)}}
+  @keyframes driftB{0%,100%{transform:translate(0,0)}50%{transform:translate(-8px,12px)}}
+  @keyframes driftC{0%,100%{transform:translate(0,0)}50%{transform:translate(6px,-6px)}}
+
+  /* D2 · Onboarding mesh intensity — eases in on load */
+  .intensity .mesh{animation:intensity 1.2s ease-out both}
+  @keyframes intensity{from{opacity:0;filter:blur(90px)}to{opacity:1;filter:blur(70px)}}
+
+  /* D3 · Product — chip fill + cart press (120ms) */
+  .press:active{transform:scale(.97);transition:transform .12s ease-out}
+
+  @media (prefers-reduced-motion:reduce){
+    .drift .blob-a,.drift .blob-b,.drift .blob-c,.intensity .mesh{animation:none}
+    .press:active{transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Project D — Motion</h1>
+  <p class="lede">One idea per animation. Mesh drift · intensity ease-in · chip fill + press. Respects prefers-reduced-motion.</p>
+
+  <!-- D1 · Weather mesh drift -->
+  <section class="section">
+    <h2>D1 · Weather — mesh drift</h2>
+    <div class="note">Blobs slowly drift 8–16px, 3s ease-in-out, loop. The wash breathes; the UI stays still.</div>
+    <div class="screen-grid">
+      <div class="screen drift" data-theme="sunset">
+        <div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div>
+        <div class="content"><div class="weather"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div class="temp">31°</div><div class="city">Islamabad</div><div class="cond">Sunny</div></div><div class="sun"></div></div><div class="hi-lo">↑ 31° &nbsp; ↓ 16°</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D2 · Onboarding intensity -->
+  <section class="section">
+    <h2>D2 · Onboarding — mesh intensity eases in</h2>
+    <div class="note">Mesh fades + un-blurs on first load (1.2s). Content settles after.</div>
+    <div class="screen-grid">
+      <div class="screen intensity" data-theme="mango">
+        <div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div>
+        <div class="content"><div class="h1">Explore the<br>coolest collections.</div><div class="sub">Curated picks, updated daily.</div><button class="btn">Sign In</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D3 · Product — chip fill + cart press -->
+  <section class="section">
+    <h2>D3 · Product — chip fill + cart press</h2>
+    <div class="note">Click a size chip (fill animates) and the Add to cart button (120ms press).</div>
+    <div class="screen-grid">
+      <div class="screen" data-theme="grape">
+        <div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div>
+        <div class="content">
+          <div class="h1" style="font-size:24px">El Paseo Espresso</div>
+          <div class="sub">Single-origin, medium roast.</div>
+          <div class="chips" id="chips"><div class="chip active" data-size>100g</div><div class="chip" data-size>250g</div><div class="chip" data-size>500g</div><div class="chip" data-size>1kg</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:22px;font-weight:800">$18.00</div><button class="btn press" id="cart">Add to cart</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  // D3 · chip fill — one active at a time
+  document.querySelectorAll('#chips .chip').forEach(chip=>{
+    chip.addEventListener('click',()=>{
+      document.querySelectorAll('#chips .chip').forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+  // D3 · cart press feedback (visual only)
+  document.getElementById('cart').addEventListener('click',()=>{
+    const b=document.getElementById('cart');
+    b.textContent='✓ Added';
+    setTimeout(()=>b.textContent='Add to cart',900);
+  });
+</script>
+</body>
+</html>

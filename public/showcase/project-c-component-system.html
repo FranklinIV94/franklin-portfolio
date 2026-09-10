@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blur Experiments — Project C · Component System</title>
+<style>
+  /* ═══ TOKENS — the system (design-constraint-system) ═══ */
+  :root{
+    --font:'Inter',system-ui,sans-serif;
+    --fs-display:34px; --fs-title:20px; --fs-body:14px; --fs-meta:12px;
+    --fw-display:800; --fw-title:600; --fw-body:400; --fw-meta:500;
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s7:28px;
+    --radius:28px; --radius-sm:12px;
+
+    /* mesh tokens — theme = sunset | sky | grape | mango */
+    --mesh-dark:#F97316; --mesh-mid:#FDBA74; --mesh-light:#FFF7ED;
+    --text-primary:#111; --text-secondary:#6B7280;
+    --action:#F97316; --action-on:#fff;
+  }
+  /* theme overrides */
+  [data-theme="sky"]{--mesh-dark:#1D4ED8;--mesh-mid:#38BDF8;--mesh-light:#F0F9FF;--action:#111;--action-on:#fff}
+  [data-theme="grape"]{--mesh-dark:#C084FC;--mesh-mid:#E9D5FF;--mesh-light:#FDF4FF;--action:#A855F7;--action-on:#fff}
+  [data-theme="mango"]{--mesh-dark:#F59E0B;--mesh-mid:#FB923C;--mesh-light:#FFF7ED;--action:#F97316;--action-on:#fff}
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font);background:#EFEFEF;padding:48px 24px;color:var(--text-primary)}
+
+  .page{max-width:1200px;margin:0 auto}
+  .page h1{font-size:26px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
+  .page .lede{font-size:14px;color:var(--text-secondary);margin-bottom:32px}
+
+  .section{margin-bottom:40px}
+  .section h2{font-size:16px;font-weight:700;margin-bottom:16px;color:#374151;text-transform:uppercase;letter-spacing:.5px}
+
+  /* ═══ COMPONENTS ═══ */
+  /* Mesh/Background — theme + device props */
+  .mesh-bg{position:relative;overflow:hidden;background:var(--mesh-light)}
+  .mesh-bg .mesh{position:absolute;inset:0;filter:blur(70px)}
+  .mesh-bg .blob{position:absolute;border-radius:50%}
+  .mesh-bg .blob-a{width:360px;height:360px;background:var(--mesh-dark);top:-120px;left:-90px}
+  .mesh-bg .blob-b{width:320px;height:320px;background:var(--mesh-mid);top:-90px;right:-70px}
+  .mesh-bg .blob-c{width:260px;height:260px;background:var(--mesh-light);top:-30px;left:60px;opacity:.8}
+  .mesh-bg .content{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;height:100%;padding:var(--s6)}
+
+  /* Button/Primary, Button/Secondary */
+  .btn{display:flex;align-items:center;justify-content:center;height:48px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;border:none;font-family:var(--font)}
+  .btn-primary{background:var(--action);color:var(--action-on)}
+  .btn-secondary{background:transparent;border:1.5px solid var(--text-primary);color:var(--text-primary)}
+
+  /* Input/Default */
+  .input{height:48px;border-radius:var(--radius-sm);border:1.5px solid #E5E7EB;padding:0 16px;font-size:14px;color:var(--text-primary);background:#fff;font-family:var(--font)}
+  .input::placeholder{color:#9CA3AF}
+
+  /* Chip/Size */
+  .chips{display:flex;gap:8px}
+  .chip{height:36px;padding:0 14px;border-radius:10px;border:1.5px solid #E5E7EB;display:flex;align-items:center;font-size:13px;font-weight:500;color:#374151;background:#fff;font-family:var(--font)}
+  .chip.active{background:var(--text-primary);color:#fff;border-color:var(--text-primary)}
+
+  /* Weather/Card */
+  .weather{display:flex;flex-direction:column;justify-content:space-between;height:100%}
+  .weather .temp{font-size:72px;font-weight:800;line-height:.9;letter-spacing:-2px}
+  .weather .city{font-size:22px;font-weight:600;margin-top:4px}
+  .weather .cond{font-size:14px;color:var(--text-secondary)}
+  .weather .hi-lo{font-size:14px;font-weight:600;margin-top:12px}
+  .weather .sun{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FDE68A,var(--mesh-dark));box-shadow:0 0 24px rgba(249,115,22,.5)}
+
+  /* type styles */
+  .h1{font-size:var(--fs-display);font-weight:var(--fw-display);line-height:1.05;letter-spacing:-1px}
+  .sub{font-size:var(--fs-body);color:var(--text-secondary);line-height:1.5}
+
+  /* ═══ SYSTEM PAGE LAYOUT ═══ */
+  .token-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+  .token{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:14px}
+  .token .swatch{height:48px;border-radius:8px;margin-bottom:8px;border:1px solid rgba(0,0,0,.06)}
+  .token .name{font-size:12px;font-weight:600}
+  .token .val{font-size:11px;color:#9CA3AF;font-family:monospace}
+
+  .comp-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .comp-box{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:200px}
+  .comp-box .label{font-size:11px;color:#9CA3AF;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+
+  .screen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .screen{width:100%;height:480px;border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+  .screen .tag{position:absolute;top:12px;left:14px;font-size:11px;font-weight:600;color:rgba(0,0,0,.4);z-index:5;letter-spacing:.5px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Project C — Mesh Component System</h1>
+  <p class="lede">Color variables, Mesh/Background (theme + device), Button/Input/Chip/Weather components. Swap a theme, restyle the mesh — no rebuilding blobs.</p>
+
+  <!-- ═══ 1. COLOR TOKENS ═══ -->
+  <section class="section">
+    <h2>1 · Color Variables</h2>
+    <div class="token-grid">
+      <div class="token"><div class="swatch" style="background:var(--mesh-dark)"></div><div class="name">mesh/dark</div><div class="val">#F97316</div></div>
+      <div class="token"><div class="swatch" style="background:var(--mesh-mid)"></div><div class="name">mesh/mid</div><div class="val">#FDBA74</div></div>
+      <div class="token"><div class="swatch" style="background:var(--mesh-light)"></div><div class="name">mesh/light</div><div class="val">#FFF7ED</div></div>
+      <div class="token"><div class="swatch" style="background:var(--text-primary)"></div><div class="name">text/primary</div><div class="val">#111111</div></div>
+      <div class="token"><div class="swatch" style="background:var(--text-secondary)"></div><div class="name">text/secondary</div><div class="val">#6B7280</div></div>
+      <div class="token"><div class="swatch" style="background:var(--action)"></div><div class="name">action/default</div><div class="val">#F97316</div></div>
+      <div class="token"><div class="swatch" style="background:var(--action-on)"></div><div class="name">action/on-action</div><div class="val">#FFFFFF</div></div>
+    </div>
+  </section>
+
+  <!-- ═══ 2. COMPONENTS ═══ -->
+  <section class="section">
+    <h2>2 · Components</h2>
+    <div class="comp-row">
+      <div class="comp-box"><span class="label">Button/Primary</span><button class="btn btn-primary">Subscribe</button></div>
+      <div class="comp-box"><span class="label">Button/Secondary</span><button class="btn btn-secondary">Sign Up</button></div>
+      <div class="comp-box"><span class="label">Input/Default</span><input class="input" placeholder="Enter your email"></div>
+      <div class="comp-box"><span class="label">Chip/Size</span><div class="chips"><div class="chip active">100g</div><div class="chip">250g</div><div class="chip">500g</div></div></div>
+    </div>
+  </section>
+
+  <!-- ═══ 3. MESH/BACKGROUND — theme prop ═══ -->
+  <section class="section">
+    <h2>3 · Mesh/Background — Theme prop (sunset · sky · grape · mango)</h2>
+    <div class="screen-grid">
+      <div class="screen mesh-bg" data-theme="sunset"><div class="tag">sunset</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content"><div class="h1">Sunset</div><div class="sub">Warm, energetic.</div></div></div>
+      <div class="screen mesh-bg" data-theme="sky"><div class="tag">sky</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content"><div class="h1">Sky</div><div class="sub">Cool, focused.</div></div></div>
+      <div class="screen mesh-bg" data-theme="grape"><div class="tag">grape</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content"><div class="h1">Grape</div><div class="sub">Premium, calm.</div></div></div>
+      <div class="screen mesh-bg" data-theme="mango"><div class="tag">mango</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content"><div class="h1">Mango</div><div class="sub">Bright, friendly.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ═══ 4. EXAMPLE SCREENS — only components ═══ -->
+  <section class="section">
+    <h2>4 · Example Screens (components only)</h2>
+    <div class="screen-grid">
+      <!-- Weather card (Project A) -->
+      <div class="screen mesh-bg" data-theme="sunset"><div class="tag">Weather/Card</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content"><div class="weather"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div class="temp">31°</div><div class="city">Islamabad</div><div class="cond">Sunny</div></div><div class="sun"></div></div><div class="hi-lo">↑ 31° &nbsp; ↓ 16°</div></div></div></div>
+
+      <!-- Subscribe (B1) -->
+      <div class="screen mesh-bg" data-theme="sky"><div class="tag">Subscribe</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content" style="gap:12px"><div class="h1">Join 2,000+<br>subscribers</div><div class="sub">Stay in the loop.</div><input class="input" placeholder="Enter your email"><button class="btn btn-primary">Subscribe</button></div></div>
+
+      <!-- Onboarding (B2) -->
+      <div class="screen mesh-bg" data-theme="mango"><div class="tag">Onboarding</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content" style="gap:12px"><div class="h1">Explore the<br>coolest collections.</div><div class="sub">Curated picks, updated daily.</div><button class="btn btn-secondary">Sign Up</button><button class="btn btn-primary">Sign In</button></div></div>
+
+      <!-- Product (B3) -->
+      <div class="screen mesh-bg" data-theme="grape"><div class="tag">Product</div><div class="mesh"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div><div class="content" style="gap:10px"><div class="h1" style="font-size:24px">El Paseo Espresso</div><div class="sub">Single-origin, medium roast.</div><div class="chips"><div class="chip active">100g</div><div class="chip">250g</div><div class="chip">500g</div></div><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:22px;font-weight:800">$18.00</div><button class="btn btn-primary" style="width:130px">Add to cart</button></div></div></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
