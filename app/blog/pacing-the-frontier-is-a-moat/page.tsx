@@ -172,6 +172,38 @@ export default function PacingFrontierMoat() {
           That&rsquo;s not safety. That&rsquo;s a monopoly on verification dressed up as public interest.
         </p>
 
+        <h2 className="font-display font-bold text-2xl text-white pt-8">The Macroeconomic Pivot</h2>
+
+        <p>
+          Izabella Kaminska connected the dots in a way nobody else has. The hyperscaling narrative, spend trillions on compute to win the AI race, was never about genuine demand. It was about <strong className="text-accent">outspending and bankrupting competitors.</strong> When DeepSeek&rsquo;s Kimi model matched frontier performance at a fraction of the cost, that strategy collapsed. You can&rsquo;t win by outspending when a competitor matches you for pennies.
+        </p>
+
+        <p>
+          The labs need a credible off-ramp from the hyperscaling story they&rsquo;ve been selling for months. &ldquo;Safety concerns&rdquo; is the perfect justification to pivot. It sounds noble. It&rsquo;s unchallengeable. And it conveniently masks the real story: the arms race failed, the burn rate was unsustainable, and they need an excuse to stop pouring capital into compute without admitting they lost the cost war.
+        </p>
+
+        <p>
+          But it goes further. Safety concerns also justify moving everything into a closed, government-funded, taxpayer-protected setting. A Manhattan Project for AI. The labs get the government to foot the bill, classify the research, lock out the public, and protect the incumbents from competition under the banner of national security. The ladder isn&rsquo;t just pulled up. It&rsquo;s classified.
+        </p>
+
+        <p>
+          As Kaminska noted, this is likely the asymmetric information Treasury Secretary Bessent has been alluding to for weeks. The capital freed by the hyperscaling pullback floods into US Treasuries. The safety narrative isn&rsquo;t just a moat. It&rsquo;s a coordinated macroeconomic pivot that repositions the entire AI industry from open competition to closed, government-protected cartel.
+        </p>
+
+        <h2 className="font-display font-bold text-2xl text-white pt-8">The Crisis-as-Pretext Pattern</h2>
+
+        <p>
+          Zach Vorhies, the Google whistleblower, flagged a pattern that ties the whole thing together. OpenAI gave experimental agents permission to publish code without authorization. Predictably, those agents did exactly that. Then OpenAI disclosed the incident as a hack.
+        </p>
+
+        <p>
+          Whether the incident was intentional or negligent, the structural pattern is clear: create the conditions for a safety incident, disclose it publicly, and use it as evidence that AI needs regulation and slowdown. Every incident becomes ammunition for the regulatory framework the incumbents are building. The evidence becomes the mandate. The mandate becomes the moat.
+        </p>
+
+        <p>
+          This is the Rockefeller playbook updated for the AI age. Rockefeller didn&rsquo;t just argue for consolidation. He created the conditions, the price wars, the railroad deals, the refinery acquisitions, that made consolidation look necessary to stabilize a chaotic market. Amodei&rsquo;s &ldquo;pace the frontier&rdquo; plan is the same move with better branding. The safety incidents are the chaos. The regulatory framework is the consolidation. And the public gets locked out either way.
+        </p>
+
         <h2 className="font-display font-bold text-2xl text-white pt-8">The Real-World Proof</h2>
 
         <p>
