@@ -10,6 +10,14 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'pacing-the-frontier-is-a-moat',
+    title: 'Pacing the Frontier Is a Moat',
+    excerpt: "Three billionaires who already crossed the finish line are asking for a speed limit. Anthropic says slow down while RSI is already happening. The plan regulates the model you can see. The risk is the swarm you can't.",
+    date: 'September 12, 2026',
+    dateISO: '2026-09-12',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'the-cost-of-waiting',
     title: 'The Cost of Waiting',
     excerpt: "AI isn't just changing your industry. It's changing the cost of money itself. Harvard proved one person with AI matches a two-person team. The model they used is 11 generations out of date. The window to get ahead of this is closing.",
