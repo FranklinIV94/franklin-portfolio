@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: 'Pacing the Frontier Is a Moat',
     description: 'Three billionaires who already crossed the finish line are pulling up the ladder. The public gets regulated out of the frontier. The private sector keeps the advantage.',
-    images: ['/blog/governance-by-default-hero.jpg'],
+    images: ['/blog/pacing-frontier-moat-hero.jpg'],
   },
 };
 
@@ -69,7 +69,7 @@ export default function PacingFrontierMoat() {
 
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
-          src="/blog/governance-by-default-hero.jpg"
+          src="/blog/pacing-frontier-moat-hero.jpg"
           alt="Three wealthy tech moguls at the top of a wall pulling up a ladder behind them, a speed limit sign at the top, a crowd of smaller developers below unable to reach the ladder"
           className="w-full"
         />
