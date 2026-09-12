@@ -139,6 +139,17 @@ export default function PacingFrontierMoat() {
           He says the risk is swarms. He regulates models. If you believe your own threat assessment, your plan doesn&rsquo;t solve it.
         </p>
 
+        <figure className="my-8 overflow-hidden rounded-xl border border-border">
+          <img
+            src="/blog/pacing-frontier-substrate.jpg"
+            alt="A vast network of glowing interconnected nodes spread across a dark globe like a weather pattern, with a small disconnected server rack in the corner"
+            className="w-full"
+          />
+          <figcaption className="mt-2 text-xs text-gray-500 text-center">
+            The substrate has no server. The intelligence is in the topology, not the parts.
+          </figcaption>
+        </figure>
+
         <h2 className="font-display font-bold text-2xl text-white pt-8">Pulling Up the Ladder</h2>
 
         <p>
