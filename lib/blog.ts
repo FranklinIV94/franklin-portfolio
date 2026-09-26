@@ -10,6 +10,14 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'we-let-ai-run-our-sales-pipeline',
+    title: 'We Let AI Run Our Sales Pipeline for 5 Months. Then We Hired a Human.',
+    excerpt: "How a two-person Florida firm built a lead engine with autonomous agents, cold email outreach, and signal-based sourcing — and why we just hired our first human salesperson to do what the AI couldn't.",
+    date: 'September 26, 2026',
+    dateISO: '2026-09-26',
+    tag: 'GTM',
+  },
+  {
     slug: 'pacing-the-frontier-is-a-moat',
     title: 'Pacing the Frontier Is a Moat',
     excerpt: "Three billionaires who already crossed the finish line are asking for a speed limit. Anthropic says slow down while RSI is already happening. The plan regulates the model you can see. The risk is the swarm you can't.",
