@@ -294,7 +294,7 @@ export default function WeLetAiRunOurSalesPipeline() {
         <hr className="border-border my-12" />
 
         <p>
-          I&apos;m Franklin Bryant IV, COO of All Lines Business Solutions and founder of Prospyr 305. We build agentic systems for small and mid-size firms across five states. If you want to see what an AI-driven pipeline could look like for your business, book a consultation. An agent will handle the scheduling. A human will take the call.
+          I&apos;m Franklin Bryant IV, COO of All Lines Business Solutions and founder of Prospyr 305. We build agentic systems for small and mid-size firms across ten states. If you want to see what an AI-driven pipeline could look like for your business, book a consultation. An agent will handle the scheduling. A human will take the call.
         </p>
 
         {/* CTA */}

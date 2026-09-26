@@ -66,14 +66,15 @@ export default function AboutPage() {
                   The core of how I work: I design outcomes and direct AI execution rather than
                   writing code line-by-line. This isn&apos;t about replacing developers — it&apos;s about
                   amplifying what one person with the right architectural thinking can deliver.
-                  Sixteen projects in production. Fourteen AI agents running 24/7. Industries spanning
-                  healthcare, HR, retail, construction, and insurance.
+                  Sixteen projects in production. Fourteen AI agents running 24/7. Over fifty research
+                  articles synthesized. Industries spanning healthcare, HR, retail, construction, and insurance.
                 </p>
                 <p>
                   My firm, <span className="text-white">All Lines Business Solutions (ALBS)</span>, applies
                   this same methodology to consulting and accounting engagements. AI-accelerated
                   development isn&apos;t just our service — it&apos;s how we run the business. We serve
-                  clients across Florida, Georgia, Texas, New York, and California.
+                  clients across Florida, Georgia, Texas, New York, California, Oklahoma, Colorado,
+                  New Jersey, South Carolina, and North Carolina.
                 </p>
                 <p>
                   I authored the <span className="text-white">Agent Code of Conduct</span> — an open-source
