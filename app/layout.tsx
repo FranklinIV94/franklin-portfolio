@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: 'Franklin J Bryant IV — AI Business Solutions Architect',
   description: 'I build autonomous AI systems that operate, transact, and scale. Founder of All Lines Business Solutions.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'AI business solutions', 'agentic engineering', 'autonomous systems', 'ALBS', 'Prospyr 305', 'AI automation', 'business automation'],
+  // Self-referencing canonical for EVERY route. './' resolves against metadataBase + the
+  // current path, so each page declares itself canonical. Individual pages that set
+  // `alternates.canonical` explicitly (e.g. blog posts, /ai-governance) override this.
+  // Replaced a hardcoded <link rel="canonical"> that pointed every page at the site root
+  // and de-duplicated all blog posts out of the index (fixed 2026-09-26).
+  alternates: { canonical: './' },
   openGraph: {
     title: 'Franklin J Bryant IV — AI Business Solutions Architect',
     description: 'I build autonomous AI systems that operate, transact, and scale.',
@@ -87,7 +93,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="canonical" href="https://franklin.simplifyingbusinesses.com" />
+        {/*
+          NOTE (2026-09-26): a hardcoded <link rel="canonical" href="<site root>"> used to live
+          here. It emitted a homepage canonical on EVERY page, so every blog post declared the
+          homepage as its canonical and de-duplicated itself out of the index. Per-page canonicals
+          are now declared in each page's `metadata.alternates.canonical` (Next.js Metadata API).
+          The homepage declares its own canonical via app/page.tsx. Do NOT re-add a global
+          canonical here — it silently overrides every child route.
+        */}
         <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
         <script
           type="application/ld+json"
