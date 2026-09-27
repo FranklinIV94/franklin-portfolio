@@ -107,7 +107,7 @@ export default function WeLetAiRunOurSalesPipeline() {
         </p>
 
         <p>
-          Today we have 21 active clients, 42 competitors tracked, and a pipeline that runs while we sleep. We also just hired our first human salesperson.
+          Five months later I have a pipeline that runs while I sleep, and I just hired my first human salesperson.
         </p>
 
         <p>
@@ -124,7 +124,7 @@ export default function WeLetAiRunOurSalesPipeline() {
         </p>
 
         <p>
-          Last April, I looked at our pipeline and saw a problem most small firms would love to have. We had more inbound interest than we could follow up on. Referrals were coming in from existing clients. Our website was getting traffic. But between the interest and the signed contract was a gap filled with manual work: follow-up emails, scheduling, research on each prospect, tailored proposals. All of it falling on two people who were also doing the delivery work.
+          Last April I looked at our pipeline and saw a problem most small firms would love to have. More inbound interest than we could follow up on, referrals from existing clients, a website getting traffic. But between the interest and the signed contract was a gap filled with manual work: follow-up, scheduling, research on each prospect, tailored proposals. All of it landing on two people who were also doing the delivery work.
         </p>
 
         <p>
@@ -146,31 +146,27 @@ export default function WeLetAiRunOurSalesPipeline() {
         </h2>
 
         <p>
-          The system had four layers. Each ran autonomously, checked in with me on a schedule, and logged everything to a shared workspace.
+          <strong className="text-white">Layer one: signal-based sourcing.</strong> One agent watched industry signals — hiring posts, funding announcements, regulatory changes. When a Florida accounting firm posted a job for a bookkeeper, that was a signal. The agent compiled these into a daily lead list with context: who they were, what they likely needed, and why now.
         </p>
 
         <p>
-          <strong className="text-white">Layer one: signal-based sourcing.</strong> One agent monitored industry signals: hiring posts, funding announcements, regulatory changes, technology adoption patterns. When a Florida accounting firm posted a job for a bookkeeper, that was a signal. When a medical practice announced a new location, that was a signal. The agent compiled these into a daily lead list with context: who they were, what they likely needed, why reaching out now made sense.
+          <strong className="text-white">Layer two: research and scoring.</strong> A second agent pulled the website, the technology stack, the headcount, the recent news, then scored each prospect on fit: right profile, right state, big enough to need us, small enough that we&apos;d matter.
         </p>
 
         <p>
-          <strong className="text-white">Layer two: research and scoring.</strong> A second agent took each lead and did deep research. Website analysis, technology stack, employee count, revenue estimates, recent news. It scored each prospect on fit: did they match our ideal client profile? Were they in a state we serve? Were they big enough to need us but small enough that we&apos;d matter?
+          <strong className="text-white">Layer three: cold email outreach.</strong> A third agent wrote the emails. Not mail-merged templates — grounded in the research, with a specific hook per prospect, sent in two windows, 8:30 to 10:30 AM and 5:30 to 7:30 PM Eastern, never on weekends.
         </p>
 
         <p>
-          <strong className="text-white">Layer three: cold email outreach.</strong> A third agent wrote the emails. Not templates with merge fields. Actual emails, grounded in the research, with a specific hook for each prospect. It sent them during two windows: 8:30 to 10:30 AM and 5:30 to 7:30 PM Eastern. It tracked opens, replies, and follow-ups. It never sent on weekends.
-        </p>
-
-        <p>
-          <strong className="text-white">Layer four: pipeline management.</strong> A fourth agent tracked everything in a shared dashboard. Who was contacted. Who replied. Who booked a call. Who went dark. It flagged leads that needed a human touch and queued them for me.
+          <strong className="text-white">Layer four: pipeline management.</strong> A fourth agent tracked who was contacted, who replied, who booked, who went dark, and queued the ones that needed a human touch.
         </p>
 
         <p className="text-lg text-gray-200 leading-relaxed border-l-2 border-accent pl-6 italic">
-          &quot;There is never going to be a week where no work was completed and a scorecard cannot be created for any of these clients.&quot;
+          &quot;When a card has a named owner, a direct line and one specific gap, the agent writes &apos;hand to human&apos; on it. Everything else stays in the machine.&quot;
         </p>
 
         <p>
-          I said that to my team after the system had been running for three months. The agents were logging every action, every reply, every booked call. The data was clean. The pipeline was visible. For the first time in my career, I could see exactly where every lead was in the funnel without opening a spreadsheet.
+          I said that to my team after the system had been running for three months. The agents were logging every action, every reply, every booked call. The data was complete: every touch, every reply, every outcome had a timestamp.
         </p>
 
         {/* Section: What Worked */}
@@ -179,15 +175,15 @@ export default function WeLetAiRunOurSalesPipeline() {
         </h2>
 
         <p>
-          The agents were relentlessly consistent. They never forgot to follow up. They never sent an email with the wrong name. They never missed a sending window because they were in a meeting. They never got tired, never got discouraged by a rejection, never had a bad day and let the pipeline go cold.
+          The agents were relentlessly consistent. They never sent an email with the wrong name. They never missed a sending window because they were in a meeting. They never got tired, never got discouraged by a rejection, never had a bad day and let the pipeline go cold.
         </p>
 
         <p>
-          The research was better than what I&apos;d been doing manually. The agent could pull a company&apos;s entire technology stack, estimate their revenue from public data, and identify the exact regulatory pressure they were under in thirty seconds. I&apos;d been spending twenty minutes per prospect doing the same thing.
+          The research was better than what I&apos;d been doing manually. The agent could pull a company&apos;s technology stack, estimate revenue from public data, and identify the regulatory pressure they were under in thirty seconds. I&apos;d been spending twenty minutes per prospect doing the same thing.
         </p>
 
         <p>
-          The emails were good. Not great. Good. They got replies. About 4% of cold emails got a response, which is above average for B2B cold outreach. A handful of those turned into consultations. A few of those turned into clients.
+          And it put in the volume. Over two hundred cold emails went out between May and August, written per prospect rather than mail-merged, sent inside the windows we set, logged as they went. Some got replies. A few of those replies turned into conversations worth having.
         </p>
 
         <p>
@@ -200,19 +196,19 @@ export default function WeLetAiRunOurSalesPipeline() {
         </h2>
 
         <p>
-          The gap wasn&apos;t in the outreach. It was in the room.
+          Two things, and only one of them is the one everybody predicts.
         </p>
 
         <p>
-          When a prospect replied to a cold email, they were interested. When they booked a consultation, they were serious. But the consultation is where the deal actually happens. And that&apos;s where the AI hit a wall it couldn&apos;t climb.
+          The first is the room. When a prospect replied to a cold email they were interested; when they booked, they were serious. But the consultation is where the deal happens, and it is a conversation, not a presentation. The prospect hints at the problem they will not say out loud. They test your reactions. They decide whether they trust you, and none of that happens in text. An agent can schedule the call and prep the brief. It cannot sit in the room and read the temperature.
         </p>
 
         <p>
-          A consultation isn&apos;t a presentation. It&apos;s a conversation. The prospect tells you what they&apos;re worried about. They hint at the problem they won&apos;t say out loud. They test your reactions. They decide whether they trust you. None of that happens in the text. It happens in the pause, the tone, the moment where you lean forward and say &quot;I&apos;ve seen this before&quot; and they believe you because you said it like you meant it.
+          The second is shape, and it surprised me. The agents were superb at volume and poor at fit. Left to signals, they filled the pipeline with the companies that emit the most signals: PEOs, law firms, medical groups, insurance agencies. Sophisticated buyers with procurement, exactly the accounts that need a warm introduction and a long email track, and exactly the wrong first calls for a new salesperson. The businesses we actually serve best on day one, the electrician with four trucks, the salon owner, the fifteen-person CPA firm, barely emit signals at all. When the agents did find them, the research got thin and the hook got generic: one line, reused across every trade. Good enough for an email sequence. Useless on a live call.
         </p>
 
         <p>
-          An AI agent can schedule the call. It can prep a brief. It can even draft a proposal based on the conversation notes. But it cannot sit in the room and read the temperature. It cannot tell when someone is being polite but skeptical. It cannot adjust its pitch in real time because the prospect&apos;s body language just shifted.
+          So when I looked at the pipeline in September I did not see a closing problem. I saw a few hundred leads, a handful of them ready for a human, and the rest needing a person to pick up the phone and find out what the owner is actually worried about.
         </p>
 
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
@@ -230,15 +226,15 @@ export default function WeLetAiRunOurSalesPipeline() {
         </h2>
 
         <p>
-          So we hired someone. Not an SDR. Not a cold caller. A person who could take the meetings the agents booked and close them.
+          So we hired someone. Not an SDR reading a script, and not a closer waiting for the agents to hand her a signed deal. A person who can do the two things the agents could not: pick up the phone to a small business owner, and read the room once she gets there.
         </p>
 
         <p>
-          The job is simple to describe and hard to do. Take the consultations the AI pipeline books. Sit across from the prospect. Listen. Understand what they actually need versus what they said they need. Make them feel like they&apos;re in good hands. Close the deal.
+          Her first week is not the meetings the agents booked. It is a queue of sixty-three cards the agents scored and a human re-vetted, one at a time: who owns the company, how jobs come in, how many reviews they have, what the first useful thing we could do for them is. She researches every card before she dials, leaves a name and a number on voicemail and nothing else, and logs who answered, what they warmed to, what they said no to, and when to call again.
         </p>
 
         <p>
-          The agents still run the pipeline. They still source leads, do research, send emails, track everything. The human takes the calls and goes to the meetings. It&apos;s the most efficient sales operation I&apos;ve ever built. Four AI agents feed one human closer. The human does the one thing AI can&apos;t, and nothing else.
+          The agents still run everything around her. They source, they score, they write the first draft of the angle, they keep the board honest, and when a card has a named owner, a direct line and one specific gap, they mark it for her. She takes it from there. The bigger engagements still end with me in the room. The rest she owns.
         </p>
 
         {/* Section: What I Learned */}
@@ -251,19 +247,15 @@ export default function WeLetAiRunOurSalesPipeline() {
         </p>
 
         <p>
-          The sourcing, the research, the outreach, the follow-up, the pipeline tracking — that&apos;s volume work. It&apos;s consistent, repeatable, and detail-oriented. AI is extraordinary at it. Better than I am, honestly. The agent never forgets a follow-up. I forget follow-ups all the time.
+          The sourcing, the research, the outreach, the follow-up, the pipeline tracking — that&apos;s volume work. Consistent, repeatable, detail-oriented. AI is extraordinary at it, better than I am. The consultation, the trust-building, the moment where you adjust your approach because the prospect just got more interested — that&apos;s judgment work. It&apos;s human, and it will be human for a long time.
         </p>
 
         <p>
-          The consultation, the trust-building, the read-the-room moment where you adjust your approach because the prospect just got more interested — that&apos;s judgment work. It&apos;s human. It will be human for a long time.
+          The firms that figure out this split first will have an enormous advantage. Not because AI replaces people, but because it frees the people you have to do the work that actually requires a person. One human closer with four AI agents feeding them leads should outperform a team of five SDRs. That is my bet. Ask me in a year.
         </p>
 
         <p>
-          The firms that figure out this split first will have an enormous advantage. Not because AI replaces people, but because it frees the people you have to do the work that actually requires a person. One human closer with four AI agents feeding them leads will outperform a team of five SDRs every time.
-        </p>
-
-        <p>
-          I&apos;m not theorizing about this. I&apos;m running it. Right now. The pipeline is live. The agents are sending emails while I write this. The human is taking calls tomorrow morning.
+          I&apos;m not theorizing about this. I&apos;m running it. Right now. The pipeline is live, the agents are working a queue, and the human starts calling Monday morning.
         </p>
 
         {/* Section: If You're Thinking About This */}
@@ -272,11 +264,7 @@ export default function WeLetAiRunOurSalesPipeline() {
         </h2>
 
         <p>
-          Here&apos;s what I&apos;d tell you if you asked me over coffee.
-        </p>
-
-        <p>
-          <strong className="text-white">Don&apos;t start with the AI. Start with the pipeline.</strong> Map every step from &quot;someone hears about us&quot; to &quot;someone signs a contract.&quot; Write it down. Find the parts that are volume work and the parts that are judgment work. The volume work goes to agents. The judgment work stays with humans.
+          <strong className="text-white">Don&apos;t start with the AI. Start with the pipeline.</strong> Map every step from &quot;someone hears about us&quot; to &quot;someone signs a contract.&quot; Find the parts that are volume work and the parts that are judgment work. The volume work goes to agents. The judgment work stays with humans.
         </p>
 
         <p>
@@ -284,17 +272,13 @@ export default function WeLetAiRunOurSalesPipeline() {
         </p>
 
         <p>
-          <strong className="text-white">Don&apos;t skip the logging.</strong> Every action, every reply, every call outcome — log it. The data is the moat. After five months, I can tell you exactly what subject lines work, what industries convert, what time of day gets the highest open rate. That data is worth more than any individual email the agent sends.
-        </p>
-
-        <p>
-          And don&apos;t wait. The cost of building this is lower than the cost of losing one deal because you forgot to follow up.
+          <strong className="text-white">Don&apos;t skip the logging.</strong> Every reply and every call outcome, written down. Five months in, I can tell you which angles got replies, which industries went quiet, and which cards were worth a human&apos;s morning. None of it exists if you don&apos;t write it down.
         </p>
 
         <hr className="border-border my-12" />
 
         <p>
-          I&apos;m Franklin Bryant IV, COO of All Lines Business Solutions and founder of Prospyr 305. We build agentic systems for small and mid-size firms across ten states. If you want to see what an AI-driven pipeline could look like for your business, book a consultation. An agent will handle the scheduling. A human will take the call.
+          I&apos;m Franklin Bryant IV, COO of All Lines Business Solutions and founder of Prospyr 305. We build agentic systems for small and mid-size firms across ten states. If you want to see what this looks like from the prospect&apos;s side, use the same door ours do.
         </p>
 
         {/* CTA */}
@@ -307,19 +291,17 @@ export default function WeLetAiRunOurSalesPipeline() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="/contact"
+              href="https://prospyr305.com/book-with-abi/"
               className="inline-flex items-center gap-2 bg-accent text-canvas font-bold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors"
             >
-              Book a consultation →
-            </a>
-            <a
-              href="https://prospyr305.com"
-              className="inline-flex items-center gap-2 border border-border text-white font-semibold px-6 py-3 rounded-xl hover:border-accent/40 transition-colors"
-            >
-              Explore Prospyr 305
+              Tell us a day and a time →
             </a>
           </div>
+          <p className="mt-4 text-sm text-gray-500">
+            An agent takes the request. A person calls you back.
+          </p>
         </div>
+
 
         {/* Footer note */}
         <p className="mt-8 text-sm text-gray-500 text-center">
