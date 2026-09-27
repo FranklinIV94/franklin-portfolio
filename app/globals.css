@@ -300,14 +300,19 @@ article .space-y-6 em {
   color: #c5c8d0;
   font-style: italic;
 }
-article .space-y-6 a {
+/* Inline links inside article prose. Scoped with :not([class*="bg-"]) so this
+   does NOT hijack styled CTA buttons — specificity here is (0,2,1) and would
+   otherwise beat the button's own `.text-canvas` (0,1,0), painting dark text
+   green-on-green so the label vanished inside the accent button (found 2026-09-27
+   on the GTM post; also affected ≥5 other posts whose CTAs sit in this container). */
+article .space-y-6 a:not([class*="bg-"]) {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-color: rgba(200, 255, 87, 0.4);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s;
 }
-article .space-y-6 a:hover {
+article .space-y-6 a:not([class*="bg-"]):hover {
   text-decoration-color: var(--accent);
 }
 article .space-y-6 blockquote {

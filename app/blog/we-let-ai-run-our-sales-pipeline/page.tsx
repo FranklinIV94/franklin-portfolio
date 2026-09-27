@@ -278,7 +278,7 @@ export default function WeLetAiRunOurSalesPipeline() {
         <hr className="border-border my-12" />
 
         <p>
-          I&apos;m Franklin Bryant IV, COO of All Lines Business Solutions and founder of Prospyr 305. We build agentic systems for small and mid-size firms across ten states. If you want to see what this looks like from the prospect&apos;s side, use the same door ours do.
+          I&apos;m Franklin Bryant IV, COO of All Lines Business Solutions and founder of Prospyr 305. We build agentic systems for small and mid-size firms across ten states. If you want to see what an AI-driven pipeline could look like for your business, tell me a little about the firm and an agent will come back to you with what we&apos;d change first.
         </p>
 
         {/* CTA */}
@@ -291,14 +291,14 @@ export default function WeLetAiRunOurSalesPipeline() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="https://prospyr305.com/book-with-abi/"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-accent text-canvas font-bold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors"
             >
-              Tell us a day and a time →
+              Tell us about your firm →
             </a>
           </div>
           <p className="mt-4 text-sm text-gray-500">
-            An agent takes the request. A person calls you back.
+            A few quick questions. An agent takes the request, a person comes back to you.
           </p>
         </div>
 
