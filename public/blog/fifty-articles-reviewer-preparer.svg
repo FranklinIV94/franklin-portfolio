@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-label="Diagram: an agent prepares the work, a second layer checks it against evidence, and the human certifies it. The agent can request completion but cannot self-certify.">
+  <defs>
+    <style>
+      .bg { fill: #0b0d0a; }
+      .card { fill: #14170f; stroke: #2a2f22; stroke-width: 1.5; }
+      .cardacc { fill: #171b10; stroke: #c8ff57; stroke-width: 2; }
+      .t { fill: #e8ecdf; font-family: 'Inter','Helvetica Neue',Arial,sans-serif; }
+      .tm { fill: #9aa38c; font-family: 'Inter','Helvetica Neue',Arial,sans-serif; }
+      .ta { fill: #c8ff57; font-family: 'Inter','Helvetica Neue',Arial,sans-serif; }
+      .ttl { font-size: 34px; font-weight: 700; }
+      .h { font-size: 25px; font-weight: 600; }
+      .b { font-size: 19px; }
+      .s { font-size: 16px; }
+      .lbl { font-size: 15px; font-weight: 600; letter-spacing: 1.4px; }
+      .ln { stroke: #3a412e; stroke-width: 2; fill: none; }
+      .lna { stroke: #c8ff57; stroke-width: 2.5; fill: none; }
+      .dot { stroke: #c8ff57; stroke-width: 2; stroke-dasharray: 5 6; fill: none; }
+    </style>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c8ff57"/>
+    </marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3a412e"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="620"/>
+
+  <text class="t ttl" x="60" y="72">Reviewer and Preparer</text>
+  <text class="tm b" x="60" y="104">The agent does the volume. A second layer checks it. The human certifies.</text>
+
+  <!-- lane labels -->
+  <text class="ta lbl" x="60" y="168">PREPARER</text>
+  <text class="ta lbl" x="480" y="168">CHECK</text>
+  <text class="ta lbl" x="900" y="168">REVIEWER</text>
+
+  <!-- PREPARER card -->
+  <rect class="card" x="60" y="188" width="320" height="184" rx="14"/>
+  <text class="t h" x="88" y="232">Agent</text>
+  <text class="tm b" x="88" y="266">Drafts at volume</text>
+  <text class="tm b" x="88" y="294">Reads source records</text>
+  <text class="tm s" x="88" y="330">Cannot self-certify</text>
+
+  <!-- CHECK card (accent) -->
+  <rect class="cardacc" x="480" y="188" width="320" height="184" rx="14"/>
+  <text class="t h" x="508" y="232">Evidence check</text>
+  <text class="tm b" x="508" y="266">Each requirement</text>
+  <text class="tm b" x="508" y="294">verified against</text>
+  <text class="tm b" x="508" y="322">current evidence</text>
+
+  <!-- REVIEWER card -->
+  <rect class="card" x="900" y="188" width="240" height="184" rx="14"/>
+  <text class="t h" x="928" y="232">Human</text>
+  <text class="tm b" x="928" y="266">Approves</text>
+  <text class="tm b" x="928" y="294">Owns the call</text>
+  <text class="tm s" x="928" y="330">Sign-off required</text>
+
+  <!-- flow arrows -->
+  <line class="lna" x1="384" y1="252" x2="472" y2="252" marker-end="url(#ar)"/>
+  <line class="lna" x1="804" y1="252" x2="892" y2="252" marker-end="url(#ar)"/>
+  <text class="tm s" x="384" y="240">draft</text>
+  <text class="tm s" x="804" y="240">certified</text>
+
+  <!-- request line (dashed, the agent asking) -->
+  <path class="dot" d="M 220 376 L 220 452 L 1020 452 L 1020 376" marker-end="url(#ar)"/>
+  <text class="tm s" x="470" y="480">agent may REQUEST completion</text>
+  <text class="tm s" x="470" y="504">it may not declare it</text>
+
+  <!-- footer rule -->
+  <line class="ln" x1="60" y1="552" x2="1140" y2="552"/>
+  <text class="tm s" x="60" y="584">Built on the pattern described by Shah, Belagatti, Ganim and Ajzenstadt (Sept 2026).</text>
+</svg>

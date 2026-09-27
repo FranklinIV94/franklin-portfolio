@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-label="Diagram: fragmentation (many small firms each running manual delivery) becomes consolidation, where one firm injects an agent workforce into the same delivery workflow. Same clients, same revenue, higher margin.">
+  <defs>
+    <style>
+      .bg { fill: #0b0d0a; }
+      .card { fill: #14170f; stroke: #2a2f22; stroke-width: 1.5; }
+      .frag { fill: #14170f; stroke: #3f4634; stroke-width: 1.5; }
+      .hub { fill: #171b10; stroke: #c8ff57; stroke-width: 2.5; }
+      .t { fill: #e8ecdf; font-family: 'Inter','Helvetica Neue',Arial,sans-serif; }
+      .tm { fill: #9aa38c; font-family: 'Inter','Helvetica Neue',Arial,sans-serif; }
+      .ta { fill: #c8ff57; font-family: 'Inter','Helvetica Neue',Arial,sans-serif; }
+      .ttl { font-size: 34px; font-weight: 700; }
+      .h { font-size: 24px; font-weight: 600; }
+      .b { font-size: 18px; }
+      .s { font-size: 15px; }
+      .lbl { font-size: 15px; font-weight: 600; letter-spacing: 1.4px; }
+      .ln { stroke: #3a412e; stroke-width: 3; fill: none; }
+      .lna { stroke: #c8ff57; stroke-width: 2.5; fill: none; }
+      .thin { stroke: #2f3527; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c8ff57"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="620"/>
+
+  <text class="t ttl" x="60" y="72">Fragmentation to Roll-Up</text>
+  <text class="tm b" x="60" y="104">The same delivery workflow, with agents injected into it.</text>
+
+  <!-- LEFT: fragmentation -->
+  <text class="ta lbl" x="60" y="168">TODAY</text>
+  <g>
+    <rect class="frag" x="60" y="192" width="120" height="96" rx="10"/>
+    <rect class="frag" x="196" y="192" width="120" height="96" rx="10"/>
+    <rect class="frag" x="332" y="192" width="120" height="96" rx="10"/>
+    <rect class="frag" x="60" y="304" width="120" height="96" rx="10"/>
+    <rect class="frag" x="196" y="304" width="120" height="96" rx="10"/>
+    <rect class="frag" x="332" y="304" width="120" height="96" rx="10"/>
+    <text class="tm s" x="86" y="246">Owner</text>
+    <text class="tm s" x="222" y="246">Owner</text>
+    <text class="tm s" x="358" y="246">Owner</text>
+    <text class="tm s" x="86" y="358">Owner</text>
+    <text class="tm s" x="222" y="358">Owner</text>
+    <text class="tm s" x="358" y="358">Owner</text>
+    <text class="tm s" x="86" y="270">runs it all</text>
+    <text class="tm s" x="222" y="270">runs it all</text>
+    <text class="tm s" x="358" y="270">runs it all</text>
+    <text class="tm s" x="86" y="382">runs it all</text>
+    <text class="tm s" x="222" y="382">runs it all</text>
+    <text class="tm s" x="358" y="382">runs it all</text>
+  </g>
+  <text class="tm s" x="60" y="440">Small services firms. Manual delivery. The owner is the system.</text>
+
+  <!-- consolidation arrow -->
+  <line class="lna" x1="486" y1="296" x2="574" y2="296" marker-end="url(#ar2)"/>
+  <text class="tm s" x="484" y="276">consolidate</text>
+
+  <!-- RIGHT: consolidated delivery -->
+  <text class="ta lbl" x="612" y="168">AFTER</text>
+  <rect class="card" x="612" y="192" width="528" height="208" rx="14"/>
+  <text class="t h" x="640" y="234">One firm. One delivery workflow.</text>
+
+  <!-- workflow row -->
+  <rect class="frag" x="640" y="262" width="140" height="70" rx="10"/>
+  <text class="tm s" x="656" y="290">Intake</text>
+  <text class="tm s" x="656" y="312">records in</text>
+
+  <rect class="hub" x="800" y="262" width="140" height="70" rx="10"/>
+  <text class="ta s" x="816" y="290">Agents</text>
+  <text class="ta s" x="816" y="312">do the volume</text>
+
+  <rect class="frag" x="960" y="262" width="150" height="70" rx="10"/>
+  <text class="tm s" x="976" y="290">Human review</text>
+  <text class="tm s" x="976" y="312">certifies</text>
+
+  <line class="thin" x1="782" y1="297" x2="796" y2="297"/>
+  <line class="thin" x1="942" y1="297" x2="956" y2="297"/>
+
+  <text class="tm s" x="640" y="366">Same clients. Same revenue line. The work inside it changes.</text>
+
+  <!-- outcome band -->
+  <rect class="card" x="612" y="424" width="528" height="112" rx="14"/>
+  <text class="t h" x="640" y="460">The margin moves</text>
+  <text class="tm b" x="640" y="490">Not from new clients.</text>
+  <text class="tm b" x="640" y="516">From the same work, done differently.</text>
+
+  <line class="ln" x1="60" y1="552" x2="1140" y2="552"/>
+  <text class="tm s" x="60" y="584">Thesis after Isenberg and Tobias (Sept 2026). No projected returns shown by design.</text>
+</svg>

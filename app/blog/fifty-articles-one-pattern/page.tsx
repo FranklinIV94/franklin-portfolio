@@ -74,7 +74,7 @@ export default function FiftyArticlesOnePattern() {
           alt="Dark network diagram showing 50 nodes converging into one central pattern"
           className="w-full"
         />
-        <figcaption className="mt-2 text-xs text-gray-500 text-center">50 articles, 7 sections, one recurring pattern: delivery is the moat.</figcaption>
+        <figcaption className="mt-2 text-xs text-gray-500 text-center">50 articles, 9 sections, one recurring pattern: delivery is the moat.</figcaption>
       </figure>
 
       {/* Body */}
@@ -117,6 +117,16 @@ export default function FiftyArticlesOnePattern() {
         <p>
           Greg Isenberg published the thesis that opened our new service line. $5T in boomer-owned American businesses will change hands by 2035. Most are small services firms with 5-10% EBITDA margins. Buy one, inject AI agents into the delivery workflow, triple EBITDA to 30-40%. Same clients, same revenue, 3-4x the profit. 112K views, 3,148 bookmarks.
         </p>
+
+        <figure className="my-10 overflow-hidden rounded-2xl border border-border">
+          <img
+            src="/blog/fifty-articles-roll-up.svg"
+            alt="Diagram: many small services firms each run by their owner consolidate into one firm where agents do the volume work and a human certifies it"
+            className="w-full"
+            loading="lazy"
+          />
+          <figcaption className="mt-2 text-xs text-gray-500 text-center">The same delivery workflow, with agents injected into it.</figcaption>
+        </figure>
 
         <p>
           Martin Tobias, 300+ pre-seed investments, validated it from the VC side. &quot;Agent or SaaS?&quot; is the wrong question. The right question: who owns the system of record, and can they make it smarter? His 10x rule: nobody switches workflows for 20% improvement. You need 10x. Three paths: build a system of record where none existed, ship a feature that was not possible before AI, or AI eats the tedious back-office work. Our roll-up integration hits all three.
@@ -168,6 +178,16 @@ export default function FiftyArticlesOnePattern() {
         <p>
           Six articles this week described the same architecture from different angles. The pattern: the agent does the volume work. A second layer checks the output against evidence before it ships. The agent can request completion but cannot self-certify.
         </p>
+
+        <figure className="my-10 overflow-hidden rounded-2xl border border-border">
+          <img
+            src="/blog/fifty-articles-reviewer-preparer.svg"
+            alt="Diagram: an agent prepares the work, a second layer checks each requirement against current evidence, and a human certifies the result"
+            className="w-full"
+            loading="lazy"
+          />
+          <figcaption className="mt-2 text-xs text-gray-500 text-center">The agent may request completion. It may not declare it.</figcaption>
+        </figure>
 
         <p>
           Corey Ganim found the sales angle in email triage. CEOs get 200+ emails a day. The bottleneck is not writing replies. It is deciding which emails deserve a reply. Build an agent that triages the inbox, surfaces the 5 that matter, and drafts replies for approval. The reviewer approves. The preparer prepares. Neither ships alone.
