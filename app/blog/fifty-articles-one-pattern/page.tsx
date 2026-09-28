@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: 'Fifty Articles, One Pattern',
     description: '50 articles from practitioners building and selling AI-native services. One pattern: delivery is the moat.',
-    images: ['/blog/fifty-articles-one-pattern-hero.jpg'],
+    images: ['/blog/fifty-articles-one-pattern-hero.png'],
   },
 };
 
@@ -70,8 +70,8 @@ export default function FiftyArticlesOnePattern() {
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl border border-border">
         <img
-          src="/blog/fifty-articles-one-pattern-hero.jpg"
-          alt="Dark network diagram showing 50 nodes converging into one central pattern"
+          src="/blog/fifty-articles-one-pattern-hero.png"
+          alt="Dark network of amber nodes converging toward one bright central point"
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">50 articles, 9 sections, one recurring pattern: delivery is the moat.</figcaption>
@@ -108,6 +108,9 @@ export default function FiftyArticlesOnePattern() {
         <p>
           Coleen Chasteen cataloged 37 mistakes companies make with AI transformation. The pattern: companies start with &quot;we need AI&quot; instead of a real problem, underresource the center of excellence, push employees to use AI without depth, and automate existing workflows instead of rethinking from scratch. Every mistake on her list is a service we sell through our AIIO Assessment.
         </p>
+
+        {/* Divider */}
+        <hr className="my-12 border-t border-accent/20" />
 
         {/* Section 2: Roll-Up */}
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">
@@ -170,6 +173,9 @@ export default function FiftyArticlesOnePattern() {
           This is the strongest counter-argument in the market. If we can answer it, we can answer anything.
         </p>
 
+        {/* Divider */}
+        <hr className="my-12 border-t border-accent/20" />
+
         {/* Section 4: Architecture */}
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">
           The Architecture: Reviewer and Preparer
@@ -226,6 +232,9 @@ export default function FiftyArticlesOnePattern() {
           Sam Z Liu made the business case for what Josh Rosen described architecturally. Agent traces are the new oil. Agentic software generates richer traces than conventional applications because a single request can produce hundreds of intermediate operations. Those traces are the training data for the next iteration. Most companies are not properly leveraging this asset. We are.
         </p>
 
+        {/* Divider */}
+        <hr className="my-12 border-t border-accent/20" />
+
         {/* Section 6: Sales System */}
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">
           The Sales System
@@ -256,6 +265,9 @@ export default function FiftyArticlesOnePattern() {
           OpenAI&apos;s alignment team published a misalignment report this week where an agent used DNS as a side channel to bypass restrictions and contact an external chatbot. Agents finding novel exfiltration paths is exactly the class of attack our SENTINEL audit catches. Companies are using general-purpose security tools to protect AI systems. That is like using a flu vaccine against a novel coronavirus. The threat surface is different. SENTINEL is built for the actual threat landscape.
         </p>
 
+        {/* Divider */}
+        <hr className="my-12 border-t border-accent/20" />
+
         {/* Section 8: Personal Agent */}
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">
           The Personal Agent
@@ -268,6 +280,9 @@ export default function FiftyArticlesOnePattern() {
         <p>
           This is the consumer version of what we build for businesses. Wang legitimizes the agent-as-chief-of-staff model to a massive audience. That makes our enterprise pitch easier. And when consumer agent users need someone to actually build and maintain the system, that is a services play. That is us.
         </p>
+
+        {/* Divider */}
+        <hr className="my-12 border-t border-accent/20" />
 
         {/* Section 9: The Pattern */}
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">
