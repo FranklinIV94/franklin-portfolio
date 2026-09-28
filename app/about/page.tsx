@@ -10,8 +10,8 @@ export default function AboutPage() {
     name: 'Franklin J Bryant IV',
     alternateName: 'Franklin Jordan Bryant IV',
     url: 'https://franklin.simplifyingbusinesses.com',
-    jobTitle: 'AI Business Solutions Architect',
-    description: 'Founder of All Lines Business Solutions. AI infrastructure architect building autonomous systems that operate, transact, and scale.',
+    jobTitle: 'COO, All Lines Business Solutions · Founder, Prospyr 305',
+    description: 'COO of ALL LINES BUSINESS SOLUTIONS and a leading voice in practical AI implementation for small business. Creator of the AIIO Assessment framework and SENTINEL security audit.',
     sameAs: [
       'https://github.com/FranklinIV94',
       'https://www.linkedin.com/in/franklin-bryant-36115363/',
@@ -46,7 +46,7 @@ export default function AboutPage() {
                   Franklin J Bryant IV<span className="text-accent">.</span>
                 </h1>
                 <p className="text-lg text-gray-400 mb-8">
-                  Franklin Jordan Bryant IV — AI Business Solutions Architect, COO of All Lines Business Solutions, and founder of the Agent Code of Conduct.
+                  COO of ALL LINES BUSINESS SOLUTIONS. Founder of Prospyr 305. Creator of the AIIO Assessment framework and SENTINEL security audit. Based in Florida, serving clients across five states.
                 </p>
               </motion.div>
 
@@ -57,12 +57,14 @@ export default function AboutPage() {
                 className="space-y-5 text-muted leading-relaxed"
               >
                 <p>
-                  I&apos;m Franklin Jordan Bryant IV, an AI Business Solutions Architect based in Miami, Florida.
-                  I run a team of AI agents — Prospyr, Northstar, Southstar, and Zo — that handle
-                  everything from research and coding to client communications, security monitoring,
-                  and overnight intelligence briefings.
+                  I&apos;m Franklin Jordan Bryant IV, COO of ALL LINES BUSINESS SOLUTIONS and founder of Prospyr 305.
+                  With a background spanning business operations, insurance, and data security, I&apos;ve helped
+                  dozens of Florida companies modernize their workflows and cut operational costs through
+                  AI-accelerated systems. My approach is hands-on, jargon-free, and focused on one thing:
+                  making sure the technology actually pays for itself.
                 </p>
                 <p>
+<<<<<<< Updated upstream
                   The core of how I work: I design outcomes and direct AI execution rather than
                   writing code line-by-line. This isn&apos;t about replacing developers — it&apos;s about
                   amplifying what one person with the right architectural thinking can deliver.
@@ -81,11 +83,26 @@ export default function AboutPage() {
                   governance framework for AI agent infrastructure, now in production across fourteen agents.
                   I write about AI governance, agent architecture, and the business of building systems
                   that run themselves.
+=======
+                  I created the <span className="text-white">AIIO Assessment</span> framework, a structured
+                  evaluation that identifies automation opportunities and quantifies ROI before a single
+                  dollar is spent. I also developed <span className="text-white">SENTINEL</span>, a comprehensive
+                  AI security audit designed to protect businesses from the emerging threats that come with
+                  adopting AI tools. Twenty-one active clients. Fifty-seven research articles synthesized.
+                  Industries spanning healthcare, HR, retail, construction, insurance, and accounting.
+                </p>
+                <p>
+                  My firm, <span className="text-white">All Lines Business Solutions (ALBS)</span>, handles
+                  back-office services: accounting, payroll, tax preparation, and compliance. <span className="text-white">Prospyr 305</span> builds
+                  agentic engineering systems: AI agent workforces, competitive audit tools, and custom
+                  workflows for established firms. AI-accelerated development isn&apos;t just our service.
+                  It&apos;s how we run the business. We serve clients across Florida, Georgia, Texas, New York, and California.
+>>>>>>> Stashed changes
                 </p>
                 <p>
                   Before AI tooling matured, the gap between having a great idea and having a working
                   product was enormous. That gap has effectively collapsed. I help businesses
-                  understand and capture that leverage — and I write about what I learn along the way.
+                  understand and capture that leverage. And I write about what I learn along the way.
                 </p>
               </motion.div>
 
@@ -123,16 +140,24 @@ export default function AboutPage() {
               >
                 {[
                   {
-                    title: 'Prospyr + Northstar + Southstar + Zo',
-                    desc: 'Four AI agents running 24/7. Prospyr handles communications and cloud ops; Northstar handles research, development, and heavy computation; Southstar handles overnight research and competitive intelligence; Zo manages client-facing interactions and onboarding.',
+                    title: 'Eaststar + Northstar + Southstar + Prospyr Prime',
+                    desc: 'Four AI agents running 24/7. Eaststar handles office operations, outreach, and pipeline on a Hetzner cloud server. Northstar handles research, development, and heavy computation locally. Southstar handles engineering and security from the Punta Gorda office. Prospyr Prime is the CEO agent on a dedicated Hetzner box.',
                   },
                   {
-                    title: 'Autonomous Agents',
-                    desc: 'AI agents that run in the background, monitor systems, execute tasks, and escalate when human input is needed.',
+                    title: 'AIIO Assessment',
+                    desc: 'Structured evaluation that identifies automation opportunities and quantifies ROI before a single dollar is spent. The first step in every Prospyr 305 engagement.',
+                  },
+                  {
+                    title: 'SENTINEL Security Audit',
+                    desc: 'Comprehensive AI security audit that protects businesses from emerging threats that come with adopting AI tools. 1,282 security tests across 102 rules.',
+                  },
+                  {
+                    title: 'Agent-Ready Commerce',
+                    desc: 'We send AI agents to your website as mystery shoppers, test if your business is ready for the AI economy, and deliver a competitive audit with gap analysis.',
                   },
                   {
                     title: 'Structured Memory',
-                    desc: 'Persistent context across sessions — decisions, preferences, project history — so nothing is lost between conversations.',
+                    desc: 'Persistent context across sessions. Decisions, preferences, project history, client notes. Nothing is lost between conversations.',
                   },
                   {
                     title: 'AI-First Development',
