@@ -10,6 +10,15 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'data-brokerage-boom',
+    title: 'The Data Brokerage Boom: Who Wins When AI Eats the Software but Not the Data',
+    excerpt:
+      "AI labs have scraped the open web. What's left is proprietary data - and the brokers connecting sellers to buyers are earning margins that make SaaS look like a rounding error. The broker tax, the coming shakeout, and who ends up owning the output.",
+    date: 'October 8, 2026',
+    dateISO: '2026-10-08',
+    tag: 'AI & Data',
+  },
+  {
     slug: 'fifty-articles-one-pattern',
     title: 'Fifty Articles, One Pattern',
     excerpt: "50 articles from practitioners building and selling AI-native services, September 21-27, 2026. The market moved from 'should we adopt AI' to 'who can deliver AI that works.' The firms that deliver are the ones who capture the budget.",

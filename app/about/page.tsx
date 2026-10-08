@@ -64,40 +64,29 @@ export default function AboutPage() {
                   making sure the technology actually pays for itself.
                 </p>
                 <p>
-<<<<<<< Updated upstream
                   The core of how I work: I design outcomes and direct AI execution rather than
                   writing code line-by-line. This isn&apos;t about replacing developers — it&apos;s about
                   amplifying what one person with the right architectural thinking can deliver.
-                  Sixteen projects in production. Fourteen AI agents running 24/7. Over fifty research
-                  articles synthesized. Industries spanning healthcare, HR, retail, construction, and insurance.
+                  Sixteen projects in production. Fourteen AI agents running 24/7. Industries spanning
+                  healthcare, HR, retail, construction, insurance, and accounting.
                 </p>
                 <p>
-                  My firm, <span className="text-white">All Lines Business Solutions (ALBS)</span>, applies
-                  this same methodology to consulting and accounting engagements. AI-accelerated
-                  development isn&apos;t just our service — it&apos;s how we run the business. We serve
-                  clients across Florida, Georgia, Texas, New York, California, Oklahoma, Colorado,
-                  New Jersey, South Carolina, and North Carolina.
-                </p>
-                <p>
-                  I authored the <span className="text-white">Agent Code of Conduct</span> — an open-source
-                  governance framework for AI agent infrastructure, now in production across fourteen agents.
-                  I write about AI governance, agent architecture, and the business of building systems
-                  that run themselves.
-=======
                   I created the <span className="text-white">AIIO Assessment</span> framework, a structured
                   evaluation that identifies automation opportunities and quantifies ROI before a single
                   dollar is spent. I also developed <span className="text-white">SENTINEL</span>, a comprehensive
                   AI security audit designed to protect businesses from the emerging threats that come with
-                  adopting AI tools. Twenty-one active clients. Fifty-seven research articles synthesized.
-                  Industries spanning healthcare, HR, retail, construction, insurance, and accounting.
+                  adopting AI tools. I authored the <span className="text-white">Agent Code of Conduct</span> —
+                  an open-source governance framework for AI agent infrastructure, now in production across
+                  fourteen agents. I write about AI governance, agent architecture, and the business of
+                  building systems that run themselves.
                 </p>
                 <p>
                   My firm, <span className="text-white">All Lines Business Solutions (ALBS)</span>, handles
-                  back-office services: accounting, payroll, tax preparation, and compliance. <span className="text-white">Prospyr 305</span> builds
-                  agentic engineering systems: AI agent workforces, competitive audit tools, and custom
-                  workflows for established firms. AI-accelerated development isn&apos;t just our service.
-                  It&apos;s how we run the business. We serve clients across Florida, Georgia, Texas, New York, and California.
->>>>>>> Stashed changes
+                  back-office services: accounting, payroll, tax preparation, and compliance.
+                  <span className="text-white"> Prospyr 305</span> builds agentic engineering systems: AI agent
+                  workforces, competitive audit tools, and custom workflows for established firms.
+                  AI-accelerated development isn&apos;t just our service. It&apos;s how we run the business.
+                  We serve clients across Florida, Georgia, Texas, New York, and California.
                 </p>
                 <p>
                   Before AI tooling matured, the gap between having a great idea and having a working
