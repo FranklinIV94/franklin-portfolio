@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'When Creatives Meet Agents | Franklin J Bryant IV',
   description: 'I spent a week at the Runway AI Art & Film Festival and a private event in Beverly Hills with artists, filmmakers, musicians, and producers. Here\'s what the creative world actually needs from agentic engineering, and why the next wave of AI isn\'t about replacing creatives, it\'s about engineering the infrastructure that lets them scale.',
@@ -67,11 +68,14 @@ export default function WhenCreativesMeetAgents() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="when-creatives-meet-agents" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/when-creatives-meet-agents-hero.jpg"
-          alt="Creative professionals gathered at an AI art and film festival, surrounded by holographic AI-generated visual art projections"
+          alt="Creative professionals gather at an AI art and film festival, standing among holographic projections of AI-generated visual art."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">The Runway AI Art &amp; Film Festival, where creative talent met AI capability.</figcaption>
@@ -113,7 +117,7 @@ export default function WhenCreativesMeetAgents() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/when-creatives-meet-agents-gap.jpg"
-            alt="Split image: creative work on one side, overwhelming business operations on the other"
+            alt="A split image with creative work on one side and a mass of business operations on the other, showing that AI handles the output while the operational load still lands on the creative."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">The gap: AI handles the creative output. The business operations still fall on the creative.</figcaption>
@@ -151,7 +155,7 @@ export default function WhenCreativesMeetAgents() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/when-creatives-meet-agents-infrastructure.jpg"
-            alt="Abstract visualization of AI agent infrastructure with glowing connected nodes forming a network"
+            alt="An abstract visualization of AI agent infrastructure: many glowing nodes joined into one connected network, standing for agents that work as a single workforce instead of isolated tools."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">The infrastructure layer: agents as a connected workforce, not isolated tools.</figcaption>
@@ -215,7 +219,7 @@ export default function WhenCreativesMeetAgents() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/when-creatives-meet-agents-collaboration.jpg"
-            alt="A creative professional in a modern studio surrounded by translucent holographic AI agent workflow panels"
+            alt="A creative professional works in a modern studio, surrounded by translucent holographic panels showing AI agent workflows, illustrating a business that runs itself around the craft."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">The vision: creative professionals surrounded by an operational system that runs itself.</figcaption>
@@ -320,6 +324,8 @@ export default function WhenCreativesMeetAgents() {
         </p>
 
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="when-creatives-meet-agents" />
     </article>
   );
 }

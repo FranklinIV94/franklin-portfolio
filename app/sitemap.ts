@@ -17,6 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/geo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    // Field Notes — living documents. Added 2026-10-17.
+    { url: `${BASE_URL}/field-notes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/field-notes/ai-usage-policy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/field-notes/pre-launch-security-checklist`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ];
 
   const cityPages: MetadataRoute.Sitemap = cities.map(city => ({

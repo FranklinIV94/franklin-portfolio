@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'How to Turn an AI Agent Into a Retainer | Franklin J Bryant IV',
   description: 'Sell the role. Manage adoption. Prove the result. The four-layer offer that turns a one-off AI build into a recurring retainer, plus the weekly ledger that keeps it renewed.',
@@ -16,7 +17,7 @@ export const metadata = {
         url: 'https://franklin.simplifyingbusinesses.com/blog/agent-to-retainer-hero.jpg',
         width: 1600,
         height: 900,
-        alt: 'Abstract: a single glowing green agent node feeding a rising value graph through a ledger, the retainer flywheel',
+        alt: 'Abstract illustration of a single glowing green agent node feeding a rising value graph through a ledger, representing the retainer flywheel in which one managed job produces recurring, provable value.',
       },
     ],
   },
@@ -88,11 +89,14 @@ export default function AgentToRetainer() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="agent-to-retainer" />
+
       {/* Hero image */}
       <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/agent-to-retainer-hero.jpg"
-          alt="Abstract: a single glowing green agent node feeding a rising value graph through a ledger, the retainer flywheel"
+          alt="Abstract illustration of a single glowing green agent node feeding a rising value graph through a ledger, representing the retainer flywheel in which one managed job produces recurring, provable value."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -247,6 +251,8 @@ export default function AgentToRetainer() {
           you&apos;ve got one painful job you&apos;re tired of doing by hand, <a href="https://franklin.simplifyingbusinesses.com#contact" className="text-accent hover:underline">let&apos;s talk</a>.
         </p>
       </footer>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="agent-to-retainer" />
     </article>
   );
 }

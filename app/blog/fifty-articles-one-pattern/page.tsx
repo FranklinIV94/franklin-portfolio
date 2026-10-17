@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'Fifty Articles, One Pattern | Franklin J Bryant IV',
   description: '50 articles from practitioners building and selling AI-native services, September 21-27, 2026. One pattern: the firms that deliver AI that works are the ones who capture the budget.',
@@ -67,11 +68,14 @@ export default function FiftyArticlesOnePattern() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="fifty-articles-one-pattern" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/fifty-articles-one-pattern-hero.png"
-          alt="Dark network of amber nodes converging toward one bright central point"
+          alt="Hero illustration: a dark field of amber nodes and connecting lines, all converging toward one bright point at the center, standing for fifty articles resolving into a single pattern."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">50 articles, 9 sections, one recurring pattern: delivery is the moat.</figcaption>
@@ -124,7 +128,7 @@ export default function FiftyArticlesOnePattern() {
         <figure className="my-10 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/fifty-articles-roll-up.svg"
-            alt="Diagram: many small services firms each run by their owner consolidate into one firm where agents do the volume work and a human certifies it"
+            alt="Diagram showing several small services firms, each run by its owner, consolidating into a single firm where agents handle the volume work and a human certifies the output."
             className="w-full"
             loading="lazy"
           />
@@ -322,6 +326,8 @@ export default function FiftyArticlesOnePattern() {
           Franklin J Bryant IV is COO of ALL LINES BUSINESS SOLUTIONS and a leading voice in practical AI implementation for small business. He is the creator of the AIIO Assessment framework and SENTINEL AI security audit. <a href="/contact" className="text-accent hover:underline">Get in touch.</a>
         </p>
       </footer>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="fifty-articles-one-pattern" />
     </article>
   );
 }

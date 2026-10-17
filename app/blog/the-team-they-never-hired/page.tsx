@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'The Team They Never Hired | Franklin J Bryant IV',
   description: "Every small business needs an AI team. None can afford one. The opportunity isn't building AI. It's becoming the AI team for one industry you understand better than anyone in the room.",
@@ -66,11 +67,14 @@ export default function BlogPost() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="the-team-they-never-hired" />
+
       {/* Hero image */}
       <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/team-never-hired-hero.jpg"
-          alt="Abstract visualization: a small green node representing a single AI team connecting to multiple larger industry nodes, with the AI node glowing as the central orchestrator"
+          alt="An abstract network diagram in which one small, brightly glowing green node sits at the center and connects outward to several larger industry nodes, showing a single AI team serving many industries at once."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -107,7 +111,7 @@ export default function BlogPost() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/team-never-hired-gap.jpg"
-            alt="Abstract diagram showing the gap between AI platforms at the top and small businesses at the bottom, with a missing middle layer highlighted in green"
+            alt="An abstract two-tier diagram with AI platform blocks across the top and small business blocks across the bottom, and the empty middle layer between them highlighted in green to mark the application gap nothing fills."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -183,7 +187,7 @@ export default function BlogPost() {
       <figure className="my-8 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/team-never-hired-workflow.jpg"
-          alt="Abstract workflow diagram showing five stages with green connecting lines between stages"
+          alt="An abstract workflow diagram of five stages joined left to right by green connecting lines, standing for the sequence the post describes: pick one industry, learn how it runs, build the AI layer, price for the upside, then repeat."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -302,6 +306,8 @@ export default function BlogPost() {
           <strong className="text-white">Franklin J Bryant IV</strong> is COO of All Lines Business Solutions and founder of Prospyr 305, the AI development arm building autonomous workflow systems, vertical automation platforms, and compliance infrastructure for small and mid-size businesses. He runs four AI agents in production, maintains an Obsidian knowledge graph of 1,200+ pages, and hasn&apos;t taken a manual intake form seriously since 2024.
         </p>
       </footer>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="the-team-they-never-hired" />
     </article>
   );
 }

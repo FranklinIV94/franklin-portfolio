@@ -101,6 +101,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           The homepage declares its own canonical via app/page.tsx. Do NOT re-add a global
           canonical here — it silently overrides every child route.
         */}
+        {/* Feed discovery — added 2026-10-17. The feed is generated at build from
+            lib/blog.ts (app/rss.xml/route.ts), so any registered post is in it.
+            Declared here as a raw tag rather than in metadata.alternates because
+            per-page `alternates` overrides would strip it from blog posts. */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Franklin J Bryant IV — Writing"
+          href="https://franklin.simplifyingbusinesses.com/rss.xml"
+        />
         <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
         <script
           type="application/ld+json"

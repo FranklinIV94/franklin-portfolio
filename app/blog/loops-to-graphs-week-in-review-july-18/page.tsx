@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'From Loops to Graphs: What We Learned This Week | Franklin J Bryant IV',
   description: 'One week of AI infrastructure research: seven threads pulled together. Loop engineering, credit ledgers, CDP, Kimi K3, GPU benchmarks, security breaches, and selling to the frontier.',
@@ -65,11 +66,14 @@ export default function BlogPost() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="loops-to-graphs-week-in-review-july-18" />
+
       {/* Hero image */}
       <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/loops-to-graphs-hero.jpg"
-          alt="Abstract visualization: isolated feedback loops on the left transforming into an interconnected network graph of loop-nodes on the right, with glowing green connections"
+          alt="Hero illustration showing isolated feedback loops on the left becoming an interconnected network graph of loop-nodes joined by glowing green connections on the right."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -91,7 +95,7 @@ export default function BlogPost() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/loops-to-graphs-network.jpg"
-            alt="Abstract network of interconnected loop-nodes with green glowing connections and ground anchors"
+            alt="Diagram of a graph of loops: interconnected loop-nodes joined by glowing green connections, each one anchored to fixed points on the ground it cannot tune."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -300,6 +304,8 @@ export default function BlogPost() {
           our research channel and published every Friday.
         </p>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="loops-to-graphs-week-in-review-july-18" />
     </article>
   );
 }

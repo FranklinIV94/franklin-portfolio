@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'Governance by Default | Franklin J Bryant IV',
   description: 'Cloudflare open-sourced their internal AI workspace. The architecture maps nearly 1:1 onto what we already spec\'d for our Ops Center. Here\'s what that validation means, and why we\'re borrowing patterns, not adopting their stack.',
@@ -61,11 +62,14 @@ export default function GovernanceByDefault() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="governance-by-default" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/governance-by-default-hero.jpg"
-          alt="Governed agent architecture: layered security boundaries around an AI core"
+          alt="Hero illustration of a governed agent architecture: an AI core at the center wrapped in concentric layers of security boundaries, with each layer standing for one of the four governance pillars around agent access."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -233,6 +237,8 @@ export default function GovernanceByDefault() {
         </p>
 
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="governance-by-default" />
     </article>
   );
 }

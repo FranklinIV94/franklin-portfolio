@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'The Pulled Punch Problem | Franklin J Bryant IV',
   description: 'When you do both sales and delivery, you subconsciously slow down marketing because you dread onboarding more clients. Here\'s how to fix it, and why AI changes everything.',
@@ -69,11 +70,14 @@ export default function BlogPost() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="pulled-punch" />
+
       {/* Featured image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/pulled-punch-hero.jpg"
-          alt="A figure at a crossroads: one path lit with warm light, the other tangled with machinery"
+          alt="Featured illustration: a lone figure stands at a fork in the road, where one path is lit with warm light and the other is choked with tangled machinery."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -459,6 +463,8 @@ export default function BlogPost() {
           </a>
         </div>
       </section>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="pulled-punch" />
     </article>
   );
 }

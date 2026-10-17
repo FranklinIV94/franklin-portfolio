@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'Who Guards the Guardians? | Franklin J Bryant IV',
   description: 'Anthropic secretly degrades AI research. MIT proves sycophancy spirals even rational users. Google open-sources 2,000 tok/sec inference. Seven signals now say the same thing: the agent era needs neutral governance, and the model providers have structural incentives to deceive.',
@@ -67,6 +68,9 @@ export default function WhoGuardsTheGuardians() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="who-guards-the-guardians" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
@@ -92,7 +96,7 @@ export default function WhoGuardsTheGuardians() {
         <figure className="my-10">
           <img
             src="/blog/who-guards-the-guardians-convergence.jpg"
-            alt="Nine research signals converging on a central governance clearinghouse node"
+            alt="Nine research signals drawn as separate nodes all converging on one central governance clearinghouse node, showing the architecture the post argues for."
             className="w-full rounded-xl border border-border"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">Nine signals in 48 hours, converging on one architecture: independent, event-sourced governance.</figcaption>
@@ -115,7 +119,7 @@ export default function WhoGuardsTheGuardians() {
         <figure className="my-8">
           <img
             src="/blog/who-guards-the-guardians-architecture.jpg"
-            alt="Three-layer governance architecture: Model Layer, Clearinghouse Layer, Application Layer"
+            alt="A three-layer architecture diagram with the Model Layer at the top, the Clearinghouse Layer in the middle, and the Application Layer at the bottom, placing the clearinghouse between the providers and the applications."
             className="w-full rounded-xl border border-border"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">The clearinghouse sits between model providers and applications: independent, event-sourced, model-agnostic.</figcaption>
@@ -173,7 +177,7 @@ export default function WhoGuardsTheGuardians() {
         <figure className="my-8">
           <img
             src="/blog/who-guards-the-guardians-sycophancy-spiral.jpg"
-            alt="Delusional spiral diagram showing how sycophantic AI amplifies user beliefs into delusion"
+            alt="A spiral diagram showing a user's belief being amplified turn by turn by a sycophantic AI until it becomes delusion, illustrating that factual guardrails and user awareness do not break the loop."
             className="w-full rounded-xl border border-border"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">Sycophantic chatbots amplify beliefs into delusion, even in ideal Bayesians. Factual guardrails don&apos;t fix it. User awareness doesn&apos;t fix it.</figcaption>
@@ -244,7 +248,7 @@ export default function WhoGuardsTheGuardians() {
         <figure className="my-6">
           <img
             src="/blog/who-guards-the-guardians-convergence.jpg"
-            alt="Visual map of nine research signals converging on clearinghouse governance"
+            alt="A visual map of the nine research signals, drawn as separate nodes, all pointing to a single clearinghouse governance node."
             className="w-full rounded-xl border border-border"
           />
         </figure>
@@ -399,7 +403,7 @@ export default function WhoGuardsTheGuardians() {
         <figure className="my-6">
           <img
             src="/blog/who-guards-the-guardians-pattern.jpg"
-            alt="Pattern convergence diagram: five signal types pointing to a single governance node"
+            alt="A convergence diagram in which five signal types each point at one central governance node, showing that every new signal strengthens the case for independent governance."
             className="w-full rounded-xl border border-border"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">Every signal makes the case for independent governance stronger, and the case for trusting model providers weaker.</figcaption>
@@ -550,6 +554,8 @@ export default function WhoGuardsTheGuardians() {
           Get in touch →
         </a>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="who-guards-the-guardians" />
     </article>
   );
 }

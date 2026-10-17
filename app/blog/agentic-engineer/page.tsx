@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: "I'm Not an AI Engineer. I'm an Agentic Engineer. | Franklin J Bryant IV",
   description: 'The biggest opportunity in AI isn\'t building models. It\'s building businesses where AI is the execution layer. Why agentic engineering is a fundamentally different skill set than what most people are learning.',
@@ -67,11 +68,14 @@ export default function AgenticEngineer() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="agentic-engineer" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/agentic-engineer-hero.jpg"
-          alt="Agentic engineering command center: autonomous systems orchestrating business operations"
+          alt="Hero illustration for an essay arguing that the agentic engineer does not write every line of code but architects business systems where AI executes reliably."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -109,7 +113,7 @@ export default function AgenticEngineer() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The Difference</h2>
 
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/agentic-vs-ai-engineer.jpg" alt="AI Engineer vs Agentic Engineer architecture comparison" className="w-full rounded-xl" />
+          <img src="/blog/agentic-vs-ai-engineer.jpg" alt="Side-by-side comparison of an AI engineer, who optimizes model performance in notebooks and benchmarks, and an agentic engineer, who runs models inside production systems with paying clients, compliance, and security constraints." className="w-full rounded-xl" />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
             AI engineering optimizes models. Agentic engineering optimizes business outcomes.
           </figcaption>
@@ -205,7 +209,7 @@ export default function AgenticEngineer() {
         </p>
 
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/agentic-engineer-architecture.jpg" alt="Four pillars of agentic engineering: Durable Memory, Definition of Done, Security-First, Four Laws" className="w-full rounded-xl" />
+          <img src="/blog/agentic-engineer-architecture.jpg" alt="Diagram of the four architectural pillars of agentic engineering: durable external memory, a precise definition of done, security-first access control, and four operating laws." className="w-full rounded-xl" />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
             The four architectural pillars that make agentic systems work in production
           </figcaption>
@@ -430,6 +434,8 @@ export default function AgenticEngineer() {
           Get in touch →
         </a>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="agentic-engineer" />
     </article>
   );
 }

@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'The Cost of Waiting | Franklin J Bryant IV',
   description: "AI isn't just changing your industry. It's changing the cost of money itself. Harvard proved one person with AI matches a two-person team. The model they used is 11 generations out of date. The window to get ahead of this is closing.",
@@ -60,10 +61,13 @@ export default function TheCostOfWaiting() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="the-cost-of-waiting" />
+
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/cost-of-waiting-hero.jpg"
-          alt="The cost of waiting: a traditional office on the left, an AI-powered operation on the right, separated by a glowing red gap representing the competitive squeeze"
+          alt="A split illustration with a traditional office on the left and an AI-powered operation on the right, separated by a glowing red gap that represents the widening competitive squeeze."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -147,7 +151,7 @@ export default function TheCostOfWaiting() {
         <figure className="my-8 overflow-hidden rounded-xl border border-border">
           <img
             src="/blog/cost-of-waiting-squeeze.jpg"
-            alt="A small business storefront being squeezed from above by rising capital costs and from below by AI-powered competitors with lower operating costs"
+            alt="A small business storefront is squeezed from above by rising capital costs and from below by AI-powered competitors that run lower operating costs."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -283,6 +287,8 @@ export default function TheCostOfWaiting() {
         </div>
 
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="the-cost-of-waiting" />
     </article>
   );
 }

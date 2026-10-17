@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'Crypto Compliance After NexFundAI | Franklin J Bryant IV',
   description: 'The FBI created a real cryptocurrency token to catch market manipulators. Here\'s what it means for your business, and what you need to do now.',
@@ -66,11 +67,14 @@ export default function BlogPost() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="crypto-compliance-after-nexfundai" />
+
       {/* Featured image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/nexfundai-hero.jpg"
-          alt="NexFundAI: FBI crypto sting operation illustration"
+          alt="Illustration of the FBI's NexFundAI sting, in which agents launched a real ERC-20 token on Ethereum to catch market makers engaged in wash trading and pump-and-dump schemes."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-300">
@@ -301,6 +305,8 @@ export default function BlogPost() {
           </li>
         </ul>
       </section>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="crypto-compliance-after-nexfundai" />
     </article>
   );
 }

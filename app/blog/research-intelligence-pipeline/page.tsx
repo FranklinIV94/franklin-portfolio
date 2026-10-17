@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'The Research Intelligence Pipeline: From Paper to Production in 24 Hours | Franklin J Bryant IV',
   description: 'How we turned a week of AI research papers into production insights, connected every finding to our stack, and built a research pipeline that delivers competitive advantage in real time.',
@@ -68,11 +69,14 @@ export default function ResearchIntelligencePipeline() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="research-intelligence-pipeline" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/research-pipeline-hero.jpg"
-          alt="Research intelligence pipeline: from raw papers to production-connected insights"
+          alt="An illustration of the research pipeline, with papers, talks and threads entering on one side and emerging on the other as production-connected insights and architecture decisions."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -130,7 +134,7 @@ export default function ResearchIntelligencePipeline() {
         </p>
 
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/research-pipeline-flow.jpg" alt="Research pipeline flow diagram showing nine signals entering and connected insights leaving" className="w-full rounded-xl" />
+          <img src="/blog/research-pipeline-flow.jpg" alt="A flow diagram showing nine research signals entering the pipeline in a single week, with each one leaving mapped to a production connection." className="w-full rounded-xl" />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
             Nine research signals in, every one mapped to a production connection
           </figcaption>
@@ -555,6 +559,8 @@ export default function ResearchIntelligencePipeline() {
           Get in touch →
         </a>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="research-intelligence-pipeline" />
     </article>
   );
 }

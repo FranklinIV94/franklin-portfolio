@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'System of Action vs. System of Intelligence | Franklin J Bryant IV',
   description: 'Google Cloud\'s "Agentic Data Cloud" validates a shift we\'ve been building toward for months, and it changes how every business should think about their technology stack.',
@@ -68,11 +69,14 @@ export default function BlogPost() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="system-of-action" />
+
       {/* Featured image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/intelligence-vs-action.jpg"
-          alt="System of Intelligence → System of Action"
+          alt="A two-panel comparison contrasting a system of intelligence that reports what happened and waits to be asked, with a system of action that operates on the business's behalf."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-300">
@@ -94,7 +98,7 @@ export default function BlogPost() {
       <section className="mt-16">
         <h2 className="font-display font-bold text-3xl text-white mb-8">The Three Shifts Google Identified</h2>
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/three-shifts.jpg" alt="Three shifts in AI architecture" className="w-full rounded-xl" />
+          <img src="/blog/three-shifts.jpg" alt="A diagram of the three shifts Google Cloud identifies: human scale to agent scale, reactive to proactive, and data to knowledge." className="w-full rounded-xl" />
         </figure>
 
         <div className="mt-8 grid gap-8 sm:grid-cols-3">
@@ -168,7 +172,7 @@ export default function BlogPost() {
           checking your own stack against, because at agent scale, they&apos;re fatal.
         </p>
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/four-failures.jpg" alt="Four structural failures" className="w-full rounded-xl" />
+          <img src="/blog/four-failures.jpg" alt="A diagram of the four structural failures that break agentic systems at scale: fragmented stack, walled gardens, trust gap, and cost spiral." className="w-full rounded-xl" />
         </figure>
         <div className="mt-8 space-y-4">
           {[
@@ -198,7 +202,7 @@ export default function BlogPost() {
           the architecture we built from first principles.
         </p>
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/prospyr-architecture.jpg" alt="Prospyr multi-agent architecture" className="w-full rounded-xl" />
+          <img src="/blog/prospyr-architecture.jpg" alt="A diagram of the Prospyr multi-agent architecture in which specialized agents with distinct roles share persistent memory and delegate work across extended workflows." className="w-full rounded-xl" />
         </figure>
 
         <div className="mt-8 space-y-6">
@@ -267,6 +271,8 @@ export default function BlogPost() {
           </a>
         </div>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="system-of-action" />
     </article>
   );
 }

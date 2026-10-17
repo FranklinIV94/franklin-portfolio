@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'The Data Brokerage Boom: Who Wins When AI Eats the Software but Not the Data',
   description:
@@ -116,7 +117,7 @@ const SECTIONS: Section[] = [
   {
     h: "The Shakeout Is Already Starting",
     items: [
-      { t: "figure", src: "/blog/data-brokerage-shakeout.webp", caption: "The grifters fall through. The ones who did the work stay.", alt: "Abstract illustration of market shakeout and consolidation" },
+      { t: "figure", src: "/blog/data-brokerage-shakeout.webp", caption: "The grifters fall through. The ones who did the work stay.", alt: "Abstract illustration of a market shakeout in which brokers who cannot define what they are selling drop out and the ones who did the work consolidate the deals." },
       { t: "p", text: "Mike Lisovetsky put it cleanly this week: “Data brokering will be like any other industry where there’s fast money. The grifters will be quickly expelled because it's really obvious if you have no idea what you're doing. The engagement bait on X will fade. The people who do well by labs and sellers will make a fortune.”" },
       { t: "p", text: "He's right. The market has built-in grifter detection because the deliverable is concrete. A data inventory either exists or it doesn't. Deal terms either make sense or they don't. A lab either wants the dataset or it doesn't. You can't fake your way through a due diligence call when the buyer starts asking how data flows through the seller's business for different functions, how well it's recorded, and how many years of full-context data exist." },
       { t: "p", text: "Lock says his firm talks to 20+ sellers per day. The most common friction point preventing deals from progressing isn't price. It's that the seller can't clearly define what their data shape looks like. They don't have a data inventory. They don't know how many years of exportable data they have per software system. They don't know the total volume in terabytes or messages or records." },
@@ -152,7 +153,7 @@ const SECTIONS: Section[] = [
       { t: "p", text: "Not because the money isn't tempting. Because our clients didn't give us their data so we could sell it to a third party. They gave us their data so we could do their taxes. The trust relationship is the foundation of the business. Selling the data breaks the trust. And the trust is worth more than any one-time payment." },
       { t: "p", text: "But we're also not naive. The data brokerage market is forming right now, and the patterns it establishes over the next 12 to 24 months will determine who profits from the AI transition for the next decade. Every business owner should be asking three questions:" },
       { t: "ol", items: [{"q": "What data do I have that an AI lab would want? You probably have more than you think.", "a": "Industry-specific workflows, customer behavior patterns, transaction histories, operational data. If you've been in business for 5+ years and you use any software system, you have proprietary data. Start by building a data inventory: list each software system, years of available exports, and total data volume. That inventory is your leverage. Without it, you're just another seller who can't define what they're selling."}, {"q": "What are the terms under which I'd share it? Anonymization? Aggregation? Ongoing royalty vs.", "a": "one-time sale? Exclusive vs. non-exclusive? These are business decisions, not technical ones. Make them before someone offers you money, not after. Pay attention to exclusivity terms (market standard is 2 years), acceptance windows (30 days), and de-identification requirements. The period between extraction and de-identification is the highest risk window for a seller. If the buyer can't articulate their de-ID process, walk away."}, {"q": "What happens to my competitive advantage if I share? If an AI lab trains on your data and then sells the resulting model to your competitor, did you just arm the competition? Maybe.", "a": "Maybe not. But you should know the answer before you sign."}] },
-      { t: "figure", src: "/blog/data-brokerage-inventory.webp", caption: "The inventory comes first. Everything downstream compounds.", alt: "Data inventory compounding into downstream value" },
+      { t: "figure", src: "/blog/data-brokerage-inventory.webp", caption: "The inventory comes first. Everything downstream compounds.", alt: "Diagram showing a completed data inventory coming first and compounding into downstream value for the seller, including cleaner valuation and repeat deal flow." },
       { t: "closing", text: "The data brokerage boom is real. The money is real. The shakeout is coming. The asymmetry is also real. The businesses that win won't be the ones that sold their data first. They'll be the ones that understood what they were selling before they sold it." },
     ],
   },
@@ -182,11 +183,14 @@ const SECTIONS: Section[] = [
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="data-brokerage-boom" />
+
       {/* Hero figure — outside prose so it keeps the taller hero framing. */}
       <figure className="mb-16 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/data-brokerage-hero-panning.webp"
-          alt="Most of what is for sale is silt; a little of it is gold"
+          alt="Hero illustration for an essay on data brokerage, suggesting that most of the data offered for sale is silt and only a small fraction of it is gold."
           width={1600}
           height={904}
           className="w-full"
@@ -310,6 +314,8 @@ const SECTIONS: Section[] = [
           </a>
         </div>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="data-brokerage-boom" />
     </article>
   );
 }

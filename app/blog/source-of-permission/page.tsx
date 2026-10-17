@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'The Source of Permission | Franklin J Bryant IV',
   description: 'The SaaS moat was owning data. The AI moat is owning permissions. How clearinghouses, vertical agents, and the death of scaffolding converged this week, and what Prospyr 305 is building next.',
@@ -67,11 +68,14 @@ export default function SourceOfPermission() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="source-of-permission" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/source-of-permission-hero.jpg"
-          alt="Central governance node: the clearinghouse where agent permissions are verified, authorized, and audited"
+          alt="A diagram of the clearinghouse as a central governance node, with agent requests arriving from multiple vendors and each one verified, authorized and recorded before it is allowed to act."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -104,7 +108,7 @@ export default function SourceOfPermission() {
         <figure className="my-12 overflow-hidden rounded-2xl">
           <img
             src="/blog/source-of-permission-truth-vs-permission.jpg"
-            alt="The transition from system of record to clearinghouse"
+            alt="A two-state diagram showing the shift from a system of record that holds the truth to a clearinghouse that holds permission, with the moat moving from the data layer to the governance layer."
             className="w-full"
           />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -423,7 +427,7 @@ export default function SourceOfPermission() {
         <figure className="my-12 overflow-hidden rounded-2xl">
           <img
             src="/blog/source-of-permission-convergence.jpg"
-            alt="Six research signals converging on one architecture: the clearinghouse"
+            alt="A convergence diagram in which six research signals from separate sources funnel into one shared architecture, drawn as the four clearinghouse pillars."
             className="w-full"
           />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -673,6 +677,8 @@ export default function SourceOfPermission() {
           Get in touch →
         </a>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="source-of-permission" />
     </article>
   );
 }

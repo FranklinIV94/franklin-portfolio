@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'Verification Is the Scarcity | Franklin J Bryant IV',
   description: 'AI training data is a $100M gold rush. But the gold learns to mine itself. What survives when every supplier becomes replaceable, and what Prospyr 305 is building on the same principle.',
@@ -65,11 +66,14 @@ export default function VerificationIsTheScarcity() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="verification-is-the-scarcity" />
+
       {/* Hero image */}
       <figure className="mb-16 mt-10 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/verification-scarcity-hero.jpg"
-          alt="Abstract visualization: a glowing green checkmark at the center of a filtering funnel, raw data fragments rejected around it"
+          alt="A single glowing green checkmark sits at the center of a funnel-shaped filter, with rejected raw-data fragments scattered around it, showing that verification rather than data is the scarce thing."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -108,7 +112,7 @@ export default function VerificationIsTheScarcity() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/verification-scarcity-funnel.jpg"
-            alt="Abstract: raw data pouring into a mesh funnel, most rejected as grey, a few verified items emerging at the bottom glowing green"
+            alt="Raw data pours into a mesh funnel where most items are rejected and fall away in grey, while the few that pass emerge at the bottom glowing green, showing the filter that decides which data counts as good."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -205,6 +209,8 @@ export default function VerificationIsTheScarcity() {
           This piece synthesizes research from 13 sources tracked this week in the Prospyr 305 research pipeline, including analyses of the AI training data market (@viks_rum), research agent anti-hallucination frameworks (@de1lymoon), the Hebbia &ldquo;AI makes humans cheaper than software&rdquo; thesis (@gsivulka), the Grok Build CLI exfiltration incident (@IntCyberDigest), and B2B competition strategy.
         </p>
       </footer>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="verification-is-the-scarcity" />
     </article>
   );
 }

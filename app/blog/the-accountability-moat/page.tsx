@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'The Accountability Moat | Franklin J Bryant IV',
   description: "AI doesn't kill competitive advantage. It moves the moat to the one thing models can't own: accountability. Your clients are already checking your work against AI. The question is whether you survive the filter.",
@@ -60,10 +61,13 @@ export default function TheAccountabilityMoat() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="the-accountability-moat" />
+
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/accountability-moat-hero.jpg"
-          alt="The accountability moat: where AI generation meets human responsibility"
+          alt="An illustration of the accountability moat as the boundary where machine generation stops and human responsibility begins, with the signing human standing on the far side of the line."
           className="w-full"
         />
       </figure>
@@ -189,6 +193,8 @@ export default function TheAccountabilityMoat() {
 
 <p><em>Franklin Bryant IV is COO of All Lines Business Solutions and creator of the <a href="https://prospyr305.com">AIIO Assessment</a> framework, a structured evaluation that identifies automation opportunities and quantifies ROI before a single dollar is spent. He also developed <a href="https://prospyr305.com">SENTINEL</a>, a comprehensive AI security audit for agent infrastructure. He's currently pursuing his Enrolled Agent credential. Learn more at <a href="https://prospyr305.com">prospyr305.com</a>.</em></p>
 ` }} />
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="the-accountability-moat" />
     </article>
   );
 }

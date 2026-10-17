@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'Pacing the Frontier Is a Moat | Franklin J Bryant IV',
   description: 'Three billionaires who already crossed the finish line are pulling up the ladder. Anthropic says slow down while RSI is already happening. The public gets regulated out of the frontier. The private sector keeps the advantage.',
@@ -67,10 +68,13 @@ export default function PacingFrontierMoat() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="pacing-the-frontier-is-a-moat" />
+
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/pacing-frontier-moat-hero.jpg"
-          alt="Three wealthy tech moguls at the top of a wall pulling up a ladder behind them, a speed limit sign at the top, a crowd of smaller developers below unable to reach the ladder"
+          alt="Hero illustration: three wealthy tech figures stand atop a high wall pulling the ladder up behind them while a speed limit sign sits at the top, and a crowd of smaller developers waits below with no way to climb."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -142,7 +146,7 @@ export default function PacingFrontierMoat() {
         <figure className="my-8 overflow-hidden rounded-xl border border-border">
           <img
             src="/blog/pacing-frontier-substrate.jpg"
-            alt="A vast network of glowing interconnected nodes spread across a dark globe like a weather pattern, with a small disconnected server rack in the corner"
+            alt="Illustration of a vast network of glowing interconnected nodes spreading across a dark globe like a weather pattern, with one small, disconnected server rack sitting alone in the corner."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -276,6 +280,8 @@ export default function PacingFrontierMoat() {
         </div>
 
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="pacing-the-frontier-is-a-moat" />
     </article>
   );
 }

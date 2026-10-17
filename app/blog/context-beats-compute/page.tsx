@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: '7 Trillion Passwords Couldn\'t Crack This Bitcoin Wallet. AI Did It in Minutes. | Franklin J Bryant IV',
   description: 'How contextual intelligence beat brute force, and what it means for business. A Bitcoin recovery story and new research prove: better retrieval beats more compute.',
@@ -67,11 +68,14 @@ export default function ContextBeatsCompute() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="context-beats-compute" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/context-vs-compute-hero.jpg"
-          alt="Brute Force vs Contextual Intelligence: the pattern that changes everything"
+          alt="Hero graphic contrasting brute-force password guessing with contextual intelligence across many files, the pattern behind a 5 Bitcoin wallet recovered after 11 years locked."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -141,7 +145,7 @@ export default function ContextBeatsCompute() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">The Pattern: Better Retrieval Beats More Compute</h2>
 
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/context-vs-compute-data.jpg" alt="Exa research data: 4B model with semantic search outperforms 235B model with keyword search" className="w-full rounded-xl" />
+          <img src="/blog/context-vs-compute-data.jpg" alt="Chart of Exa research results showing a 4-billion-parameter model using semantic search scoring 0.767 on SimpleQA against 0.730 for a 235-billion-parameter base model." className="w-full rounded-xl" />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
             Exa&apos;s research shows smaller models with better search consistently outperform larger models with worse search
           </figcaption>
@@ -227,7 +231,7 @@ export default function ContextBeatsCompute() {
         <h2 className="font-display font-bold text-3xl text-white mt-12 mb-4">Why This Matters for Business</h2>
 
         <figure className="my-10 overflow-hidden rounded-xl">
-          <img src="/blog/context-vs-compute-pipeline.jpg" alt="Context Pipeline: from scattered data to organized knowledge to AI action" className="w-full rounded-xl" />
+          <img src="/blog/context-vs-compute-pipeline.jpg" alt="Diagram of the context pipeline, in which scattered business data is curated into organized, agent-accessible knowledge and then used to drive an AI action." className="w-full rounded-xl" />
           <figcaption className="mt-3 text-center text-sm text-gray-400">
             The context pipeline: transforming scattered data into organized, agent-accessible knowledge
           </figcaption>
@@ -352,6 +356,8 @@ export default function ContextBeatsCompute() {
           Let&apos;s talk →
         </a>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="context-beats-compute" />
     </article>
   );
 }

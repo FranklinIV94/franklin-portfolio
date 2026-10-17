@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: 'We Let AI Run Our Sales Pipeline for 5 Months. Then We Hired a Human. | Franklin J Bryant IV',
   description: 'How a two-person Florida firm built a lead engine with autonomous agents, cold email outreach, and signal-based sourcing — and why we just hired our first human sales person to do what the AI couldn\'t.',
@@ -67,11 +68,14 @@ export default function WeLetAIRunOurSalesPipeline() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="we-let-ai-run-our-sales-pipeline" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl border border-border">
         <img
           src="/blog/gtm-hero.png"
-          alt="Dark-themed dashboard showing an AI-powered sales pipeline with email flows, lead sourcing nodes, conversion charts, and a phone interface"
+          alt="A dark-themed dashboard depicting the agent-run sales pipeline: lead-sourcing nodes and email flows on one side, a conversion chart in the middle, and a phone interface on the other, showing where automation stops and a human call begins."
           className="w-full"
         />
         <figcaption className="mt-2 text-xs text-gray-500 text-center">The pipeline: agents source, research, email, and track. Humans call and close.</figcaption>
@@ -134,7 +138,7 @@ export default function WeLetAIRunOurSalesPipeline() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/gtm-pipeline.png"
-            alt="Abstract visualization of AI agents working a sales pipeline with connected glowing nodes forming a flow diagram"
+            alt="An abstract flow diagram of glowing connected nodes representing the six signal-based sourcing channels feeding leads into the sales pipeline."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">Six signal-based sourcing channels feeding the pipeline.</figcaption>
@@ -217,7 +221,7 @@ export default function WeLetAIRunOurSalesPipeline() {
         <figure className="my-8 overflow-hidden rounded-2xl border border-border">
           <img
             src="/blog/gtm-human-hire.png"
-            alt="Split composition: AI dashboard with flowing data on the left, a human hand reaching for a phone on the right, meeting in the middle"
+            alt="A split composition with the AI dashboard and its flowing data on the left and a human hand reaching for a phone on the right, the two meeting in the middle where automation hands off to a person."
             className="w-full"
           />
           <figcaption className="mt-2 text-xs text-gray-500 text-center">The bridge: AI does what it&apos;s good at. Human does what they&apos;re good at. Infrastructure connects them.</figcaption>
@@ -346,6 +350,8 @@ export default function WeLetAIRunOurSalesPipeline() {
         </p>
 
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="we-let-ai-run-our-sales-pipeline" />
     </article>
   );
 }

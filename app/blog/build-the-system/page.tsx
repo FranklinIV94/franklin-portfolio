@@ -1,3 +1,4 @@
+import { PostTldr, PostSources } from '@/components/PostEnhancements';
 export const metadata = {
   title: "Build the System, Not the Prompt | Franklin J Bryant IV",
   description: "The week AI research converged on one architecture: specialized components, completion states, persistent memory, and guardrails at boundaries. Here's what it means for business.",
@@ -67,11 +68,14 @@ export default function BuildTheSystem() {
         </div>
       </header>
 
+      {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <PostTldr slug="build-the-system" />
+
       {/* Hero image */}
       <figure className="mb-16 overflow-hidden rounded-2xl">
         <img
           src="/blog/build-the-system-hero.jpg"
-          alt="Interconnected AI agent architecture: specialized components with persistent memory and guardrails"
+          alt="Diagram of an interconnected AI agent architecture in which specialized components share persistent memory and pass through guardrails at their boundaries."
           className="w-full"
         />
         <figcaption className="mt-3 text-center text-sm text-gray-400">
@@ -507,6 +511,8 @@ export default function BuildTheSystem() {
           </ul>
         </div>
       </div>
+          {/* Sources — every link below was opened and checked */}
+      <PostSources slug="build-the-system" />
     </article>
   );
 }
