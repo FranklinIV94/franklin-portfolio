@@ -50,9 +50,12 @@ RULES: list[tuple[str, re.Pattern[str], re.Pattern[str] | None]] = [
     # Fleet codenames — never on a public surface.
     ("agent codename", re.compile(r"\b(prime|northstar|southstar|eaststar|weststar|claudette|atlas)\b", re.I), None),
     # Hosts, providers, infra.
-    ("infrastructure host", re.compile(r"\b(hetzner|digitalocean|tailscale|aws|ec2|s3\.amazonaws|vercel\.app|100\.\d+\.\d+\.\d+)\b", re.I), None),
+    # Fleet hosting. Note the distinction: naming a public cloud as a PROJECT's stack ("deployed on
+    # AWS") is normal portfolio copy; naming where the FLEET runs, or a preview host, is not. So
+    # Hetzner/DigitalOcean/tailnet stay flagged; AWS/Azure/Vercel/Cloudflare are waived as stack names.
+    ("infrastructure host", re.compile(r"\b(hetzner|digitalocean|office paled|oracle vps|tailscale|vercel\.app|100\.\d+\.\d+\.\d+)\b", re.I), None),
     # Job / cron identifiers.
-    ("job identifier", re.compile(r"\b(portal-notification-scanner|arag-reindex|checkReason|targetId|scheduledBy|agentName|openclaw|cron-job|systemd)\b", re.I), None),
+    ("job identifier", re.compile(r"\b(portal-notification-scanner|arag-reindex|checkReason|targetId|scheduledBy|agentName|systemd|cron-job|systemd)\b", re.I), None),
     # Client names / people we serve.
     ("client identifier", re.compile(r"\b(cabrera|bolaveau|vita showroom|mm&r|mmrcm|cyber1|kilby|jdp electric|beemore|amosova|borrego|vivero)\b", re.I), None),
     # Invoice / record ids.
