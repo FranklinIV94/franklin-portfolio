@@ -15,7 +15,7 @@ module.exports = {
         accent: '#c8ff57',
         'accent-dim': 'rgba(200,255,87,0.12)',
         'accent-ink': '#0b0f02',
-        muted: '#6b6b7a',
+        muted: '#9d9dab', // was #6b6b7a — text-muted utility failed WCAG AA (LH 2026-10-18)
         cream: '#f4f3ee',
         'light-ink': '#101116',
         'light-muted': '#5d5f66',
