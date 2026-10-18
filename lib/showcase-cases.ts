@@ -173,7 +173,7 @@ export const craftStudies: Array<{ title: string; sub: string; file: string; bg:
   {
     title: 'Shape → gradient → screen',
     sub: 'Three themes, three stages each',
-    file: '/showcase/design-craft/project-b-posters.html',
+    file: '/showcase/design-craft/project-b-shape-gradient.html',
     bg: '#eef3ff',
     blobs: ['#2563eb', '#7dd3fc'],
   },

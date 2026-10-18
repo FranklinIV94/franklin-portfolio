@@ -111,7 +111,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           title="Franklin J Bryant IV — Writing"
           href="https://franklin.simplifyingbusinesses.com/rss.xml"
         />
-        <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}

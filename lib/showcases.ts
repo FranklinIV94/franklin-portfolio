@@ -44,11 +44,11 @@ export const showcaseCategories: ShowcaseCategory[] = [
         ratio: 'aspect-[4/3]',
       },
       {
-        slug: 'project-b-posters',
+        slug: 'project-b-shape-gradient',
         title: 'Shapes → Gradient → Design',
         tag: 'Design Process',
         desc: 'Three themes (blue subscribe, orange onboarding, purple product) showing the raw construction, the blurred gradient, and the finished screen.',
-        file: '/showcase/design-craft/project-b-posters.html',
+        file: '/showcase/design-craft/project-b-shape-gradient.html',
         ratio: 'aspect-[4/3]',
       },
       {
