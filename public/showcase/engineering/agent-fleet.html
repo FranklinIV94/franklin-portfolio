@@ -82,68 +82,69 @@
       <div class="stat"><div class="num" id="nAgents">—</div><div class="lbl">Agents</div></div>
       <div class="stat"><div class="num green" id="nActive">—</div><div class="lbl">Active now</div></div>
       <div class="stat"><div class="num" id="nJobs">—</div><div class="lbl">Jobs · 24h</div></div>
-      <div class="stat"><div class="num" id="nPending">—</div><div class="lbl">Rechecks queued</div></div>
+      <div class="stat"><div class="num" id="nPending">—</div><div class="lbl">Awaiting approval</div></div>
     </div>
 
     <div class="agents" id="agents"><div class="err">Loading fleet…</div></div>
 
     <div class="activity">
-      <div class="t">Live activity</div>
-      <div id="ticks"><div class="err">Loading…</div></div>
+      <div class="t">What this panel does not show</div>
+      <div id="ticks" style="font-family:var(--mono);font-size:11.5px;line-height:1.7;color:var(--muted)">No job titles, hostnames, agent codenames or logs. Counts and role states only — that is the whole point of the gate, and it is enforced server-side.</div>
     </div>
 
     <div class="foot">Read-only view · data refreshes every 15s</div>
   </div>
 
 <script>
-const AGENTS = [
-  {name:'Prime', role:'Lead · Ops', emoji:'🛰️'},
-  {name:'Northstar', role:'Home · Local', emoji:'⭐'},
-  {name:'Eaststar', role:'Translator · Hetzner', emoji:'🌐'},
-  {name:'Southstar', role:'AWS · Deploy', emoji:'☁️'},
-  {name:'Atlas', role:'Understudy', emoji:'🗺️'},
+// Public role labels only. No codenames, no hosts, no job text — 2026-10-18.
+// The previous version rendered internal agent names, the host each one ran on, and live
+// task text straight from the internal scheduler. That was never-ship material on a public
+// page; the endpoint behind it is now closed and this panel reads /api/fleet-public, which
+// cannot return any of it.
+const ROLES = [
+  {role:'CEO agent', emoji:'🛰️'},
+  {role:'Ops agent', emoji:'⭐'},
+  {role:'Research agent', emoji:'🌐'},
+  {role:'Deploy agent', emoji:'☁️'},
+  {role:'Understudy', emoji:'🗺️'},
 ];
+const STATE_CLASS = {working:'on', idle:'off', 'awaiting approval':'busy'};
+
+function placeholder(reason){
+  document.getElementById('nAgents').textContent = '—';
+  document.getElementById('nActive').textContent = '—';
+  document.getElementById('nJobs').textContent = '—';
+  document.getElementById('nPending').textContent = '—';
+  document.getElementById('agents').innerHTML = ROLES.map(r=>`<div class="agent">
+      <span class="status off"></span>
+      <div class="row"><div class="avatar">${r.emoji}</div><div><div class="name">${r.role}</div><div class="role">${reason}</div></div></div>
+    </div>`).join('');
+}
 
 async function load(){
   try{
-    const r = await fetch('/api/fleet?kind=fleet');
+    const r = await fetch('/api/fleet-public');
     const d = await r.json();
-    if(d.error) throw new Error(d.error);
+    if(!r.ok || d.error) throw new Error(d.error || 'unavailable');
 
-    const actions = d.actions || [];
-    const schedules = d.schedules || [];
+    document.getElementById('nAgents').textContent = d.agents_total ?? '—';
+    document.getElementById('nActive').textContent = d.agents_active ?? '—';
+    document.getElementById('nJobs').textContent = d.jobs_24h ?? '—';
+    const roles = Array.isArray(d.roles) ? d.roles : [];
+    document.getElementById('nPending').textContent = roles.filter(x=>x.state==='awaiting approval').length;
 
-    // stats
-    document.getElementById('nAgents').textContent = AGENTS.length;
-    const recent = actions.filter(a=>a.status==='COMPLETED'||a.status==='INITIATED');
-    document.getElementById('nActive').textContent = new Set(actions.map(a=>a.agentName)).size;
-    document.getElementById('nJobs').textContent = actions.length;
-    document.getElementById('nPending').textContent = schedules.filter(s=>s.status==='PENDING').length;
-
-    // agent cards
-    const byAgent = {};
-    actions.forEach(a=>{ (byAgent[a.agentName]=byAgent[a.agentName]||[]).push(a); });
     const grid = document.getElementById('agents');
-    grid.innerHTML = AGENTS.map(a=>{
-      const acts = byAgent[a.name.toLowerCase()] || [];
-      const last = acts[0];
-      const status = last && last.status==='INITIATED' ? 'busy' : (last ? 'on' : 'off');
-      const job = last ? `<b>${last.category||'task'}</b> · ${(last.scenario||'').slice(0,40)}` : 'Standing by';
+    grid.innerHTML = roles.map(x=>{
+      const meta = ROLES.find(r=>r.role===x.role) || {emoji:'•'};
+      const cls = STATE_CLASS[x.state] || 'off';
       return `<div class="agent">
-        <span class="status ${status}"></span>
-        <div class="row"><div class="avatar">${a.emoji}</div><div><div class="name">${a.name}</div><div class="role">${a.role}</div></div></div>
-        <div class="job">${job}</div>
+        <span class="status ${cls}"></span>
+        <div class="row"><div class="avatar">${meta.emoji}</div><div><div class="name">${x.role}</div><div class="role">${x.state}</div></div></div>
       </div>`;
-    }).join('');
-
-    // activity ticker
-    const tick = document.getElementById('ticks');
-    tick.innerHTML = actions.slice(0,8).map(a=>{
-      const st = a.status==='COMPLETED'?'done':a.status==='INITIATED'?'run':'fail';
-      return `<div class="tick"><span class="who">${a.agentName}</span><span class="what">${(a.scenario||a.category||'').slice(0,60)}</span><span class="st ${st}">${a.status}</span></div>`;
-    }).join('') || '<div class="err">No recent activity</div>';
+    }).join('') || '<div class="err">No roles reported</div>';
   }catch(e){
-    document.getElementById('agents').innerHTML = `<div class="err">Fleet offline — ${e.message}</div>`;
+    // An endpoint outage must not blank the panel — render the roles with "—".
+    placeholder('—');
   }
 }
 load();
