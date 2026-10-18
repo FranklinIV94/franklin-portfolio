@@ -123,12 +123,67 @@ export async function GET(_request: NextRequest) {
     const roles = PUBLIC_ROLES.map((role) => ({ role, state: roleState.get(role) ?? 'idle' }));
     const agentsActive = roles.filter((r) => r.state === 'working').length;
 
+    // ── Workflows (what the hours actually go into) ───────────────────────
+    // Franklin, 2026-10-18: the board "should tie to our actual workflows and productivity".
+    // Aggregated by `category` — a workflow label, not a job identifier. No scenario text, no
+    // target names, no timestamps beyond the 24h window. This is the line between "what work
+    // is being done" (public-safe, and the actual proof) and "what exactly is running where"
+    // (internal, and what leaked before).
+    const WORKFLOW_LABELS: Record<string, string> = {
+      RESEARCH: 'Research',
+      OUTREACH: 'Outreach',
+      SALES: 'Sales',
+      MARKETING: 'Marketing',
+      OPS: 'Operations',
+      OPERATIONS: 'Operations',
+      FINANCE: 'Finance',
+      BILLING: 'Billing',
+      INVOICE: 'Billing',
+      TAX: 'Tax',
+      ENGINEERING: 'Engineering',
+      DEPLOY: 'Engineering',
+      SECURITY: 'Security',
+      DATA: 'Data',
+      CONTENT: 'Content',
+      QA: 'Quality',
+      REVIEW: 'Review',
+    };
+
+    const wf = new Map<string, { name: string; jobs: number; completed: number }>();
+    for (const a of actions) {
+      const raw = String(a.category || '').toUpperCase().trim();
+      const name = WORKFLOW_LABELS[raw];
+      if (!name) continue; // unrecognised category is dropped, not echoed
+      const row = wf.get(name) ?? { name, jobs: 0, completed: 0 };
+      row.jobs++;
+      if (String(a.status || '').toUpperCase() === 'COMPLETED') row.completed++;
+      wf.set(name, row);
+    }
+    const workflows = Array.from(wf.values())
+      .sort((a, b) => b.jobs - a.jobs)
+      .slice(0, 6);
+
+    // Productivity: completion rate over the same window, and the queue a human is holding.
+    const jobs24 = actions.filter((a) => {
+      const t = Date.parse(a.createdAt || a.updatedAt || a.completedAt || '');
+      return Number.isFinite(t) ? t >= cutoff : false;
+    });
+    const completed24 = jobs24.filter((a) => String(a.status || '').toUpperCase() === 'COMPLETED').length;
+    const awaitingApproval = roles.filter((r) => r.state === 'awaiting approval').length;
+    const completionRate = jobs24.length > 0 ? Math.round((completed24 / jobs24.length) * 100) : 0;
+
     return NextResponse.json(
       {
         agents_total: Math.min(agentsTotalFinal, 99),
         agents_active: agentsActive,
         jobs_24h: Math.min(jobs24h, 9999),
         roles,
+        workflows,
+        productivity: {
+          completed_24h: completed24,
+          completion_rate: completionRate, // % of the 24h window that finished
+          awaiting_approval: awaitingApproval, // the human gate, made visible
+        },
         scopes: 'counts-and-role-states-only',
         fetchedAt: new Date().toISOString(),
       },
