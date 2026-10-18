@@ -16,7 +16,7 @@ const firmLinks = [
   { href: 'https://prospyr305.com', label: 'Prospyr 305' },
   { href: 'https://prospyr305.com/capabilities', label: 'Capabilities' },
   { href: 'https://prospyr305.com/possibilities', label: 'Possibilities' },
-  { href: 'https://prospyr305.com/security-audit/', label: 'SENTINEL Audit' },
+  { href: 'https://prospyr305.com/sentinel', label: 'SENTINEL Audit' },
 ];
 
 export function Navbar() {

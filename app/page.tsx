@@ -336,7 +336,7 @@ export default function Home() {
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </a>
                   <a
-                    href="https://prospyr305.com/security-audit/"
+                    href="https://prospyr305.com/sentinel"
                     className="inline-flex items-center justify-between gap-2 text-sm font-medium text-muted hover:text-accent transition-colors group"
                   >
                     <span>SENTINEL Security Audit</span>
@@ -383,7 +383,7 @@ export default function Home() {
                 <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3 block">My Firm</span>
                 <div className="flex flex-col gap-2">
                   <a href="https://prospyr305.com" className="text-xs text-muted hover:text-accent transition-colors">Prospyr 305 — Agentic Engineering</a>
-                  <a href="https://prospyr305.com/security-audit/" className="text-xs text-muted hover:text-accent transition-colors">SENTINEL Security Audit</a>
+                  <a href="https://prospyr305.com/sentinel" className="text-xs text-muted hover:text-accent transition-colors">SENTINEL Security Audit</a>
                   <a href="https://prospyr305.com/possibilities" className="text-xs text-muted hover:text-accent transition-colors">What We Can Build</a>
                 </div>
               </div>

@@ -145,16 +145,28 @@ export default function AboutPage() {
               </span>
             </div>
 
+            {/* Each tile is a link to the thing itself — a claim with a door on it. */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-7 max-w-[640px]">
               {[
-                ['Made', 'AIIO assessment'],
-                ['Made', 'SENTINEL security audit'],
-                ['Wrote', 'Agent Code of Conduct'],
-              ].map(([label, value]) => (
-                <div key={value} className="rounded-lg border border-border bg-surface px-3.5 py-3">
+                ['Made', 'AIIO assessment', 'https://prospyr305.com/aiio'],
+                ['Made', 'SENTINEL security audit', 'https://prospyr305.com/sentinel'],
+                ['Wrote', 'Agent Code of Conduct', 'https://github.com/FranklinIV94/agent-code-of-conduct'],
+              ].map(([label, value, href]) => (
+                <a
+                  key={value}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded-lg border border-border bg-surface px-3.5 py-3 hover:border-accent/50 transition-colors"
+                >
                   <span className="block font-mono text-[10.5px] uppercase tracking-[0.1em] text-muted mb-1">{label}</span>
-                  <b className="font-medium text-sm text-white">{value}</b>
-                </div>
+                  <b className="flex items-center gap-1.5 font-medium text-sm text-white group-hover:text-accent transition-colors">
+                    {value}
+                    <svg className="w-3 h-3 opacity-50 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </b>
+                </a>
               ))}
             </div>
           </div>
