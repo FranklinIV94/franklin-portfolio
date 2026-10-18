@@ -1,191 +1,322 @@
-'use client';
-
-import { motion } from 'framer-motion';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
+// /about v2 — ported from the 2026-10-18 reference build.
+//
+// §0 of the handoff, and the reason this rewrite could not wait: the previous version of this page
+// carried the "AI-Powered Delivery" card, which named four fleet agents, the host each one ran on,
+// "locally" (i.e. home hardware) and a physical office city — four classes of the never-ship list in
+// one paragraph, on the second-most-visited page of the site. It also said "fourteen AI agents"
+// beside a public fleet board showing five. Public copy now names ROLES, never agents or hosts:
+// where the fleet runs is a security posture, not a disclosure.
+//
+// Editorial rules for this page (from the handoff, keep them):
+//   * No numbers. Proof lives on /showcase, and it is linked. Counts on a bio page are claims
+//     without receipts, and they drift (this page had two that contradicted each other).
+//   * No client names, no client counts, no fees, no hosts, no codenames.
+//   * First person, plain. No hype vocabulary, no exclamation marks.
+
+export const metadata: Metadata = {
+  title: 'About — Franklin J Bryant IV',
+  description:
+    'Claims adjuster, then the books, then the fleet. COO of a back-office firm and founder of Prospyr 305. I design the outcome and the acceptance test; agents do the hours; a person holds the gates.',
+  alternates: { canonical: '/about' },
+  openGraph: {
+    type: 'profile',
+    siteName: 'Franklin J Bryant IV',
+    url: 'https://franklin.simplifyingbusinesses.com/about',
+    title: 'About — Franklin J Bryant IV',
+    description:
+      'Claims adjuster, then the books, then the fleet. COO of a back-office firm and founder of Prospyr 305.',
+    images: [
+      {
+        url: 'https://franklin.simplifyingbusinesses.com/about-portrait.jpg',
+        width: 400,
+        height: 400,
+        alt: 'Franklin J Bryant IV',
+      },
+    ],
+  },
+};
+
+const BEATS = [
+  {
+    n: '01',
+    tag: 'Claims',
+    title: 'Find out what happened. Write it so it survives a dispute.',
+    body: 'Insurance claims teach a discipline nothing else does: the file is the truth, the number has to hold up to someone paid to disagree with it, and “probably” is not a finding. I still work from the file.',
+    carry: 'evidence before opinion; every finding with its source.',
+  },
+  {
+    n: '02',
+    tag: 'The books',
+    title: 'Run the back office owners do at night.',
+    body: 'At All Lines Business Solutions I am the COO of a firm that does accounting, payroll, tax and compliance for small businesses. You learn exactly where the hours go, and that most of them go to re-typing the same fact into three systems.',
+    carry: 'the acceptance test is the client’s own month, reproduced to the dollar.',
+  },
+  {
+    n: '03',
+    tag: 'The fleet',
+    title: 'Fix it in our own shop first, then sell what worked.',
+    body: 'Prospyr 305 is what came out of automating our own operations. I design the outcome and the acceptance test; a fleet of role-named agents does the building, deploying and auditing around the clock; a person holds the gates. Every action leaves a receipt.',
+    carry: 'nothing ships that I could not show a client on their own screen.',
+  },
+];
+
+const METHOD = [
+  {
+    k: 'Before a dollar',
+    title: 'Assess, then build',
+    body: 'Every engagement starts with the AIIO assessment: twelve dimensions, about five minutes, a scored report and a roadmap. We agree on what to build from the report, not from a pitch.',
+  },
+  {
+    k: 'Before a line of code',
+    title: 'The test is written first',
+    body: 'Acceptance criteria in the client’s words, signed before the build. “The four monthly reports reproduce this month within rounding.” Done means that passes.',
+  },
+  {
+    k: 'Verification',
+    title: 'Live, from your seat',
+    body: 'Reviews happen on the real system, logged in as you, with the network and console open. I don’t report from a standup or a staging screenshot.',
+  },
+  {
+    k: 'Delivery',
+    title: 'Agents by role, not by vendor',
+    body: 'A chief-executive agent, an operations agent, a research agent, a deploy agent, an understudy. Each has a scope, a memory and a ledger. Where they run is nobody’s business but ours — that is a security posture, not a secret.',
+  },
+  {
+    k: 'Security',
+    title: 'Guards you can watch',
+    body: 'SENTINEL audits the AI tools a business has already adopted. Inside our own systems, every tool call passes a deterministic gate before it reaches a model; you can try to break it on the Showcase page.',
+  },
+  {
+    k: 'Governance',
+    title: 'Standards before content',
+    body: 'What may leave the building, who approves what, and when a human must be in the loop are written down and enforced by the agents themselves. The Agent Code of Conduct is the public version.',
+  },
+];
+
 export default function AboutPage() {
-  const personJsonLd = {
+  const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Franklin J Bryant IV',
-    alternateName: 'Franklin Jordan Bryant IV',
     url: 'https://franklin.simplifyingbusinesses.com',
-    jobTitle: 'COO, All Lines Business Solutions · Founder, Prospyr 305',
-    description: 'COO of ALL LINES BUSINESS SOLUTIONS and a leading voice in practical AI implementation for small business. Creator of the AIIO Assessment framework and SENTINEL security audit.',
+    image: 'https://franklin.simplifyingbusinesses.com/about-portrait.jpg',
+    jobTitle: ['Chief Operating Officer', 'Founder'],
+    worksFor: [
+      { '@type': 'Organization', name: 'All Lines Business Solutions', url: 'https://simplifyingbusinesses.com' },
+      { '@type': 'Organization', name: 'Prospyr 305', url: 'https://prospyr305.com' },
+    ],
     sameAs: [
       'https://github.com/FranklinIV94',
       'https://www.linkedin.com/in/franklin-bryant-36115363/',
       'https://x.com/theycallmeking_',
-      'https://www.crunchbase.com/organization/all-lines-business-solutions',
     ],
-    worksFor: {
-      '@type': 'Organization',
-      name: 'All Lines Business Solutions',
-      alternateName: 'ALBS',
-    },
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-      />
-      <main className="min-h-screen pt-32 pb-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Left: Bio */}
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="font-mono text-xs text-accent mb-3 block">About</span>
-                <h1 className="font-display font-bold text-4xl md:text-5xl leading-tight mb-8">
-                  Franklin J Bryant IV<span className="text-accent">.</span>
-                </h1>
-                <p className="text-lg text-gray-400 mb-8">
-                  COO of ALL LINES BUSINESS SOLUTIONS. Founder of Prospyr 305. Creator of the AIIO Assessment framework and SENTINEL security audit. Based in Florida, serving clients across five states.
-                </p>
-              </motion.div>
+    <main className="min-h-screen pt-32 pb-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="space-y-5 text-muted leading-relaxed"
-              >
-                <p>
-                  I&apos;m Franklin Jordan Bryant IV, COO of ALL LINES BUSINESS SOLUTIONS and founder of Prospyr 305.
-                  With a background spanning business operations, insurance, and data security, I&apos;ve helped
-                  dozens of Florida companies modernize their workflows and cut operational costs through
-                  AI-accelerated systems. My approach is hands-on, jargon-free, and focused on one thing:
-                  making sure the technology actually pays for itself.
-                </p>
-                <p>
-                  The core of how I work: I design outcomes and direct AI execution rather than
-                  writing code line-by-line. This isn&apos;t about replacing developers — it&apos;s about
-                  amplifying what one person with the right architectural thinking can deliver.
-                  Sixteen projects in production. Fourteen AI agents running 24/7. Industries spanning
-                  healthcare, HR, retail, construction, insurance, and accounting.
-                </p>
-                <p>
-                  I created the <span className="text-white">AIIO Assessment</span> framework, a structured
-                  evaluation that identifies automation opportunities and quantifies ROI before a single
-                  dollar is spent. I also developed <span className="text-white">SENTINEL</span>, a comprehensive
-                  AI security audit designed to protect businesses from the emerging threats that come with
-                  adopting AI tools. I authored the <span className="text-white">Agent Code of Conduct</span> —
-                  an open-source governance framework for AI agent infrastructure, now in production across
-                  fourteen agents. I write about AI governance, agent architecture, and the business of
-                  building systems that run themselves.
-                </p>
-                <p>
-                  My firm, <span className="text-white">All Lines Business Solutions (ALBS)</span>, handles
-                  back-office services: accounting, payroll, tax preparation, and compliance.
-                  <span className="text-white"> Prospyr 305</span> builds agentic engineering systems: AI agent
-                  workforces, competitive audit tools, and custom workflows for established firms.
-                  AI-accelerated development isn&apos;t just our service. It&apos;s how we run the business.
-                  We serve clients across Florida, Georgia, Texas, New York, and California.
-                </p>
-                <p>
-                  Before AI tooling matured, the gap between having a great idea and having a working
-                  product was enormous. That gap has effectively collapsed. I help businesses
-                  understand and capture that leverage. And I write about what I learn along the way.
-                </p>
-              </motion.div>
+      <div className="max-w-6xl mx-auto px-6">
+        {/* ── Hero ─────────────────────────────────────────────── */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_216px] gap-12 items-start">
+          <div>
+            <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-accent">About</span>
+            <h1 className="font-display font-bold text-4xl md:text-6xl leading-[1.03] mt-4">
+              Franklin J Bryant IV<span className="text-accent">.</span>
+            </h1>
+            <p className="text-muted text-lg md:text-xl leading-relaxed mt-5 max-w-[640px]">
+              I run the back office for other people’s companies, and I build the systems that run mine.{' '}
+              <b className="text-white font-medium">Claims adjuster first, then the books, then the fleet.</b>{' '}
+              The job never changed: find out what actually happened, write it down so it holds, put a number
+              on it, and make the work finish.
+            </p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-10"
-              >
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-accent text-canvas font-semibold px-6 py-3 rounded-xl hover:bg-accent/90 transition-colors"
-                >
-                  Work with me →
-                </Link>
-              </motion.div>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {['COO · All Lines Business Solutions', 'Founder · Prospyr 305'].map((chip) => (
+                <span key={chip} className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-muted border border-border rounded-full px-3 py-1.5">
+                  {chip}
+                </span>
+              ))}
+              <span className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-accent border border-accent/35 rounded-full px-3 py-1.5">
+                Runs an agent fleet
+              </span>
             </div>
 
-            {/* Right: Capabilities */}
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 }}
-              >
-                <span className="font-mono text-xs text-accent mb-3 block">How I Work</span>
-                <h2 className="font-display font-bold text-2xl mb-6">AI-Powered Delivery</h2>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-4"
-              >
-                {[
-                  {
-                    title: 'Eaststar + Northstar + Southstar + Prospyr Prime',
-                    desc: 'Four AI agents running 24/7. Eaststar handles office operations, outreach, and pipeline on a Hetzner cloud server. Northstar handles research, development, and heavy computation locally. Southstar handles engineering and security from the Punta Gorda office. Prospyr Prime is the CEO agent on a dedicated Hetzner box.',
-                  },
-                  {
-                    title: 'AIIO Assessment',
-                    desc: 'Structured evaluation that identifies automation opportunities and quantifies ROI before a single dollar is spent. The first step in every Prospyr 305 engagement.',
-                  },
-                  {
-                    title: 'SENTINEL Security Audit',
-                    desc: 'Comprehensive AI security audit that protects businesses from emerging threats that come with adopting AI tools. 1,282 security tests across 102 rules.',
-                  },
-                  {
-                    title: 'Agent-Ready Commerce',
-                    desc: 'We send AI agents to your website as mystery shoppers, test if your business is ready for the AI economy, and deliver a competitive audit with gap analysis.',
-                  },
-                  {
-                    title: 'Structured Memory',
-                    desc: 'Persistent context across sessions. Decisions, preferences, project history, client notes. Nothing is lost between conversations.',
-                  },
-                  {
-                    title: 'AI-First Development',
-                    desc: 'Architecture first, then directed AI execution. The speed difference between AI-assisted and traditional development is an order of magnitude.',
-                  },
-                ].map(({ title, desc }) => (
-                  <div key={title} className="bg-surface border border-border rounded-xl p-5">
-                    <h3 className="font-semibold text-white mb-2">{title}</h3>
-                    <p className="text-sm text-muted leading-relaxed">{desc}</p>
-                  </div>
-                ))}
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="mt-8"
-              >
-                <span className="font-mono text-xs text-accent mb-3 block">Tech Stack</span>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    'Next.js', 'TypeScript', 'Python', 'Node.js', 'Prisma',
-                    'PostgreSQL', 'Stripe', 'Ethers.js', 'AWS', 'Azure', 'Vercel', 'Railway', 'Cloudflare',
-                    'AI Agents', 'OpenAI', 'Anthropic', 'Blockchain', 'Solidity',
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="font-mono text-xs text-muted bg-canvas border border-border px-3 py-1.5 rounded-lg"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-7 max-w-[640px]">
+              {[
+                ['Made', 'AIIO assessment'],
+                ['Made', 'SENTINEL security audit'],
+                ['Wrote', 'Agent Code of Conduct'],
+              ].map(([label, value]) => (
+                <div key={value} className="rounded-lg border border-border bg-surface px-3.5 py-3">
+                  <span className="block font-mono text-[10.5px] uppercase tracking-[0.1em] text-muted mb-1">{label}</span>
+                  <b className="font-medium text-sm text-white">{value}</b>
                 </div>
-              </motion.div>
+              ))}
             </div>
           </div>
+
+          {/* Headshot — served as a static asset with intrinsic size set (no layout shift) */}
+          <div className="justify-self-start lg:justify-self-end w-[120px] lg:w-[216px] lg:mt-14">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/about-portrait.jpg"
+              alt="Franklin J Bryant IV"
+              width={400}
+              height={400}
+              className="w-full h-auto aspect-square object-cover rounded-[14px] border border-border"
+            />
+            <span className="block mt-2.5 font-mono text-[10.5px] uppercase tracking-[0.08em] text-muted">
+              Florida · remote across 5 states
+            </span>
+          </div>
         </div>
-      </main>
-    </>
+
+        {/* ── Three beats ──────────────────────────────────────── */}
+        <section className="mt-20">
+          <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-accent">Three beats</span>
+          <h2 className="font-display font-bold text-3xl md:text-4xl mt-3">
+            How an adjuster ends up running agents<span className="text-accent">.</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-7">
+            {BEATS.map((b) => (
+              <article key={b.n} className="rounded-2xl border border-border bg-surface p-6">
+                <div className="flex justify-between font-mono text-xs text-accent mb-3">
+                  {b.n} <span className="text-muted uppercase tracking-[0.08em]">{b.tag}</span>
+                </div>
+                <h3 className="font-display font-bold text-xl leading-snug">{b.title}</h3>
+                <p className="text-muted text-[15px] leading-relaxed mt-3">{b.body}</p>
+                <div className="mt-4 pt-3 border-t border-dashed border-border text-[13px] text-muted">
+                  <b className="text-muted font-medium">Carried forward:</b> {b.carry}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* ── How I work ───────────────────────────────────────── */}
+        <section className="mt-20">
+          <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-accent">How I work</span>
+          <h2 className="font-display font-bold text-3xl md:text-4xl mt-3">
+            Six things you can count on<span className="text-accent">.</span>
+          </h2>
+          <p className="text-muted mt-3 max-w-xl">
+            These are not values. They are procedures, and each one is visible on the{' '}
+            <Link href="/showcase" className="text-accent hover:underline">Showcase</Link> page as a receipt.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-7">
+            {METHOD.map((m) => (
+              <div key={m.title} className="rounded-2xl border border-border bg-surface p-6">
+                <div className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-accent mb-2.5">{m.k}</div>
+                <h3 className="font-display font-bold text-lg leading-snug">{m.title}</h3>
+                <p className="text-muted text-[14.5px] leading-relaxed mt-2">{m.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 rounded-2xl border border-border bg-[#0d0e13] px-5 py-4 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4 items-center">
+            <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-accent whitespace-nowrap">
+              A human holds three gates
+            </span>
+            <ol className="flex flex-wrap gap-2.5 list-none m-0 p-0">
+              {[
+                ['Irreversible', 'delete, migrate, sign'],
+                ['Client-facing', 'anything they see or receive'],
+                ['Money', 'anything that spends or bills'],
+              ].map(([a, b]) => (
+                <li key={a} className="font-mono text-[12.5px] text-muted border border-border rounded-full px-3 py-1.5">
+                  <b className="text-white font-medium">{a}</b> · {b}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* ── Who I work with / Writing ────────────────────────── */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
+          <div className="rounded-2xl border border-border bg-surface p-6">
+            <h3 className="font-display font-bold text-xl mb-2.5">Who I work with</h3>
+            <p className="text-muted text-[14.5px] leading-relaxed">
+              Owner-operators of firms with a back office that keeps not getting done: practices, agencies,
+              contractors, PEOs, law and accounting firms. Based in Florida; clients in Florida, Georgia,
+              Texas, New York and California.
+            </p>
+            <ul className="mt-4 grid gap-2 list-none p-0">
+              {[
+                ['Back-office operations', 'ALBS'],
+                ['Agentic systems, audits, products', 'Prospyr 305'],
+                ['Fractional CFO and project leadership', 'direct'],
+              ].map(([a, b]) => (
+                <li key={a} className="flex justify-between gap-3 border-b border-dashed border-border pb-2 text-sm">
+                  <span className="text-white">{a}</span>
+                  <span className="text-muted font-mono text-[11.5px]">{b}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4 font-mono text-[12.5px] leading-relaxed text-muted">
+              <b className="text-white font-medium">Builds in</b> Next.js · TypeScript · Python · Postgres ·
+              Stripe · AWS / Azure / Vercel / Cloudflare · Anthropic and OpenAI models
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-border bg-surface p-6">
+            <h3 className="font-display font-bold text-xl mb-2.5">Writing</h3>
+            <p className="text-muted text-[14.5px] leading-relaxed">
+              I write about agent governance, agent architecture, and the business of building systems that
+              run themselves — from the operator’s chair, with the receipts.
+            </p>
+            <ul className="mt-4 grid gap-2 list-none p-0">
+              {[
+                ['Field notes', 'weekly', '/field-notes'],
+                ['Blog', 'long form', '/blog'],
+                ['RSS', 'feed', '/rss.xml'],
+              ].map(([a, b, href]) => (
+                <li key={a} className="flex justify-between gap-3 border-b border-dashed border-border pb-2 text-sm">
+                  <Link href={href} className="text-white hover:text-accent transition-colors">{a}</Link>
+                  <span className="text-muted font-mono text-[11.5px]">{b}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4 font-mono text-[12.5px] text-muted">
+              <b className="text-white font-medium">Elsewhere</b>{' '}
+              <a href="https://github.com/FranklinIV94" target="_blank" rel="noopener noreferrer" className="hover:text-accent">GitHub</a> ·{' '}
+              <a href="https://www.linkedin.com/in/franklin-bryant-36115363/" target="_blank" rel="noopener noreferrer" className="hover:text-accent">LinkedIn</a> ·{' '}
+              <a href="https://x.com/theycallmeking_" target="_blank" rel="noopener noreferrer" className="hover:text-accent">X</a>
+            </div>
+            <div className="mt-3 font-mono text-[12.5px] text-muted">
+              <b className="text-white font-medium">Standard</b>{' '}
+              <a href="https://github.com/FranklinIV94/agent-code-of-conduct" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                Agent Code of Conduct
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── CTA ──────────────────────────────────────────────── */}
+        <section className="mt-14">
+          <div className="rounded-2xl border border-border bg-gradient-to-b from-surface to-canvas p-10 text-center">
+            <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-accent">Next</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl mt-3">
+              Fifteen minutes, no deck<span className="text-accent">.</span>
+            </h2>
+            <p className="text-muted max-w-xl mx-auto mt-4">
+              Bring the work that keeps not getting done. You leave with the acceptance test we would write for
+              it, whether or not we work together.
+            </p>
+            <div className="flex flex-wrap gap-2.5 justify-center mt-6">
+              <Link href="/book" className="inline-flex items-center bg-accent text-canvas font-semibold rounded-full px-6 py-3 hover:opacity-90 transition-opacity">
+                Book 15 minutes
+              </Link>
+              <Link href="/showcase" className="inline-flex items-center border border-border text-white font-semibold rounded-full px-6 py-3 hover:border-accent/50 transition-colors">
+                See the receipts →
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }

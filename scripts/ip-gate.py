@@ -29,6 +29,11 @@ import urllib.error
 import urllib.request
 
 DEFAULT_URLS = [
+    # Whole-site default set. /about was NOT in the original list, which is how a card naming four
+    # fleet agents, their hosts and an office city survived on the second-most-visited page while
+    # this gate reported PASS. A gate that scans one page is a gate for one page.
+    "https://franklin.simplifyingbusinesses.com/",
+    "https://franklin.simplifyingbusinesses.com/about",
     "https://franklin.simplifyingbusinesses.com/showcase",
     "https://franklin.simplifyingbusinesses.com/book",
     "https://franklin.simplifyingbusinesses.com/showcase/engineering/agent-fleet.html",
