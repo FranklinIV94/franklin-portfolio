@@ -70,10 +70,20 @@ export async function GET(_request: NextRequest) {
     const actions: any[] = Array.isArray(acts.actions) ? acts.actions : [];
 
     // ── Counts ────────────────────────────────────────────────────────────
-    const agentsTotal = new Set(
-      actions.map((a) => String(a.agentName || '').toLowerCase()).filter(Boolean)
-    ).size;
-    const agentsTotalFinal = agentsTotal || PUBLIC_ROLES.length;
+    // Fleet size = distinct agents seen in EITHER the schedule rows or the recent-action
+    // window. Counting only actions reported "3 agents" on a five-agent fleet, because an
+    // agent that had not acted inside the window simply vanished — a total derived from a
+    // window is not a total. Names are counted here and never returned.
+    const seenAgents = new Set<string>();
+    for (const a of actions) {
+      const who = String(a.agentName || '').toLowerCase().trim();
+      if (who) seenAgents.add(who);
+    }
+    for (const s of schedules) {
+      const who = String(s.scheduledBy || '').toLowerCase().trim();
+      if (who) seenAgents.add(who);
+    }
+    const agentsTotalFinal = Math.max(seenAgents.size, PUBLIC_ROLES.length);
 
     const cutoff = Date.now() - 24 * 60 * 60 * 1000;
     const jobs24h = actions.filter((a) => {
