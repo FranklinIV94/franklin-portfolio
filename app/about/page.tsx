@@ -171,14 +171,21 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Headshot — served as a static asset with intrinsic size set (no layout shift) */}
+          {/* Headshot — six-second cinematic intro, same slot and geometry as the still it
+              replaced (Franklin, 2026-10-21). Square frame, object-cover so the crop is
+              identical to the photo's, poster on first paint so there is no flash, and the
+              source was re-encoded HEVC -> H.264 yuv420p because HEVC only plays in Safari.
+              Muted + playsInline are what make autoplay legal on mobile. */}
           <div className="justify-self-start lg:justify-self-end w-[120px] lg:w-[216px] lg:mt-14">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/about-portrait.jpg"
-              alt="Franklin J Bryant IV"
-              width={400}
-              height={400}
+            <video
+              src="/about-intro.mp4"
+              poster="/about-intro-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="Franklin J Bryant IV"
               className="w-full h-auto aspect-square object-cover rounded-[14px] border border-border"
             />
             <span className="block mt-2.5 font-mono text-[10.5px] uppercase tracking-[0.08em] text-muted">
