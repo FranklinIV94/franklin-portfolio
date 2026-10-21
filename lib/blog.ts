@@ -10,6 +10,15 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'php2shell',
+    title: 'The Patch Landed at 10 A.M.',
+    excerpt:
+      'Two 9.2-severity remote code execution flaws in PHP, with details circulating before the fix existed, patched in one coordinated hour on 21 October 2026. PHP quietly runs WordPress and most of the small-business web. What happened, why AI compressed the window, and the five habits that protect a normal person.',
+    date: 'October 21, 2026',
+    dateISO: '2026-10-21',
+    tag: 'AI & Security',
+  },
+  {
     slug: 'data-brokerage-boom',
     title: 'The Data Brokerage Boom: Who Wins When AI Eats the Software but Not the Data',
     excerpt:

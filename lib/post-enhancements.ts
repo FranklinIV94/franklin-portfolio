@@ -20,6 +20,45 @@ export type PostEnhancement = {
 };
 
 export const postEnhancements: Record<string, PostEnhancement> = {
+  // php2shell
+  'php2shell': {
+    tldr: {
+      lines: [
+        "On 21 October 2026 PHP shipped an emergency fix for two remote code execution flaws rated 9.2, with technical detail circulating publicly before a patch existed.",
+        "PHP runs WordPress, WooCommerce, Drupal, Joomla, Magento and much of shared hosting, so most site owners are exposed without ever having chosen it.",
+        "The lesson for people building with AI is not about PHP: it is that maintenance is a habit nothing hands you, and a site nobody patches is a liability rather than an asset.",
+      ],
+      keyTerm: "the disclosure-to-exploitation window",
+      inOtherWords:
+        "The software under your site is not the part you built, and it is the part that gets attacked.",
+    },
+    citations: [
+      {
+        label: "PHP.net — official security release announcement, October 2026 archive",
+        url: "https://www.php.net/archive/2026.php",
+        supports:
+          "the emergency security release and its timing; the two vulnerabilities and the 9.2 severity rating",
+      },
+      {
+        label: "BleepingComputer — PHP warns admins of two critical flaws, emergency patches coming tomorrow",
+        url: "https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/",
+        supports:
+          "the 14:00 UTC / 10:00 A.M. Eastern release time, both flaws rated 9.2 under CVSS v4.0, and the maintainers' commitment to release sooner if details went public or exploitation appeared",
+      },
+      {
+        label: "GoDaddy — Important PHP security update: what website owners need to do",
+        url: "https://www.godaddy.com/resources/news/important-php-security-update-what-website-owners-need-to-do",
+        supports:
+          "both vulnerabilities being remote code execution, the affected platforms (WordPress, WooCommerce, Drupal, Joomla, Magento, Laravel), and the 'assume you are affected until updated' guidance",
+      },
+      {
+        label: "Huntress — php2shell, leaked critical PHP vulnerabilities (CVE-2026-109618, CVE-2026-109619)",
+        url: null,
+        supports:
+          "the report that technical detail circulated before the fix and that the release was moved earlier than the original embargo",
+      },
+    ],
+  },
   // data-brokerage-boom
   'data-brokerage-boom': {
     tldr: {
