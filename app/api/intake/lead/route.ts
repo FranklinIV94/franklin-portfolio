@@ -38,7 +38,10 @@ export async function POST(req: NextRequest) {
       data = { error: e instanceof Error ? e.message : 'portal unreachable' };
     }
 
-    const ok = !!res?.ok && !!data.token;
+    // The portal returns either a booking token or a plain success payload depending on the
+    // service mix. Treating a created lead as a failure produced a false 'CRM write FAILED' alert,
+    // which is worse than no alert: it trains you to ignore the one that matters.
+    const ok = !!res?.ok && (!!data.token || data.success === true || !!data.leadId);
     const leadId = typeof data.leadId === 'string' ? data.leadId : undefined;
 
     // Notify regardless of outcome. A lead that failed to record is exactly the one worth an email:
