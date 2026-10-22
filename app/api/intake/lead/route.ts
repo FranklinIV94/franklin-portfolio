@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { leadEmailHtml, notifyOwner } from '@/lib/notify';
 
 const PORTAL_API = 'https://onboarding.simplifyingbusinesses.com/api/v1/intake';
 
@@ -14,23 +15,50 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const lead = {
+      name: `${firstName ?? ''} ${lastName ?? ''}`.trim(),
+      email,
+      phone,
+      company,
+      service: body.service ?? body.interest ?? body.topic ?? null,
+      message: body.message ?? body.notes ?? body.details ?? null,
+    };
+
     // Forward to ALBS portal API
-    const res = await fetch(PORTAL_API, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ firstName, lastName, email, phone, company }),
+    let res: Response | null = null;
+    let data: Record<string, unknown> = {};
+    try {
+      res = await fetch(PORTAL_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstName, lastName, email, phone, company }),
+      });
+      data = await res.json();
+    } catch (e) {
+      data = { error: e instanceof Error ? e.message : 'portal unreachable' };
+    }
+
+    const ok = !!res?.ok && !!data.token;
+    const leadId = typeof data.leadId === 'string' ? data.leadId : undefined;
+
+    // Notify regardless of outcome. A lead that failed to record is exactly the one worth an email:
+    // silently losing an enquiry is worse than a noisy inbox.
+    await notifyOwner({
+      subject: ok
+        ? `Site enquiry — ${lead.name || 'unknown'}${lead.company ? ` (${lead.company})` : ''}`
+        : `Site enquiry NEEDS ATTENTION — ${lead.name || 'unknown'} (CRM write failed)`,
+      html: leadEmailHtml(lead, { ok, leadId, source: req.headers.get('referer') || 'contact form' }),
+      replyTo: typeof email === 'string' ? email : undefined,
     });
 
-    const data = await res.json();
-
-    if (res.ok && data.token) {
+    if (ok) {
       // Redirect to calendar hub booking page
       return NextResponse.json({
         redirect: `https://calendar.simplifyingbusinesses.com/book?token=${data.token}`,
       });
     }
 
-    return NextResponse.json(data, { status: res.status });
+    return NextResponse.json(data, { status: res?.status ?? 502 });
   } catch (error) {
     console.error('Intake error:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
