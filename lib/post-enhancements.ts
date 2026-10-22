@@ -21,12 +21,14 @@ export type PostEnhancement = {
 
 export const postEnhancements: Record<string, PostEnhancement> = {
   // php2shell
-  'php2shell': {
+    'php2shell': {
     tldr: {
       lines: [
+        'php2shell',
         "On 21 October 2026 PHP shipped an emergency fix for two remote code execution flaws rated 9.2, with technical detail circulating publicly before a patch existed.",
         "PHP runs WordPress, WooCommerce, Drupal, Joomla, Magento and much of shared hosting, so most site owners are exposed without ever having chosen it.",
         "The lesson for people building with AI is not about PHP: it is that maintenance is a habit nothing hands you, and a site nobody patches is a liability rather than an asset.",
+        'What we changed inside our own estate this week, and what we did not disclose',
       ],
       keyTerm: "the disclosure-to-exploitation window",
       inOtherWords:

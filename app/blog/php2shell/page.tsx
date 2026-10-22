@@ -108,6 +108,11 @@ export default function Php2Shell() {
       </header>
 
       {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
+      <p className="text-sm text-muted border-l-2 border-accent/60 pl-4 mb-10">
+        <strong className="text-white">Updated 22 October 2026</strong> — added what we found
+        inside our own estate, what we changed, and the standing arrangement that came out of it.
+      </p>
+
       <PostTldr slug="php2shell" />
 
       {/* Hero image */}
@@ -318,6 +323,105 @@ export default function Php2Shell() {
         </p>
 
       </div>
+
+
+        <h2 className="font-display text-2xl font-bold text-white pt-4">
+          What we did in the first twelve hours
+        </h2>
+
+        <p>
+          We treat an advisory like this as an operational event, not as news. The reading is the
+          easy part. What follows is the part that decides whether the next forty-eight hours are
+          boring.
+        </p>
+
+        <p>
+          <strong className="text-white">We went to the primary source first.</strong> The advisory
+          itself, then the vendor&apos;s own guidance, then the host-level notices. Commentary is
+          useful for context and actively harmful for decisions: it is written at the speed of
+          attention, and it is frequently wrong about scope in the first day.
+        </p>
+
+        <p>
+          <strong className="text-white">We inventoried before we patched.</strong> Patching fast is
+          worthless if you patch the wrong thing and assume the rest. So the first pass is always the
+          same question asked of every system we operate or maintain on someone&apos;s behalf: what
+          is actually running here, who built it, and who is responsible for it this quarter. Half
+          the value of an incident like this is the inventory it forces you to produce.
+        </p>
+
+        <p>
+          <strong className="text-white">We verified state instead of trusting settings.</strong>
+          &ldquo;Automatic updates are on&rdquo; is a setting. A version number, read back from the
+          system itself, is a fact. We check the fact. Where something could not be updated in place,
+          we treated it as compromised until proven otherwise rather than as pending.
+        </p>
+
+        <p>
+          <strong className="text-white">We gave the adjacent layers the same scrutiny.</strong> Code
+          is the obvious surface. The certificate stores and the credentials that let systems talk to
+          each other are quieter and just as consequential, and they are usually the last thing anyone
+          checks. Ours got the same treatment as the application layer.
+        </p>
+
+        <p>
+          <strong className="text-white">We accepted that we had drifted.</strong> Two of our own
+          internal rails had quietly gone stale in the past month. Neither was a breach. Both were
+          corrected within the day, and both are now watched by an automated check that reports to us
+          before anyone outside would notice. Any firm that tells you nothing drifted during a week
+          like this is telling you they did not look.
+        </p>
+
+        <p>
+          <strong className="text-white">We made the fix verifiable, not just done.</strong> An API
+          returning success is a claim. Reading the change back from the system, independently, is
+          proof. Every remedy from this week was confirmed the second way, and that is now the standing
+          rule rather than a habit that depends on who is awake.
+        </p>
+
+        <h2 className="font-display text-2xl font-bold text-white pt-4">
+          Why this matters more for the small operator
+        </h2>
+
+        <p>
+          A large company has a security team whose entire job is to spend a day like this. A
+          twenty-person business, or someone running four sites built with AI tools on a Tuesday,
+          has nobody. The advisory is public, the fix is available, and the gap is that no one is
+          assigned to read either.
+        </p>
+
+        <p>
+          That gap is not closed by caring more. It is closed by something that happens whether or not
+          anyone remembers: an inventory that exists, a check that fails loudly, and a decision made
+          in advance about what gets shut off when a genuinely critical flaw lands and there is no
+          patch yet.
+        </p>
+
+        <div className="my-12 rounded-2xl border border-accent/40 bg-accent/[0.06] p-8">
+          <div className="font-mono text-xs uppercase tracking-widest text-accent mb-3">
+            Prospyr 305 Sentinel
+          </div>
+          <h3 className="font-display text-xl font-bold text-white mb-3">
+            The standing version of what we did this week
+          </h3>
+          <p className="text-muted mb-4">
+            Sentinel is the arrangement we built after enough of these mornings: continuous watching
+            of the advisories that actually affect the systems you run, a maintained inventory so
+            nobody is guessing under pressure, verification that patches landed rather than being
+            scheduled, and a named person who responds when something critical has no fix yet.
+          </p>
+          <p className="text-muted mb-6">
+            It is deliberately unglamorous. Most of the value arrives on the days nothing happens,
+            and the day it pays for itself is the one where you find out from us instead of from a
+            customer.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block rounded-full bg-accent px-6 py-3 text-sm font-bold text-black hover:opacity-90 transition-opacity"
+          >
+            Ask about Sentinel →
+          </a>
+        </div>
 
       <PostSources slug="php2shell" />
     </article>
