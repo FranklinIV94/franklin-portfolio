@@ -55,9 +55,18 @@ export async function POST(req: NextRequest) {
     });
 
     if (ok) {
-      // Redirect to calendar hub booking page
+      // Only offer the booking redirect when the portal actually issued a token. Building the URL
+      // with an undefined token sends a real lead to a broken page, which is worse than a plain
+      // acknowledgement.
+      if (typeof data.token === 'string' && data.token.length > 0) {
+        return NextResponse.json({
+          redirect: `https://calendar.simplifyingbusinesses.com/book?token=${data.token}`,
+        });
+      }
       return NextResponse.json({
-        redirect: `https://calendar.simplifyingbusinesses.com/book?token=${data.token}`,
+        success: true,
+        leadId: leadId ?? null,
+        message: 'Thanks — we have your details and will come back to you today.',
       });
     }
 

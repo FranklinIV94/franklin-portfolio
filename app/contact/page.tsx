@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState<string | null>(null);
 
   // Use non-standard names so browser autofill can't pre-populate
   const [fields, setFields] = useState({
@@ -36,6 +37,9 @@ export default function ContactPage() {
 
       if (res.ok && data.redirect) {
         window.location.href = data.redirect;
+      } else if (res.ok && data.success) {
+        setSent(data.message || 'Thanks — we have your details.');
+        setSubmitting(false);
       } else {
         alert(data.error || 'Something went wrong. Please try again.');
         setSubmitting(false);
@@ -69,6 +73,17 @@ export default function ContactPage() {
               a time that works.
             </p>
 
+            {sent && (
+              <div className="mb-8 rounded-2xl border border-accent/40 bg-accent/[0.06] p-6">
+                <div className="font-mono text-xs uppercase tracking-widest text-accent mb-2">
+                  Message received
+                </div>
+                <p className="text-white">{sent}</p>
+                <p className="text-sm text-muted mt-2">
+                  If it is urgent, call (561) 589-8900.
+                </p>
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* First + Last Name */}
               <div className="grid grid-cols-2 gap-4">
