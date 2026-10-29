@@ -1,7 +1,7 @@
 import { PostTldr, PostSources } from '@/components/PostEnhancements';
 
 export const metadata = {
-  title: 'The Patch Landed at 10 A.M. — What Two Leaked PHP Flaws Mean for Anyone Building With AI | Franklin J Bryant IV',
+  title: 'The Patch Landed at 10 A.M.: What Two Leaked PHP Flaws Mean for Anyone Building With AI | Franklin J Bryant IV',
   description:
     'Two 9.2-severity remote code execution flaws in PHP, with details circulating before the fix existed, patched in one coordinated hour on 21 October 2026. PHP quietly runs WordPress and most of the small-business web. What actually happened, why AI compressed the timeline, and the habits that protect a normal person.',
   keywords: [
@@ -109,7 +109,7 @@ export default function Php2Shell() {
 
       {/* TL;DR — thesis in three lines (lib/post-enhancements.ts) */}
       <p className="text-sm text-muted border-l-2 border-accent/60 pl-4 mb-10">
-        <strong className="text-white">Updated 22 October 2026</strong> — added what we found
+        <strong className="text-white">Updated 22 October 2026</strong>: added what we found
         inside our own estate, what we changed, and the standing arrangement that came out of it.
       </p>
 

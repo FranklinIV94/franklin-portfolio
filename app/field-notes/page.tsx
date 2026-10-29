@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Field Notes — Franklin J Bryant IV',
+  title: 'Field Notes · Franklin J Bryant IV',
   description:
     'Living documents: the AI usage policy, the security gate, and the operating standards we actually run on. Unlike the essays, these change as practice changes.',
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/field-notes' },
   openGraph: {
-    title: 'Field Notes — Franklin J Bryant IV',
+    title: 'Field Notes · Franklin J Bryant IV',
     description:
       'Living documents: the AI usage policy, the security gate, and the operating standards we actually run on.',
     type: 'website',
@@ -89,7 +89,7 @@ export default function FieldNotesPage() {
       </div>
 
       <p className="mt-16 text-sm text-gray-400 border-t border-border pt-8">
-        When a note and an essay disagree, the note is newer — the note is what we run on today.
+        When a note and an essay disagree, the note is newer. The note is what we run on today.
         Questions about either: <a href="mailto:franklin@prospyr305.com">franklin@prospyr305.com</a>.
       </p>
     </main>

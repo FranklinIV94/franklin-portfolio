@@ -17,7 +17,7 @@ import Link from 'next/link';
 //   * First person, plain. No hype vocabulary, no exclamation marks.
 
 export const metadata: Metadata = {
-  title: 'About — Franklin J Bryant IV',
+  title: 'About · Franklin J Bryant IV',
   description:
     'Claims adjuster, then the books, then the fleet. COO of a back-office firm and founder of Prospyr 305. I design the outcome and the acceptance test; agents do the hours; a person holds the gates.',
   alternates: { canonical: '/about' },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'profile',
     siteName: 'Franklin J Bryant IV',
     url: 'https://franklin.simplifyingbusinesses.com/about',
-    title: 'About — Franklin J Bryant IV',
+    title: 'About · Franklin J Bryant IV',
     description:
       'Claims adjuster, then the books, then the fleet. COO of a back-office firm and founder of Prospyr 305.',
     images: [
@@ -82,7 +82,7 @@ const METHOD = [
   {
     k: 'Delivery',
     title: 'Agents by role, not by vendor',
-    body: 'A chief-executive agent, an operations agent, a research agent, a deploy agent, an understudy. Each has a scope, a memory and a ledger. Where they run is nobody’s business but ours — that is a security posture, not a secret.',
+    body: 'A chief-executive agent, an operations agent, a research agent, a deploy agent, an understudy. Each has a scope, a memory and a ledger. Where they run is nobody’s business but ours. That is a security posture, not a secret.',
   },
   {
     k: 'Security',
@@ -285,7 +285,7 @@ export default function AboutPage() {
             <h3 className="font-display font-bold text-xl mb-2.5">Writing</h3>
             <p className="text-muted text-[14.5px] leading-relaxed">
               I write about agent governance, agent architecture, and the business of building systems that
-              run themselves — from the operator’s chair, with the receipts.
+              run themselves, from the operator’s chair, with the receipts.
             </p>
             <ul className="mt-4 grid gap-2 list-none p-0">
               {[

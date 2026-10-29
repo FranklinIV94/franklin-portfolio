@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How We Use AI — Policy | Franklin J Bryant IV',
+  title: 'How We Use AI: Policy | Franklin J Bryant IV',
   description:
     'Our operating policy for AI: where it is used, where a human signs off, how client data is handled, and how to tell us to keep your work entirely manual.',
   keywords: [
@@ -88,7 +88,7 @@ export default function AiUsagePolicy() {
           <strong className="text-white">2. No autonomous client-facing action.</strong> Our systems
           propose; a human approves. Sending, filing, paying, submitting, or committing something on a
           client&apos;s behalf sits behind an approval gate by design, not by configuration. We build
-          the gate first and the automation second — that order matters, and it is the opposite of how
+          the gate first and the automation second. That order matters, and it is the opposite of how
           most agent projects get built.
         </p>
 
@@ -103,7 +103,7 @@ export default function AiUsagePolicy() {
         <p>
           <strong className="text-white">4. You can switch it off.</strong> Tell us a piece of work
           should be handled entirely by people and it will be. That applies to a whole engagement, one
-          system, or one document. No fee change, no argument, no upsell — it&apos;s your work.
+          system, or one document. No fee change, no argument, no upsell: it&apos;s your work.
         </p>
 
         <h2 className="font-display font-bold text-2xl text-white pt-8">Where we do use it</h2>
@@ -111,7 +111,7 @@ export default function AiUsagePolicy() {
         <div className="rounded-xl border border-border bg-white/5 p-5">
           <ul className="space-y-2 text-gray-300">
             <li>• Drafting and restructuring writing, proposals, and internal documentation.</li>
-            <li>• Research intake — reading, extracting, and summarizing public sources at volume.</li>
+            <li>• Research intake: reading, extracting, and summarizing public sources at volume.</li>
             <li>• Code we build and maintain, including the checks that catch our own mistakes.</li>
             <li>• Internal operations: routing, scheduling, reconciliation, and reporting.</li>
             <li>• Review passes that look for what a tired human would miss at 11pm.</li>
@@ -133,7 +133,7 @@ export default function AiUsagePolicy() {
 
         <p>
           A policy nobody checks is decoration. Two habits keep this one honest. First, every system we
-          ship passes a pre-launch security gate before it touches a real user —{' '}
+          ship passes a pre-launch security gate before it touches a real user.{' '}
           <a href="/field-notes/pre-launch-security-checklist" className="text-accent">
             the checklist is public
           </a>

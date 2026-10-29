@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { blogPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
-  title: 'Writing — Franklin J Bryant IV',
+  title: 'Writing · Franklin J Bryant IV',
   description: 'Essays on AI, business, and building systems that run themselves.',
 };
 
