@@ -97,7 +97,7 @@ export function Navbar() {
             </Link>
           ))}
           <div className="pt-3 mt-2 border-t border-border">
-            <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-2 block">Prospyr 305 — Agentic Engineering</span>
+            <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-2 block">Prospyr 305 · Agentic Engineering</span>
             <div className="flex flex-col gap-3">
               {firmLinks.map(({ href, label }) => (
                 <a

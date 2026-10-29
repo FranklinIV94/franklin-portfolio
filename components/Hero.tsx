@@ -43,7 +43,7 @@ export function Hero() {
         >
           I architect systems where AI executes.
           Directing AI-powered development to deliver results that used to
-          require entire teams — and writing about what I learn along the way.
+          require entire teams. And writing about what I learn along the way.
         </motion.p>
 
         {/* CTAs — ONE primary + quiet email */}

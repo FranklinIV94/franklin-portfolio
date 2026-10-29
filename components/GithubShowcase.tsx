@@ -78,7 +78,7 @@ export function GithubShowcase() {
         {/* Auto-pulled from GitHub */}
         <div className="mb-6">
           <span className="font-mono text-xs text-muted bg-surface border border-border px-3 py-1.5 rounded-full">
-            ↻ Auto-synced from GitHub — updated every 5 minutes
+            ↻ Auto-synced from GitHub · updated every 5 minutes
           </span>
         </div>
 

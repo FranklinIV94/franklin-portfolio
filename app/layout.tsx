@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://franklin.simplifyingbusinesses.com'),
-  title: 'Franklin J Bryant IV — AI Business Solutions Architect',
+  title: 'Franklin J Bryant IV · AI Business Solutions Architect',
   description: 'I build autonomous AI systems that operate, transact, and scale. Founder of All Lines Business Solutions.',
   keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'AI business solutions', 'agentic engineering', 'autonomous systems', 'ALBS', 'Prospyr 305', 'AI automation', 'business automation'],
   // Self-referencing canonical for EVERY route. './' resolves against metadataBase + the
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   // and de-duplicated all blog posts out of the index (fixed 2026-09-26).
   alternates: { canonical: './' },
   openGraph: {
-    title: 'Franklin J Bryant IV — AI Business Solutions Architect',
+    title: 'Franklin J Bryant IV · AI Business Solutions Architect',
     description: 'I build autonomous AI systems that operate, transact, and scale.',
     type: 'website',
     siteName: 'Franklin J Bryant IV',
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Franklin J Bryant IV — Writing"
+          title="Franklin J Bryant IV · Writing"
           href="https://franklin.simplifyingbusinesses.com/rss.xml"
         />
         <script
