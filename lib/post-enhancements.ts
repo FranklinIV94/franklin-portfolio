@@ -20,6 +20,28 @@ export type PostEnhancement = {
 };
 
 export const postEnhancements: Record<string, PostEnhancement> = {
+  // ai-pullback-is-an-ownership-problem
+  'ai-pullback-is-an-ownership-problem': {
+    tldr: {
+      lines: [
+        'The reports say companies are pulling back from AI because of errors, cost and poor output.',
+        "Almost none of those stories describe a weak model. They describe a project that was bought instead of installed: the partner left, nobody was trained, the cost had no ceiling, and the output had no test.",
+        'Those are four symptoms of one missing thing, and it is cheaper to fix than the build was.',
+        'Four lines on one page, before you buy anything else',
+      ],
+      keyTerm: 'installed, not bought',
+      inOtherWords:
+        'The tool was never the problem. Nobody wrote down what it was supposed to do, or who answers for it now.',
+    },
+    citations: [
+      {
+        label: "JJ Englert — 'This is not an AI failure. It is an org failure.' (X, 29 October 2026)",
+        url: 'https://x.com/JJEnglert/status/2115790430969151597',
+        supports:
+          'the org-failure framing and the missing prerequisites: no company AI strategy, no change management, no data/token policy, no training, no exec decision-making',
+      },
+    ],
+  },
   // php2shell
     'php2shell': {
     tldr: {

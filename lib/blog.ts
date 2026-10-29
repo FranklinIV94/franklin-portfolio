@@ -10,6 +10,15 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-pullback-is-an-ownership-problem',
+    title: 'The AI Pullback Is Not an AI Problem',
+    excerpt:
+      'Companies are not winding back AI. They are winding back projects nobody owned. The same four failures show up every time: the partner left, nobody was trained, the cost was unbounded, and there was no way to judge the output.',
+    date: 'October 29, 2026',
+    dateISO: '2026-10-29',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'php2shell',
     title: 'The Patch Landed at 10 A.M.',
     excerpt:
