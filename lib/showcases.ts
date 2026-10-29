@@ -33,11 +33,11 @@ export const showcaseCategories: ShowcaseCategory[] = [
     id: 'design-craft',
     label: 'Design Craft',
     blurb:
-      'Live, interactive experiments in visual craft — blurred mesh gradients, component systems, and motion. Working artifacts, not static mockups.',
+      'Live, interactive experiments in visual craft: blurred mesh gradients, component systems, and motion. Working artifacts, not static mockups.',
     items: [
       {
         slug: 'project-a-weather-card',
-        title: 'Blur Mesh — Weather Card',
+        title: 'Blur Mesh Weather Card',
         tag: 'Visual Craft',
         desc: 'Overlapping solid blobs blurred into a soft mesh wash, with clean UI on top. The technique behind premium mobile cards.',
         file: '/showcase/design-craft/project-a-weather-card.html',
@@ -55,7 +55,7 @@ export const showcaseCategories: ShowcaseCategory[] = [
         slug: 'project-c-component-system',
         title: 'Mesh Component System',
         tag: 'Design System',
-        desc: 'Color tokens, a Mesh/Background component with four themes, and reusable Button/Input/Chip/Weather components. Swap a theme, restyle the mesh — no rebuilding.',
+        desc: 'Color tokens, a Mesh/Background component with four themes, and reusable Button/Input/Chip/Weather components. Swap a theme, restyle the mesh without rebuilding.',
         file: '/showcase/design-craft/project-c-component-system.html',
         ratio: 'aspect-[4/3]',
       },
@@ -80,21 +80,21 @@ export const showcaseCategories: ShowcaseCategory[] = [
     id: 'engineering',
     label: 'Engineering',
     blurb:
-      'Proof of how systems actually run — live, read-only views of the agent fleet and the infrastructure behind it.',
+      'Proof of how systems actually run: live, read-only views of the agent fleet and the infrastructure behind it.',
     items: [
       {
         slug: 'agent-fleet',
-        title: 'Agent Fleet — Live',
+        title: 'Agent Fleet Live',
         tag: 'Live System',
-        desc: 'A read-only view of the agent fleet running right now — who is online, what each is working on, and live activity. Real data, refreshing every 15 seconds.',
+        desc: 'A read-only view of the agent fleet running right now: who is online, what each is working on, and live activity. Real data, refreshing every 15 seconds.',
         file: '/showcase/engineering/agent-fleet.html',
         ratio: 'aspect-[4/3]',
       },
       {
         slug: 'model-armor',
-        title: 'Model Armor — Injection Blocked',
+        title: 'Model Armor: Injection Blocked',
         tag: 'Security',
-        desc: 'An interactive sandbox: try a prompt-injection attack and watch it get blocked at the deterministic gate — before it ever reaches the model. Every attempt audited.',
+        desc: 'An interactive sandbox: try a prompt-injection attack and watch it get blocked at the deterministic gate, before it ever reaches the model. Every attempt audited.',
         file: '/showcase/engineering/model-armor.html',
         ratio: 'aspect-[4/3]',
       },

@@ -143,7 +143,7 @@ export const showcaseCases: ShowcaseCase[] = [
     decision:
       'Redact line-for-line the same day, then publish a standard, not a memo: a never-ship list with the safe substitute for each class, a mechanical scan anyone can run, a four-step gate with a second reviewer, and named owners.',
     shipped:
-      '22 lessons, 90 lines redacted with quiz structure intact; the scan script; the pre-publish gate every agent now runs before anything goes public — including this page.',
+      '22 lessons, 90 lines redacted with quiz structure intact; the scan script; the pre-publish gate every agent now runs before anything goes public, including this page.',
     receipt:
       'The standard is why no client, host or fee appears above. A PASS line with a scan hash is required before publish; a push without one is a policy violation, not a shortcut.',
     lines: [
