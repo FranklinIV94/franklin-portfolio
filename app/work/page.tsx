@@ -72,7 +72,7 @@ export default function WorkPage() {
               Work<span className="text-accent">.</span>
             </h1>
             <p className="text-muted mt-4 max-w-xl">
-              Every project, filterable by status, domain, and tier. Autonomous AI systems, blockchain integrations, and business automation — built to run in production, not just on a screen.
+              Every project, filterable by status, domain, and tier. Autonomous AI systems, blockchain integrations, and business automation, built to run in production, not just on a screen.
             </p>
           </motion.div>
 
@@ -181,7 +181,7 @@ export default function WorkPage() {
             {query.trim() && <> · matching "{query.trim()}"</>}
           </div>
 
-          {/* Archive rows — dense, scannable */}
+          {/* Archive rows, dense, scannable */}
           <div className="flex flex-col">
             {filtered.map((p, i) => (
               <motion.div

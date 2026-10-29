@@ -1,6 +1,6 @@
 'use client';
 
-// /showcase v2 — "Work you can inspect."
+// /showcase v2, "Work you can inspect."
 //
 // Ported from the 2026-10-18 reference build (showcase-v2-reference.html). The HTML was the
 // spec: same sections, same copy, same receipt motif, component-for-component. Case content
@@ -148,7 +148,7 @@ export default function ShowcasePage() {
               </div>
             </div>
 
-            {/* Proof strip — the five rules every item on this page obeys */}
+            {/* Proof strip, the five rules every item on this page obeys */}
             <aside className="rounded-2xl border border-border bg-surface p-5 font-mono text-[13px] text-muted" aria-label="How every project on this page is documented">
               {[
                 ['Acceptance test written', 'before the build', true],
@@ -261,7 +261,7 @@ export default function ShowcasePage() {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
-            {/* Fleet board — counts, role states and workflow mix only */}
+            {/* Fleet board, counts, role states and workflow mix only */}
             <div className="rounded-2xl border border-border bg-surface p-6">
               <div className="flex justify-between items-center mb-5">
                 <h3 className="font-display font-bold text-xl">Fleet board</h3>
@@ -273,9 +273,9 @@ export default function ShowcasePage() {
 
               <div className="grid grid-cols-3 gap-2.5">
                 {[
-                  ['agents', fleet?.agents_total ?? '—'],
-                  ['working now', fleet?.agents_active ?? '—'],
-                  ['jobs · 24 h', fleet?.jobs_24h ?? '—'],
+                  ['agents', fleet?.agents_total ?? ', '],
+                  ['working now', fleet?.agents_active ?? ', '],
+                  ['jobs · 24 h', fleet?.jobs_24h ?? ', '],
                 ].map(([l, v]) => (
                   <div key={String(l)} className="rounded-xl border border-border bg-[#171a22] p-3.5">
                     <b className="block font-display text-2xl leading-none">{v}</b>
@@ -293,7 +293,7 @@ export default function ShowcasePage() {
                 ))}
               </div>
 
-              {/* Workflow mix — what the hours actually go into */}
+              {/* Workflow mix, what the hours actually go into */}
               {fleet?.workflows?.length ? (
                 <div className="mt-4">
                   <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted mb-2">Where the hours went</p>
@@ -328,7 +328,7 @@ export default function ShowcasePage() {
               </p>
             </div>
 
-            {/* Model Armor — deterministic demo, honestly labelled */}
+            {/* Model Armor, deterministic demo, honestly labelled */}
             <div className="rounded-2xl border border-border bg-surface p-6">
               <div className="flex justify-between items-center mb-5">
                 <h3 className="font-display font-bold text-xl">Model Armor</h3>
@@ -386,7 +386,7 @@ export default function ShowcasePage() {
               </div>
 
               <p className="text-[12.5px] text-muted mt-4">
-                This demo is a deterministic pattern check running in your browser — not a live service, and it
+                This demo is a deterministic pattern check running in your browser, not a live service, and it
                 does not call a model. In production the same class of check runs in code before a tool call
                 reaches a model. Counters are this session’s; nothing you type is stored.
               </p>

@@ -99,14 +99,14 @@ export default function ProjectPage({ params }: PageProps) {
             className="border-t border-border mb-16"
           />
 
-          {/* Case study sections — Outcome leads, above the fold */}
+          {/* Case study sections. Outcome leads, above the fold */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="space-y-16"
           >
-            {/* Outcome — lead with it */}
+            {/* Outcome, lead with it */}
             {project.results.length > 0 && (
               <section>
                 <h2 className="font-display font-bold text-2xl mb-4 text-accent">Outcome</h2>

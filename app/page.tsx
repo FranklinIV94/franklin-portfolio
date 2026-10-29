@@ -16,22 +16,22 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState<Category | 'All'>('All');
   const [activeDomain, setActiveDomain] = useState<Domain | 'All'>('All');
 
-  // Flagships — the 3-5 hand-picked, case-study depth
+  // Flagships, the 3-5 hand-picked, case-study depth
   const flagships = projects.filter((p) => p.tier === 'flagship').sort((a, b) => a.order - b.order);
 
-  // Selected — the strong middle (~12), filtered by status + domain
+  // Selected, the strong middle (~12), filtered by status + domain
   const selected = projects
     .filter((p) => p.tier === 'selected')
     .filter((p) => activeFilter === 'All' || p.category === activeFilter)
     .filter((p) => activeDomain === 'All' || p.domains.includes(activeDomain))
     .sort((a, b) => a.order - b.order);
 
-  // Now — the slim status strip (active engagements, one line each)
+  // Now, the slim status strip (active engagements, one line each)
   const now = projects
     .filter((p) => p.category === 'Production' && p.tier !== 'archive')
     .slice(0, 4);
 
-  // Latest writing — 2-3 most recent essays
+  // Latest writing, 2-3 most recent essays
   const latestPosts = [...blogPosts].sort((a, b) => (a.dateISO > b.dateISO ? -1 : 1)).slice(0, 3);
 
   return (
@@ -39,7 +39,7 @@ export default function Home() {
       <main>
         <Hero />
 
-        {/* Flagships — the work that defines you */}
+        {/* Flagships, the work that defines you */}
         <section id="work" className="max-w-6xl mx-auto px-6 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Selected work — two-axis filter */}
+          {/* Selected work, two-axis filter */}
           <div className="mt-16 mb-8">
             <span className="font-mono text-xs text-accent mb-3 block">Selected Work</span>
             <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight mb-6">
@@ -199,7 +199,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Now — slim status strip (replaces the duplicate Active Engagements gallery) */}
+        {/* Now, slim status strip (replaces the duplicate Active Engagements gallery) */}
         <section className="border-t border-border">
           <div className="max-w-6xl mx-auto px-6 py-24">
             <motion.div
@@ -382,7 +382,7 @@ export default function Home() {
               <div>
                 <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3 block">My Firm</span>
                 <div className="flex flex-col gap-2">
-                  <a href="https://prospyr305.com" className="text-xs text-muted hover:text-accent transition-colors">Prospyr 305 — Agentic Engineering</a>
+                  <a href="https://prospyr305.com" className="text-xs text-muted hover:text-accent transition-colors">Prospyr 305. Agentic Engineering</a>
                   <a href="https://prospyr305.com/sentinel" className="text-xs text-muted hover:text-accent transition-colors">SENTINEL Security Audit</a>
                   <a href="https://prospyr305.com/possibilities" className="text-xs text-muted hover:text-accent transition-colors">What We Can Build</a>
                 </div>
