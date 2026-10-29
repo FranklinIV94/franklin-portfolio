@@ -79,8 +79,8 @@ export default function AiUsagePolicy() {
 
         <p>
           <strong className="text-white">1. A named human owns every deliverable.</strong> AI drafts,
-          summarizes, extracts, and checks. It does not sign. Nothing reaches a client — a filing, a
-          return, an audit finding, a contract — without a person who read it end to end and put their
+          summarizes, extracts, and checks. It does not sign. Nothing reaches a client, whether a filing, a
+          return, an audit finding or a contract, without a person who read it end to end and put their
           name on it. If we cannot point to the human who owns a piece of work, that work does not go out.
         </p>
 
