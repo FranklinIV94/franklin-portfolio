@@ -2,22 +2,22 @@ import { PostTldr, PostSources } from '@/components/PostEnhancements';
 
 const SLUG = 'ai-pullback-is-an-ownership-problem';
 const HERO = `https://franklin.simplifyingbusinesses.com/blog/${SLUG}-hero.jpg`;
-const DIAGRAM = `https://franklin.simplifyingbusinesses.com/blog/${SLUG}-four-things.jpg`;
 
 export const metadata = {
   title: 'The AI Pullback Is Not an AI Problem | Franklin J Bryant IV',
   description:
-    'Companies are not winding back AI. They are winding back projects nobody owned. The four failures behind almost every pullback story, and the four lines worth writing down before you buy anything else.',
+    'MIT puts zero return on 95% of enterprise GenAI spending. The report blames brittle workflows, weak contextual learning and misalignment with the day to day. That is not a model problem. It is an ownership problem, and here are the four lines that fix it.',
   keywords: [
     'Franklin J Bryant IV',
     'Franklin Bryant',
     'AI adoption failure',
     'AI project failure',
-    'AI pullback',
-    'AI strategy',
+    'GenAI Divide',
+    'MIT NANDA AI report',
+    'AI pilot failure rate',
     'AI governance',
     'AI cost control',
-    'workflow automation',
+    'NIST AI RMF',
     'Prospyr 305',
   ],
   alternates: {
@@ -28,7 +28,7 @@ export const metadata = {
     siteName: 'Franklin J Bryant IV',
     title: 'The AI Pullback Is Not an AI Problem',
     description:
-      'Almost no pullback story describes a model that was too weak. They describe a project that was bought instead of installed.',
+      'MIT measures 95% of enterprise GenAI spending returning nothing, and blames workflows rather than models. The four failures behind almost every pullback story.',
     url: `https://franklin.simplifyingbusinesses.com/blog/${SLUG}`,
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata = {
     creator: '@theycallmeking_',
     title: 'The AI Pullback Is Not an AI Problem',
     description:
-      'AI did not fail. It got bought instead of installed. Those are different problems, and only one of them is expensive.',
+      'AI did not fail. It got bought instead of installed. MIT puts zero return on 95% of enterprise GenAI spend, and the reasons are operational.',
     images: [HERO],
   },
 };
@@ -55,7 +55,7 @@ export default function AiPullback() {
     '@type': 'BlogPosting',
     headline: 'The AI Pullback Is Not an AI Problem',
     description:
-      'Companies are not winding back AI. They are winding back projects nobody owned: the partner left, nobody was trained, the cost was unbounded, and there was no way to judge the output.',
+      'MIT measures 95% of enterprise GenAI spending returning nothing and blames brittle workflows, weak contextual learning and misalignment with daily operations. Those are symptoms of a project that was bought rather than installed.',
     image: HERO,
     inLanguage: 'en',
     articleSection: 'AI Strategy',
@@ -93,8 +93,8 @@ export default function AiPullback() {
           The AI pullback is not an AI problem<span className="text-accent">.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl italic">
-          Almost none of the pullback stories describe a model that was too weak. They describe a
-          project that was bought instead of installed.
+          MIT puts zero return on 95% of enterprise GenAI spending, and blames the workflow rather
+          than the model. That is an ownership problem, and ownership is cheap to fix.
         </p>
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -120,20 +120,40 @@ export default function AiPullback() {
       <div className="space-y-6 text-lg leading-relaxed text-gray-300">
         <p>
           Every few months the story changes shape. Two years ago AI was going to replace your staff.
-          Now the story going around is that companies are pulling back, drowning in errors,
-          low-quality output, privacy risk and costs nobody forecast.
-        </p>
-        <p>Both stories come from the same place. Neither one is about the model.</p>
-        <p>
-          Read the pullback coverage properly and something stands out. Almost none of it describes a
-          model that was too weak. It describes a project that was bought instead of installed. A
-          partner who left after go-live. A tool nobody was trained on. A bill nobody capped. An output
-          nobody could grade, so the only test was whether it felt right.
+          Now the story is that companies are pulling back.
         </p>
         <p>
-          Those are four symptoms of one missing thing. <strong className="text-white">Nobody defined
-          the job.</strong>
+          There is now hard evidence behind the pullback, and it is worse than the anecdotes. MIT&apos;s
+          <em> GenAI Divide</em> study puts{' '}
+          <strong className="text-white">95% of organisations at zero return</strong> on GenAI, against
+          $30 to $40 billion of enterprise spending. Of the organisations that evaluated these tools,
+          60% never got past evaluation, 20% reached a pilot, and <strong className="text-white">5%
+          reached production</strong>.
         </p>
+        <p>
+          Here is the part worth reading twice. The report does not blame the models. It blames{' '}
+          <em>brittle workflows, a lack of contextual learning, and misalignment with day-to-day
+          operations</em>.
+        </p>
+        <p>
+          That is a sentence about ownership, written by researchers who were looking at technology.
+        </p>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-white mt-12 mb-4">
+            Buying was easy. Installing was hard.
+          </h2>
+          <p>
+            Almost none of the pullback coverage describes a model that was too weak. It describes a
+            project that was bought instead of installed. A partner who left after go-live. A tool
+            nobody was trained on. A bill nobody capped. An output nobody could grade, so the only test
+            was whether it felt right.
+          </p>
+          <p>
+            Four symptoms of one missing thing.{' '}
+            <strong className="text-white">Nobody defined the job.</strong>
+          </p>
+        </section>
 
         <section>
           <h2 className="font-display text-2xl font-bold text-white mt-12 mb-4">
@@ -148,12 +168,18 @@ export default function AiPullback() {
             I&apos;ve seen this from the other side. When we audit a codebase, the architecture is
             rarely the problem. The problem is that nobody can tell me what the system was supposed to
             decide. So every screen ends up defending against a state the database should never have
-            allowed.
+            allowed, and every bug becomes a negotiation about what the feature was for.
           </p>
           <p>
             A project has a delivery date. A result has an owner and a number. If your AI initiative
             has a delivery date and no number,{' '}
             <strong className="text-white">you bought a project.</strong>
+          </p>
+          <p>
+            The obvious answer is to build it yourself. The MIT study has an uncomfortable finding for
+            that too: <strong className="text-white">internal builds fail about twice as often</strong>{' '}
+            as bought ones. The failure is not in who writes the code. It is in whether anyone owns the
+            outcome once the code exists.
           </p>
         </section>
 
@@ -167,11 +193,21 @@ export default function AiPullback() {
             process, and the tool will look broken.
           </p>
           <p>
-            That isn&apos;t an AI literacy problem in the abstract. It&apos;s specific. Who checks the
+            The evidence for this is sitting in the same study, and it is almost funny. Employees are
+            already getting value out of AI, just not from the official programme. The MIT researchers
+            call it the shadow AI economy: personal tools, adopted without permission, quietly
+            delivering better returns than the enterprise initiatives.
+          </p>
+          <p>
+            Read that as an adoption finding rather than a compliance one. People finish what they own.
+            A tool handed over from a programme nobody asked for is somebody else&apos;s project, and it
+            gets used until it is inconvenient.
+          </p>
+          <p>
+            So it isn&apos;t an AI literacy problem in the abstract. It&apos;s specific. Who checks the
             output. What they do when it looks wrong. Where they escalate. If those three answers
             aren&apos;t written down, the tool is one bad week away from being quietly ignored.
           </p>
-          <p>The ones that survive are boring. Somebody wrote the exception path down before launch.</p>
         </section>
 
         <section>
@@ -183,6 +219,11 @@ export default function AiPullback() {
             has no natural ceiling. Companies sign a contract with a monthly platform fee, then
             discover the real bill is the per-call cost multiplied by however many people found the
             button.
+          </p>
+          <p>
+            Thirty to forty billion dollars went in. Five percent of organisations can point at the
+            return. Whatever the average bill was, somebody signed it without a number on the other
+            side of the page.
           </p>
           <p>
             I&apos;m not going to pretend we predicted every bill either. What we do now is put a
@@ -206,11 +247,30 @@ export default function AiPullback() {
             We build evaluation sets for the same reason an accountant reconciles a bank account. You
             need twenty real examples with the right answer written down. Otherwise you&apos;ve got no
             way to know whether the model improved or just changed. And without that, every complaint
-            turns into a debate, and the loudest person wins.
+            turns into a debate, and the loudest person in the room wins.
           </p>
           <p>
-            It&apos;s the cheapest thing on this list and the one most often skipped.{' '}
+            This is the cheapest item on the list and the one most often skipped.{' '}
             <strong className="text-white">Twenty examples cost less than one bad month.</strong>
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-white mt-12 mb-4">
+            A government framework will not do this for you
+          </h2>
+          <p>
+            There is a temptation to treat governance as paperwork and buy your way past it. The
+            National Institute of Standards and Technology is blunt about that in its own AI Risk
+            Management Framework. Organisations, it says, need to establish and maintain{' '}
+            <em>accountability mechanisms, roles and responsibilities, culture, and incentive
+            structures</em> for risk management to be effective, and using the framework alone will not
+            produce those changes.
+          </p>
+          <p>
+            A standard tells you what a good control looks like. It cannot tell you who answers the
+            phone at 9pm when the thing misbehaves. That is a name, and it is written down, or the
+            project is already dead and nobody has told finance.
           </p>
         </section>
 
@@ -218,7 +278,6 @@ export default function AiPullback() {
           <h2 className="font-display text-2xl font-bold text-white mt-12 mb-4">
             What the pullback actually tells you
           </h2>
-          <p>It tells you buying was easy and installing was hard.</p>
           <p>
             Nobody&apos;s winding back because a model got worse. They&apos;re winding back because
             those four things were never done. The organisation looked at a tool with no owner, no

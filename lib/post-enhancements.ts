@@ -24,9 +24,9 @@ export const postEnhancements: Record<string, PostEnhancement> = {
   'ai-pullback-is-an-ownership-problem': {
     tldr: {
       lines: [
-        'The reports say companies are pulling back from AI because of errors, cost and poor output.',
-        "Almost none of those stories describe a weak model. They describe a project that was bought instead of installed: the partner left, nobody was trained, the cost had no ceiling, and the output had no test.",
-        'Those are four symptoms of one missing thing, and it is cheaper to fix than the build was.',
+        "MIT measures 95% of organisations at zero return on GenAI, against $30-40bn of enterprise spend, and only 5% of pilots reaching production.",
+        "The report's own diagnosis is not model quality: brittle workflows, weak contextual learning, and misalignment with the day-to-day operation.",
+        'That is an ownership problem, and it shows up the same four ways every time: bought not installed, nobody trained, no cost ceiling, no way to grade the output.',
         'Four lines on one page, before you buy anything else',
       ],
       keyTerm: 'installed, not bought',
@@ -34,6 +34,18 @@ export const postEnhancements: Record<string, PostEnhancement> = {
         'The tool was never the problem. Nobody wrote down what it was supposed to do, or who answers for it now.',
     },
     citations: [
+      {
+        label: 'MIT NANDA — The GenAI Divide: State of AI in Business 2025 (full report, PDF)',
+        url: 'https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf',
+        supports:
+          'the 95% zero-return figure against $30-40bn of enterprise spend; the 60% evaluation to 20% pilot to 5% production funnel; brittle workflows, lack of contextual learning and misalignment with day-to-day operations as the stated causes; internal builds failing about twice as often; and the shadow AI economy, where employees’ own tools out-return formal programmes',
+      },
+      {
+        label: 'NIST — Artificial Intelligence Risk Management Framework (AI 100-1), section on accountability',
+        url: 'https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf',
+        supports:
+          'that organisations must establish and maintain accountability mechanisms, roles and responsibilities, culture and incentive structures, and that using the framework alone will not produce those changes',
+      },
       {
         label: "JJ Englert — 'This is not an AI failure. It is an org failure.' (X, 29 October 2026)",
         url: 'https://x.com/JJEnglert/status/2115790430969151597',
