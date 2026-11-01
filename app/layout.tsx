@@ -30,12 +30,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const siteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    // Stable identity for this person. Other properties reference this exact @id
+    // rather than repeating the name — a name repeated in three places resolves to
+    // three strangers, which is what was happening across Prospyr 305 and ALBS.
+    '@id': 'https://franklin.simplifyingbusinesses.com/about#person',
     name: 'Franklin J Bryant IV',
     alternateName: 'Franklin Jordan Bryant IV',
     additionalName: ['Franklin Bryant', 'Franklin Bryant IV', 'Franklin Jordan Bryant', 'Franklin Bryant AI'],
     url: 'https://franklin.simplifyingbusinesses.com',
     jobTitle: 'AI Business Solutions Architect',
-    description: 'I build autonomous AI systems that operate, transact, and scale. Founder of All Lines Business Solutions.',
+    description: 'I build autonomous AI systems that operate, transact, and scale. Founder and acting COO of All Lines Business Solutions, and partner in Prospyr 305.',
     knowsAbout: [
       'AI implementation',
       'business automation',
