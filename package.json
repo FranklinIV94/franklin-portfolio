@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "vercel deploy --prod"
+    "deploy": "vercel deploy --prod",
+    "postbuild": "node scripts/build-rss.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
