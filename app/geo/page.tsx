@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { CITY_COUNT, STATE_COUNT } from '@/lib/cities';
+import { cities, CITY_COUNT, STATE_COUNT } from '@/lib/cities';
 
 export const metadata: Metadata = {
   title: 'AI-Integrated Business Services | All Lines Business Solutions',
@@ -10,20 +10,10 @@ export const metadata: Metadata = {
   },
 };
 
-const cities = [
-  { name: 'Miami', state: 'FL', slug: 'miami' },
-  { name: 'Tampa', state: 'FL', slug: 'tampa' },
-  { name: 'Cape Coral', state: 'FL', slug: 'cape-coral' },
-  { name: 'Punta Gorda', state: 'FL', slug: 'punta-gorda' },
-  { name: 'West Palm Beach', state: 'FL', slug: 'west-palm-beach' },
-  { name: 'Fort Lauderdale', state: 'FL', slug: 'fort-lauderdale' },
-  { name: 'Atlanta', state: 'GA', slug: 'atlanta' },
-  { name: 'Dallas', state: 'TX', slug: 'dallas' },
-  { name: 'Manhattan', state: 'NY', slug: 'manhattan' },
-  { name: 'Los Angeles', state: 'CA', slug: 'los-angeles' },
-  { name: 'San Diego', state: 'CA', slug: 'san-diego' },
-  { name: 'Las Vegas', state: 'NV', slug: 'las-vegas' },
-];
+// Derived from the same record the city pages and the sitemap use. This list used to be
+// hardcoded a fourth time, which is how the index still showed Tampa after Tampa's page
+// was replaced.
+const cityCards = Object.values(cities).map((c) => ({ name: c.name, state: c.state, slug: c.slug }));
 
 const services = [
   { name: 'Bookkeeping', slug: 'bookkeeping', desc: 'Monthly bookkeeping, reconciliation, and financial reporting — handled by your AI business partner.' },
@@ -96,7 +86,7 @@ export default function GeoIndexPage() {
       <section className="mb-16">
         <h2 className="font-display font-bold text-2xl text-white mb-6">{CITY_COUNT} Cities. {STATE_COUNT} States. Nationwide Reach. Global Capability.</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {cities.map(city => (
+          {cityCards.map(city => (
             <a
               key={city.slug}
               href={`/geo/${city.slug}`}

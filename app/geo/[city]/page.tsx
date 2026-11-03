@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { cities } from '@/lib/cities';
 
 const services = [
@@ -31,7 +32,9 @@ export async function generateMetadata({ params }: { params: { city: string } })
 
 export default function CityPage({ params }: { params: { city: string } }) {
   const c = cities[params.city];
-  if (!c) return <div className="text-white text-center py-20">City not found</div>;
+  // A real 404. Returning 200 with "City not found" made every retired slug a
+  // soft-404 that search engines keep in the index.
+  if (!c) notFound();
 
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
