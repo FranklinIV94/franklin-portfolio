@@ -3,11 +3,8 @@ import { blogPosts } from '@/lib/blog';
 
 const BASE_URL = 'https://franklin.simplifyingbusinesses.com';
 
-const cities = [
-  'miami', 'tampa', 'cape-coral', 'punta-gorda', 'west-palm-beach',
-  'fort-lauderdale', 'atlanta', 'dallas', 'manhattan', 'los-angeles',
-  'san-diego', 'las-vegas', 'fort-myers',
-];
+// Derived from lib/cities.ts — the page set and the sitemap can no longer drift.
+import { CITY_SLUGS } from '@/lib/cities';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -23,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/field-notes/pre-launch-security-checklist`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ];
 
-  const cityPages: MetadataRoute.Sitemap = cities.map(city => ({
+  const cityPages: MetadataRoute.Sitemap = CITY_SLUGS.map(city => ({
     url: `${BASE_URL}/geo/${city}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,

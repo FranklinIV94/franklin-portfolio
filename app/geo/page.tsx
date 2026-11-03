@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { CITY_COUNT, STATE_COUNT } from '@/lib/cities';
 
 export const metadata: Metadata = {
   title: 'AI-Integrated Business Services | All Lines Business Solutions',
@@ -93,7 +94,7 @@ export default function GeoIndexPage() {
 
       {/* Cities */}
       <section className="mb-16">
-        <h2 className="font-display font-bold text-2xl text-white mb-6">12 Cities. 7 States. Nationwide Reach. Global Capability.</h2>
+        <h2 className="font-display font-bold text-2xl text-white mb-6">{CITY_COUNT} Cities. {STATE_COUNT} States. Nationwide Reach. Global Capability.</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {cities.map(city => (
             <a
@@ -135,7 +136,7 @@ export default function GeoIndexPage() {
             complex, multi-entity operations — and we handle them with AI precision.
           </p>
           <p>
-            <strong className="text-white">We service the whole world.</strong> On the ground in 12 cities across 7 states, with nationwide reach — anywhere in the United States within 48 hours notice. International? 7–10 day lead time gets us there. Your AI business partner doesn't sleep, doesn't miss deadlines, and doesn't care about time zones.
+            <strong className="text-white">We service the whole world.</strong> On the ground in {CITY_COUNT} cities across {STATE_COUNT} states, with nationwide reach — anywhere in the United States within 48 hours notice. International? 7–10 day lead time gets us there. Your AI business partner doesn't sleep, doesn't miss deadlines, and doesn't care about time zones.
           </p>
           <p>
             <strong className="text-white">Your AI business partner handles the work. You direct the growth.</strong> Prospyr 
