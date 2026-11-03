@@ -7,7 +7,20 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://franklin.simplifyingbusinesses.com'),
   title: 'Franklin J Bryant IV · AI Business Solutions Architect',
   description: 'I build autonomous AI systems that operate, transact, and scale. Founder of All Lines Business Solutions.',
-  keywords: ['Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant', 'AI business solutions', 'agentic engineering', 'autonomous systems', 'ALBS', 'Prospyr 305', 'AI automation', 'business automation'],
+  // Two clusters on purpose. This site is the person, and the person spans both the AI
+  // engineering work and the accounting practice — it is the only surface that should
+  // rank for either. ALBS owns the accounting queries, Prospyr 305 owns the AI ones.
+  keywords: [
+    'Franklin J Bryant IV', 'Franklin Bryant', 'Franklin Jordan Bryant',
+    // AI, software, engineering
+    'AI business solutions', 'agentic engineering', 'autonomous systems', 'AI automation',
+    'business automation', 'AI consulting', 'AI software development',
+    'forward deployed engineer', 'forward deployed engineering', 'AI implementation',
+    // accounting, tax, back office
+    'ALBS', 'All Lines Business Solutions', 'Prospyr 305', 'tax preparation', 'tax advisory',
+    'bookkeeping', 'payroll services', 'fractional CFO', 'fractional COO',
+    'back office administration', 'business insurance',
+  ],
   // Self-referencing canonical for EVERY route. './' resolves against metadataBase + the
   // current path, so each page declares itself canonical. Individual pages that set
   // `alternates.canonical` explicitly (e.g. blog posts, /ai-governance) override this.
@@ -40,16 +53,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     url: 'https://franklin.simplifyingbusinesses.com',
     jobTitle: 'AI Business Solutions Architect',
     description: 'I build autonomous AI systems that operate, transact, and scale. Founder and acting COO of All Lines Business Solutions, and partner in Prospyr 305.',
+    // The portfolio is the bridge: it is the only surface that should carry BOTH
+    // clusters, because it is a person, not a firm. AI work lands here alongside tax,
+    // payroll and the back office — that is the whole point of the overlap.
     knowsAbout: [
+      // AI, software and engineering (also the Prospyr 305 cluster)
       'AI implementation',
-      'business automation',
+      'AI automation',
+      'AI consulting',
       'agentic engineering',
-      'AI security audits',
-      'tax preparation',
-      'business operations',
-      'data security',
+      'forward deployed engineering',
+      'AI software development',
       'AI-accelerated development',
+      'AI security audits',
+      'data security',
+      // Accounting, tax and back office (also the All Lines cluster)
+      'tax preparation',
+      'tax advisory',
+      'bookkeeping',
+      'payroll',
+      'fractional CFO',
+      'fractional COO',
       'insurance',
+      'back office administration',
+      'business operations',
     ],
     sameAs: [
       'https://github.com/FranklinIV94',
