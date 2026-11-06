@@ -111,9 +111,12 @@ bundles — not currency.
 - [x] Each artifact runs with no console errors, with and without `prefers-reduced-motion` (Playwright, Chromium + SwiftShader)
 - [x] 390 px: no horizontal scroll; grid cards 1.40× their frame, lead panels 1.44× (see §4)
 - [x] Lighthouse 12 mobile on `/showcase` (local `next start`, Chromium): **performance 99**, accessibility 96, best-practices 96 · FCP 1.8 s · LCP 1.8 s · TBT 60 ms · CLS 0
+- [x] **Lighthouse 12 mobile against production** (`https://franklin.simplifyingbusinesses.com/showcase/`, run 2026-11-06T19:23Z): **performance 98**, accessibility **100**, best-practices 96 · LCP 2.1 s · TBT 100 ms · CLS 0. The local 99 was one point optimistic; 98 on the real CDN is the number to quote.
+- [x] **Vertical cut audio bed** — shipped silent in `9ffaf85` because Bark's weights are multi-GB and never ran in the build sandbox. Bark is still not installed on Prime, so the bed is synthesised in FFmpeg instead: three tuned sines (110 / 164.81 / 220 Hz), slow tremolo, 900 Hz lowpass, 2 s fade in, 2.7 s fade out, normalised to −22 dB mean / −13.7 dB peak. Muxed into both `vertical.mp4` (AAC 128k) and `vertical.webm` (Opus 96k); duration stays 15.0 s. The card and this spec now name FFmpeg as the source rather than implying Bark, and audio remains off by default with an explicit control. If a Bark machine turns up later, `encode.sh` still has the hook — replace the bed and update the card's `madeWith`.
 - [x] Every "Made with" name maps to a row in §1
 - [x] IP grep in §5
-- [x] Films ≤ 2.5 MB / ≤ 1.8 MB, posters present, no audio
+- [x] Films ≤ 2.5 MB / ≤ 1.8 MB, posters present. Launch film is silent by design (no track at all); the vertical cut carries an ambient bed that is **off by default** behind an explicit control.
+
 - [x] `npm run build` clean; route table lists `/showcase`, `/api/fleet` and `/api/fleet-public`
 
 ## 7. Known gaps, deliberately left visible
@@ -127,3 +130,16 @@ bundles — not currency.
    naming them as process steps; naming a step that did not happen is the kind of claim the page refuses.
 4. `/api/fleet-public` returns 503 without the Vercel env key; the fleet board shows its "endpoint down"
    state and the role list only. Unchanged from v2.
+
+## 8. Remotion licence — read before any client work
+
+Checked against Remotion's own licensing page, 2026-11-06:
+
+> "Remotion is free to use for individuals and companies up to three people… Company License is required only for entities ineligible for the Free License… Required for collaborations and companies of 4+ people." Free tier includes **unlimited commercial use**.
+
+**Where that leaves us.** The two films on this page were rendered with Remotion. The Free License covers companies of up to three people; Prospyr 305 / ALBS together staff more than three, so a Company License is the correct position for anything commercially published, including this site. Two honest options:
+
+1. **Buy the Company License** and keep Remotion in the toolkit — it is the right tool for parametrised, repeatable video, and the films here are the proof.
+2. **Re-render without Remotion.** These compositions are simple enough to drive with FFmpeg filters or a headless-browser frame capture, which is already how the audio bed was made. Costs a day, removes the dependency.
+
+**Hard rule until one of those is chosen:** no client deliverable is rendered with Remotion. Franklin's own site is a decision he owns; a client's brand is not a place to be unlicensed. Record the licence status in the project brief before any video work.
