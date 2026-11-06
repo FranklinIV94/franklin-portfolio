@@ -1,0 +1,14 @@
+{
+  "name": "showcase-motion-build",
+  "private": true,
+  "description": "Throwaway toolchain for the /showcase Motion & Film artifacts. Not a dependency of the portfolio app.",
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "devDependencies": {
+    "animejs": "4.3.0",
+    "cannon-es": "0.20.0",
+    "esbuild": "0.25.12",
+    "flubber": "0.4.2",
+    "three": "0.182.0"
+  }
+}
