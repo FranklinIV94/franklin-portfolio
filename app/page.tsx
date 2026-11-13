@@ -352,44 +352,6 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-border">
-          <div className="max-w-6xl mx-auto px-6 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <p className="text-sm text-muted mb-2">
-                  © {new Date().getFullYear()} Franklin J Bryant IV. Architected and deployed with AI.
-                </p>
-              </div>
-              <div>
-                <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3 block">Social</span>
-                <div className="flex gap-6">
-                  {[
-                    { label: 'GitHub', href: 'https://github.com/FranklinIV94' },
-                    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/franklin-bryant-36115363/' },
-                    { label: 'Twitter', href: 'https://x.com/theycallmeking_' },
-                  ].map(({ label, href }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      className="text-xs text-muted hover:text-white transition-colors"
-                    >
-                      {label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3 block">My Firm</span>
-                <div className="flex flex-col gap-2">
-                  <a href="https://prospyr305.com" className="text-xs text-muted hover:text-accent transition-colors">Prospyr 305. Agentic Engineering</a>
-                  <a href="https://prospyr305.com/sentinel" className="text-xs text-muted hover:text-accent transition-colors">SENTINEL Security Audit</a>
-                  <a href="https://prospyr305.com/possibilities" className="text-xs text-muted hover:text-accent transition-colors">What We Can Build</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
       </main>
     </>
   );

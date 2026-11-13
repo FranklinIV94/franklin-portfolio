@@ -2,63 +2,171 @@
 
 import Link from 'next/link';
 
+/**
+ * Site footer — rewritten 2026-11-09.
+ *
+ * Franklin: "the portfolio ... is the one with no contact path at all." The old footer listed
+ * socials and firm links and never once offered a way to reach him.
+ *
+ * Shape: the close (one sentence, one action), the index (writing / firm / elsewhere), then the
+ * signature. The name is set at 110px — a signature, not a billboard (Franklin, 2026-11-09:
+ * "my name is way too big").
+ *
+ * This file is rendered by app/layout.tsx on EVERY page. app/page.tsx used to render a second,
+ * different footer inline, so the homepage shipped two <footer> elements. That inline copy is
+ * gone; this is the only footer.
+ */
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-              <span className="text-black font-bold text-sm">FB</span>
-            </div>
-            <span className="text-white font-display font-bold">Franklin Bryant</span>
+      <div className="max-w-6xl mx-auto px-6 pt-20 pb-8">
+        {/* The close */}
+        <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-accent mb-5">
+          Work with me
+        </p>
+        <h2 className="font-display text-4xl sm:text-[3.4rem] leading-[1.05] tracking-[-0.02em] text-cream mb-4">
+          Let&rsquo;s find <em className="italic text-accent">your</em> bottleneck.
+        </h2>
+        <p className="text-muted text-base sm:text-[16.5px] leading-relaxed max-w-xl mb-9">
+          Fifteen minutes on the process that&rsquo;s actually costing you. I&rsquo;ll tell you what
+          I&rsquo;d build first, and what I&rsquo;d leave alone.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-4 mb-20">
+          <Link
+            href="/book"
+            className="inline-flex items-center gap-2 rounded-lg bg-accent text-accent-ink text-[14.5px] font-semibold px-6 py-3.5 hover:brightness-95 transition"
+          >
+            Book a 15-minute call <span aria-hidden="true">&rarr;</span>
+          </Link>
+          <p className="text-muted text-[14.5px]">
+            or email{' '}
+            <a
+              href="mailto:franklin@prospyr305.com"
+              className="text-cream border-b border-border-strong hover:border-cream pb-px"
+            >
+              franklin@prospyr305.com
+            </a>
+          </p>
+        </div>
+
+        {/* The index */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 border-t border-border pt-9">
+          <div className="max-w-[270px]">
+            <p className="text-cream text-[13.5px] font-semibold mb-1.5">Franklin J Bryant IV</p>
+            <p className="text-muted text-[13px] leading-relaxed">
+              Agentic systems architect. I build the thing, then I show you how it works.
+            </p>
           </div>
 
-          <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted">
-            <Link href="/work" className="hover:text-white transition-colors">Work</Link>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-            <Link href="/field-notes" className="hover:text-white transition-colors">Field Notes</Link>
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
-            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-            <a href="/rss.xml" className="hover:text-white transition-colors">RSS</a>
-          </nav>
+          <div>
+            <span className="block font-mono text-[10px] tracking-[0.18em] uppercase text-muted mb-3.5">
+              Writing
+            </span>
+            <Link href="/blog" className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors">
+              Blog
+            </Link>
+            <Link href="/field-notes" className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors">
+              Field notes
+            </Link>
+            <Link href="/work" className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors">
+              Work
+            </Link>
+            <a href="/rss.xml" className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors">
+              RSS
+            </a>
+          </div>
 
-          <div className="flex items-center gap-4">
+          <div>
+            <span className="block font-mono text-[10px] tracking-[0.18em] uppercase text-muted mb-3.5">
+              Firm
+            </span>
+            <a
+              href="https://prospyr305.com"
+              className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors"
+            >
+              Prospyr 305
+            </a>
+            <a
+              href="https://prospyr305.com/sentinel"
+              className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors"
+            >
+              SENTINEL audit
+            </a>
+            <a
+              href="https://prospyr305.com/possibilities"
+              className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors"
+            >
+              What we can build
+            </a>
+          </div>
+
+          <div>
+            <span className="block font-mono text-[10px] tracking-[0.18em] uppercase text-muted mb-3.5">
+              Elsewhere
+            </span>
             <a
               href="https://github.com/FranklinIV94"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors"
-             aria-label="GitHub (opens in a new tab)">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-              </svg>
+              className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors"
+            >
+              GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/franklin-bryant-36115363/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors"
-             aria-label="LinkedIn (opens in a new tab)">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
+              className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors"
+            >
+              LinkedIn
             </a>
             <a
               href="https://x.com/theycallmeking_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors"
-             aria-label="X (Twitter) (opens in a new tab)">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
+              className="block text-[13.5px] text-[#d4d4d8] py-1 hover:text-accent transition-colors"
+            >
+              X
             </a>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-border text-center text-xs text-muted">
-          © {new Date().getFullYear()} Franklin Bryant IV. All rights reserved.
+        {/* The signature — 110px, click returns to top */}
+        <a
+          href="#top"
+          aria-label="Back to top"
+          className="block mt-16 font-display font-black text-cream leading-[0.84] tracking-[-0.045em] whitespace-nowrap select-none"
+          style={{ fontSize: 'clamp(52px, 7.6vw, 110px)' }}
+        >
+          FRANKLIN<span className="text-accent" style={{ fontSize: '0.5em' }}>.</span>
+        </a>
+
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-7 pt-4 border-t border-border">
+          <p className="font-mono text-[10px] tracking-[0.06em] text-muted">
+            © {new Date().getFullYear()} Franklin J Bryant IV &nbsp;·&nbsp; Architected and built
+            with AI as the pair
+          </p>
+          <div className="flex items-center gap-5 font-mono text-[10px] tracking-[0.06em] text-muted">
+            {/* The portfolio had no /privacy or /terms routes — these point at the
+                firm's live policies instead of shipping two 404s site-wide. */}
+            <a
+              href="https://prospyr305.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cream transition-colors"
+            >
+              Privacy
+            </a>
+            <a
+              href="https://prospyr305.com/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cream transition-colors"
+            >
+              Terms
+            </a>
+          </div>
         </div>
       </div>
     </footer>
