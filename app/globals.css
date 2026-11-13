@@ -279,6 +279,18 @@ article .space-y-6 p:first-of-type {
   font-size: 1.125rem;
   line-height: 1.7;
 }
+/* Paragraph rhythm inside a section. `space-y-6` only spaces the sections
+   themselves, so consecutive <p>/<ul> blocks inside one section were collapsing
+   into a wall of text on every post. Figures/cards keep their own margins. */
+article .space-y-6 section > p + p,
+article .space-y-6 section > p + ul,
+article .space-y-6 section > p + ol,
+article .space-y-6 section > ul + p,
+article .space-y-6 section > ol + p,
+article .space-y-6 section > h3 + p {
+  margin-top: 1.1rem;
+}
+
 article .space-y-6 ul,
 article .space-y-6 ol {
   color: #9ca0ab;

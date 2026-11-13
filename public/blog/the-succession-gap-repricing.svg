@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Chart of NVIDIA's repricing on 12 November 2026. On the day, the shares fell as much as 14 percent intraday and closed 4.3 percent lower. Across the week, more than 740 billion dollars of market value was lost since the prior Friday's close, roughly 2 trillion dollars came off the October peak, and market value fell below 4 trillion dollars for the first time since 2025.">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#161a20" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8ff57" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#c8ff57" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7f8797" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#7f8797" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="#0a0b0f"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <style>
+    .eyebrow { font-family: 'DejaVu Sans Mono', monospace; font-size: 17px; letter-spacing: 3px; fill: #c8ff57; }
+    .panel   { font-family: 'DejaVu Sans Mono', monospace; font-size: 18px; letter-spacing: 3px; fill: #8a8f9c; }
+    .rowlab  { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 22px; fill: #d7dbe2; }
+    .val     { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 30px; font-weight: 600; fill: #f4f6f0; }
+    .valdim  { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 30px; font-weight: 600; fill: #9aa0ad; }
+    .big     { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 64px; font-weight: 700; fill: #c8ff57; }
+    .bigdim  { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 64px; font-weight: 700; fill: #d7dbe2; }
+    .sub     { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 21px; fill: #9aa0ad; }
+    .foot    { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 18px; fill: #7e8494; }
+  </style>
+
+  <text x="80" y="88" class="eyebrow">THE MARKET · 12 NOVEMBER 2026</text>
+
+  <!-- LEFT: the day -->
+  <text x="80" y="176" class="panel">THE DAY</text>
+
+  <text x="250" y="292" class="rowlab" text-anchor="end">Intraday low</text>
+  <rect x="270" y="262" width="429" height="42" rx="6" fill="url(#bar1)"/>
+  <text x="716" y="292" class="val">−14%</text>
+
+  <text x="250" y="404" class="rowlab" text-anchor="end">Close</text>
+  <rect x="270" y="374" width="132" height="42" rx="6" fill="url(#bar2)"/>
+  <text x="419" y="404" class="valdim">−4.3%</text>
+
+  <text x="80" y="508" class="panel">WHAT DID NOT CHANGE</text>
+  <text x="80" y="556" class="sub">Products unchanged. Fabs unchanged.</text>
+  <text x="80" y="590" class="sub">Order book unchanged. One name came off</text>
+  <text x="80" y="624" class="sub">a door, and the question got asked out</text>
+  <text x="80" y="658" class="sub">loud: how much of this was the institution,</text>
+  <text x="80" y="692" class="sub">and how much was him?</text>
+
+  <!-- divider -->
+  <line x1="780" y1="150" x2="780" y2="700" stroke="#24262e" stroke-width="1.5"/>
+
+  <!-- RIGHT: the week -->
+  <text x="840" y="176" class="panel">THE WEEK</text>
+
+  <text x="840" y="268" class="big">−$740B</text>
+  <text x="840" y="300" class="sub">of market value gone since the prior Friday&apos;s close</text>
+
+  <text x="840" y="410" class="bigdim">~$2T</text>
+  <text x="840" y="442" class="sub">off the October peak</text>
+
+  <text x="840" y="552" class="bigdim">below $4T</text>
+  <text x="840" y="584" class="sub">for the first time since 2025</text>
+
+  <text x="80" y="822" class="foot">Figures as reported 12 November 2026: intraday low, closing price, week-to-date and peak-to-date market value. Sources listed with the piece.</text>
+</svg>
