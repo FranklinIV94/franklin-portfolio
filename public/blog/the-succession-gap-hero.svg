@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1a1a2e" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3eb002" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#3eb002" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#3eb002" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="void" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="#0a0a0f"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <!-- the lattice that remains: spokes leaving the empty centre -->
+  <g stroke="#2a2a3e" stroke-width="2.5">
+    <line x1="800" y1="450" x2="300" y2="230"/>
+    <line x1="800" y1="450" x2="1300" y2="230"/>
+    <line x1="800" y1="450" x2="300" y2="670"/>
+    <line x1="800" y1="450" x2="1300" y2="670"/>
+    <line x1="800" y1="450" x2="800" y2="130"/>
+    <line x1="800" y1="450" x2="800" y2="770"/>
+    <line x1="800" y1="450" x2="180" y2="450"/>
+    <line x1="800" y1="450" x2="1420" y2="450"/>
+  </g>
+
+  <!-- the one live path that still carries load through the gap -->
+  <g stroke="#3eb002" stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+    <path d="M1300 230 C1120 300 1000 390 900 440" fill="none"/>
+    <path d="M900 460 C1000 510 1120 600 1300 670" fill="none"/>
+  </g>
+
+  <!-- the vacancy -->
+  <circle cx="800" cy="450" r="120" fill="url(#void)"/>
+  <circle cx="800" cy="450" r="78" fill="none" stroke="#4a4a6a" stroke-width="2.5" stroke-dasharray="9 11"/>
+  <circle cx="800" cy="450" r="132" fill="none" stroke="#22222f" stroke-width="1.5"/>
+
+  <!-- satellite nodes -->
+  <g fill="#f8f8f8">
+    <circle cx="300" cy="230" r="11"/>
+    <circle cx="1300" cy="230" r="13"/>
+    <circle cx="300" cy="670" r="11"/>
+    <circle cx="1300" cy="670" r="13"/>
+    <circle cx="800" cy="130" r="10"/>
+    <circle cx="800" cy="770" r="10"/>
+    <circle cx="180" cy="450" r="9"/>
+    <circle cx="1420" cy="450" r="9"/>
+  </g>
+
+  <!-- the stand-in: one node stepped into the ring, ringed in accent -->
+  <circle cx="800" cy="450" r="46" fill="#0f1310" stroke="#3eb002" stroke-width="3"/>
+  <circle cx="800" cy="450" r="16" fill="#3eb002"/>
+  <circle cx="800" cy="450" r="150" fill="url(#glow)" opacity="0.5"/>
+</svg>

@@ -20,6 +20,56 @@ export type PostEnhancement = {
 };
 
 export const postEnhancements: Record<string, PostEnhancement> = {
+  // the-succession-gap
+  'the-succession-gap': {
+    tldr: {
+      lines: [
+        "NVIDIA's 12 November release announced Jensen Huang's resignation as president, CEO and board member, effective immediately - and named no cause and no successor.",
+        'Colette Kress is interim CEO while remaining CFO, and Harvey C. Jones became the first Chair of the Board in company history: an interim holding two jobs, and a control installed the same afternoon.',
+        'The chair says operations and the roadmap should continue "without interruption" - a forecast, not a warranty, testable at Q3 FY2027 results on 17 November.',
+        'The transferable lesson is vendor concentration: a dependency you have never priced gets priced for you, in one morning, at the worst moment.',
+      ],
+      keyTerm: 'single-point dependency',
+      inOtherWords:
+        'A company with no named successor and a first-ever chair is telling you what its bench looked like. Ask the same question about your own vendors.',
+    },
+    citations: [
+      {
+        label: 'NVIDIA Newsroom - "NVIDIA Announces CEO Transition" (12 November 2026)',
+        url: 'https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition',
+        supports:
+          'The resignation, Kress as interim CEO while remaining CFO, Jones as first-ever Chair, both quotes, and the 17 November earnings date.',
+      },
+      {
+        label: 'NVIDIA Investor Relations - same release, with the 17 November results date',
+        url: 'https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx',
+        supports:
+          'Primary-source confirmation of the filing language and the scheduled Q3 FY2027 results and call time.',
+      },
+      {
+        label: 'The Wall Street Journal - markets live coverage, 12 November 2026',
+        url: null,
+        supports:
+          'Shares fell as much as 14% intraday and closed 4.3% lower; hundreds of billions wiped from market value.',
+      },
+      {
+        label: 'CNBC - Nvidia CEO Jensen Huang resigns: live updates, 12 November 2026',
+        url: null,
+        supports:
+          'More than $740bn lost since the prior Friday close, roughly $2tn off the October peak, and a close of $173.73 against a $239.24 October high.',
+      },
+      {
+        label: 'NBC News - Nvidia stock falls after Jensen Huang resigns, 12 November 2026',
+        url: null,
+        supports: 'Market value fell below $4 trillion for the first time since 2025.',
+      },
+      {
+        label: 'Reuters - "Nvidia CEO Jensen Huang resigns in blow to AI boom", 12 November 2026',
+        url: null,
+        supports: 'The resignation landing as a shock to the wider AI industry; cause attributed to reporting, not to the company release.',
+      },
+    ],
+  },
   // ai-pullback-is-an-ownership-problem
   'ai-pullback-is-an-ownership-problem': {
     tldr: {

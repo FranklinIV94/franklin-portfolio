@@ -10,6 +10,15 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'the-succession-gap',
+    title: 'The Succession Gap',
+    excerpt:
+      "NVIDIA's board announced a CEO resignation, an interim chief who keeps her old job, and the first Chair in company history - in one release, with no cause and no successor named. What that says about single-point dependency, and five things any business should check about its own vendors.",
+    date: 'November 12, 2026',
+    dateISO: '2026-11-12',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'ai-pullback-is-an-ownership-problem',
     title: 'The AI Pullback Is Not an AI Problem',
     excerpt:
