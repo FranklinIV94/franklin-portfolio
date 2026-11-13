@@ -24,15 +24,15 @@ export const postEnhancements: Record<string, PostEnhancement> = {
   'the-succession-gap': {
     tldr: {
       lines: [
-        "NVIDIA's 12 November release announced Jensen Huang's resignation as president, CEO and board member, effective immediately - and named no cause and no successor.",
+        "NVIDIA's 12 November release announced Jensen Huang's resignation as president, CEO and board member, effective immediately, and named no cause and no successor.",
         'Colette Kress is interim CEO while remaining CFO, and Harvey C. Jones became the first Chair of the Board in company history: an interim holding two jobs, and a control installed the same afternoon.',
-        'The chair says operations and the roadmap should continue "without interruption" - a forecast, not a warranty, testable at Q3 FY2027 results on 17 November.',
+        'The chair says operations and the roadmap should continue "without interruption": a forecast, not a warranty, testable at Q3 FY2027 results on 17 November.',
         'The chip-smuggling rumour conflates two different verbs: NVIDIA publishes quantized NVFP4 builds of DeepSeek V4 and MiniMax M2.7 under its own name, for global deployment, MIT-licensed. That is where those models run, not what trained them.',
         'The transferable lesson is vendor concentration: a dependency you have never priced gets priced for you, in one morning, at the worst moment.',
       ],
       keyTerm: 'single-point dependency',
       inOtherWords:
-        'A company with no named successor and a first-ever chair is telling you what its bench looked like. Ask the same question about your own vendors - and check whether the model you run on has a second home.',
+        'A company with no named successor and a first-ever chair is telling you what its bench looked like. Ask the same question about your own vendors, and check whether the model you run on has a second home.',
     },
     citations: [
       {
@@ -79,19 +79,19 @@ export const postEnhancements: Record<string, PostEnhancement> = {
         label: 'Hugging Face - nvidia/MiniMax-M2.7-NVFP4 model card',
         url: 'https://huggingface.co/nvidia/MiniMax-M2.7-NVFP4',
         supports:
-          'The same NVIDIA-published quantization pattern applied to MiniMax M2.7 - the second model the rumour names.',
+          'The same NVIDIA-published quantization pattern applied to MiniMax M2.7, the second model the rumour names.',
       },
       {
         label: 'NVIDIA Technical Blog - "MiniMax M2.7 Advances Scalable Agentic Workflows on NVIDIA Platforms" (11 April 2026)',
         url: 'https://developer.nvidia.com/blog/minimax-m2-7-advances-scalable-agentic-workflows-on-nvidia-platforms-for-complex-ai-applications/',
         supports:
-          '230B total / 10B active parameters, FP8 kernels contributed to vLLM and SGLang, NIM container, post-training recipes - NVIDIA publicly shipping the deployment path for a Chinese open-weight model.',
+          '230B total / 10B active parameters, FP8 kernels contributed to vLLM and SGLang, NIM container, post-training recipes. NVIDIA is publicly shipping the deployment path for a Chinese open-weight model.',
       },
       {
         label: 'Reuters - "China\'s DeepSeek trained AI model on Nvidia\'s best chip despite US ban, official says" (23 February 2026)',
         url: null,
         supports:
-          'The single on-record allegation that DeepSeek trained on Blackwell, sourced to a senior administration official, with Blackwells likely in Inner Mongolia; NVIDIA declined to comment. Cited as a claim, not a confirmed fact - the page is bot-blocked to automated fetches, so no link is published.',
+          'The single on-record allegation that DeepSeek trained on Blackwell, sourced to a senior administration official, with Blackwells likely in Inner Mongolia; NVIDIA declined to comment. Cited as a claim, not a confirmed fact. The page is bot-blocked to automated fetches, so no link is published.',
       },
       {
         label: 'Bloomsbury Intelligence and Security Institute - "AI Chip Smuggling: The Limits of US Export Controls" (6 April 2026)',
@@ -108,7 +108,7 @@ export const postEnhancements: Record<string, PostEnhancement> = {
         label: 'Atlantic Council - "Beyond the spy scandal: What the Nvidia-Megaspeed case reveals about export controls"',
         url: 'https://www.atlanticcouncil.org/dispatches/beyond-the-spy-scandal-what-the-nvidia-megaspeed-case-reveals-about-export-controls/',
         supports:
-          'Megaspeed renting NVIDIA capacity across Southeast Asia to Chinese buyers through arrangements that do not violate current US export rules - diversion without complicity.',
+          'Megaspeed renting NVIDIA capacity across Southeast Asia to Chinese buyers through arrangements that do not violate current US export rules: diversion without complicity.',
       },
     ],
   },

@@ -6,7 +6,7 @@ const HERO = `https://franklin.simplifyingbusinesses.com/blog/${SLUG}-hero.jpg`;
 export const metadata = {
   title: 'The Succession Gap | Franklin J Bryant IV',
   description:
-    "NVIDIA's board removed its chief executive in a morning, handed the job to the CFO who kept her old one, and appointed the first Chair in company history — no cause, no successor. An opinion column on what that release admits, what the China chip rumour gets wrong, and five things a normal business should check about its own vendors.",
+    "NVIDIA's board removed its chief executive in a morning, handed the job to the CFO who kept her old one, and appointed the first Chair in company history, with no cause and no successor named. An opinion column on what that release admits, what the China chip rumour gets wrong, and five things a normal business should check about its own vendors.",
   keywords: [
     'Franklin J Bryant IV',
     'Franklin Bryant',
@@ -32,7 +32,7 @@ export const metadata = {
     siteName: 'Franklin J Bryant IV',
     title: 'The Succession Gap',
     description:
-      'A company lost its chief executive before the market opened, promoted the CFO into the job while she keeps it, and appointed the first board chair in its history. The interesting part is what the release does not say — and what the chip rumour gets backwards.',
+      'A company lost its chief executive before the market opened, promoted the CFO into the job while she keeps it, and appointed the first board chair in its history. The interesting part is what the release does not say, and what the chip rumour gets backwards.',
     url: `https://franklin.simplifyingbusinesses.com/blog/${SLUG}`,
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata = {
     creator: '@theycallmeking_',
     title: 'The Succession Gap',
     description:
-      'No cause given. No successor named. The CFO now holds two jobs and the board has a chair for the first time in 33 years. That is a governance story — and the chip rumour going around gets the verb wrong.',
+      'No cause given. No successor named. The CFO now holds two jobs and the board has a chair for the first time in 33 years. That is a governance story, and the chip rumour going around gets the verb wrong.',
     images: [HERO],
   },
 };
@@ -106,7 +106,7 @@ export default function TheSuccessionGap() {
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl italic">
           A company lost its chief executive in a morning, handed the job to the CFO who kept her old
-          one, and appointed the first board chair in its history — all in one release that names no
+          one, and appointed the first board chair in its history, all in one release that names no
           cause and no successor. I read it once as a governance document. Then I read it again as a
           warning about my own vendors.
         </p>
@@ -149,7 +149,7 @@ export default function TheSuccessionGap() {
           </p>
           <p>
             Here is the thing that stuck with me. The release is not badly written. It is{' '}
-            <em>well</em> written — every sentence does a job, and the job is to be true without saying
+            <em>well</em> written. Every sentence does a job, and the job is to be true without saying
             anything. That is a real skill. It is also exactly what a company sounds like when it has
             spent years rehearsing an emergency it never actually planned for.
           </p>
@@ -172,8 +172,8 @@ export default function TheSuccessionGap() {
           </p>
           <p>
             Colette Kress, the Executive Vice President and Chief Financial Officer, agreed to serve as
-            Interim CEO — <em>and to keep the CFO role while doing it</em> — until a permanent successor
-            is named. The Board said it is starting a search and will consider internal and external
+            interim CEO, <em>keeping the CFO role while she does it</em>, until a permanent successor is
+            named. The Board said it is starting a search and will consider internal and external
             candidates.
           </p>
           <p>
@@ -190,7 +190,7 @@ export default function TheSuccessionGap() {
           <figure className="my-8 overflow-hidden rounded-2xl border border-border">
             <img
               src={`/blog/${SLUG}-release.jpg`}
-              alt="Four-step timeline of the NVIDIA release: thirty-three years of one person as the control, a morning resignation effective immediately with no cause given, the CFO installed as interim CEO while keeping the CFO job, and the first Chair of the Board in company history — with a bar across the bottom noting that the release contained no cause, no named successor and no timeline."
+              alt="Four-step timeline of the NVIDIA release: thirty-three years of one person as the control, a morning resignation effective immediately with no cause given, the CFO installed as interim CEO while keeping the CFO job, and the first Chair of the Board in company history, with a bar across the bottom noting that the release contained no cause, no named successor and no timeline."
               className="w-full"
             />
             <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -205,15 +205,14 @@ export default function TheSuccessionGap() {
           </h2>
           <p>
             The release gives <strong>no reason</strong> for the resignation. None. Not a family matter,
-            not a health matter, not a disagreement — nothing. Press accounts have supplied their own
+            not a health matter, not a disagreement. Nothing. Press accounts have supplied their own
             explanation, and I am not going to lean on it here, because the governance facts stand up
             without it and the personal ones are unverified by the primary document.
           </p>
           <p>More telling is what is absent structurally:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              <strong>No named successor.</strong> Not &quot;the board has been planning for this&quot; —
-              a search, starting now, internal and external.
+              <strong>No named successor.</strong> Not &quot;the board has been planning for this&quot;, but a search starting now, internal and external.
             </li>
             <li>
               <strong>The interim keeps both jobs.</strong> Kress is now the chief executive <em>and</em>{' '}
@@ -225,7 +224,7 @@ export default function TheSuccessionGap() {
             <li>
               <strong>The first chair in company history.</strong> A board that has never had an
               independent chair has one the same afternoon. That is not a coincidence; it is a control
-              being installed because the control that was there — the founder — just left.
+              being installed because the control that was there, the founder, just left.
             </li>
           </ul>
           <p>
@@ -258,7 +257,7 @@ export default function TheSuccessionGap() {
           <figure className="my-8 overflow-hidden rounded-2xl border border-border">
             <img
               src={`/blog/${SLUG}-repricing.jpg`}
-              alt="Chart of the 12 November repricing: the shares fell as much as 14 percent intraday and closed 4.3 percent lower, while the week took more than 740 billion dollars off market value and roughly 2 trillion dollars off the October peak, with market value below 4 trillion dollars for the first time since 2025 — against products, fabs and order book that had not changed."
+              alt="Chart of the 12 November repricing: the shares fell as much as 14 percent intraday and closed 4.3 percent lower, while the week took more than 740 billion dollars off market value and roughly 2 trillion dollars off the October peak, with market value below 4 trillion dollars for the first time since 2025, against products, fabs and order book that had not changed."
               className="w-full"
             />
             <figcaption className="mt-2 text-xs text-gray-500 text-center">
@@ -274,7 +273,7 @@ export default function TheSuccessionGap() {
           <p>
             My own answer, for what it is worth: most of it was the institution, and the market knows
             that. What the market could not price was the one thing institutions cannot manufacture on
-            demand — certainty about who decides next week. Money does not run from bad news. It runs
+            demand: certainty about who decides next week. Money does not run from bad news. It runs
             from ambiguity.
           </p>
         </section>
@@ -290,7 +289,7 @@ export default function TheSuccessionGap() {
           </p>
           <p>
             <em>Expects.</em> That is a forecast in the mouth of the person who now has to make it true.
-            It is not a warranty, and it is testable — NVIDIA reports third-quarter fiscal 2027 results
+            It is not a warranty, and it is testable. NVIDIA reports third-quarter fiscal 2027 results
             on <strong>November 17</strong>, five days after the announcement, with the call at 2 p.m. PT.
           </p>
 
@@ -335,7 +334,7 @@ export default function TheSuccessionGap() {
           <p>
             Put that date in your calendar whether or not you own the stock. If a company can absorb this
             in five days, &quot;without interruption&quot; becomes a fact. If the call is rearranged, it
-            stays a claim — and the whole supply chain that plans around it should notice.
+            stays a claim, and the whole supply chain that plans around it should notice.
           </p>
         </section>
 
@@ -349,8 +348,8 @@ export default function TheSuccessionGap() {
           </p>
           <p>
             Since Thursday the theory going around trading chats and group texts is that NVIDIA was
-            routing its best silicon into China anyway — that the export controls were a press release
-            and the enforcement was theatre — and that this year&apos;s Chinese frontier models are the
+            routing its best silicon into China anyway: that the export controls were a press release
+            and the enforcement was theatre, and that this year&apos;s Chinese frontier models are the
             receipt. DeepSeek&apos;s V4 Flash and V4 Pro. MiniMax&apos;s M2.7. Trained in China,
             quantized on NVIDIA hardware, running on NVIDIA parts. Follow the chips and you find the
             smoking gun.
@@ -368,8 +367,8 @@ export default function TheSuccessionGap() {
             Unfounded, as far as I can find, and I looked. There is no document, no filing, and no
             on-the-record allegation that the company designed its own route around export controls. What
             exists is narrower and stranger: in February, a senior administration official told Reuters
-            that DeepSeek&apos;s newest model had been trained on Blackwell — the chip the US does not
-            ship to China — likely at a data centre in Inner Mongolia, and that DeepSeek would strip the
+            that DeepSeek&apos;s newest model had been trained on Blackwell (the chip the US does not
+            ship to China), likely at a data centre in Inner Mongolia, and that DeepSeek would strip the
             technical indicators that would give it away. NVIDIA declined to comment. The Commerce
             Department and DeepSeek did not respond.
           </p>
@@ -386,7 +385,7 @@ export default function TheSuccessionGap() {
             This one is not really a conspiracy, because the diversion is documented and the paperwork is
             public. In March, the co-founder of Super Micro was arrested over a scheme to move
             NVIDIA-equipped servers to China through Taiwan and Southeast Asian intermediaries, using
-            falsified documents and dummy equipment to pass audits — a scheme valued at roughly $2.5
+            falsified documents and dummy equipment to pass audits. The scheme was valued at roughly $2.5
             billion. Days later, three people were charged over 750 servers worth about $170 million
             ordered with certifications swearing they were not bound for China. Congress responded by
             advancing a bill that would put tracking directly into the chips.
@@ -407,19 +406,19 @@ export default function TheSuccessionGap() {
           </p>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              <strong>nvidia/DeepSeek-V4-Flash-NVFP4</strong> — listed 28 May 2026. A quantized version
+              <strong>nvidia/DeepSeek-V4-Flash-NVFP4</strong>, listed 28 May 2026. A quantized version
               of DeepSeek&apos;s open-weight model: 284B parameters total, 13B active, compressed with
               NVIDIA&apos;s own Model Optimizer, targeted at Blackwell, MIT licence, and under deployment
               geography the card says one word: <em>global</em>.
             </li>
             <li>
               <strong>nvidia/DeepSeek-V4.1-Flash-NVFP4</strong> and{' '}
-              <strong>nvidia/MiniMax-M2.7-NVFP4</strong> — the same pattern, same organisation, same
+              <strong>nvidia/MiniMax-M2.7-NVFP4</strong>, the same pattern, same organisation, same
               naming convention.
             </li>
             <li>
               An NVIDIA developer blog post from April 2026 titled, without a shred of irony,{' '}
-              <em>MiniMax M2.7 Advances Scalable Agentic Workflows on NVIDIA Platforms</em> — 230B
+              <em>MiniMax M2.7 Advances Scalable Agentic Workflows on NVIDIA Platforms</em>: 230B
               parameters, FP8 kernels contributed upstream to vLLM and SGLang, a NIM container, day-zero
               support.
             </li>
@@ -448,7 +447,7 @@ export default function TheSuccessionGap() {
             cheaper to serve. A card that says NVFP4 tells you where a model <em>runs best</em>. It tells
             you nothing about what the model was <em>raised on</em>. A model trained on Huawei silicon
             and later compressed for Blackwell looks identical on that page to one trained on a Blackwell
-            cluster — and nothing DeepSeek has published settles it either way.
+            cluster, and nothing DeepSeek has published settles it either way.
           </p>
           <p>
             So &quot;they were quantized on NVIDIA chips, therefore NVIDIA trained them&quot; is not a
@@ -461,7 +460,7 @@ export default function TheSuccessionGap() {
           <p>
             <strong>For NVIDIA&apos;s critics, the uncomfortable fact is that no back door was
             needed.</strong> The company spent a decade building the toolchain that every serious model
-            gets built and served on — the compilers, the kernels, the container, the optimized build of
+            gets built and served on: the compilers, the kernels, the container, the optimized build of
             somebody else&apos;s weights with its name on the label. You do not have to smuggle a
             platform. It is already in the building. Open weights plus a permissive licence plus day-zero
             support means the most efficient place to run a Chinese frontier model is, awkwardly, an
@@ -470,12 +469,12 @@ export default function TheSuccessionGap() {
           <p>
             <strong>For NVIDIA&apos;s shareholders, the uncomfortable fact is the mirror image:</strong>{' '}
             this is a moat made of habit, not of scarcity. A chip can be tracked, tariffed, licensed and
-            legislated. A toolchain cannot — you cannot put a tracker in a CUDA kernel, and every
+            legislated. A toolchain cannot. You cannot put a tracker in a CUDA kernel, and every
             enforcement bill I read this year is written as though the object of the fight is a crate. I
             think the fight is over an ecosystem, and ecosystems do not read statutes.
           </p>
           <p>
-            That, to me, is the story of the year — and almost nobody covering the resignation is
+            That, to me, is the story of the year, and almost nobody covering the resignation is
             covering it. One man&apos;s exit will be resolved in a quarter. The other question, whether
             American policy can govern a technology whose advantage lives in software layers it does not
             control, will outlive every CEO involved.
@@ -500,8 +499,7 @@ export default function TheSuccessionGap() {
           </p>
           <p>
             The lesson of Thursday is not &quot;AI is risky.&quot; It is narrower and more useful:
-            <strong> a dependency you have never priced is not a strength, it is an unpriced risk</strong>{' '}
-            — and it gets priced for you, in one morning, at the worst possible moment.
+            <strong> a dependency you have never priced is not a strength, it is an unpriced risk</strong>. And it gets priced for you, in one morning, at the worst possible moment.
           </p>
           <p>
             Here is what I would check this week in any small business running AI in operations. None of
@@ -550,7 +548,7 @@ export default function TheSuccessionGap() {
                 05 · Grade the output
               </div>
               <p className="text-base text-gray-300">
-                If you cannot say whether the thing is working, you do not have a system — you have a
+                If you cannot say whether the thing is working, you do not have a system; you have a
                 subscription. Two checks a month, written down, beats any dashboard you never open.
               </p>
             </div>
@@ -582,7 +580,7 @@ export default function TheSuccessionGap() {
           <div className="rounded-xl border-l-4 border-accent bg-surface p-6 my-8">
             <p className="text-gray-200 italic leading-relaxed">
               <strong className="text-accent not-italic">Split the CFO job from the CEO job this
-              quarter.</strong> Not because she cannot do both — she plainly can. Because the person
+              quarter.</strong> Not because she cannot do both. She plainly can. Because the person
               whose numbers are being scrutinised should not also be the person signing off on them.
               Concentration risk is not only a customer problem.
             </p>
@@ -614,7 +612,7 @@ export default function TheSuccessionGap() {
           </p>
           <p>
             NVIDIA will probably be fine. It has the balance sheet, the people, and a five-day clock to
-            prove it. The rest of us should use the week to check whether we would be — and if the honest
+            prove it. The rest of us should use the week to check whether we would be. And if the honest
             answer is &quot;no,&quot; that is not a reason to feel bad. It is a reason to spend one
             afternoon.
           </p>
