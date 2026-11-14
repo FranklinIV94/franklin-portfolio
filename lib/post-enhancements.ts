@@ -36,76 +36,76 @@ export const postEnhancements: Record<string, PostEnhancement> = {
     },
     citations: [
       {
-        label: 'NVIDIA Newsroom - "NVIDIA Announces CEO Transition" (12 November 2026)',
+        label: 'NVIDIA Newsroom · "NVIDIA Announces CEO Transition" (12 November 2026)',
         url: 'https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition',
         supports:
           'The resignation, Kress as interim CEO while remaining CFO, Jones as first-ever Chair, both quotes, and the 17 November earnings date.',
       },
       {
-        label: 'NVIDIA Investor Relations - same release, with the 17 November results date',
+        label: 'NVIDIA Investor Relations · same release, with the 17 November results date',
         url: 'https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx',
         supports:
           'Primary-source confirmation of the filing language and the scheduled Q3 FY2027 results and call time.',
       },
       {
-        label: 'The Wall Street Journal - markets live coverage, 12 November 2026',
+        label: 'The Wall Street Journal · markets live coverage, 12 November 2026',
         url: null,
         supports:
           'Shares fell as much as 14% intraday and closed 4.3% lower; hundreds of billions wiped from market value.',
       },
       {
-        label: 'CNBC - Nvidia CEO Jensen Huang resigns: live updates, 12 November 2026',
+        label: 'CNBC · Nvidia CEO Jensen Huang resigns: live updates, 12 November 2026',
         url: null,
         supports:
           'More than $740bn lost since the prior Friday close, roughly $2tn off the October peak, and a close of $173.73 against a $239.24 October high.',
       },
       {
-        label: 'NBC News - Nvidia stock falls after Jensen Huang resigns, 12 November 2026',
+        label: 'NBC News · Nvidia stock falls after Jensen Huang resigns, 12 November 2026',
         url: null,
         supports: 'Market value fell below $4 trillion for the first time since 2025.',
       },
       {
-        label: 'Reuters - "Nvidia CEO Jensen Huang resigns in blow to AI boom", 12 November 2026',
+        label: 'Reuters · "Nvidia CEO Jensen Huang resigns in blow to AI boom", 12 November 2026',
         url: null,
         supports: 'The resignation landing as a shock to the wider AI industry; cause attributed to reporting, not to the company release.',
       },
       {
-        label: 'Hugging Face - nvidia/DeepSeek-V4-Flash-NVFP4 model card',
+        label: 'Hugging Face · nvidia/DeepSeek-V4-Flash-NVFP4 model card',
         url: 'https://huggingface.co/nvidia/DeepSeek-V4-Flash-NVFP4',
         supports:
           'Released 28 May 2026; quantized from DeepSeek open weights with NVIDIA Model Optimizer; 284B total / 13B active parameters; targeted at Blackwell; MIT licence; deployment geography listed as global.',
       },
       {
-        label: 'Hugging Face - nvidia/MiniMax-M2.7-NVFP4 model card',
+        label: 'Hugging Face · nvidia/MiniMax-M2.7-NVFP4 model card',
         url: 'https://huggingface.co/nvidia/MiniMax-M2.7-NVFP4',
         supports:
           'The same NVIDIA-published quantization pattern applied to MiniMax M2.7, the second model the rumour names.',
       },
       {
-        label: 'NVIDIA Technical Blog - "MiniMax M2.7 Advances Scalable Agentic Workflows on NVIDIA Platforms" (11 April 2026)',
+        label: 'NVIDIA Technical Blog · "MiniMax M2.7 Advances Scalable Agentic Workflows on NVIDIA Platforms" (11 April 2026)',
         url: 'https://developer.nvidia.com/blog/minimax-m2-7-advances-scalable-agentic-workflows-on-nvidia-platforms-for-complex-ai-applications/',
         supports:
           '230B total / 10B active parameters, FP8 kernels contributed to vLLM and SGLang, NIM container, post-training recipes. NVIDIA is publicly shipping the deployment path for a Chinese open-weight model.',
       },
       {
-        label: 'Reuters - "China\'s DeepSeek trained AI model on Nvidia\'s best chip despite US ban, official says" (23 February 2026)',
+        label: 'Reuters · "China\'s DeepSeek trained AI model on Nvidia\'s best chip despite US ban, official says" (23 February 2026)',
         url: null,
         supports:
           'The single on-record allegation that DeepSeek trained on Blackwell, sourced to a senior administration official, with Blackwells likely in Inner Mongolia; NVIDIA declined to comment. Cited as a claim, not a confirmed fact. The page is bot-blocked to automated fetches, so no link is published.',
       },
       {
-        label: 'Bloomsbury Intelligence and Security Institute - "AI Chip Smuggling: The Limits of US Export Controls" (6 April 2026)',
+        label: 'Bloomsbury Intelligence and Security Institute · "AI Chip Smuggling: The Limits of US Export Controls" (6 April 2026)',
         url: 'https://bisi.org.uk/reports/ai-chip-smuggling-the-limits-of-us-export-controls',
         supports:
           'The Super Micro co-founder arrest on 19 March 2026 over a $2.5bn diversion scheme using falsified documents and dummy equipment, and the Chip Security Act advancing on 26 March 2026.',
       },
       {
-        label: 'US Department of Justice - "Chinese National and Two U.S. Citizens Charged with Conspiring to Smuggle Artificial Intelligence Technology to China"',
+        label: 'US Department of Justice · "Chinese National and Two U.S. Citizens Charged with Conspiring to Smuggle Artificial Intelligence Technology to China"',
         url: 'https://www.justice.gov/opa/pr/chinese-national-and-two-us-citizens-charged-conspiring-smuggle-artificial-intelligence',
         supports: 'The 750-server, approximately $170m order shipped against false certifications.',
       },
       {
-        label: 'Atlantic Council - "Beyond the spy scandal: What the Nvidia-Megaspeed case reveals about export controls"',
+        label: 'Atlantic Council · "Beyond the spy scandal: What the Nvidia-Megaspeed case reveals about export controls"',
         url: 'https://www.atlanticcouncil.org/dispatches/beyond-the-spy-scandal-what-the-nvidia-megaspeed-case-reveals-about-export-controls/',
         supports:
           'Megaspeed renting NVIDIA capacity across Southeast Asia to Chinese buyers through arrangements that do not violate current US export rules: diversion without complicity.',
