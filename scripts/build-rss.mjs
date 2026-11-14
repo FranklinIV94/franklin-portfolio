@@ -94,6 +94,13 @@ function articleHtml(html, pageUrl) {
     // Fragment-only links (#sources, #source-3) resolve against the reader, not
     // the post. Qualify them to the post URL; validators flag them as relative.
     .replace(/(\shref=")(#[^"]*)"/g, (mm, pre, frag) => `${pre}${pageUrl}${frag}"`)
+    // The feed validator treats inline style attributes as a potential injection
+    // vector and names border-radius specifically. Drop that one declaration and
+    // keep the rest (max-width, margin) that stop images overflowing a reader.
+    .replace(/\sstyle="([^"]*)"/g, (mm, css) => {
+      const cleaned = css.replace(/\s*border-radius:\s*[^;]+;?/g, "").trim();
+      return cleaned ? ` style="${cleaned}"` : "";
+    })
     .trim();
 
   return { body, standfirst };
