@@ -28,6 +28,7 @@ export const postEnhancements: Record<string, PostEnhancement> = {
         'Colette Kress is interim CEO while remaining CFO, and Harvey C. Jones became the first Chair of the Board in company history: an interim holding two jobs, and a control installed the same afternoon.',
         'The chair says operations and the roadmap should continue "without interruption": a forecast, not a warranty, testable at Q3 FY2027 results on 17 November.',
         'The chip-smuggling rumour conflates two different verbs: NVIDIA publishes quantized NVFP4 builds of DeepSeek V4 and MiniMax M2.7 under its own name, for global deployment, MIT-licensed. That is where those models run, not what trained them.',
+        'The theory that he was pushed out by competitors is unfounded. The part that is not: NVIDIA\'s economics ran with open weights, the closed labs\' economics run against them, and the open camp just lost its ally inside the compute vendor.',
         'The transferable lesson is vendor concentration: a dependency you have never priced gets priced for you, in one morning, at the worst moment.',
       ],
       keyTerm: 'single-point dependency',
@@ -103,6 +104,13 @@ export const postEnhancements: Record<string, PostEnhancement> = {
         label: 'US Department of Justice · "Chinese National and Two U.S. Citizens Charged with Conspiring to Smuggle Artificial Intelligence Technology to China"',
         url: 'https://www.justice.gov/opa/pr/chinese-national-and-two-us-citizens-charged-conspiring-smuggle-artificial-intelligence',
         supports: 'The 750-server, approximately $170m order shipped against false certifications.',
+      },
+      {
+        label:
+          'X · @0xSero, 13 November 2026 · the "crucified Jensen" quote-post over the "Permanent Underclass" illustration (x.com/0xsero/status/2121064369899590139)',
+        url: null,
+        supports:
+          'The circulating takedown theory and the cartoon\'s own argument: Local AI on a cloud, the closed labs walled off beneath it, the underclass below the wall. Cited as a claim in circulation, not as evidence for it. The illustration is third-party artwork and is described, not reproduced.',
       },
       {
         label: 'Atlantic Council · "Beyond the spy scandal: What the Nvidia-Megaspeed case reveals about export controls"',

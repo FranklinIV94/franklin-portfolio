@@ -64,7 +64,7 @@ export default function TheSuccessionGap() {
     inLanguage: 'en',
     articleSection: 'AI Strategy',
     datePublished: '2026-11-12',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-14',
     author: {
       '@type': 'Person',
       name: 'Franklin J Bryant IV',
@@ -484,6 +484,81 @@ export default function TheSuccessionGap() {
             influence chip policy and you are not going to out-research a trading desk. You can find out
             whether the model your business runs on has a second home. That is a Tuesday problem, not a
             Washington one.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-white mb-4">
+            Who benefits from him being gone
+          </h2>
+          <p className="text-sm text-gray-500 italic">
+            Opinion again, and the most speculative thing on this page. I will tell you exactly where
+            the evidence stops.
+          </p>
+          <p>
+            Within hours of the release, a second theory started moving, and it was nastier than the
+            China one. The short version: he was removed on purpose, by people who could not beat him
+            in the open. One account with a large following put it over a cartoon titled{' '}
+            <em>Permanent Underclass</em> and captioned it, &quot;Here&apos;s why they crucified Jensen.
+            Don&apos;t let them psyop you, they have nothing special.&quot; Half a million people saw
+            it by the weekend.
+          </p>
+          <p>
+            The cartoon is worth describing because the argument is in the picture, not the caption.
+            Along the top, on a cloud, sits <em>Local AI</em>: happy people running open models,
+            quantization, self-hosting. Below them are walled compounds marked OpenAI, Anthropic and
+            xAI, one of them flying a banner that reads <em>compute is all that matters</em>. And
+            beneath the wall is the underclass, holding signs. <em>Productivity quota: 0.0001 tokens
+            per day. You will own nothing and be happy. Any leftover tokens?</em> A pipe labelled{' '}
+            <em>slop</em> pours down on them from above.
+          </p>
+          <p>
+            Here is my read, and I will separate the two halves because one is nonsense and the other
+            is not.
+          </p>
+          <p>
+            <strong>The conspiracy half is unfounded.</strong> Nobody has produced a document, a
+            filing, or a credible account of a coordinated campaign to remove a chief executive from
+            the company that supplies their own compute. Companies do not usually destabilise their
+            silicon vendor to win an argument about licensing. The people making this claim are
+            guessing from motive, and motive is the cheapest evidence there is. If that is the whole
+            of the theory, it belongs next to the chip-smuggling one: loud, satisfying, unsupported.
+          </p>
+          <p>
+            <strong>The structural half is not nonsense at all.</strong> Look at whose economics depend
+            on what. NVIDIA&apos;s business has spent a decade getting more valuable as more people run
+            more models, on hardware they bought. Its own Hugging Face organisation publishes
+            optimized builds of other companies&apos; open-weight models, MIT licensed, for global
+            deployment. Whatever Jensen Huang believed personally, the company he ran was structurally
+            on the side of weights getting out into the world, because that is what sells GPUs.
+          </p>
+          <p>
+            The closed labs run the opposite trade. Their margin comes from a model you cannot hold,
+            served by the token, improving on a schedule you do not control. Every open-weight release
+            that lands within a version or two of the frontier is a discount on that margin. Both
+            models can be honest and profitable at the same time. They cannot both be dominant.
+          </p>
+          <p>
+            So when the most prominent advocate the open camp had inside the compute vendor leaves in a
+            morning, with no successor named and a CFO holding the chair, the open camp loses its most
+            useful ally in the room. Whether anyone <em>did</em> that to him is unknowable from here.
+            That it <em>benefits</em> the people selling scarcity is arithmetic. And an interim chief
+            with two jobs does not pick that fight in her first quarter. Neither does a chair appointed
+            the same afternoon.
+          </p>
+          <p>
+            One pushback on the cartoon, though, because &quot;they have nothing special&quot; is the
+            weakest line in it. They do have something: distribution, a billing relationship, and a
+            model that gets better while you sleep. What they do not have is a reason for you to stay
+            once switching costs fall to zero. The underclass in that picture is not a conspiracy
+            either. It is a business model drawn honestly, and the punchline is that most people
+            volunteered for it because the API was easier than the alternative.
+          </p>
+          <p>
+            Which is the same conclusion as the rest of this piece, arrived at from a different
+            direction. You cannot vote on who runs NVIDIA, and you cannot litigate which camp wins. You
+            can decide, this month, whether your operation survives the answer. The preppers hoarding
+            weights on Reddit have already made that decision. Most businesses have not.
           </p>
         </section>
 
