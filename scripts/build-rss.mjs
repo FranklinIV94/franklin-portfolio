@@ -65,7 +65,7 @@ function stripTags(html) {
     .replace(/\s+/g, " ").trim();
 }
 
-function articleHtml(html) {
+function articleHtml(html, pageUrl) {
   const m = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
   let body = m ? m[1] : "";
   if (!body) return "";
@@ -91,6 +91,9 @@ function articleHtml(html) {
     // already in pubDate, so the header comes off the top of the item body.
     .replace(/^\s*<header[\s\S]*?<\/header>/i, "")
     .replace(/\s(?:href|src)="\/(?!\/)/g, (mm) => mm.replace('="/', `="${BASE}/`))
+    // Fragment-only links (#sources, #source-3) resolve against the reader, not
+    // the post. Qualify them to the post URL; validators flag them as relative.
+    .replace(/(\shref=")(#[^"]*)"/g, (mm, pre, frag) => `${pre}${pageUrl}${frag}"`)
     .trim();
 
   return { body, standfirst };
@@ -147,7 +150,7 @@ const missing = [];
 for (const p of posts) {
   const file = path.join(POSTS_DIR, `${p.slug}.html`);
   if (!existsSync(file)) { missing.push(p.slug); continue; }
-  const { body, standfirst } = articleHtml(readFileSync(file, "utf8"));
+  const { body, standfirst } = articleHtml(readFileSync(file, "utf8"), `${BASE}/blog/${p.slug}`);
   if (!body) { missing.push(p.slug); continue; }
   const url = `${BASE}/blog/${p.slug}`;
   const pubDate = new Date(`${p.dateISO}T12:00:00Z`).toUTCString();
@@ -185,8 +188,8 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
       <url>${BASE}/about-portrait.jpg</url>
       <title>Franklin J Bryant IV · Writing</title>
       <link>${BASE}/blog</link>
-      <width>400</width>
-      <height>400</height>
+      <width>144</width>
+      <height>144</height>
     </image>
     <atom:link href="${BASE}/rss.xml" rel="self" type="application/rss+xml" />
     <ttl>60</ttl>
