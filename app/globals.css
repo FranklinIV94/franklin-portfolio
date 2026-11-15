@@ -38,7 +38,15 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar.
+   The ::-webkit-* rules below only apply in Chromium. The two standard properties are what
+   Firefox and Safari actually honour — without them those browsers fall back to a default,
+   full-width scrollbar and the design differs per engine. Keep both: the vendor rules give
+   Chromium the 4px track, the standard pair gives everyone else the same look. */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a35 transparent;
+}
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #2a2a35; border-radius: 2px; }
