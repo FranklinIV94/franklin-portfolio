@@ -105,10 +105,10 @@ export default function TheSuccessionGap() {
           The succession gap<span className="text-accent">.</span>
         </h1>
         <p className="mt-4 text-xl text-gray-300 max-w-2xl italic">
-          A company lost its chief executive in a morning, handed the job to the CFO who kept her old
-          one, and appointed the first board chair in its history, all in one release that names no
-          cause and no successor. I read it once as a governance document. Then I read it again as a
-          warning about my own vendors.
+          On Thursday a four-trillion-dollar company lost its chief executive before lunch, handed the
+          job to the CFO who kept her old one, and appointed the first board chair in its history — one
+          release, no cause given, no successor named. I read it once as governance. Then I read it
+          again as a warning about my own vendors.
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-gray-400">
           <span className="font-semibold text-white">Franklin J Bryant IV</span>
@@ -138,7 +138,7 @@ export default function TheSuccessionGap() {
       <div className="space-y-6 text-lg leading-relaxed text-gray-300">
         <section>
           <h2 className="font-display text-2xl font-bold text-white mb-4">
-            What I actually think, before the facts
+            The argument, before the facts
           </h2>
           <p>
             I have never met Jensen Huang and I have no inside knowledge of NVIDIA. What I do have is
@@ -153,18 +153,11 @@ export default function TheSuccessionGap() {
             anything. That is a real skill. It is also exactly what a company sounds like when it has
             spent years rehearsing an emergency it never actually planned for.
           </p>
-          <p>
-            One more piece of housekeeping, because it matters for the rest of this. I am going to say
-            what I think in plain first person, including about the story everyone is whispering about.
-            I will mark the line between reporting and opinion, and I will not blur it to make a
-            paragraph hit harder. A blog is allowed to have a thesis. It is not allowed to invent a
-            fact to carry it.
-          </p>
         </section>
 
         <section>
           <h2 className="font-display text-2xl font-bold text-white mb-4">
-            What the release actually says
+            Three paragraphs, no cause
           </h2>
           <p>
             On November 12, 2026, NVIDIA&apos;s board announced that Jensen Huang had resigned as
@@ -201,7 +194,7 @@ export default function TheSuccessionGap() {
 
         <section>
           <h2 className="font-display text-2xl font-bold text-white mb-4">
-            What it does not say
+            What is missing from it
           </h2>
           <p>
             The release gives <strong>no reason</strong> for the resignation. None. Not a family matter,
@@ -232,11 +225,6 @@ export default function TheSuccessionGap() {
             day he isn&apos;t there is a press release written in the past tense. I keep coming back to
             that sentence because it is the whole article. A succession plan is not a document you write
             when the emergency starts. It is the document that makes the emergency boring.
-          </p>
-
-          <p className="text-2xl font-display text-white border-l-4 border-accent pl-6 italic mt-12">
-            Thirty-three years of one person&apos;s judgment, and the plan for the day he isn&apos;t
-            there is a press release written in the past tense.
           </p>
         </section>
 
@@ -271,10 +259,22 @@ export default function TheSuccessionGap() {
             question got asked out loud: how much of this was the institution, and how much was him?
           </p>
           <p>
-            My own answer, for what it is worth: most of it was the institution, and the market knows
-            that. What the market could not price was the one thing institutions cannot manufacture on
-            demand: certainty about who decides next week. Money does not run from bad news. It runs
-            from ambiguity.
+            My first answer was that most of it was the institution, and the market knows that. The
+            second half of that is true. The first half I am less sure about, and the reason is the
+            story going around about how NVIDIA actually got its supply.
+          </p>
+          <p>
+            The version circulating — and it is a story, not a filing, so treat it as one — is that
+            NVIDIA&apos;s priority on the most advanced process at TSMC and on HBM from SK Hynix never
+            rested mainly on contracts. It rested on Jensen Huang turning up in person, repeatedly,
+            for twenty years, until the queue bent around him. If that is even half right, then the
+            moat was not only the toolchain and the order book. Some of it was a man&apos;s address book,
+            and there is no line item in the accounts for that.
+          </p>
+          <p>
+            What the market actually could not price was narrower than &quot;will the business
+            survive.&quot; It was: who decides next week, and does the person who holds the queue still
+            answer the phone. Money does not run from bad news. It runs from ambiguity.
           </p>
         </section>
 
@@ -340,7 +340,7 @@ export default function TheSuccessionGap() {
 
         <section>
           <h2 className="font-display text-2xl font-bold text-white mb-4">
-            The China story nobody can leave alone
+            The China story, in three parts
           </h2>
           <p className="text-sm text-gray-500 italic">
             Opinion, with the reporting cited. This is the section where I stop describing the release
@@ -355,9 +355,8 @@ export default function TheSuccessionGap() {
             smoking gun.
           </p>
           <p>
-            I spent a couple of hours on that theory, because it is the kind of theory that either falls
-            apart immediately or gets much worse the harder you look. My read is that it is three
-            different claims wearing one coat, and only one of them survives contact with evidence.
+            It is three different claims wearing one coat. Only one of them survives contact with
+            evidence, and it is not the one people are repeating.
           </p>
 
           <h3 className="font-display font-bold text-xl text-white mt-10 mb-3">
@@ -373,9 +372,10 @@ export default function TheSuccessionGap() {
             Department and DeepSeek did not respond.
           </p>
           <p>
-            An official&apos;s claim with no artifact attached is a claim. I am not going to launder it
-            into a fact for you, and I am not going to pretend the absence of a denial is a confession.
-            That is the difference between a blog with a thesis and a blog with an agenda.
+            An official&apos;s claim with no artifact attached is still a claim. I am not going to launder
+            it into a fact, and I am not going to treat the absence of a denial as a confession. It sits
+            in the same place as everything else in this section: worth watching, not worth repeating
+            as though it were settled.
           </p>
 
           <h3 className="font-display font-bold text-xl text-white mt-10 mb-3">
@@ -453,9 +453,6 @@ export default function TheSuccessionGap() {
             So &quot;they were quantized on NVIDIA chips, therefore NVIDIA trained them&quot; is not a
             scandal. It is a category error with a stock chart attached, and it is being repeated by
             people who would never accept the same logic about anything else.
-          </p>
-          <p>
-            Now the opinion, since that is what you came for.
           </p>
           <p>
             <strong>For NVIDIA&apos;s critics, the uncomfortable fact is that no back door was
@@ -564,7 +561,56 @@ export default function TheSuccessionGap() {
 
         <section>
           <h2 className="font-display text-2xl font-bold text-white mb-4">
-            Why a 30-person business should care
+            The claim underneath the conspiracy
+          </h2>
+          <p>
+            Since Thursday, one version of the &quot;why&quot; has travelled further than the others, and it
+            is worth taking apart properly because a lot of people I respect have repeated it. The
+            economist Richard Werner put it this way: use only open models you can download and run
+            offline, because the terms on the closed ones mean you hand over the intellectual property
+            you mention, the provider sells it on, and small firms have been undercut by a new competitor
+            offering the same work cheaper within months.
+          </p>
+          <p>
+            Three claims again, and this time two of them matter to you whether or not you care about
+            NVIDIA.
+          </p>
+          <p>
+            <strong>The part that is checkable, and that you should check this week.</strong> The terms
+            on AI services are not uniform and the differences are large. Consumer chat surfaces have
+            generally reserved the right to use what you type to improve the model unless you turn it
+            off. Business tiers and API access usually do not train on your inputs by default — but that
+            is a default you can change in a settings page, and it varies by vendor, by tier, and by
+            whether you are on a free plan. Nobody reading this knows which of those they are on. Go and
+            look. It is a ten-minute job and it is the single highest-return thing in this article.
+          </p>
+          <p>
+            <strong>The part that is a category error.</strong> A licence to use your inputs is not the
+            same as ownership of your business, and the leap from one to the other is doing a lot of
+            work in that post. What most terms grant is broad permission to process and, on some tiers,
+            learn from what you send. Whether that becomes a competitor serving your clients depends on
+            something the terms cannot tell you: whether what you send is specific enough to copy, and
+            whether anyone has an incentive to. That is an operational question, and it is answerable.
+          </p>
+          <p>
+            <strong>The part that is unfounded.</strong> That Jensen Huang was removed for opposing this,
+            and that the whole thing is a coordinated takeover, is asserted with no document and no
+            named case, and it has to explain away the appointment of a first independent chair and a
+            CFO holding two jobs — which is what an institution looks like when it is trying to look
+            stable, not what a coup looks like. The bankruptcies it describes may exist. Nobody has shown
+            me one.
+          </p>
+          <p>
+            So here is the version I would defend. The conspiracy is noise. The mechanism it points at is
+            real, it is documented in the terms you already agreed to, and it is a dependency most
+            businesses have never priced — which is the same sentence as the rest of this piece,
+            arrived at through the loudest possible door.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-white mb-4">
+            What this costs a 30-person business
           </h2>
           <p>
             Almost nobody reading this owns NVIDIA shares. Almost everybody reading this has, in the last
