@@ -623,6 +623,22 @@ export default function TheSuccessionGap() {
             <strong> a dependency you have never priced is not a strength, it is an unpriced risk</strong>. And it gets priced for you, in one morning, at the worst possible moment.
           </p>
           <p>
+            There is exactly one company in this story that removed the dependency instead of pricing
+            it. Google trains Gemini on its own TPUs, and the claim travelling this week is that this
+            makes it structurally independent of NVIDIA and structurally cheaper. Half of that is the
+            strong version of a true thing. Google still buys NVIDIA at scale — for Cloud, not for its
+            own training — and owning your silicon does not make capacity free, only cheaper to add.
+            But the direction is right, and it is the deepest moat in the industry, which is why it is
+            the example everyone reaches for.
+          </p>
+          <p>
+            Look at what it cost, though. A decade of designing chips, a foundry relationship, a compiler
+            stack, and an army of people who could make all three work together. That is the same shape
+            of investment NVIDIA made in CUDA, and it is the reason the answer for Google is not the
+            answer for you. You are not going to build a fab. You are going to do the cheap version:
+            know where your second home is, and test that it works once, before the morning you need it.
+          </p>
+          <p>
             Here is what I would check this week in any small business running AI in operations. None of
             it requires a consultant, and all of it fits on one page.
           </p>
