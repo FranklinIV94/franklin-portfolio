@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import WebMcpTools from '@/lib/webmcp/register';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://franklin.simplifyingbusinesses.com'),
@@ -146,6 +147,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
+        {/* WebMCP origin-trial tokens. A token is bound to an origin, so it only ever comes
+            from the deploy environment — never committed, never set in dev. Register the
+            origin at developer.chrome.com/origintrials and Microsoft's Edge trial, then set
+            NEXT_PUBLIC_WEBMCP_TRIAL_CHROME / NEXT_PUBLIC_WEBMCP_TRIAL_EDGE in Vercel.
+            While both are unset this renders nothing at all: no meta tag, no
+            document.modelContext, no cost to visitors. That is the correct default. */}
+        {process.env.NEXT_PUBLIC_WEBMCP_TRIAL_CHROME ? (
+          <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_TRIAL_CHROME} />
+        ) : null}
+        {process.env.NEXT_PUBLIC_WEBMCP_TRIAL_EDGE ? (
+          <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_TRIAL_EDGE} />
+        ) : null}
       </head>
       <body className="bg-canvas text-white antialiased font-body">
         <div className="noise-overlay" aria-hidden="true" />
@@ -153,6 +166,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <div google-add-preferred-source-btn data-theme="dark" />
         <Footer />
+        {/* WebMCP: read-only tools for browser agents. Renders null and loads no extra
+            JavaScript unless the browser actually has document.modelContext. */}
+        <WebMcpTools />
       </body>
     </html>
   );
