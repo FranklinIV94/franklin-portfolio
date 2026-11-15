@@ -4,6 +4,20 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import WebMcpTools from '@/lib/webmcp/register';
 
+const WEBMCP_TRIAL = {
+  /**
+   * Origin-trial tokens for franklin.simplifyingbusinesses.com. PUBLIC by design — they ship inside the page's meta tag and only
+   * activate WebMCP on the origin baked into them, so a copy is worthless elsewhere. Committed rather
+   * than env-only on purpose: a Vercel deploy carries only what the commit carries, so a token that
+   * lives solely in a dashboard env var is one missing setting away from silently switching the
+   * feature off. Env still overrides, for a re-issued token.
+   *
+   * Expiry decoded from the token: Chrome 2027-03-30, Edge 2026-12-30 (Edge dies before its trial ends).
+   */
+  chrome: process.env.NEXT_PUBLIC_WEBMCP_TRIAL_CHROME || "AvDgXvo+XMai9C0PN2GKOnMxcFbcYlkYei19qO1uxJxQ41S2/FvwSn9CBSu1GJjtCyss02bDWwCHD5CSjXjZeQkAAAB1eyJvcmlnaW4iOiJodHRwczovL2ZyYW5rbGluLnNpbXBsaWZ5aW5nYnVzaW5lc3Nlcy5jb206NDQzIiwiZmVhdHVyZSI6IldlYk1DUCIsImV4cGlyeSI6MTgwNjM2NDgwMCwiaXNTdWJkb21haW4iOnRydWV9",
+  edge: process.env.NEXT_PUBLIC_WEBMCP_TRIAL_EDGE || "A+AU6DknuoIZpliQ1J+uqsvS1VyKYOBlwJeh+XxF5WcXO0E7yfDGhQEvl1WwwmXqIHSGNC3Ohtj1PJC9yChomHQAAAB1eyJvcmlnaW4iOiJodHRwczovL2ZyYW5rbGluLnNpbXBsaWZ5aW5nYnVzaW5lc3Nlcy5jb206NDQzIiwiZmVhdHVyZSI6IldlYk1DUCIsImV4cGlyeSI6MTc5ODY0NTcyNywiaXNTdWJkb21haW4iOnRydWV9",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://franklin.simplifyingbusinesses.com'),
   title: 'Franklin J Bryant IV · AI Business Solutions Architect',
@@ -153,12 +167,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             NEXT_PUBLIC_WEBMCP_TRIAL_CHROME / NEXT_PUBLIC_WEBMCP_TRIAL_EDGE in Vercel.
             While both are unset this renders nothing at all: no meta tag, no
             document.modelContext, no cost to visitors. That is the correct default. */}
-        {process.env.NEXT_PUBLIC_WEBMCP_TRIAL_CHROME ? (
-          <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_TRIAL_CHROME} />
-        ) : null}
-        {process.env.NEXT_PUBLIC_WEBMCP_TRIAL_EDGE ? (
-          <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_TRIAL_EDGE} />
-        ) : null}
+        <meta httpEquiv="origin-trial" content={WEBMCP_TRIAL.chrome} />
+        <meta httpEquiv="origin-trial" content={WEBMCP_TRIAL.edge} />
       </head>
       <body className="bg-canvas text-white antialiased font-body">
         <div className="noise-overlay" aria-hidden="true" />
