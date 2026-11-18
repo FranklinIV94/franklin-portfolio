@@ -30,10 +30,11 @@ const under = (r, label) => chk(`${label} under 2000 chars`, r.text.length <= 20
 /* ── tool surface ──────────────────────────────────────────────────────── */
 
 const tools = T.buildTools();
-chk('4 tools registered', tools.length === 4, String(tools.length));
+chk('6 tools registered', tools.length === 6, String(tools.length));
 chk(
   'tool names are the shipped set',
-  JSON.stringify(tools.map((t) => t.name)) === JSON.stringify(['list-work', 'list-writing', 'answer-question', 'get-contact']),
+  JSON.stringify(tools.map((t) => t.name)) ===
+    JSON.stringify(['list-work', 'list-writing', 'get-project', 'get-post', 'search-answers', 'get-contact']),
   JSON.stringify(tools.map((t) => t.name)),
 );
 for (const t of tools) {
@@ -135,27 +136,64 @@ const badTag = T.listWriting({ tag: 'astrology' });
 console.log('\n--- list-writing bad tag ---\n' + badTag.text);
 chk('bad tag is a sentence with the tags in use', /Tags in use:/.test(badTag.text) && badTag.total === 0);
 
+/* ── get-project / get-post ─────────────────────────────────────────────── */
+
+const proj = T.getProject({ slug: 'agent-code-of-conduct' });
+console.log('\n--- get-project (by slug) ---\n' + proj.text);
+under(proj, 'get-project');
+chk('get-project returns one record', proj.total === 1, String(proj.total));
+chk('get-project carries the case study url', /https:\/\/franklin\.simplifyingbusinesses\.com\/work\/agent-code-of-conduct/.test(proj.text));
+chk('get-project carries the problem and the approach', /^Problem:/m.test(proj.text) && /^Approach:/m.test(proj.text));
+
+const projByName = T.getProject({ name: 'agent code of conduct' });
+chk('get-project resolves a lowercase title with no slug', projByName.total === 1 && /Agent Code of Conduct/.test(projByName.text));
+
+const projMiss = T.getProject({ slug: 'quantum banana teleporter' });
+console.log('\n--- get-project (miss) ---\n' + projMiss.text);
+chk('get-project miss is actionable', /No project matched/.test(projMiss.text) && projMiss.total === 0);
+
+const projEmpty = T.getProject({});
+chk('get-project empty tolerated', /Pass a slug from list-work/.test(projEmpty.text));
+
+const post = T.getPost({ slug: blogPosts[0].slug });
+console.log('\n--- get-post (newest) ---\n' + post.text);
+under(post, 'get-post');
+chk('get-post returns the citation record', post.total === 1 && post.text.includes(blogPosts[0].title));
+chk('get-post carries a quotable date', post.text.includes(blogPosts[0].date));
+chk('get-post carries a canonical url', post.text.includes(`/blog/${blogPosts[0].slug}`));
+chk('get-post admits the body is not in the record', /essay body is on that page/.test(post.text));
+
+const postMiss = T.getPost({ title: 'astrology for dogs' });
+chk('get-post miss is actionable', /No essay matched/.test(postMiss.text));
+
+// every list entry must resolve through its get tool — no dead ends in the surface
+const unreachable = [];
+for (const p of projects) if (T.getProject({ slug: p.slug }).total !== 1) unreachable.push(p.slug);
+for (const p of blogPosts) if (T.getPost({ slug: p.slug }).total !== 1) unreachable.push(p.slug);
+chk('every listed item resolves through get-*', unreachable.length === 0, unreachable.join(', '));
+
 /* ── answer-question ───────────────────────────────────────────────────── */
 
-const q = T.answerQuestion({ question: 'how does an engagement start' });
+const q = T.searchAnswers({ question: 'how does an engagement start' });
 console.log('\n--- answer-question (engagement start) ---');
 console.log(q.text);
 under(q, 'answer-question hit');
-chk('answer-question finds the published answer', q.total >= 1, String(q.total));
-chk('answer-question quotes the AIIO assessment line', /AIIO assessment/.test(q.text));
-chk('answer-question cites the page it quoted', q.text.includes('https://franklin.simplifyingbusinesses.com/about'));
+chk('search-answers finds the published answer', q.total >= 1, String(q.total));
+chk('search-answers quotes the AIIO assessment line', /AIIO assessment/.test(q.text));
+chk('search-answers cites the page it quoted', q.text.includes('https://franklin.simplifyingbusinesses.com/about'));
+chk('search-answers points at the structured tools', /As records, not prose: list-work \+ get-project/.test(q.text), 'no pointer in reply');
 
-const q2 = T.answerQuestion({ question: 'who does he work with' });
+const q2 = T.searchAnswers({ question: 'who does he work with' });
 console.log('\n--- answer-question (audience) ---\n' + q2.text);
-chk('answer-question answers the audience question', /Owner-operators of firms/.test(q2.text));
+chk('search-answers answers the audience question', /Owner-operators of firms/.test(q2.text));
 under(q2, 'answer-question audience');
 
-const q3 = T.answerQuestion({ question: 'what is the airspeed of an unladen swallow' });
+const q3 = T.searchAnswers({ question: 'what is the airspeed of an unladen swallow' });
 console.log('\n--- answer-question (miss) ---\n' + q3.text);
 chk('miss is a sentence, not an exception', typeof q3.text === 'string' && q3.text.startsWith('No published answer matched'));
 chk('miss names the fallback contact path', /franklin@prospyr305\.com/.test(q3.text));
 
-const q4 = T.answerQuestion({});
+const q4 = T.searchAnswers({});
 chk('empty question tolerated', /Pass a question/.test(q4.text));
 
 /* ── get-contact ───────────────────────────────────────────────────────── */

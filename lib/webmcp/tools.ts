@@ -97,6 +97,124 @@ function score(haystack: string, needles: string[]): number {
   return n;
 }
 
+/* A list without a get is a dead end: an agent can see that a project exists, ask about it, and
+ * have nowhere to go but the raw page. These two close that gap on the two lists above. */
+
+const normKey = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+function matchProject(input: { slug?: string; name?: string }): Project | null {
+  const raw = (input.slug || input.name || '').trim();
+  if (!raw) return null;
+  const q = normKey(raw);
+  return (
+    projects.find((p) => p.slug === raw.toLowerCase()) ??
+    projects.find((p) => normKey(p.title) === q) ??
+    projects.find((p) => normKey(p.title).includes(q)) ??
+    projects.find((p) => q.includes(normKey(p.title))) ??
+    projects.find((p) => normKey(p.tagline).includes(q)) ??
+    null
+  );
+}
+
+export function getProject(input: { slug?: string; name?: string } = {}): ToolResult {
+  const raw = (input.slug || input.name || '').trim();
+  if (!raw) {
+    return {
+      text: `Pass a slug from list-work, for example {"slug":"agent-code-of-conduct"}. ${projects.length} projects are published.`,
+      total: projects.length,
+    };
+  }
+  const p = matchProject(input);
+  if (!p) {
+    const near = projects
+      .map((x) => ({ x, s: score(x.title + ' ' + x.tagline + ' ' + x.tags.join(' '), tokens(raw)) }))
+      .filter((r) => r.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 3)
+      .map((r) => r.x.title);
+    return {
+      text:
+        `No project matched '${raw}'.` +
+        (near.length
+          ? ` Closest: ${near.join('; ')} — call get-project with one of those names.`
+          : ` There are ${projects.length} published projects; call list-work to browse.`),
+      total: 0,
+    };
+  }
+
+  // Same progressive-clip trick as get-offering: keep the structure, give up prose length.
+  const build = (chars: number) =>
+    [
+      `${p.title} — ${p.tagline}`,
+      `Category: ${p.category}${p.tier === 'flagship' ? ' (flagship case study)' : ''} · when: ${p.timeline} · role: ${p.role}`,
+      `Domains: ${p.domains.join(', ')}`,
+      `Tags: ${p.tags.join(', ')}`,
+      p.liveUrl ? `Live: ${p.liveUrl}` : '',
+      p.repoUrl ? `Code: ${p.repoUrl}` : '',
+      `Case study page: ${url(`/work/${p.slug}`)}`,
+      `What it is: ${clip(p.description, chars)}`,
+      `Problem: ${clip(p.challenge, chars)}`,
+      `Approach: ${clip(p.approach, chars)}`,
+      `Built: ${clip(p.solution, chars)}`,
+      p.results.length ? `Results:\n${p.results.map((r) => `- ${clip(r, 220)}`).join('\n')}` : '',
+      p.caseStudy ? `Written up at: ${p.caseStudy}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+  let chars = 700;
+  let text = build(chars);
+  while (text.length > MAX_CHARS && chars > 150) {
+    chars -= 100;
+    text = build(chars);
+  }
+  return { text, total: 1, trimmed: text.length !== build(700).length };
+}
+
+export function getPost(input: { slug?: string; title?: string } = {}): ToolResult {
+  const raw = (input.slug || input.title || '').trim();
+  if (!raw) {
+    return {
+      text: `Pass a slug or title from list-writing, for example {"slug":"governance-by-default"}. ${blogPosts.length} essays are published.`,
+      total: blogPosts.length,
+    };
+  }
+  const q = normKey(raw);
+  const p =
+    blogPosts.find((x) => x.slug === raw.toLowerCase()) ??
+    blogPosts.find((x) => normKey(x.title) === q) ??
+    blogPosts.find((x) => normKey(x.title).includes(q)) ??
+    blogPosts.find((x) => q.includes(normKey(x.title))) ??
+    null;
+  if (!p) {
+    const near = blogPosts
+      .map((x) => ({ x, s: score(x.title + ' ' + x.excerpt + ' ' + x.tag, tokens(raw)) }))
+      .filter((r) => r.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 3)
+      .map((r) => r.x.title);
+    return {
+      text:
+        `No essay matched '${raw}'.` +
+        (near.length ? ` Closest: ${near.join('; ')}.` : ` ${blogPosts.length} essays are published; call list-writing to browse.`),
+      total: 0,
+    };
+  }
+  // The essay body lives in its own page component, not in a data module, so it is not
+  // mirrored here — this tool returns the citation record (title, date, tag, canonical URL)
+  // and says plainly where the prose is. Claiming to return the essay would be a lie the
+  // first time an agent relied on it.
+  const text = [
+    `"${p.title}" — ${p.date} · ${p.tag}`,
+    `Excerpt: ${clip(p.excerpt, 600)}`,
+    `Essay: ${url(`/blog/${p.slug}`)}`,
+    `Slug: ${p.slug}`,
+    `Cite as: Franklin J Bryant IV, "${p.title}", ${p.date}, ${url(`/blog/${p.slug}`)}`,
+    `The essay body is on that page; this record is the citation and summary, not the argument.`,
+  ].join('\n');
+  return { text: clip(text, MAX_CHARS), total: 1 };
+}
+
 /* ── tools ─────────────────────────────────────────────────────────────── */
 
 const WORK_SORTED: Project[] = [...projects].sort(
@@ -272,13 +390,22 @@ const QA_INDEX: QA[] = [
   },
 ];
 
-export function answerQuestion(input: { question?: string } = {}): ToolResult {
+/**
+ * Searches the published /about answers and quotes them verbatim.
+ *
+ * Deliberately the last resort. It answers in prose, so the caller's context dies at the tool
+ * boundary and the reply cannot be paged, filtered or chained from. Every reply therefore ends
+ * by naming the tool that holds the same ground as structured records, and the description
+ * tells the model not to use this one when a list or get tool fits.
+ */
+export function searchAnswers(input: { question?: string } = {}): ToolResult {
   const question = (input.question ?? '').trim();
   if (!question) {
     return {
       text:
         `Pass a question, for example {"question":"how does an engagement start"}. ` +
-        `${QA_INDEX.length} published answers are indexed, all quoted verbatim from ${url(PATHS.about)}.`,
+        `${QA_INDEX.length} published answers are indexed, all quoted verbatim from ${url(PATHS.about)}. ` +
+        `For what he has built or written, prefer list-work, get-project, list-writing or get-post — those return records.`,
       total: QA_INDEX.length,
     };
   }
@@ -315,11 +442,12 @@ export function answerQuestion(input: { question?: string } = {}): ToolResult {
     header,
     shown.map((r) => `Q: ${r.a.q}\nA: ${clip(r.a.a, 700)}\nSource: ${r.a.source}`),
     (kept) =>
-      kept < Math.min(3, ranked.length)
-        ? `Only ${kept} of ${shown.length} fit in one answer. Ask a narrower question for the rest.`
+      (kept < Math.min(3, ranked.length)
+        ? `Only ${kept} of ${shown.length} fit in one answer. Ask a narrower question for the rest. `
         : ranked.length > shown.length
-          ? `${ranked.length - shown.length} more published answers matched; ask a narrower question.`
-          : '',
+          ? `${ranked.length - shown.length} more published answers matched; ask a narrower question. `
+          : '') +
+      'As records, not prose: list-work + get-project cover what he has shipped, list-writing + get-post cover what he has argued, get-contact covers how to reach him.',
   );
   return {
     text: packed.text,
@@ -396,9 +524,39 @@ export function buildTools(): ToolDef[] {
       execute: (i) => listWriting(i ?? {}),
     },
     {
-      name: 'answer-question',
+      name: 'get-project',
       description:
-        "Answers a question about how this architect works, what he runs, how a project starts and finishes, how security and governance are handled, and who he works with — quoted verbatim from the published /about page rather than paraphrased. Use when the user asks how he operates, what he would do first, or whether he is a fit. Read-only.",
+        'Returns one shipped project in full: what it is, the problem, the approach, what was actually built, the results, the role and timeline, and the live or code link where one exists. Use after list-work, when the task needs the detail behind one project rather than the whole list. Read-only. Misspellings return the closest titles.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          slug: { type: 'string', maxLength: 80, description: 'Project slug from list-work, e.g. agent-code-of-conduct.' },
+          name: { type: 'string', maxLength: 120, description: 'Project title, when you do not have the slug.' },
+        },
+        additionalProperties: false,
+      },
+      annotations: READ_ONLY,
+      execute: (i) => getProject(i ?? {}),
+    },
+    {
+      name: 'get-post',
+      description:
+        'Returns the citation record for one published essay: title, date, topic tag, summary and canonical URL, formatted so it can be quoted with a date. Use when the task needs his stated position on a subject, or a citation. Read-only. The essay body is on its page, not in this record — this tool will say so rather than paraphrase it.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          slug: { type: 'string', maxLength: 80, description: 'Essay slug from list-writing.' },
+          title: { type: 'string', maxLength: 160, description: 'Essay title, when you do not have the slug.' },
+        },
+        additionalProperties: false,
+      },
+      annotations: READ_ONLY,
+      execute: (i) => getPost(i ?? {}),
+    },
+    {
+      name: 'search-answers',
+      description:
+        "Last resort. Quoted answers from the published /about page about how this architect works, how an engagement starts and finishes, how security and governance are handled, and who he works with. Do NOT use it for evidence of shipped work (list-work, get-project) or for his published positions (list-writing, get-post) — those return records with dates. Read-only, and every reply ends by naming those tools.",
       inputSchema: {
         type: 'object',
         properties: {
@@ -408,7 +566,7 @@ export function buildTools(): ToolDef[] {
         additionalProperties: false,
       },
       annotations: READ_ONLY,
-      execute: (i) => answerQuestion(i ?? {}),
+      execute: (i) => searchAnswers(i ?? {}),
     },
     {
       name: 'get-contact',
