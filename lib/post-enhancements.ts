@@ -20,6 +20,22 @@ export type PostEnhancement = {
 };
 
 export const postEnhancements: Record<string, PostEnhancement> = {
+  // what-changed-between-tax-season-and-november
+  'what-changed-between-tax-season-and-november': {
+    tldr: {
+      lines: [
+        'The first production use of an agent here was a filing deadline, not a strategy — which is why it survived.',
+        'It spread from documents to workflows to client onboarding before any of that was planned.',
+        'The security work came second because client data started moving through systems I had built.',
+      ],
+      keyTerm: 'Production-first',
+      inOtherWords:
+        'A system is finished when it survives a real deadline, not when it demos well.',
+    },
+    // No citations: this is a first-person account of our own year. Every figure in it is
+    // our own published standard, so there is no external source to link. Adding a link
+    // here to make the block look fuller would break the sourcing rule.',
+  },
   // the-succession-gap
   'the-succession-gap': {
     tldr: {

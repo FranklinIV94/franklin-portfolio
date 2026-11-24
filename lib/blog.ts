@@ -10,6 +10,15 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'what-changed-between-tax-season-and-november',
+    title: 'What Changed Between Tax Season and November',
+    excerpt:
+      'Eleven months ago the goal was surviving a filing deadline, not building a business. What actually spread and in what order, the question February raised that changed the plan, why the shift to security was forced rather than chosen, and what carries into next year.',
+    date: 'November 24, 2026',
+    dateISO: '2026-11-24',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'the-succession-gap',
     title: 'The Succession Gap',
     excerpt:
