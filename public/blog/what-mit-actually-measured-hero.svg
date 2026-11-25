@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="A dark field of small grey data points with one bright green point standing apart, and a thin green line running from it back into the grey mass.">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a2e" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3eb002" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#3eb002" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#3eb002" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="#0a0a0f"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity="0.75"/>
+
+  <!-- dense field of grey points, slightly right-weighted -->
+  <g fill="#4a4a6a">
+    <circle cx="180" cy="300" r="4"/><circle cx="246" cy="352" r="3.5"/><circle cx="312" cy="286" r="4.5"/>
+    <circle cx="378" cy="340" r="3"/><circle cx="430" cy="268" r="4"/><circle cx="196" cy="430" r="3.5"/>
+    <circle cx="268" cy="470" r="4"/><circle cx="340" cy="520" r="3.5"/><circle cx="404" cy="452" r="4"/>
+    <circle cx="470" cy="512" r="3"/><circle cx="512" cy="392" r="4.5"/><circle cx="560" cy="470" r="3.5"/>
+    <circle cx="614" cy="330" r="4"/><circle cx="668" cy="404" r="3"/><circle cx="716" cy="300" r="4"/>
+    <circle cx="768" cy="368" r="3.5"/><circle cx="826" cy="452" r="4"/><circle cx="884" cy="372" r="3"/>
+    <circle cx="934" cy="470" r="4.5"/><circle cx="990" cy="330" r="3.5"/><circle cx="1042" cy="412" r="4"/>
+    <circle cx="1096" cy="336" r="3"/><circle cx="1150" cy="452" r="4"/><circle cx="1204" cy="372" r="3.5"/>
+    <circle cx="1258" cy="470" r="4"/><circle cx="1310" cy="330" r="3"/><circle cx="1364" cy="410" r="4.5"/>
+    <circle cx="1418" cy="344" r="3.5"/><circle cx="1470" cy="452" r="4"/><circle cx="1524" cy="380" r="3"/>
+    <circle cx="580" cy="600" r="4"/><circle cx="644" cy="660" r="3.5"/><circle cx="712" cy="580" r="4"/>
+    <circle cx="780" cy="648" r="3"/><circle cx="842" cy="596" r="4.5"/><circle cx="904" cy="664" r="3.5"/>
+    <circle cx="966" cy="592" r="4"/><circle cx="1030" cy="656" r="3"/><circle cx="1092" cy="588" r="4"/>
+    <circle cx="1154" cy="648" r="3.5"/><circle cx="1216" cy="596" r="4"/><circle cx="1278" cy="660" r="3"/>
+    <circle cx="1338" cy="592" r="4.5"/><circle cx="1400" cy="652" r="3.5"/><circle cx="1462" cy="600" r="4"/>
+    <circle cx="300" cy="640" r="3.5"/><circle cx="368" cy="700" r="4"/><circle cx="436" cy="628" r="3"/>
+    <circle cx="504" cy="692" r="4"/><circle cx="228" cy="700" r="3"/><circle cx="152" cy="620" r="3.5"/>
+  </g>
+
+  <!-- the single bright point, standing apart, upper-left quadrant -->
+  <circle cx="470" cy="220" r="90" fill="url(#glow)"/>
+  <circle cx="470" cy="220" r="26" fill="#3eb002" opacity="0.25" filter="url(#soft)"/>
+  <circle cx="470" cy="220" r="11" fill="#3eb002"/>
+  <circle cx="470" cy="220" r="4" fill="#f8f8f8"/>
+
+  <!-- the line back into the grey mass: the part most retellings drop -->
+  <path d="M 478 231 C 560 300, 660 350, 768 368" fill="none" stroke="#3eb002" stroke-width="2.5" stroke-opacity="0.55"/>
+  <path d="M 478 231 C 560 300, 660 350, 768 368" fill="none" stroke="#3eb002" stroke-width="6" stroke-opacity="0.08"/>
+
+  <!-- a second, faded path to the lower field -->
+  <path d="M 470 233 C 500 380, 540 520, 580 600" fill="none" stroke="#3eb002" stroke-width="2" stroke-opacity="0.22" stroke-dasharray="7 9"/>
+
+  <!-- horizon emphasis -->
+  <line x1="120" y1="760" x2="1480" y2="760" stroke="#2a2a3e" stroke-width="1" opacity="0.8"/>
+</svg>

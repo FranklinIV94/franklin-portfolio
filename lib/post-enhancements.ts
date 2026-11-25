@@ -20,6 +20,38 @@ export type PostEnhancement = {
 };
 
 export const postEnhancements: Record<string, PostEnhancement> = {
+  // what-mit-actually-measured
+  'what-mit-actually-measured': {
+    tldr: {
+      lines: [
+        'The report says 95% of organisations are getting zero return from generative AI, not that 95% of pilots fail — a different claim with a different evidence base.',
+        'Its method is on page two and almost never travels: 300+ public initiatives, 52 interviews and 153 senior leaders surveyed at four conferences, preliminary findings.',
+        'The same report attributes the divide to approach and names brittle workflows and missing context, which is worse news for tool vendors than the headline was.',
+      ],
+      keyTerm: 'the misquote',
+      inOtherWords:
+        'The number sells urgency. The cause, in the same report, sells the work that has to happen first.',
+    },
+    citations: [
+      {
+        label: 'MIT Project NANDA, The GenAI Divide: State of AI in Business 2025 (July 2025, published deck)',
+        url: 'https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf',
+        supports:
+          'The 95% figure, the methodology on page two, and both quoted sentences on approach and brittle workflows.',
+      },
+      {
+        // Gartner and Reuters both 403/401 to a non-browser fetch from this machine, so the
+        // link cannot be 200-verified the way the sourcing rule requires. Published as plain
+        // text rather than a dead link. Gartner newsroom, 25 June 2025; Reuters carried the
+        // same finding the same day.
+        label:
+          'Gartner, "Over 40% of Agentic AI Projects Will Be Canceled by End of 2027", 25 June 2025 (newsroom release; not link-verified from this host)',
+        url: null,
+        supports:
+          'The 40% cancellation prediction and the three stated reasons: escalating costs, unclear business value, inadequate risk controls.',
+      },
+    ],
+  },
   // what-changed-between-tax-season-and-november
   'what-changed-between-tax-season-and-november': {
     tldr: {

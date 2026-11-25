@@ -10,6 +10,15 @@ export type BlogPost = {
 // Sorted newest first. Update this when adding new posts.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'what-mit-actually-measured',
+    title: 'The 95% Statistic Is Misquoted',
+    excerpt:
+      'The number everyone quotes about AI failing is not what the research found. MIT measured organisations getting zero return, from 52 interviews and 153 leaders, and named the cause in the same report. The misquote sells software; the finding sells the opposite.',
+    date: 'November 25, 2026',
+    dateISO: '2026-11-25',
+    tag: 'AI Strategy',
+  },
+  {
     slug: 'what-changed-between-tax-season-and-november',
     title: 'What Changed Between Tax Season and November',
     excerpt:
